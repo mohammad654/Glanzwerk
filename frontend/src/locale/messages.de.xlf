@@ -250,6 +250,30 @@
           <context context-type="linenumber">84,85</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="contact.namePlaceholder" datatype="html">
+        <source>Name</source>
+        <target state="translated">Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.emailPlaceholder" datatype="html">
+        <source>Email</source>
+        <target state="translated">E-Mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.phonePlaceholder" datatype="html">
+        <source>Phone</source>
+        <target state="translated">Telefon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="contact.service" datatype="html">
         <source>What do you need?</source>
         <target state="translated">Was brauchen Sie?</target>
@@ -282,12 +306,20 @@
           <context context-type="linenumber">130,131</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contact.submit" datatype="html">
-        <source> Send Enquiry </source>
-        <target state="translated">Anfrage senden</target>
+      <trans-unit id="contact.messageHint" datatype="html">
+        <source>Size of the property, how often, and when you need it done.</source>
+        <target state="translated">Größe des Objekts, wie oft, und wann es fertig sein soll.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">170,171</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.bookVisit" datatype="html">
+        <source> Book A Free Site Visit </source>
+        <target state="translated">Kostenlosen Vor-Ort-Termin buchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">178,179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.nextHeading" datatype="html">

@@ -79,37 +79,49 @@
   label {
     display: block;
     margin-bottom: 0.5rem;
-    color: v.$brand-headings;
+    color: v.$primary;
     font-size: v.$topbar-font-size;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
+  // An underline rather than a box: the label above already marks where the
+  // field starts, so a full border would only repeat it.
   input,
   select,
   textarea {
     width: 100%;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid #e3eef3;
-    border-radius: v.$radius;
-    background: #fff;
+    padding: 0.625rem 0;
+    border: 0;
+    border-bottom: 1px solid #e3eef3;
+    border-radius: 0;
+    background: transparent;
     color: v.$brand-headings;
     font-family: v.$font-body;
-    font-size: v.$font-size-sm;
+    font-size: v.$font-size-base;
+    transition: border-color 0.2s ease-in-out;
 
     &::placeholder {
       color: rgba(v.$brand-body, 0.6);
     }
 
     &:focus {
-      border-color: v.$primary;
+      border-bottom-color: v.$primary;
       outline: 2px solid rgba(v.$primary, 0.35);
-      outline-offset: 1px;
+      outline-offset: 0.25rem;
     }
   }
 
   input,
   select {
-    height: 3.125rem;
+    height: 2.75rem;
+  }
+
+  // Until a service is picked the select should read as a prompt, like the
+  // placeholder in every other field, rather than as an answer already given.
+  select:has(option[value='']:checked) {
+    color: rgba(v.$brand-body, 0.6);
   }
 
   textarea {
@@ -118,7 +130,7 @@
 
   // Colour alone cannot carry the error, so each field also renders a message.
   .is-invalid {
-    border-color: #d9534f;
+    border-bottom-color: #d9534f;
   }
 }
 
@@ -134,13 +146,16 @@
   gap: 0.625rem;
   align-items: flex-start;
   color: v.$brand-body;
+  font-size: v.$font-size-sm;
   font-weight: 400;
+  letter-spacing: normal;
   line-height: 1.6;
+  text-transform: none;
 
   input {
     width: auto;
     height: auto;
-    margin-top: 0.25rem;
+    margin-top: 0.3125rem;
     accent-color: v.$primary;
   }
 }

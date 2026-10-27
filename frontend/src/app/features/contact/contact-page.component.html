@@ -28,7 +28,7 @@
       }
     </ul>
 
-    <div class="row g-5">
+    <div class="row gy-5 g-lg-5">
       <div class="col-lg-7">
         @if (submitted()) {
           <p class="contact__note" role="status">
@@ -46,6 +46,8 @@
                   id="contact-name"
                   type="text"
                   formControlName="name"
+                  placeholder="Name"
+                  i18n-placeholder="@@contact.namePlaceholder"
                   autocomplete="name"
                   [class.is-invalid]="isInvalid('name')"
                   [attr.aria-invalid]="isInvalid('name') || null"
@@ -66,6 +68,8 @@
                   id="contact-email"
                   type="email"
                   formControlName="email"
+                  placeholder="Email"
+                  i18n-placeholder="@@contact.emailPlaceholder"
                   autocomplete="email"
                   [class.is-invalid]="isInvalid('email')"
                   [attr.aria-invalid]="isInvalid('email') || null"
@@ -86,6 +90,8 @@
                   id="contact-phone"
                   type="tel"
                   formControlName="phone"
+                  placeholder="Phone"
+                  i18n-placeholder="@@contact.phonePlaceholder"
                   autocomplete="tel"
                   [class.is-invalid]="isInvalid('phone')"
                   [attr.aria-invalid]="isInvalid('phone') || null"
@@ -134,6 +140,7 @@
                   formControlName="message"
                   [attr.maxlength]="messageLimits.max"
                   placeholder="Size of the property, how often, and when you need it done."
+                  i18n-placeholder="@@contact.messageHint"
                   [class.is-invalid]="isInvalid('message')"
                   [attr.aria-invalid]="isInvalid('message') || null"
                   [attr.aria-describedby]="isInvalid('message') ? 'contact-message-error' : null"
@@ -166,8 +173,8 @@
             </div>
 
             <div class="col-12">
-              <button class="default-btn" type="submit" i18n="@@contact.submit">
-                Send Enquiry
+              <button class="default-btn" type="submit" i18n="@@contact.bookVisit">
+                Book A Free Site Visit
               </button>
             </div>
           </div>

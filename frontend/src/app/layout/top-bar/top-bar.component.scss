@@ -43,9 +43,19 @@
   }
 }
 
+// On tablets and phones the bar has to earn its height: it is fixed, so every
+// row it wraps onto is taken off the top of every screen for the whole visit.
 @media (max-width: 767.98px) {
-  // The language switcher stays: it is the only way to reach the other build.
-  .top-bar__secondary {
+  // Has to outrank `.top-bar__group li`, which sets display: flex.
+  .top-bar__group .top-bar__secondary {
+    display: none;
+  }
+}
+
+// On a phone, keep the number you can tap and the language switch. The address
+// is a line away in the footer and on the contact page.
+@media (max-width: 575.98px) {
+  .top-bar__group .top-bar__email {
     display: none;
   }
 }

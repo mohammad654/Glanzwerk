@@ -139,42 +139,42 @@
         <source>Glanzwerk | Cleaning, Moving &amp; Property Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/site.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="site.description" datatype="html">
         <source>More than cleaning. Glanzwerk handles home and commercial cleaning, moving, clearance, snow removal and property maintenance, including same-day and 24/7 call-outs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/site.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.1" datatype="html">
         <source>Years in building services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.2" datatype="html">
         <source>Sites under contract</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.3" datatype="html">
         <source>Directly employed staff</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.4" datatype="html">
         <source>Contract renewal rate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.eyebrow" datatype="html">
@@ -204,68 +204,87 @@
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
           <context context-type="linenumber">44,45</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="contact.email" datatype="html">
         <source>Email address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">71,72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.phone" datatype="html">
         <source>Phone number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">84,85</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">93,94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.service" datatype="html">
         <source>What do you need?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">104,105</context>
+          <context context-type="linenumber">110,111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.selectService" datatype="html">
         <source>Select a service</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">112,113</context>
+          <context context-type="linenumber">118,119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.somethingElse" datatype="html">
         <source> Something else </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">117,118</context>
+          <context context-type="linenumber">123,124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.message" datatype="html">
         <source>About the job</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">130,131</context>
+          <context context-type="linenumber">136,137</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contact.submit" datatype="html">
-        <source> Send Enquiry </source>
+      <trans-unit id="contact.messageHint" datatype="html">
+        <source>Size of the property, how often, and when you need it done.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">170,171</context>
+          <context context-type="linenumber">142,143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.bookVisit" datatype="html">
+        <source> Book A Free Site Visit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">177,178</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.nextHeading" datatype="html">
         <source>What happens next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">179,180</context>
+          <context context-type="linenumber">186,187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.urgentHeading" datatype="html">
         <source>Need someone today?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">187,189</context>
+          <context context-type="linenumber">194,196</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.eyebrow" datatype="html">

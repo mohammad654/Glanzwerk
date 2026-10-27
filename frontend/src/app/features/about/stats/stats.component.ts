@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { CountUpDirective } from '../../../shared/directives/count-up.directive';
+
 interface Stat {
   value: string;
   label: string;
@@ -7,6 +9,7 @@ interface Stat {
 
 @Component({
   selector: 'app-stats',
+  imports: [CountUpDirective],
   templateUrl: './stats.component.html',
   styleUrl: './stats.component.scss',
 })
