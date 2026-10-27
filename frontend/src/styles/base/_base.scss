@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as v;
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+// The header sits on top of the hero image, so the page starts at y=0.
+.page-shell {
+  position: relative;
+}
+
+// One global opt-out covers every hover zoom, fade and slide in the app.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

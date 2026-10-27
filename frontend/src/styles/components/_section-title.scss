@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as v;
+
+// Eyebrow + heading + lead paragraph, repeated above almost every section.
+.section-title {
+  max-width: 43.5rem;
+  margin: 0 auto 3.125rem;
+  text-align: center;
+
+  span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: v.$primary;
+    font-size: v.$topbar-font-size;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+
+  h2 {
+    margin-bottom: 0.75rem;
+    color: v.$brand-headings;
+    font-family: v.$font-heading;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: v.$brand-body;
+    font-size: v.$font-size-sm;
+    line-height: 1.8;
+  }
+}
+
+// On a dark band the heading and lead have to invert.
+.section-title--light {
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(#fff, 0.8);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+}

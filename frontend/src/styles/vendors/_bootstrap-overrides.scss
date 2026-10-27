@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+
+// Bootstrap reads these as !default, so they must be declared BEFORE the
+// bootstrap import below — that is what makes brand colors flow through every
+// Bootstrap component instead of needing per-component overrides later.
+$primary: v.$primary;
+$secondary: v.$secondary;
+$body-color: v.$brand-body;
+$headings-color: v.$brand-headings;
+$border-radius: v.$radius;
+$border-radius-sm: v.$radius-sm;
+$border-radius-pill: v.$radius-pill;
+$spacer: v.$spacer;
+
+$font-family-sans-serif: v.$font-body;
+$headings-font-family: v.$font-heading;
+$headings-font-weight: 700;
+$body-line-height: v.$line-height-base;
+
+$link-decoration: none;
+$btn-font-weight: 600;
+
+// Source SCSS, not compiled CSS — compiled CSS cannot be re-themed.
+@import "bootstrap/scss/bootstrap";

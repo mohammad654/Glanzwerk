@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as v;
+
+// Shared by the home carousel and the projects grid.
+.project__media {
+  display: block;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 437 / 307;
+    object-fit: cover;
+    transition: scale 0.6s ease-in-out;
+  }
+
+  &:hover img {
+    scale: 1.05;
+  }
+}
+
+// Overlaps the bottom of the image and is inset from the left, as in the
+// template.
+.project__content {
+  position: relative;
+  width: 80%;
+  margin: -3.75rem 0 0 2.75rem;
+  padding: 1.875rem;
+  border-radius: 1.875rem; // 30px
+  background: v.$brand-indigo;
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  h3 a {
+    color: #fff;
+
+    &:hover {
+      color: v.$primary;
+    }
+  }
+
+  > span {
+    color: v.$primary;
+    font-size: v.$topbar-font-size;
+  }
+}
+
+.project__link {
+  position: absolute;
+  right: 1.875rem;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: v.$primary;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: v.$btn-transition;
+
+  &:hover {
+    background: #fff;
+    color: v.$brand-indigo;
+  }
+}

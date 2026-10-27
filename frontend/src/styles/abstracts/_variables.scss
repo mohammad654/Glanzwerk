@@ -1,0 +1,58 @@
+// Design tokens — the single source of truth for the whole UI.
+// Values measured off the Trice reference template.
+
+// Palette
+$brand-cyan: #04b8e5; // buttons, active links, eyebrow text
+$brand-indigo: #190f3c; // top bar
+$brand-headings: #232350; // headings
+$brand-body: #5d5d5d; // body copy
+
+// Tinted backgrounds that separate alternating sections
+$bg-tint: #f4fbfe;
+$bg-tint-soft: #f6fcfe;
+
+// From logo.png — kept for accents that should feel like the mark itself
+$brand-blue: #2e6f9e;
+$brand-green: #7fbf5a;
+
+// Semantic aliases — components reference these, never the raw palette names
+$primary: $brand-cyan;
+$secondary: $brand-green;
+$accent: $brand-cyan;
+
+// Type
+$font-body: "Lato", system-ui, sans-serif;
+$font-heading: "Roboto", system-ui, sans-serif;
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.9375rem; // 15px — body copy in sections
+$line-height-base: 1.8;
+
+// Header
+$topbar-bg: $brand-indigo;
+$topbar-color: #fff;
+$topbar-font-size: 0.875rem; // 14px
+$topbar-padding-y: 0.9375rem; // 15px
+$navbar-height: 4.5625rem; // 73px
+$navbar-bg: rgba($brand-indigo, 0.92);
+$navbar-bg-solid: $brand-indigo;
+$navbar-link-color: #fff;
+$navbar-link-active: $brand-cyan;
+$navbar-link-size: 0.9375rem; // 15px
+$logo-height: 3.5rem; // 56px — the mark is stacked, so it needs the height
+
+// Buttons
+$btn-padding: 0.75rem 1.25rem; // 12px 20px
+$btn-font-size: 1rem;
+$btn-transition: 0.5s;
+
+// Home
+$hero-height: 50rem; // 800px
+$feature-overlap: 6.25rem; // 100px — the feature strip rides up over the hero
+
+// Shape and rhythm
+$radius-sm: 0.375rem;
+$radius: 0.5rem;
+$radius-lg: 0.625rem; // 10px — the template's cards and panels
+$radius-pill: 50px;
+$spacer: 1rem;
+$section-padding-y: 6.25rem; // 100px — the template's pt-100 / pb-100

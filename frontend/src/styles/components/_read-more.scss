@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+
+// The small "Read More →" link under cards, repeated in several sections.
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: v.$brand-indigo;
+  font-size: 0.8125rem; // 13px
+  font-weight: 600;
+
+  &:hover,
+  &:focus-visible {
+    color: v.$primary;
+  }
+}

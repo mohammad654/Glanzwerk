@@ -1,0 +1,20 @@
+# Dependencies and build output
+node_modules/
+dist/
+.angular/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors and OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Company background document. Kept local: this repository is public and the
+# file is business material, not code.
+Lebenslauf Firma Glanzwerk .pdf

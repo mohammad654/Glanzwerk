@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as v;
+
+// The template's primary call to action, used in the header, hero and forms.
+.default-btn {
+  display: inline-block;
+  padding: v.$btn-padding;
+  border: 0;
+  border-radius: v.$radius-pill;
+  background: v.$primary;
+  color: #fff;
+  font-family: v.$font-body;
+  font-size: v.$btn-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  transition: v.$btn-transition;
+
+  &:hover,
+  &:focus-visible {
+    background: v.$brand-indigo;
+    color: #fff;
+  }
+}
+
+// The secondary call to action, paired with the primary one in the hero.
+.default-btn--light {
+  background: #fff;
+  color: v.$brand-headings;
+
+  &:hover,
+  &:focus-visible {
+    background: v.$brand-indigo;
+    color: #fff;
+  }
+}

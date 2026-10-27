@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as v;
+
+// Shared by the home news section and the blog grid.
+.post {
+  margin-bottom: 1.875rem;
+}
+
+.post__media {
+  display: block;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 416 / 292;
+    object-fit: cover;
+    transition: scale 0.6s ease-in-out;
+  }
+
+  &:hover img {
+    scale: 1.05;
+  }
+}
+
+.post__content {
+  padding-top: 1.25rem;
+
+  ul {
+    margin: 0 0 0.625rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    color: #78a9e3;
+    font-size: v.$topbar-font-size;
+
+    + li::before {
+      content: "•";
+      margin: 0 0.5rem;
+    }
+  }
+
+  h3 {
+    margin: 0 0 0.9375rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  h3 a {
+    color: v.$brand-headings;
+
+    &:hover {
+      color: v.$primary;
+    }
+  }
+
+  p {
+    margin-bottom: 0.9375rem;
+    color: v.$brand-body;
+    font-size: v.$font-size-sm;
+    line-height: 1.8;
+  }
+}
