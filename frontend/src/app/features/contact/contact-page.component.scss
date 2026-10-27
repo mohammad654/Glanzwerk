@@ -65,12 +65,22 @@
 }
 
 .contact__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
   margin-bottom: 1.875rem;
   padding: 0.9375rem 1.25rem;
+  border: 1px solid rgba(v.$form-success, 0.6);
   border-radius: v.$radius-lg;
-  background: v.$bg-tint;
+  background: rgba(v.$form-success, 0.12);
   color: v.$brand-headings;
   font-size: v.$font-size-sm;
+
+  i {
+    flex-shrink: 0;
+    color: v.$form-success;
+    font-size: 1.25rem;
+  }
 }
 
 .form-field {
@@ -86,17 +96,15 @@
     text-transform: uppercase;
   }
 
-  // An underline rather than a box: the label above already marks where the
-  // field starts, so a full border would only repeat it.
-  input,
+  // The checkbox in the consent row is excluded: it keeps its native box.
+  input:not([type='checkbox']),
   select,
   textarea {
     width: 100%;
-    padding: 0.625rem 0;
-    border: 0;
-    border-bottom: 1px solid #e3eef3;
-    border-radius: 0;
-    background: transparent;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid v.$input-border;
+    border-radius: v.$radius-sm;
+    background: #fff;
     color: v.$brand-headings;
     font-family: v.$font-body;
     font-size: v.$font-size-base;
@@ -107,15 +115,15 @@
     }
 
     &:focus {
-      border-bottom-color: v.$primary;
+      border-color: v.$primary;
       outline: 2px solid rgba(v.$primary, 0.35);
       outline-offset: 0.25rem;
     }
   }
 
-  input,
+  input:not([type='checkbox']),
   select {
-    height: 2.75rem;
+    height: 3.125rem; // 50px
   }
 
   // Until a service is picked the select should read as a prompt, like the
@@ -130,14 +138,14 @@
 
   // Colour alone cannot carry the error, so each field also renders a message.
   .is-invalid {
-    border-bottom-color: #d9534f;
+    border-color: v.$input-error;
   }
 }
 
 .form-field__error {
   display: block;
   margin-top: 0.375rem;
-  color: #d9534f;
+  color: v.$input-error;
   font-size: v.$topbar-font-size;
 }
 

@@ -1,6 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 interface ProcessStep {
   icon: string;
@@ -10,7 +11,7 @@ interface ProcessStep {
 
 @Component({
   selector: 'app-process',
-  imports: [RouterLink, DecimalPipe],
+  imports: [IconComponent, RouterLink, DecimalPipe],
   templateUrl: './process.component.html',
   styleUrl: './process.component.scss',
 })

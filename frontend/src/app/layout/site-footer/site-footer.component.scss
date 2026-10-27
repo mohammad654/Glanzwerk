@@ -49,9 +49,13 @@
     background: v.$primary;
     color: #fff;
     font-size: v.$font-size-sm;
-    transition: v.$btn-transition;
+    transition:
+      background v.$btn-transition,
+      color v.$btn-transition,
+      scale 0.25s ease-in-out;
 
     &:hover {
+      scale: 1.2;
       background: #fff;
       color: v.$brand-indigo;
     }
@@ -65,8 +69,14 @@
   color: #fff;
   font-size: v.$font-size-sm;
   line-height: 2.125rem;
+  // Grows rightwards so the column edge stays put.
+  transform-origin: left center;
+  transition:
+    color 0.25s ease-in-out,
+    scale 0.25s ease-in-out;
 
   &:hover {
+    scale: 1.08;
     color: v.$primary;
   }
 }
@@ -93,9 +103,15 @@
   }
 
   a {
+    display: inline-block;
     color: #fff;
+    transform-origin: left center;
+    transition:
+      color 0.25s ease-in-out,
+      scale 0.25s ease-in-out;
 
     &:hover {
+      scale: 1.08;
       color: v.$primary;
     }
   }

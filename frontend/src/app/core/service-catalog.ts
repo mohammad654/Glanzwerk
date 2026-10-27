@@ -240,5 +240,8 @@ export const SERVICES: readonly Service[] = [
 
 export const servicePath = (slug: string): string => `services/${slug}`;
 
+/** The same route as a router link. */
+export const serviceLink = (slug: string): string => `/${servicePath(slug)}`;
+
 export const findService = (slug: string): Service | undefined =>
   SERVICES.find((service) => service.slug === slug);

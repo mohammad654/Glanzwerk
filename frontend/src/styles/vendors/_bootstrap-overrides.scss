@@ -1,7 +1,9 @@
+@use "sass:list";
+@use "sass:map";
 @use "../abstracts/variables" as v;
 
 // Bootstrap reads these as !default, so they must be declared BEFORE the
-// bootstrap import below — that is what makes brand colors flow through every
+// bootstrap imports below — that is what makes brand colors flow through every
 // Bootstrap component instead of needing per-component overrides later.
 $primary: v.$primary;
 $secondary: v.$secondary;
@@ -21,4 +23,64 @@ $link-decoration: none;
 $btn-font-weight: 600;
 
 // Source SCSS, not compiled CSS — compiled CSS cannot be re-themed.
-@import "bootstrap/scss/bootstrap";
+//
+// Imported part by part rather than as `bootstrap/scss/bootstrap`: the whole
+// framework ships every component, and this site builds its own buttons, cards,
+// forms, nav and overlays. What is left is the reset, the type scale, the grid
+// and the utilities. Add a part here when a page genuinely needs one.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Bootstrap generates every utility group across six breakpoints, which was the
+// largest single block of CSS in the bundle. This is the allowed set: a utility
+// outside it does not exist, so add its key here before reaching for one.
+$allowed-utilities: (
+  "display",
+  "margin",
+  "margin-x",
+  "margin-y",
+  "margin-top",
+  "margin-end",
+  "margin-bottom",
+  "margin-start",
+  "padding",
+  "padding-x",
+  "padding-y",
+  "padding-top",
+  "padding-end",
+  "padding-bottom",
+  "padding-start",
+  "gap",
+  "flex-direction",
+  "align-items",
+  "justify-content",
+  "text-align"
+);
+
+$kept-utilities: ();
+
+@each $key, $config in $utilities {
+  @if list.index($allowed-utilities, $key) {
+    $kept-utilities: map.merge(
+      $kept-utilities,
+      (
+        $key: $config,
+      )
+    );
+  }
+}
+
+$utilities: $kept-utilities;
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// The utilities API has to come last: it reads the map above.
+@import "bootstrap/scss/utilities/api";

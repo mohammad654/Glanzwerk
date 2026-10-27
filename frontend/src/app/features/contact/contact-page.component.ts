@@ -4,13 +4,14 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ADDRESS_LINE, COMPANY } from '../../core/company';
 import { SERVICES } from '../../core/service-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 /** Long enough to describe a job, short enough to reject a pasted essay. */
 const MESSAGE_LIMITS = { min: 10, max: 2000 } as const;
 
 @Component({
   selector: 'app-contact-page',
-  imports: [PageBannerComponent, ReactiveFormsModule],
+  imports: [IconComponent, PageBannerComponent, ReactiveFormsModule],
   templateUrl: './contact-page.component.html',
   styleUrl: './contact-page.component.scss',
 })

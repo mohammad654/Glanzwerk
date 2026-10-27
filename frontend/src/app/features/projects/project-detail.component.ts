@@ -1,12 +1,13 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { PROJECTS, findProject, projectPath } from '../../core/project-catalog';
+import { PROJECTS, findProject, projectLink } from '../../core/project-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-project-detail',
-  imports: [PageBannerComponent, RouterLink],
+  imports: [IconComponent, PageBannerComponent, RouterLink],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })
@@ -22,7 +23,6 @@ export class ProjectDetailComponent {
 
   readonly trail = [{ label: 'Projects', path: 'projects' }];
 
-  path(slug: string): string {
-    return '/' + projectPath(slug);
-  }
+  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly path = projectLink;
 }

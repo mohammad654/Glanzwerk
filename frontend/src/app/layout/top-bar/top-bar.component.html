@@ -2,12 +2,12 @@
   <div class="container top-bar__inner">
     <ul class="top-bar__group">
       <li class="top-bar__email">
-        <i class="bi bi-envelope" aria-hidden="true"></i>
+        <i appIcon="bi-envelope" aria-hidden="true"></i>
         <span i18n="@@topbar.email">Email:</span>
         <a [href]="'mailto:' + company.email">{{ company.email }}</a>
       </li>
       <li>
-        <i class="bi bi-telephone" aria-hidden="true"></i>
+        <i appIcon="bi-telephone" aria-hidden="true"></i>
         <span i18n="@@topbar.phone">Call Us:</span>
         <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
       </li>

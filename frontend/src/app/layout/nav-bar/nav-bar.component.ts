@@ -3,10 +3,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NAV_ITEMS } from '../../core/navigation';
 import { SidebarService } from '../../core/services/sidebar.service';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [IconComponent, RouterLink, RouterLinkActive],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })

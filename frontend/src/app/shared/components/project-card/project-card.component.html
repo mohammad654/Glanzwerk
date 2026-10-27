@@ -1,0 +1,16 @@
+<article class="project">
+  <a class="project__media" [routerLink]="link()" tabindex="-1" aria-hidden="true">
+    <img [src]="project().image" [alt]="project().title" loading="lazy" />
+  </a>
+
+  <div class="project__content">
+    <h3>
+      <a [routerLink]="link()">{{ project().title }}</a>
+    </h3>
+    <span>{{ project().category }}</span>
+
+    <a class="project__link" [routerLink]="link()" [attr.aria-label]="'View ' + project().title">
+      <i appIcon="bi-chevron-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</article>

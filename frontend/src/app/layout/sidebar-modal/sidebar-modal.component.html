@@ -15,7 +15,7 @@
       i18n-aria-label="@@sidebar.close"
       aria-label="Close"
     >
-      <i class="bi bi-x-lg" aria-hidden="true"></i>
+      <i appIcon="bi-x-lg" aria-hidden="true"></i>
     </button>
 
     <section class="sidebar__block">
@@ -32,7 +32,7 @@
       <ul class="sidebar__grid">
         @for (highlight of highlights; track highlight.label) {
           <li>
-            <i [class]="'bi ' + highlight.icon" aria-hidden="true"></i>
+            <i [appIcon]="highlight.icon" aria-hidden="true"></i>
             {{ highlight.label }}
           </li>
         }
@@ -51,7 +51,7 @@
         @for (social of socials; track social.label) {
           <li>
             <a [href]="social.url" target="_blank" rel="noopener" [attr.aria-label]="social.label">
-              <i [class]="'bi ' + social.icon" aria-hidden="true"></i>
+              <i [appIcon]="social.icon" aria-hidden="true"></i>
             </a>
           </li>
         }

@@ -1,10 +1,11 @@
 // Import order matters: tokens → Bootstrap (themed by those tokens) → our own
-// layers on top.
+// layers on top. Icons are not here: they come from the SVG sprite that
+// scripts/generate-icon-sprite.mjs builds, not from a webfont.
 @use "vendors/bootstrap-overrides";
-@use "bootstrap-icons/font/bootstrap-icons.css";
 @use "base/base";
 @use "components/buttons";
 @use "components/section-title";
 @use "components/read-more";
 @use "components/project-card";
 @use "components/post-card";
+@use "components/detail-layout";

@@ -30,6 +30,7 @@ npm run build              # both locales, prerendered, into dist/glanzwerk/brow
 npm test                   # Vitest
 npx ng test --watch=false  # single run, for CI or a quick check
 npm run sitemap            # regenerate public/sitemap.xml (also runs on prebuild)
+npm run icons              # regenerate public/assets/icons/sprite.svg (also runs on prebuild)
 
 npx ng extract-i18n --output-path src/locale --out-file messages.xlf
 ```
@@ -40,7 +41,7 @@ Single test file: `npx ng test --watch=false --include='**/seo.spec.ts'`.
 
 ## Frontend architecture
 
-Angular 22, **standalone components** (no NgModules), **zoneless**, **Vitest**, 2016 file naming (`app.component.ts`). Bootstrap 5 source SCSS + bootstrap-icons. Swiper web components. `@angular/ssr` for static prerendering, `@angular/localize` for i18n.
+Angular 22, **standalone components** (no NgModules), **zoneless**, **Vitest**, 2016 file naming (`app.component.ts`). Bootstrap 5 source SCSS, imported part by part. Icons are an SVG sprite, not a webfont. Swiper web components, loaded on demand. `@angular/ssr` for static prerendering, `@angular/localize` for i18n.
 
 ### Content catalogs are the single source of truth
 
@@ -71,6 +72,12 @@ Workflow for new strings: mark up → `ng extract-i18n` → add the German targe
 
 **Still untranslated:** the three content catalogs. `/de/` pages have German chrome, nav, headings and page titles but English body copy.
 
+### Chrome that is wired once, not per page
+
+- `shared/components/screen-wipe/` is the loading overlay: soap foam a squeegee pushes off the screen. It is prerendered **open**, and the boot wipe is a pure CSS animation, so it clears itself with JavaScript disabled and can never hang. `core/services/route-loading.service.ts` owns all of the timing — the overlay only renders `idle | busy | wiping` — and a navigation under `GRACE_MS` never shows it at all. The splash holds the page for roughly a second, which is LCP you are choosing to spend; `$boot-hold` and `$boot-duration` in its SCSS are the knobs.
+- `core/services/scroll.service.ts` is **the only scroll listener in the app** — one `{ passive: true }` handler throttled to one read per frame. The sticky header and the back-to-top button `computed()` off it. Do not add a `(window:scroll)` host binding: Angular registers those non-passive, one per component.
+- `shared/components/icon/` renders sprite icons through the selector `i[appIcon]`, so the element stays an `<i>` and every stylesheet rule that sizes or colours an icon through its parent keeps working. The glyph is an `<svg>` of `1em` inheriting `currentColor`.
+
 ### Prerendering
 
 `outputMode: "static"` — no Node server, just a static host. 22 routes × 2 locales = **44 prerendered HTML files**. `app.routes.server.ts` supplies `getPrerenderParams` from the catalogs.
@@ -78,19 +85,22 @@ Workflow for new strings: mark up → `ng extract-i18n` → add the German targe
 Two rules this imposes:
 
 - **Never touch the `document` or `window` globals in code that runs during render.** Inject `DOCUMENT`. An `effect()` runs while prerendering, where no global document exists. This fails as a per-route error while the build still reports success — grep the build output for `ERROR`.
+- **Swiper is registered on demand, not in `main.ts`.** `core/swiper-elements.ts` dynamic-imports it the first time a carousel is constructed, so it stays out of the initial bundle and off the prerender path. A component with a `<swiper-container>` has to call `registerSwiperElements()` itself.
 - **Swiper carousels carry `ngSkipHydration`.** Swiper clones and reorders slides on init, so prerendered markup can never match and hydration throws NG0500. The slides stay in the HTML for crawlers either way.
 
 ### Styles
 
-Tokens in `styles/abstracts/_variables.scss` (measured off the Trice reference template — do not re-guess them) feed `vendors/_bootstrap-overrides.scss`, which sets Bootstrap's variables **before** `@import "bootstrap"`. The IDE's "Invalid position for @import rule" warning there is expected.
+Tokens in `styles/abstracts/_variables.scss` (measured off the Trice reference template — do not re-guess them) feed `vendors/_bootstrap-overrides.scss`, which sets Bootstrap's variables **before** the Bootstrap imports. The IDE's "Invalid position for @import rule" warning there is expected.
+
+**Bootstrap is imported part by part, not whole.** The site builds its own buttons, cards, forms, nav and overlays, so only `root`, `reboot`, `type`, `containers`, `grid` and the utilities API are pulled in. `$allowed-utilities` in that file is the list of utility groups that exist at all — Bootstrap otherwise generates every group across six breakpoints, which was the largest single block of CSS in the bundle. **A utility outside that list silently does not exist**; add its key before reaching for one.
 
 `styles/main.scss` fixes the layer order: tokens → Bootstrap → base → components. `src/styles.scss` only `@use "main"`.
 
-**Never hardcode a colour or spacing value in a component stylesheet.** Shared card styles live in `styles/components/` rather than component files because view encapsulation would otherwise force duplication.
+**Never hardcode a colour or spacing value in a component stylesheet.** Shared card and page-shell styles live in `styles/components/` rather than component files because view encapsulation would otherwise force duplication. `_detail-layout.scss` is the shell behind every catalog detail page: the service, project and post pages all render the `.detail` block and keep only their own extras in their component stylesheet.
 
 ### Build pipeline
 
-`prebuild` regenerates `sitemap.xml` from the catalogs. `postbuild` (`scripts/finalize-dist.mjs`) copies `robots.txt` and `sitemap.xml` to the **dist root** — localized builds put them inside `/de/` and `/en/`, where no crawler looks — and writes a `noindex` root page redirecting to `/de/`.
+`prebuild` regenerates `sitemap.xml` from the catalogs and `assets/icons/sprite.svg` from the icons the source uses. `scripts/generate-icon-sprite.mjs` greps `src` for `bi-*` names and pulls those SVGs out of `node_modules/bootstrap-icons`, so **`bi-` stays the icon name prefix even though the font is gone** — it is what makes one grep find every usage. An unknown name fails the build rather than shipping a blank icon. `postbuild` (`scripts/finalize-dist.mjs`) copies `robots.txt` and `sitemap.xml` to the **dist root** — localized builds put them inside `/de/` and `/en/`, where no crawler looks — and writes a `noindex` root page redirecting to `/de/`.
 
 ### Hosting contract
 
@@ -133,4 +143,4 @@ These are deliberate placeholders, not bugs — check before treating any as rea
 - **No Impressum or Datenschutzerklärung.** Legally required for a German business site. The contact form's consent checkbox deliberately has no link because the page does not exist.
 - The hero play button has no video behind it.
 - `src/server.ts`, the `serve:ssr:glanzwerk` script and the `express` dependency are dead under `outputMode: "static"`.
-- Initial bundle is ~870 kB raw; ~317 kB of CSS is bootstrap-icons shipping ~2000 glyphs for the ~30 in use.
+- `features/home/projects/` is dead: nothing renders `<app-projects />` since the home page dropped it, and the projects page uses `shared/components/project-card/` instead.

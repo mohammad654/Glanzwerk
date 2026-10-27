@@ -13,13 +13,13 @@
       @for (step of steps; track step.title; let i = $index) {
         <div class="col-lg-4 col-sm-6">
           <div class="process__card">
-            <i [class]="'bi ' + step.icon" aria-hidden="true"></i>
+            <i [appIcon]="step.icon" aria-hidden="true"></i>
             <h3>{{ step.title }}</h3>
             <p>{{ step.text }}</p>
 
             <a class="read-more" routerLink="/contact">
               <ng-container i18n="@@cta.getInTouch">Get In Touch</ng-container>
-              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              <i appIcon="bi-plus-lg" aria-hidden="true"></i>
             </a>
 
             <span class="process__number">{{ i + 1 | number: '2.0' }}</span>

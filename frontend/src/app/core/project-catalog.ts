@@ -104,5 +104,8 @@ export const PROJECTS: readonly Project[] = [
 
 export const projectPath = (slug: string): string => `projects/${slug}`;
 
+/** The same route as a router link. */
+export const projectLink = (slug: string): string => `/${projectPath(slug)}`;
+
 export const findProject = (slug: string): Project | undefined =>
   PROJECTS.find((project) => project.slug === slug);

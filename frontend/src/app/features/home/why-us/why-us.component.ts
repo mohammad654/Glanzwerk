@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 interface Commitment {
   title: string;
@@ -7,6 +8,7 @@ interface Commitment {
 
 @Component({
   selector: 'app-why-us',
+  imports: [IconComponent],
   templateUrl: './why-us.component.html',
   styleUrl: './why-us.component.scss',
 })

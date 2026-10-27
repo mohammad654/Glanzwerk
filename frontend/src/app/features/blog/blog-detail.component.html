@@ -1,15 +1,15 @@
 @if (post(); as article) {
   <app-page-banner [title]="article.title" [trail]="trail" />
 
-  <section class="blog-detail">
+  <section class="detail detail--article">
     <div class="container">
       <div class="row gy-5 g-lg-5">
         <div class="col-lg-8">
-          <div class="blog-detail__media">
+          <div class="detail__media">
             <img [src]="article.image" [alt]="article.title" />
           </div>
 
-          <ul class="blog-detail__meta">
+          <ul class="detail__meta">
             <li>{{ article.author }}</li>
             <li>{{ article.date }}</li>
           </ul>
@@ -22,9 +22,9 @@
         </div>
 
         <aside class="col-lg-4">
-          <div class="blog-detail__panel">
+          <div class="detail__panel">
             <h3>More Posts</h3>
-            <ul class="blog-detail__list">
+            <ul class="detail__list detail__list--stacked">
               @for (other of others(); track other.slug) {
                 <li>
                   <a [routerLink]="path(other.slug)">{{ other.title }}</a>
@@ -40,7 +40,7 @@
 } @else {
   <app-page-banner title="Post not found" [trail]="trail" />
 
-  <section class="blog-detail text-center">
+  <section class="detail text-center">
     <div class="container">
       <p>That post does not exist.</p>
       <a class="default-btn" routerLink="/blog">See all posts</a>

@@ -43,12 +43,18 @@
     font-size: v.$font-size-sm;
   }
 
+  // Drawn rather than set in a font: two borders on a rotated box give the same
+  // chevron the icons use, and it costs nothing to load.
   li + li::before {
-    content: '\F285'; // chevron-right
-    font-family: bootstrap-icons, sans-serif;
-    margin: 0 0.5rem;
-    color: v.$primary;
-    font-size: 0.75rem;
+    content: '';
+    display: inline-block;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    margin: 0 0.5rem 0.0625rem;
+    border-top: 0.09375rem solid v.$primary;
+    border-right: 0.09375rem solid v.$primary;
+    rotate: 45deg;
+    vertical-align: middle;
   }
 
   a {

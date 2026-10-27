@@ -1,0 +1,14 @@
+<div class="wipe__foam">
+  <div class="wipe__bubbles" aria-hidden="true">
+    @for (bubble of bubbles; track bubble) {
+      <span></span>
+    }
+  </div>
+
+  <div class="wipe__brand">
+    <img src="assets/images/logo-light.png" alt="Glanzwerk" width="242" height="134" />
+    <p class="wipe__message">{{ message() }}</p>
+  </div>
+
+  <div class="wipe__squeegee" aria-hidden="true"></div>
+</div>

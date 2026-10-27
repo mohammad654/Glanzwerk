@@ -1,11 +1,13 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, PLATFORM_ID, inject } from '@angular/core';
 
-import { PROJECTS, projectPath } from '../../../core/project-catalog';
+import { PROJECTS } from '../../../core/project-catalog';
+import { registerSwiperElements } from '../../../core/swiper-elements';
+import { ProjectCardComponent } from '../../../shared/components/project-card/project-card.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [RouterLink],
+  imports: [ProjectCardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -15,7 +17,9 @@ import { PROJECTS, projectPath } from '../../../core/project-catalog';
 export class ProjectsComponent {
   readonly projects = PROJECTS;
 
-  path(slug: string): string {
-    return '/' + projectPath(slug);
+  constructor() {
+    if (isPlatformBrowser(inject(PLATFORM_ID))) {
+      void registerSwiperElements();
+    }
   }
 }

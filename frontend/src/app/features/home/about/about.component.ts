@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-about',
-  imports: [RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   host: {

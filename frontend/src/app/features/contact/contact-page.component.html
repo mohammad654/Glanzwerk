@@ -15,7 +15,7 @@
       @for (channel of channels; track channel.label) {
         <li class="channel">
           <span class="channel__icon" aria-hidden="true">
-            <i class="bi" [class]="'bi ' + channel.icon"></i>
+            <i [appIcon]="channel.icon"></i>
           </span>
           <h3>{{ channel.label }}</h3>
           @if (channel.href) {
@@ -32,6 +32,7 @@
       <div class="col-lg-7">
         @if (submitted()) {
           <p class="contact__note" role="status">
+            <i appIcon="bi-check-circle-fill" aria-hidden="true"></i>
             Thank you. Your enquiry is complete. Online sending is not connected yet, so please call
             {{ company.phone }} or email {{ company.email }} and we will pick it up straight away.
           </p>
@@ -197,7 +198,7 @@
               us and we will tell you straight away whether we can make it.
             </p>
             <a class="contact__phone" [href]="'tel:' + company.phone">
-              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <i appIcon="bi-telephone-fill" aria-hidden="true"></i>
               {{ company.phone }}
             </a>
           </div>

@@ -3,9 +3,11 @@ import { DOCUMENT, Component, effect, inject } from '@angular/core';
 import { COMPANY, SOCIAL_LINKS } from '../../core/company';
 import { SERVICES } from '../../core/service-catalog';
 import { SidebarService } from '../../core/services/sidebar.service';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-sidebar-modal',
+  imports: [IconComponent],
   templateUrl: './sidebar-modal.component.html',
   styleUrl: './sidebar-modal.component.scss',
   host: {

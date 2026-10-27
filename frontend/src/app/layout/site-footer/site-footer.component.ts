@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 
 import { ADDRESS_LINE, COMPANY, SOCIAL_LINKS } from '../../core/company';
 import { NAV_ITEMS } from '../../core/navigation';
-import { SERVICES, servicePath } from '../../core/service-catalog';
+import { SERVICES, serviceLink } from '../../core/service-catalog';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-site-footer',
-  imports: [RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './site-footer.component.html',
   styleUrl: './site-footer.component.scss',
 })
@@ -19,7 +20,7 @@ export class SiteFooterComponent {
 
   readonly services = SERVICES.map((service) => ({
     label: service.shortTitle,
-    path: '/' + servicePath(service.slug),
+    path: serviceLink(service.slug),
   }));
 
   // Reuses the header's labels so the two menus cannot disagree in either language.

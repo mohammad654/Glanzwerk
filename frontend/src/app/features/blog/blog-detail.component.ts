@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { BLOG_POSTS, blogPath, findPost } from '../../core/blog-catalog';
+import { BLOG_POSTS, blogLink, findPost } from '../../core/blog-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
 
 @Component({
@@ -20,7 +20,6 @@ export class BlogDetailComponent {
 
   readonly trail = [{ label: 'Blog', path: 'blog' }];
 
-  path(slug: string): string {
-    return '/' + blogPath(slug);
-  }
+  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly path = blogLink;
 }

@@ -1098,6 +1098,54 @@
           <context context-type="linenumber">17,19</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="wipe.message.1" datatype="html">
+        <source>Scrubbing the pixels…</source>
+        <target state="translated">Pixel werden geschrubbt …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wipe.message.2" datatype="html">
+        <source>Buffing out the fingerprints…</source>
+        <target state="translated">Fingerabdrücke werden wegpoliert …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wipe.message.3" datatype="html">
+        <source>Chasing the last dust bunny…</source>
+        <target state="translated">Letztes Staubmäuschen wird gejagt …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wipe.message.4" datatype="html">
+        <source>Wringing out the sponge…</source>
+        <target state="translated">Schwamm wird ausgewrungen …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wipe.message.5" datatype="html">
+        <source>Fresh water, clean bucket…</source>
+        <target state="translated">Frisches Wasser, neuer Eimer …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wipe.message.6" datatype="html">
+        <source>Polishing the corners nobody checks…</source>
+        <target state="translated">Ecken polieren, die niemand kontrolliert …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

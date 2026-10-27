@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { SERVICES } from '../../../core/service-catalog';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-appointment',
-  imports: [ReactiveFormsModule],
+  imports: [IconComponent, ReactiveFormsModule],
   templateUrl: './appointment.component.html',
   styleUrl: './appointment.component.scss',
 })

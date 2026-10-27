@@ -1,11 +1,12 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { SERVICES, servicePath } from '../../../core/service-catalog';
+import { SERVICES, serviceLink } from '../../../core/service-catalog';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-services',
-  imports: [RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
   host: {
@@ -18,7 +19,6 @@ export class ServicesComponent {
 
   readonly services = SERVICES;
 
-  path(slug: string): string {
-    return '/' + servicePath(slug);
-  }
+  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly path = serviceLink;
 }

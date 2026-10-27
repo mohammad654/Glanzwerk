@@ -9,12 +9,27 @@
 }
 
 .service {
+  position: relative;
   height: calc(100% - 1.875rem);
   margin-bottom: 1.875rem; // 30px
   padding: 0.9375rem; // 15px
   border-radius: 0.25rem;
   background: #fff;
   box-shadow: 0 0 1.25rem 0.1875rem rgba(#000, 0.05);
+  transition:
+    scale 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    // Lifts clear of the neighbouring cards it now overlaps.
+    z-index: 2;
+    scale: 1.06;
+    box-shadow: 0 1.25rem 2.5rem 0 rgba(#000, 0.18);
+
+    .service__media img {
+      scale: 1.05;
+    }
+  }
 }
 
 .service__media {
@@ -28,10 +43,6 @@
     aspect-ratio: 386 / 271;
     object-fit: cover;
     transition: scale 0.6s ease-in-out;
-  }
-
-  &:hover img {
-    scale: 1.05;
   }
 }
 

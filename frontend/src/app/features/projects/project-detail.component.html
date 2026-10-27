@@ -1,15 +1,15 @@
 @if (project(); as item) {
   <app-page-banner [title]="item.title" [trail]="trail" />
 
-  <section class="project-detail">
+  <section class="detail">
     <div class="container">
       <div class="row gy-5 g-lg-5">
         <div class="col-lg-8">
-          <div class="project-detail__media">
+          <div class="detail__media">
             <img [src]="item.image" [alt]="item.title" />
           </div>
 
-          <span class="project-detail__category">{{ item.category }}</span>
+          <span class="detail__category">{{ item.category }}</span>
           <h2>{{ item.title }}</h2>
 
           @for (paragraph of item.description; track paragraph) {
@@ -18,9 +18,9 @@
         </div>
 
         <aside class="col-lg-4">
-          <div class="project-detail__panel">
+          <div class="detail__panel">
             <h3>Project Details</h3>
-            <ul class="project-detail__facts">
+            <ul class="detail__list detail__list--facts">
               @for (fact of item.facts; track fact.label) {
                 <li>
                   <span>{{ fact.label }}</span>
@@ -30,13 +30,13 @@
             </ul>
           </div>
 
-          <div class="project-detail__panel">
+          <div class="detail__panel">
             <h3>More Projects</h3>
-            <ul class="project-detail__list">
+            <ul class="detail__list">
               @for (other of others(); track other.slug) {
                 <li>
                   <a [routerLink]="path(other.slug)">
-                    <i [class]="'bi ' + other.icon" aria-hidden="true"></i>
+                    <i [appIcon]="other.icon" aria-hidden="true"></i>
                     {{ other.title }}
                   </a>
                 </li>
@@ -52,7 +52,7 @@
 } @else {
   <app-page-banner title="Project not found" [trail]="trail" />
 
-  <section class="project-detail text-center">
+  <section class="detail text-center">
     <div class="container">
       <p>That project does not exist.</p>
       <a class="default-btn" routerLink="/projects">See all projects</a>

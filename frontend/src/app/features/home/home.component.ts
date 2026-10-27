@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 import { AboutComponent } from './about/about.component';
 import { AppointmentComponent } from './appointment/appointment.component';
-import { BlogComponent } from './blog/blog.component';
 import { FeatureStripComponent } from './feature-strip/feature-strip.component';
 import { HeroComponent } from './hero/hero.component';
-import { ProcessComponent } from './process/process.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { ServicesComponent } from './services/services.component';
 import { StatsComponent } from '../about/stats/stats.component';
 import { WhyUsComponent } from './why-us/why-us.component';
@@ -20,10 +17,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
     StatsComponent,
     ServicesComponent,
     WhyUsComponent,
-    ProcessComponent,
-    ProjectsComponent,
     AppointmentComponent,
-    BlogComponent,
   ],
   template: `
     <app-hero />
@@ -32,10 +26,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
     <app-stats />
     <app-services />
     <app-why-us />
-    <app-process />
-    <app-projects />
     <app-appointment />
-    <app-blog />
   `,
 })
 export class HomeComponent {}

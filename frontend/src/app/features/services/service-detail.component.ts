@@ -2,12 +2,13 @@ import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { COMPANY } from '../../core/company';
-import { SERVICES, findService, servicePath } from '../../core/service-catalog';
+import { SERVICES, findService, serviceLink } from '../../core/service-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [PageBannerComponent, RouterLink],
+  imports: [IconComponent, PageBannerComponent, RouterLink],
   templateUrl: './service-detail.component.html',
   styleUrl: './service-detail.component.scss',
 })
@@ -21,7 +22,6 @@ export class ServiceDetailComponent {
   readonly allServices = SERVICES;
   readonly trail = [{ label: 'Services', path: 'services' }];
 
-  path(slug: string): string {
-    return '/' + servicePath(slug);
-  }
+  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly path = serviceLink;
 }

@@ -1,5 +1,10 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, PLATFORM_ID, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { preloadImage } from '../../../core/preload-image';
+import { registerSwiperElements } from '../../../core/swiper-elements';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 interface HeroSlide {
   eyebrow: string;
@@ -10,7 +15,7 @@ interface HeroSlide {
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -39,4 +44,14 @@ export class HeroComponent {
       image: 'assets/images/hero/hero-winter.jpg',
     },
   ];
+
+  constructor() {
+    // The first slide's background is the page's largest element, and a CSS
+    // background is invisible to the preload scanner.
+    preloadImage(inject(DOCUMENT), this.slides[0].image);
+
+    if (isPlatformBrowser(inject(PLATFORM_ID))) {
+      void registerSwiperElements();
+    }
+  }
 }

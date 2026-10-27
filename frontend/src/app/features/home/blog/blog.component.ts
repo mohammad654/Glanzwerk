@@ -1,11 +1,12 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { BLOG_POSTS, blogPath } from '../../../core/blog-catalog';
+import { BLOG_POSTS, blogLink } from '../../../core/blog-catalog';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 @Component({
   selector: 'app-blog',
-  imports: [RouterLink],
+  imports: [IconComponent, RouterLink],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss',
   host: {
@@ -18,7 +19,6 @@ export class BlogComponent {
 
   readonly posts = BLOG_POSTS;
 
-  path(slug: string): string {
-    return '/' + blogPath(slug);
-  }
+  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly path = blogLink;
 }

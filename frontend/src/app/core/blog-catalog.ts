@@ -62,5 +62,8 @@ export const BLOG_POSTS: readonly BlogPost[] = [
 
 export const blogPath = (slug: string): string => `blog/${slug}`;
 
+/** The same route as a router link. */
+export const blogLink = (slug: string): string => `/${blogPath(slug)}`;
+
 export const findPost = (slug: string): BlogPost | undefined =>
   BLOG_POSTS.find((post) => post.slug === slug);

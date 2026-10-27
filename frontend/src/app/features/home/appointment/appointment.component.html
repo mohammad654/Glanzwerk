@@ -7,6 +7,7 @@
 
     @if (submitted()) {
       <p class="appointment__note" role="status">
+        <i appIcon="bi-check-circle-fill" aria-hidden="true"></i>
         Thank you. Your details are complete. Online booking is not yet connected, so please call or
         email us and we will arrange the survey directly.
       </p>
@@ -16,50 +17,105 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('name')">
-            <input type="text" formControlName="name" placeholder="Enter Your Name" />
-            <i class="bi bi-person" aria-hidden="true"></i>
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="Enter Your Name"
+              autocomplete="name"
+              [attr.aria-invalid]="isInvalid('name') || null"
+              [attr.aria-describedby]="isInvalid('name') ? 'booking-name-error' : null"
+            />
+            <i appIcon="bi-person" aria-hidden="true"></i>
+            @if (isInvalid('name')) {
+              <span class="form-group__error" id="booking-name-error">Please tell us your name.</span>
+            }
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('email')">
-            <input type="email" formControlName="email" placeholder="Enter Your Email" />
-            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter Your Email"
+              autocomplete="email"
+              [attr.aria-invalid]="isInvalid('email') || null"
+              [attr.aria-describedby]="isInvalid('email') ? 'booking-email-error' : null"
+            />
+            <i appIcon="bi-envelope" aria-hidden="true"></i>
+            @if (isInvalid('email')) {
+              <span class="form-group__error" id="booking-email-error">Please enter a valid email address.</span>
+            }
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('phone')">
-            <input type="tel" formControlName="phone" placeholder="Enter Your Phone" />
-            <i class="bi bi-phone" aria-hidden="true"></i>
+            <input
+              type="tel"
+              formControlName="phone"
+              placeholder="Enter Your Phone"
+              autocomplete="tel"
+              [attr.aria-invalid]="isInvalid('phone') || null"
+              [attr.aria-describedby]="isInvalid('phone') ? 'booking-phone-error' : null"
+            />
+            <i appIcon="bi-phone" aria-hidden="true"></i>
+            @if (isInvalid('phone')) {
+              <span class="form-group__error" id="booking-phone-error">Please enter a number we can reach you on.</span>
+            }
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('service')">
-            <select formControlName="service" aria-label="Select service">
+            <select
+              formControlName="service"
+              aria-label="Select service"
+              [attr.aria-invalid]="isInvalid('service') || null"
+              [attr.aria-describedby]="isInvalid('service') ? 'booking-service-error' : null"
+            >
               <option value="">Select Service</option>
               @for (service of services; track service) {
                 <option [value]="service">{{ service }}</option>
               }
             </select>
+            @if (isInvalid('service')) {
+              <span class="form-group__error" id="booking-service-error">Please choose the service you need.</span>
+            }
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('date')">
-            <input type="date" formControlName="date" aria-label="Preferred date" />
+            <input
+              type="date"
+              formControlName="date"
+              aria-label="Preferred date"
+              [attr.aria-invalid]="isInvalid('date') || null"
+              [attr.aria-describedby]="isInvalid('date') ? 'booking-date-error' : null"
+            />
+            @if (isInvalid('date')) {
+              <span class="form-group__error" id="booking-date-error">Please pick a date that suits you.</span>
+            }
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6">
           <div class="form-group" [class.is-invalid]="isInvalid('time')">
-            <select formControlName="time" aria-label="Select time">
+            <select
+              formControlName="time"
+              aria-label="Select time"
+              [attr.aria-invalid]="isInvalid('time') || null"
+              [attr.aria-describedby]="isInvalid('time') ? 'booking-time-error' : null"
+            >
               <option value="">Select Time</option>
               @for (slot of timeSlots; track slot) {
                 <option [value]="slot">{{ slot }}</option>
               }
             </select>
+            @if (isInvalid('time')) {
+              <span class="form-group__error" id="booking-time-error">Please pick a time slot.</span>
+            }
           </div>
         </div>
 

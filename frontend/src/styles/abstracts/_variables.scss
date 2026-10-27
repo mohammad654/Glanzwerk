@@ -6,6 +6,7 @@ $brand-cyan: #04b8e5; // buttons, active links, eyebrow text
 $brand-indigo: #190f3c; // top bar
 $brand-headings: #232350; // headings
 $brand-body: #5d5d5d; // body copy
+$brand-sky: #78a9e3; // bylines, dates and other secondary meta
 
 // Tinted backgrounds that separate alternating sections
 $bg-tint: #f4fbfe;
@@ -19,6 +20,7 @@ $brand-green: #7fbf5a;
 $primary: $brand-cyan;
 $secondary: $brand-green;
 $accent: $brand-cyan;
+$text-meta: $brand-sky;
 
 // Type
 $font-body: "Lato", system-ui, sans-serif;
@@ -39,6 +41,12 @@ $navbar-link-color: #fff;
 $navbar-link-active: $brand-cyan;
 $navbar-link-size: 0.9375rem; // 15px
 $logo-height: 3.5rem; // 56px — the mark is stacked, so it needs the height
+
+// Form fields
+$input-border: #ced4da;
+$input-error: #d9534f;
+$input-error-on-dark: #ffb3b0;
+$form-success: $brand-green;
 
 // Buttons
 $btn-padding: 0.75rem 1.25rem; // 12px 20px

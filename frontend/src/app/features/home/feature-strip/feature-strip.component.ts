@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { COMPANY } from '../../../core/company';
+import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 interface Feature {
   icon: string;
@@ -10,6 +11,7 @@ interface Feature {
 
 @Component({
   selector: 'app-feature-strip',
+  imports: [IconComponent],
   templateUrl: './feature-strip.component.html',
   styleUrl: './feature-strip.component.scss',
 })

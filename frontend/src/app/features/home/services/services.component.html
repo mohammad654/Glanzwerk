@@ -29,11 +29,11 @@
 
               <a class="read-more" [routerLink]="path(service.slug)">
                 <ng-container i18n="@@cta.readMore">Read More</ng-container>
-                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                <i appIcon="bi-plus-lg" aria-hidden="true"></i>
               </a>
 
               <span class="service__badge" aria-hidden="true">
-                <i [class]="'bi ' + service.icon"></i>
+                <i [appIcon]="service.icon"></i>
               </span>
             </div>
           </div>

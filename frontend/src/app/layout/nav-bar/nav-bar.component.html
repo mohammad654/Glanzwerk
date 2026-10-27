@@ -1,7 +1,7 @@
 <nav class="site-nav" [class.site-nav--open]="menuOpen()">
   <div class="container site-nav__inner">
     <a class="site-nav__brand" routerLink="/" (click)="closeMenu()">
-      <img src="assets/images/logo-light.png" alt="Glanzwerk" />
+      <img src="assets/images/generated_logo..png" alt="Glanzwerk" />
     </a>
 
     <ul id="primary-menu" class="site-nav__menu">
@@ -15,7 +15,7 @@
           >
             {{ item.label }}
             @if (item.children) {
-              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+              <i appIcon="bi-chevron-down" aria-hidden="true"></i>
             }
           </a>
 
@@ -45,7 +45,7 @@
         i18n-aria-label="@@nav.panel"
         aria-label="Open information panel"
       >
-        <i class="bi bi-list" aria-hidden="true"></i>
+        <i appIcon="bi-list" aria-hidden="true"></i>
       </button>
 
       <a class="default-btn site-nav__cta" routerLink="/contact" i18n="@@cta.quote">Get A Quote</a>
@@ -59,12 +59,7 @@
         i18n-aria-label="@@nav.toggle"
         aria-label="Toggle navigation"
       >
-        <i
-          class="bi"
-          [class.bi-list]="!menuOpen()"
-          [class.bi-x-lg]="menuOpen()"
-          aria-hidden="true"
-        ></i>
+        <i [appIcon]="menuOpen() ? 'bi-x-lg' : 'bi-list'" aria-hidden="true"></i>
       </button>
     </div>
   </div>
