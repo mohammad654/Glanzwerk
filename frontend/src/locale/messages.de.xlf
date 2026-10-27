@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="company.openingHours" datatype="html">
+        <source>9:00 am - 6:00 pm</source>
+        <target state="translated">9:00 - 18:00 Uhr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/company.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Home</source>
+        <target state="translated">Start</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.about" datatype="html">
+        <source>About</source>
+        <target state="translated">Über uns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.services" datatype="html">
+        <source>Services</source>
+        <target state="translated">Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.projects" datatype="html">
+        <source>Projects</source>
+        <target state="translated">Projekte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.blog" datatype="html">
+        <source>Blog</source>
+        <target state="translated">Blog</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.contact" datatype="html">
+        <source>Contact</source>
+        <target state="translated">Kontakt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.about.title" datatype="html">
+        <source>About Glanzwerk | One Team For Cleaning, Moving &amp; More</source>
+        <target state="translated">Über Glanzwerk | Ein Team für Reinigung, Umzug &amp; mehr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.about.description" datatype="html">
+        <source>Directly employed, insured and vetted staff covering cleaning, moving, clearance and property support, with fixed pricing agreed before any work begins.</source>
+        <target state="translated">Festangestellte, versicherte und geprüfte Mitarbeitende für Reinigung, Umzug, Entrümpelung und Objektbetreuung. Festpreis, vereinbart vor Arbeitsbeginn.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.services.title" datatype="html">
+        <source>Cleaning, Moving &amp; Property Services | Glanzwerk</source>
+        <target state="translated">Reinigung, Umzug &amp; Hausservice in Berlin | Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.services.description" datatype="html">
+        <source>Seven services from one team: home and commercial cleaning, moving, snow and outdoor work, 24/7 emergencies, property maintenance and waste removal.</source>
+        <target state="translated">Sieben Leistungen aus einer Hand: Haus- und Gebäudereinigung, Umzüge, Winterdienst, 24/7-Notdienst, Hausmeisterservice und Entrümpelung in Berlin.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.projects.title" datatype="html">
+        <source>Our Work | Cleaning &amp; Property Project Examples | Glanzwerk</source>
+        <target state="translated">Referenzen | Reinigung &amp; Objektbetreuung | Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.projects.description" datatype="html">
+        <source>Real jobs we have delivered: office contracts, facade and kitchen cleaning, pressure washing and winter service, with the scope and schedule behind each one.</source>
+        <target state="translated">Ausgeführte Aufträge: Büroreinigung im Vertrag, Fassaden- und Küchenreinigung, Hochdruckreinigung und Winterdienst, jeweils mit Umfang und Ablauf.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.blog.title" datatype="html">
+        <source>Cleaning &amp; Property Advice | Glanzwerk Blog</source>
+        <target state="translated">Ratgeber Reinigung &amp; Objektbetreuung | Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.blog.description" datatype="html">
+        <source>Practical guidance on cleaning frequencies, written specifications and post-construction handover, from the team that does the work.</source>
+        <target state="translated">Praktische Hinweise zu Reinigungsintervallen, Leistungsverzeichnissen und der Bauendreinigung, von dem Team, das die Arbeit ausführt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.contact.title" datatype="html">
+        <source>Contact Glanzwerk | Request A Free Quote</source>
+        <target state="translated">Kontakt Glanzwerk | Kostenloses Angebot anfordern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.contact.description" datatype="html">
+        <source>Tell us what you need and we will come back with a fixed written price. Same-day and out-of-hours work included. Call, email or send an enquiry.</source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen, und Sie erhalten einen schriftlichen Festpreis. Auch kurzfristig und außerhalb der Geschäftszeiten. Anrufen oder anfragen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.login.title" datatype="html">
+        <source>Sign In | Glanzwerk</source>
+        <target state="translated">Anmelden | Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.login.description" datatype="html">
+        <source>Sign in to the Glanzwerk portal.</source>
+        <target state="translated">Melden Sie sich im Glanzwerk-Portal an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="site.title" datatype="html">
+        <source>Glanzwerk | Cleaning, Moving &amp; Property Services</source>
+        <target state="translated">Glanzwerk | Reinigung, Umzug &amp; Hausservice in Berlin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/site.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="site.description" datatype="html">
+        <source>More than cleaning. Glanzwerk handles home and commercial cleaning, moving, clearance, snow removal and property maintenance, including same-day and 24/7 call-outs.</source>
+        <target state="translated">Mehr als Reinigung. Glanzwerk übernimmt Haus- und Gebäudereinigung, Umzüge, Entrümpelung, Winterdienst und Hausmeisterservice, auch kurzfristig und rund um die Uhr.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/site.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stats.1" datatype="html">
+        <source>Years in building services</source>
+        <target state="translated">Jahre in der Gebäudedienstleistung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stats.2" datatype="html">
+        <source>Sites under contract</source>
+        <target state="translated">Objekte unter Vertrag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stats.3" datatype="html">
+        <source>Directly employed staff</source>
+        <target state="translated">Festangestellte Mitarbeitende</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stats.4" datatype="html">
+        <source>Contract renewal rate</source>
+        <target state="translated">Vertragsverlängerungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.eyebrow" datatype="html">
+        <source>Contact</source>
+        <target state="translated">Kontakt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.heading" datatype="html">
+        <source>Tell Us What You Need</source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.lead" datatype="html">
+        <source> Cleaning, moving, clearance or something that does not fit a category: describe the job and we will tell you what it takes, what it costs and when we can be there. </source>
+        <target state="translated">Reinigung, Umzug, Entrümpelung oder etwas, das in keine Kategorie passt: Beschreiben Sie den Auftrag, und wir sagen Ihnen, was er erfordert, was er kostet und wann wir da sein können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.name" datatype="html">
+        <source>Your name</source>
+        <target state="translated">Ihr Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.email" datatype="html">
+        <source>Email address</source>
+        <target state="translated">E-Mail-Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.phone" datatype="html">
+        <source>Phone number</source>
+        <target state="translated">Telefonnummer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.service" datatype="html">
+        <source>What do you need?</source>
+        <target state="translated">Was brauchen Sie?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.selectService" datatype="html">
+        <source>Select a service</source>
+        <target state="translated">Leistung auswählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.somethingElse" datatype="html">
+        <source> Something else </source>
+        <target state="translated">Etwas anderes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.message" datatype="html">
+        <source>About the job</source>
+        <target state="translated">Zum Auftrag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.submit" datatype="html">
+        <source> Send Enquiry </source>
+        <target state="translated">Anfrage senden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.nextHeading" datatype="html">
+        <source>What happens next</source>
+        <target state="translated">Wie es weitergeht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">179,180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.urgentHeading" datatype="html">
+        <source>Need someone today?</source>
+        <target state="translated">Brauchen Sie heute noch jemanden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">187,189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.eyebrow" datatype="html">
+        <source>About Glanzwerk</source>
+        <target state="translated">Über Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.heading" datatype="html">
+        <source>Your Problem Is Our Starting Point</source>
+        <target state="translated">Ihr Problem ist unser Ausgangspunkt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.lead" datatype="html">
+        <source> Most property problems do not need five different companies. Glanzwerk covers cleaning, moving, clearance and property support for homes and businesses, from a standing appointment to the thing that went wrong this morning. </source>
+        <target state="translated">Die meisten Probleme rund um eine Immobilie brauchen keine fünf verschiedenen Firmen. Glanzwerk übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Privat- und Geschäftskunden, vom festen Termin bis zu dem, was heute Morgen schiefgegangen ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.highlight" datatype="html">
+        <source> Tell us what you need and we will bring the people and the equipment for it. We leave every space better than we found it. </source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen, und wir bringen die Leute und die Ausrüstung dafür mit. Wir hinterlassen jeden Raum besser, als wir ihn vorgefunden haben.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.moreAbout" datatype="html">
+        <source>More About Us</source>
+        <target state="translated">Mehr über uns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.point.1" datatype="html">
+        <source>Big jobs, small jobs and last-minute jobs</source>
+        <target state="translated">Große Aufträge, kleine Aufträge und kurzfristige Aufträge</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.point.2" datatype="html">
+        <source>Directly employed, insured and vetted staff</source>
+        <target state="translated">Festangestellte, versicherte und geprüfte Mitarbeitende</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.point.3" datatype="html">
+        <source>One point of contact from quote to completion</source>
+        <target state="translated">Ein Ansprechpartner vom Angebot bis zur Abnahme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about.point.4" datatype="html">
+        <source>Fixed pricing agreed before work begins</source>
+        <target state="translated">Festpreis, vereinbart vor Arbeitsbeginn</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.eyebrow" datatype="html">
+        <source>Request A Survey</source>
+        <target state="translated">Besichtigung anfragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.heading" datatype="html">
+        <source>Book A Free Site Visit</source>
+        <target state="translated">Kostenlose Besichtigung vereinbaren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.eyebrow" datatype="html">
+        <source>News</source>
+        <target state="translated">Aktuelles</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/blog/blog.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.heading" datatype="html">
+        <source>Insight &amp; Advice</source>
+        <target state="translated">Wissen &amp; Tipps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/blog/blog.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.lead" datatype="html">
+        <source> Practical guidance on specifying, buying and managing building cleaning, written by the people who carry it out. </source>
+        <target state="translated">Praktische Hinweise zum Ausschreiben, Einkaufen und Steuern von Gebäudereinigung, geschrieben von denen, die sie ausführen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/blog/blog.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.readMore" datatype="html">
+        <source>Read More</source>
+        <target state="translated">Mehr lesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/blog/blog.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/services/services.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="featureStrip.hotline" datatype="html">
+        <source>Hot Line</source>
+        <target state="translated">Hotline</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="featureStrip.contactToday" datatype="html">
+        <source>Contact Us Today!</source>
+        <target state="translated">Rufen Sie uns an!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.1.title" datatype="html">
+        <source>Last-Minute Ready</source>
+        <target state="translated">Kurzfristig verfügbar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.1.text" datatype="html">
+        <source>Same-day and out-of-hours call-outs, including weekends.</source>
+        <target state="translated">Einsätze am selben Tag und außerhalb der Geschäftszeiten, auch am Wochenende.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.2.title" datatype="html">
+        <source>One Team, Many Jobs</source>
+        <target state="translated">Ein Team, viele Aufgaben</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.2.text" datatype="html">
+        <source>Cleaning, moving and clearance from one contractor.</source>
+        <target state="translated">Reinigung, Umzug und Entrümpelung von einem Dienstleister.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.3.title" datatype="html">
+        <source>Insured &amp; Vetted</source>
+        <target state="translated">Versichert &amp; geprüft</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="feature.3.text" datatype="html">
+        <source>Directly employed staff, fully insured and background-checked.</source>
+        <target state="translated">Festangestellte Mitarbeitende, vollständig versichert und überprüft.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.requestQuote" datatype="html">
+        <source>Request A Quote</source>
+        <target state="translated">Angebot anfordern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.ourServices" datatype="html">
+        <source>Our Services</source>
+        <target state="translated">Unsere Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.play" datatype="html">
+        <source>Play intro video</source>
+        <target state="translated">Intro-Video abspielen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.1.eyebrow" datatype="html">
+        <source>Cleaning · Moving · Everything Between</source>
+        <target state="translated">Reinigung · Umzug · Alles dazwischen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.1.title" datatype="html">
+        <source>More Than Cleaning. More Than Expected.</source>
+        <target state="translated">Mehr als Reinigung. Mehr als erwartet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.1.text" datatype="html">
+        <source>One team for cleaning, moving, clearance and the jobs that come up in between. You call, we turn up when we said we would.</source>
+        <target state="translated">Ein Team für Reinigung, Umzug, Entrümpelung und die Aufgaben, die dazwischen auftauchen. Sie rufen an, wir kommen zur vereinbarten Zeit.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.2.eyebrow" datatype="html">
+        <source>Emergency &amp; 24/7</source>
+        <target state="translated">Notfall &amp; 24/7</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.2.title" datatype="html">
+        <source>When It Cannot Wait Until Monday</source>
+        <target state="translated">Wenn es nicht bis Montag warten kann</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.2.text" datatype="html">
+        <source>Same-day appointments, overnight shifts, weekends and holidays. Running out of time or facing a job too big to handle alone? Call us.</source>
+        <target state="translated">Termine am selben Tag, Nachtschichten, Wochenenden und Feiertage. Die Zeit wird knapp oder der Auftrag ist allein nicht zu schaffen? Rufen Sie uns an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.3.eyebrow" datatype="html">
+        <source>Snow &amp; Outdoor Services</source>
+        <target state="translated">Winter- &amp; Außendienst</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.3.title" datatype="html">
+        <source>Cleared Before The Day Begins</source>
+        <target state="translated">Geräumt, bevor der Tag beginnt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="hero.3.text" datatype="html">
+        <source>Snow clearing, gritting and outdoor care, with every deployment logged. That record is your evidence that the duty of care was met.</source>
+        <target state="translated">Schneeräumung, Streudienst und Außenpflege, jeder Einsatz dokumentiert. Dieser Nachweis belegt, dass Ihre Verkehrssicherungspflicht erfüllt wurde.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.eyebrow" datatype="html">
+        <source>How We Work</source>
+        <target state="translated">So arbeiten wir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.heading" datatype="html">
+        <source>From First Call To Ongoing Contract</source>
+        <target state="translated">Vom ersten Anruf zum laufenden Vertrag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.lead" datatype="html">
+        <source> Three steps, and no obligation at any of them. Most clients have a written specification within a week of the first conversation. </source>
+        <target state="translated">Drei Schritte, und keiner davon verpflichtet Sie zu etwas. Die meisten Kunden haben innerhalb einer Woche nach dem ersten Gespräch ein schriftliches Leistungsverzeichnis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.getInTouch" datatype="html">
+        <source>Get In Touch</source>
+        <target state="translated">Kontakt aufnehmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.1.title" datatype="html">
+        <source>Site Survey</source>
+        <target state="translated">Objektbegehung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.1.text" datatype="html">
+        <source>We visit the property, measure the areas and discuss how the building is actually used before quoting anything.</source>
+        <target state="translated">Wir besichtigen das Objekt, messen die Flächen und besprechen, wie das Gebäude tatsächlich genutzt wird, bevor wir ein Angebot machen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.2.title" datatype="html">
+        <source>Specification &amp; Quote</source>
+        <target state="translated">Leistungsverzeichnis &amp; Angebot</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.2.text" datatype="html">
+        <source>You receive a written schedule of tasks and frequencies alongside a fixed price, so the scope is clear from day one.</source>
+        <target state="translated">Sie erhalten ein schriftliches Verzeichnis der Aufgaben und Intervalle zusammen mit einem Festpreis, damit der Umfang von Anfang an klar ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.3.title" datatype="html">
+        <source>Delivery &amp; Review</source>
+        <target state="translated">Durchführung &amp; Kontrolle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="process.3.text" datatype="html">
+        <source>A fixed team starts on the agreed date under a named supervisor, with documented quality checks reported monthly.</source>
+        <target state="translated">Ein festes Team beginnt zum vereinbarten Termin unter benannter Objektleitung, mit dokumentierten Qualitätskontrollen und monatlichem Bericht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.eyebrow" datatype="html">
+        <source>Projects</source>
+        <target state="translated">Projekte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.heading" datatype="html">
+        <source>Recent Work</source>
+        <target state="translated">Aktuelle Arbeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projects.lead" datatype="html">
+        <source> A selection of current contracts and completed projects across commercial, hospitality and managed residential property. </source>
+        <target state="translated">Eine Auswahl laufender Verträge und abgeschlossener Projekte aus Gewerbe, Gastronomie und verwalteten Wohnimmobilien.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.eyebrow" datatype="html">
+        <source>Services</source>
+        <target state="translated">Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/services/services.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.heading" datatype="html">
+        <source>We Do More Than Clean. We Get Things Done.</source>
+        <target state="translated">Wir reinigen nicht nur. Wir bringen Dinge in Ordnung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/services/services.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.lead" datatype="html">
+        <source> Seven services, one team. Book them as a standing contract or as a single last-minute job. </source>
+        <target state="translated">Sieben Leistungen, ein Team. Buchbar als laufender Vertrag oder als einzelner kurzfristiger Auftrag.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/services/services.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.eyebrow" datatype="html">
+        <source>Why Glanzwerk</source>
+        <target state="translated">Warum Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.heading" datatype="html">
+        <source>What You Can Expect</source>
+        <target state="translated">Was Sie erwarten können</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.lead" datatype="html">
+        <source> Most problems with a cleaning contract come down to the same three things: a scope nobody wrote down, staff who change every week, and a standard nobody checks. These are the commitments we make instead. </source>
+        <target state="translated">Die meisten Probleme mit einem Reinigungsvertrag gehen auf dieselben drei Dinge zurück: einen Leistungsumfang, den niemand aufgeschrieben hat, wechselndes Personal und einen Standard, den niemand prüft. Das sind unsere Zusagen dagegen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.1.title" datatype="html">
+        <source>A specification you can hold us to</source>
+        <target state="translated">Ein Leistungsverzeichnis, an dem Sie uns messen können</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.1.text" datatype="html">
+        <source>Every contract starts with a written schedule of tasks and frequencies. The standard is defined in advance, so it can be measured.</source>
+        <target state="translated">Jeder Vertrag beginnt mit einem schriftlichen Verzeichnis der Aufgaben und Intervalle. Der Standard wird vorab festgelegt und ist damit messbar.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.2.title" datatype="html">
+        <source>A fixed team on your site</source>
+        <target state="translated">Ein festes Team in Ihrem Objekt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.2.text" datatype="html">
+        <source>The same trained staff attend each visit under a named supervisor. They learn the building, and nobody has to be shown around twice.</source>
+        <target state="translated">Dieselben geschulten Mitarbeitenden kommen zu jedem Einsatz, unter benannter Objektleitung. Sie kennen das Gebäude, und niemand muss zweimal eingewiesen werden.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.3.title" datatype="html">
+        <source>Quality checks you can read</source>
+        <target state="translated">Qualitätskontrollen zum Nachlesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.3.text" datatype="html">
+        <source>Supervisors carry out documented quality walks and report monthly, so problems surface in the review before your tenants raise them.</source>
+        <target state="translated">Die Objektleitung führt dokumentierte Qualitätsrundgänge durch und berichtet monatlich, damit Probleme in der Auswertung auffallen, bevor Ihre Mieter sie ansprechen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.4.title" datatype="html">
+        <source>Properly employed, properly insured</source>
+        <target state="translated">Richtig angestellt, richtig versichert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whyUs.4.text" datatype="html">
+        <source>Our staff are directly employed, trained and fully insured. There is no subcontracting chain, so you always know who is in your building.</source>
+        <target state="translated">Unsere Mitarbeitenden sind festangestellt, geschult und vollständig versichert. Es gibt keine Subunternehmerkette, Sie wissen also immer, wer in Ihrem Gebäude ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.expect" datatype="html">
+        <source>What you can expect</source>
+        <target state="translated">Was Sie erwarten können</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.jobs" datatype="html">
+        <source>Jobs covered by this service</source>
+        <target state="translated">Diese Arbeiten gehören dazu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.allServices" datatype="html">
+        <source>All Services</source>
+        <target state="translated">Alle Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.needQuote" datatype="html">
+        <source>Need a quote?</source>
+        <target state="translated">Angebot gewünscht?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.quoteLead" datatype="html">
+        <source> Tell us about the property and we will come back with a fixed price. </source>
+        <target state="translated">Erzählen Sie uns von dem Objekt, und wir melden uns mit einem Festpreis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.quote" datatype="html">
+        <source>Get A Quote</source>
+        <target state="translated">Angebot anfordern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
+          <context context-type="linenumber">51,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.missing" datatype="html">
+        <source>That service does not exist.</source>
+        <target state="translated">Diese Leistung gibt es nicht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.seeAllServices" datatype="html">
+        <source>See all services</source>
+        <target state="translated">Alle Leistungen ansehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">74,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.panel" datatype="html">
+        <source>Open information panel</source>
+        <target state="translated">Infobereich öffnen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.toggle" datatype="html">
+        <source>Toggle navigation</source>
+        <target state="translated">Navigation umschalten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
+          <context context-type="linenumber">60,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.label" datatype="html">
+        <source>About Glanzwerk</source>
+        <target state="translated">Über Glanzwerk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.close" datatype="html">
+        <source>Close</source>
+        <target state="translated">Schließen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.about" datatype="html">
+        <source>About Us</source>
+        <target state="translated">Über uns</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.aboutBody" datatype="html">
+        <source> Glanzwerk covers cleaning, moving, clearance and property support for commercial and private property. We work to a written specification, with directly employed staff and a named supervisor on every site, so responsibility for the standard always sits in one place. </source>
+        <target state="translated">Glanzwerk übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Gewerbe- und Privatimmobilien. Wir arbeiten nach einem schriftlichen Leistungsverzeichnis, mit festangestellten Mitarbeitenden und einer benannten Objektleitung in jedem Objekt, damit die Verantwortung für den Standard immer an einer Stelle liegt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">24,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.whatWeDo" datatype="html">
+        <source>What We Do</source>
+        <target state="translated">Was wir machen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.getInTouch" datatype="html">
+        <source>Get In Touch</source>
+        <target state="translated">Kontakt aufnehmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.or" datatype="html">
+        <source>OR</source>
+        <target state="translated">ODER</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.intro" datatype="html">
+        <source> Cleaning, moving, clearance and property support for private and commercial clients. One contractor and one point of contact for the whole job. </source>
+        <target state="translated">Reinigung, Umzug, Entrümpelung und Objektbetreuung für Privat- und Geschäftskunden. Ein Dienstleister und ein Ansprechpartner für den gesamten Auftrag.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.services" datatype="html">
+        <source>Our Services</source>
+        <target state="translated">Unsere Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.quickLinks" datatype="html">
+        <source>Quick Links</source>
+        <target state="translated">Schnellzugriff</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.getInTouch" datatype="html">
+        <source>Get In Touch</source>
+        <target state="translated">Kontakt aufnehmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.hotline" datatype="html">
+        <source>Hotline:</source>
+        <target state="translated">Hotline:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.email" datatype="html">
+        <source>Email:</source>
+        <target state="translated">E-Mail:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.address" datatype="html">
+        <source>Address:</source>
+        <target state="translated">Adresse:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.copyright" datatype="html">
+        <source>© <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> <x id="INTERPOLATION_1" equiv-text="{{ company.name }}"/>. All rights reserved.</source>
+        <target state="translated">© <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> <x id="INTERPOLATION_1" equiv-text="{{ company.name }}"/>. Alle Rechte vorbehalten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.html</context>
+          <context context-type="linenumber">93,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="topbar.email" datatype="html">
+        <source>Email:</source>
+        <target state="translated">E-Mail:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="topbar.phone" datatype="html">
+        <source>Call Us:</source>
+        <target state="translated">Telefon:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="topbar.hours" datatype="html">
+        <source> Opening Hour: <x id="INTERPOLATION" equiv-text="{{ company.openingHours }}"/> </source>
+        <target state="translated">Öffnungszeiten: <x id="INTERPOLATION" equiv-text="{{ company.openingHours }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="topbar.signin" datatype="html">
+        <source>Sign In</source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goTop.label" datatype="html">
+        <source>Back to top</source>
+        <target state="translated">Nach oben</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/go-top/go-top.component.ts</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="breadcrumb.home" datatype="html">
+        <source>Home</source>
+        <target state="translated">Start</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/page-banner/page-banner.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="placeholder.body" datatype="html">
+        <source>This page has not been built yet.</source>
+        <target state="translated">Diese Seite ist noch nicht fertig.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/page-placeholder/page-placeholder.component.ts</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

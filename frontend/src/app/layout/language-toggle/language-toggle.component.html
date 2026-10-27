@@ -1,0 +1,50 @@
+<nav class="lang" aria-label="Language">
+  @for (option of options(); track option.code) {
+    @if (option.isCurrent) {
+      <span class="lang__item is-current" aria-current="true">
+        <ng-container *ngTemplateOutlet="flag; context: { $implicit: option.code }" />
+        {{ option.label }}
+      </span>
+    } @else {
+      <!-- A plain link, never routerLink: each locale is a separate build. -->
+      <a
+        class="lang__item"
+        [href]="option.href"
+        [attr.hreflang]="option.code"
+        [attr.lang]="option.code"
+        [attr.title]="option.name"
+      >
+        <ng-container *ngTemplateOutlet="flag; context: { $implicit: option.code }" />
+        {{ option.label }}
+      </a>
+    }
+  }
+</nav>
+
+<!-- Inline so the flags cost no extra request, and because Windows does not render
+     flag emoji at all. Decorative: the language code beside them carries the meaning. -->
+<ng-template #flag let-code>
+  <svg class="lang__flag" viewBox="0 0 20 14" width="20" height="14" aria-hidden="true">
+    <!-- Rounded by CSS, not a clipPath: the template renders once per locale and
+         a shared SVG id would appear twice in the document. -->
+    <g>
+      @switch (code) {
+        @case ('de') {
+          <rect width="20" height="14" fill="#000" />
+          <rect y="4.667" width="20" height="4.667" fill="#d00" />
+          <rect y="9.334" width="20" height="4.666" fill="#ffce00" />
+        }
+        @case ('en') {
+          <rect width="20" height="14" fill="#fff" />
+          @for (stripe of stripes; track stripe) {
+            <rect [attr.y]="stripe" width="20" height="1.077" fill="#b22234" />
+          }
+          <rect width="8.6" height="7.54" fill="#3c3b6e" />
+          @for (star of stars; track star.x + '-' + star.y) {
+            <circle [attr.cx]="star.x" [attr.cy]="star.y" r="0.42" fill="#fff" />
+          }
+        }
+      }
+    </g>
+  </svg>
+</ng-template>
