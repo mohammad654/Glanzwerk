@@ -1,0 +1,18 @@
+@use 'abstracts/variables' as v;
+
+// Floats over the hero, as in the template — the slider starts at the very top
+// of the page and the header sits on the image.
+.site-header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 1030;
+  transition: background 0.3s ease-in-out;
+}
+
+// Once the hero has scrolled away there is nothing dark behind the white nav
+// links, so the header brings its own background.
+.site-header.is-scrolled {
+  background: v.$brand-indigo;
+  box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.15);
+}
