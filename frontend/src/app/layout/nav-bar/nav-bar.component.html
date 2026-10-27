@@ -1,0 +1,71 @@
+<nav class="site-nav" [class.site-nav--open]="menuOpen()">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" routerLink="/" (click)="closeMenu()">
+      <img src="assets/images/logo-light.png" alt="Glanzwerk" />
+    </a>
+
+    <ul id="primary-menu" class="site-nav__menu">
+      @for (item of items; track item.path) {
+        <li class="site-nav__item">
+          <a
+            [routerLink]="'/' + item.path"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: item.path === '' }"
+            (click)="closeMenu()"
+          >
+            {{ item.label }}
+            @if (item.children) {
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            }
+          </a>
+
+          @if (item.children) {
+            <ul class="site-nav__dropdown">
+              @for (child of item.children; track child.path) {
+                <li>
+                  <a
+                    [routerLink]="'/' + child.path"
+                    routerLinkActive="is-active"
+                    (click)="closeMenu()"
+                    >{{ child.label }}</a
+                  >
+                </li>
+              }
+            </ul>
+          }
+        </li>
+      }
+    </ul>
+
+    <div class="site-nav__actions">
+      <button
+        class="site-nav__burger"
+        type="button"
+        (click)="openSidebar()"
+        i18n-aria-label="@@nav.panel"
+        aria-label="Open information panel"
+      >
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+
+      <a class="default-btn site-nav__cta" routerLink="/contact" i18n="@@cta.quote">Get A Quote</a>
+
+      <button
+        class="site-nav__toggle"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="primary-menu"
+        i18n-aria-label="@@nav.toggle"
+        aria-label="Toggle navigation"
+      >
+        <i
+          class="bi"
+          [class.bi-list]="!menuOpen()"
+          [class.bi-x-lg]="menuOpen()"
+          aria-hidden="true"
+        ></i>
+      </button>
+    </div>
+  </div>
+</nav>

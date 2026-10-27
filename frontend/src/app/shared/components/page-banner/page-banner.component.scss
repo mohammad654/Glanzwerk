@@ -1,0 +1,71 @@
+@use 'abstracts/variables' as v;
+
+.page-banner {
+  position: relative;
+  // Clears the fixed header, which has no hero to sit on here.
+  padding: 15rem 0 9.375rem; // 240px / 150px
+  background-image: linear-gradient(135deg, v.$brand-blue, v.$brand-headings);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: v.$brand-headings;
+    opacity: 0.9;
+  }
+}
+
+.page-banner__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner h1 {
+  margin-bottom: 0.9375rem;
+  color: #fff;
+  font-size: 2.5rem; // 40px
+  font-weight: 700;
+}
+
+.page-banner__crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.625rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    color: #fff;
+    font-size: v.$font-size-sm;
+  }
+
+  li + li::before {
+    content: '\F285'; // chevron-right
+    font-family: bootstrap-icons, sans-serif;
+    margin: 0 0.5rem;
+    color: v.$primary;
+    font-size: 0.75rem;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: v.$primary;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-banner {
+    padding: 11rem 0 5rem;
+  }
+
+  .page-banner h1 {
+    font-size: 1.75rem;
+  }
+}

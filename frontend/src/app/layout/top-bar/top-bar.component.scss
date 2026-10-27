@@ -1,0 +1,51 @@
+@use 'abstracts/variables' as v;
+
+.top-bar {
+  padding: v.$topbar-padding-y 0;
+  background: v.$topbar-bg;
+  color: v.$topbar-color;
+  font-size: v.$topbar-font-size;
+}
+
+.top-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.top-bar__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  i {
+    color: v.$accent;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: v.$accent;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  // The language switcher stays: it is the only way to reach the other build.
+  .top-bar__secondary {
+    display: none;
+  }
+}

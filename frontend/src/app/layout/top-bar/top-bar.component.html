@@ -1,0 +1,24 @@
+<div class="top-bar">
+  <div class="container top-bar__inner">
+    <ul class="top-bar__group">
+      <li>
+        <i class="bi bi-envelope" aria-hidden="true"></i>
+        <span i18n="@@topbar.email">Email:</span>
+        <a [href]="'mailto:' + company.email">{{ company.email }}</a>
+      </li>
+      <li>
+        <i class="bi bi-telephone" aria-hidden="true"></i>
+        <span i18n="@@topbar.phone">Call Us:</span>
+        <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+      </li>
+    </ul>
+
+    <ul class="top-bar__group top-bar__group--end">
+      <li class="top-bar__secondary" i18n="@@topbar.hours">
+        Opening Hour: {{ company.openingHours }}
+      </li>
+      <li class="top-bar__secondary"><a routerLink="/login" i18n="@@topbar.signin">Sign In</a></li>
+      <li><app-language-toggle /></li>
+    </ul>
+  </div>
+</div>

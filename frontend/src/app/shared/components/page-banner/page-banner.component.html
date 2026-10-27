@@ -1,0 +1,19 @@
+<section class="page-banner">
+  <div class="container page-banner__inner">
+    <h1>{{ title() }}</h1>
+
+    <nav aria-label="Breadcrumb">
+      <ol class="page-banner__crumbs">
+        <li><a routerLink="/" i18n="@@breadcrumb.home">Home</a></li>
+
+        @for (crumb of trail(); track crumb.path) {
+          <li>
+            <a [routerLink]="'/' + crumb.path">{{ crumb.label }}</a>
+          </li>
+        }
+
+        <li aria-current="page">{{ title() }}</li>
+      </ol>
+    </nav>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+<div class="sidebar" [class.is-open]="isOpen()" [attr.aria-hidden]="!isOpen()">
+  <div class="sidebar__backdrop" (click)="close()"></div>
+
+  <div
+    class="sidebar__panel"
+    role="dialog"
+    aria-modal="true"
+    i18n-aria-label="@@sidebar.label"
+    aria-label="About Glanzwerk"
+  >
+    <button
+      class="sidebar__close"
+      type="button"
+      (click)="close()"
+      i18n-aria-label="@@sidebar.close"
+      aria-label="Close"
+    >
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+
+    <section class="sidebar__block">
+      <h2 i18n="@@sidebar.about">About Us</h2>
+      <p i18n="@@sidebar.aboutBody">
+        Glanzwerk covers cleaning, moving, clearance and property support for commercial and private
+        property. We work to a written specification, with directly employed staff and a named
+        supervisor on every site, so responsibility for the standard always sits in one place.
+      </p>
+    </section>
+
+    <section class="sidebar__block">
+      <h2 i18n="@@sidebar.whatWeDo">What We Do</h2>
+      <ul class="sidebar__grid">
+        @for (highlight of highlights; track highlight.label) {
+          <li>
+            <i [class]="'bi ' + highlight.icon" aria-hidden="true"></i>
+            {{ highlight.label }}
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="sidebar__block">
+      <h2 i18n="@@sidebar.getInTouch">Get In Touch</h2>
+      <p class="sidebar__contact">
+        <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+        <span i18n="@@sidebar.or">OR</span>
+        <a [href]="'mailto:' + company.email">{{ company.email }}</a>
+      </p>
+
+      <ul class="sidebar__social">
+        @for (social of socials; track social.label) {
+          <li>
+            <a [href]="social.url" target="_blank" rel="noopener" [attr.aria-label]="social.label">
+              <i [class]="'bi ' + social.icon" aria-hidden="true"></i>
+            </a>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+</div>
