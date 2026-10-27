@@ -1,0 +1,49 @@
+@if (post(); as article) {
+  <app-page-banner [title]="article.title" [trail]="trail" />
+
+  <section class="blog-detail">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="blog-detail__media">
+            <img [src]="article.image" [alt]="article.title" />
+          </div>
+
+          <ul class="blog-detail__meta">
+            <li>{{ article.author }}</li>
+            <li>{{ article.date }}</li>
+          </ul>
+
+          <h2>{{ article.title }}</h2>
+
+          @for (paragraph of article.body; track paragraph) {
+            <p>{{ paragraph }}</p>
+          }
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="blog-detail__panel">
+            <h3>More Posts</h3>
+            <ul class="blog-detail__list">
+              @for (other of others(); track other.slug) {
+                <li>
+                  <a [routerLink]="path(other.slug)">{{ other.title }}</a>
+                  <span>{{ other.date }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+} @else {
+  <app-page-banner title="Post not found" [trail]="trail" />
+
+  <section class="blog-detail text-center">
+    <div class="container">
+      <p>That post does not exist.</p>
+      <a class="default-btn" routerLink="/blog">See all posts</a>
+    </div>
+  </section>
+}

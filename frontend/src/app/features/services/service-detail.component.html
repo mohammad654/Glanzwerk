@@ -1,0 +1,77 @@
+@if (service(); as item) {
+  <app-page-banner [title]="item.title" [trail]="trail" />
+
+  <section class="service-detail">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="service-detail__media">
+            <img [src]="item.image" [alt]="item.title" />
+          </div>
+
+          <h2>{{ item.title }}</h2>
+
+          @for (paragraph of item.description; track paragraph) {
+            <p>{{ paragraph }}</p>
+          }
+
+          <h3 i18n="@@serviceDetail.expect">What you can expect</h3>
+          <ul class="service-detail__highlights">
+            @for (highlight of item.highlights; track highlight) {
+              <li>
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                {{ highlight }}
+              </li>
+            }
+          </ul>
+
+          <h3 i18n="@@serviceDetail.jobs">Jobs covered by this service</h3>
+          <ul class="service-detail__includes">
+            @for (job of item.includes; track job) {
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                {{ job }}
+              </li>
+            }
+          </ul>
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="service-detail__panel">
+            <h3 i18n="@@serviceDetail.allServices">All Services</h3>
+            <ul class="service-detail__list">
+              @for (other of allServices; track other.slug) {
+                <li>
+                  <a [routerLink]="path(other.slug)" [class.is-current]="other.slug === item.slug">
+                    <i [class]="'bi ' + other.icon" aria-hidden="true"></i>
+                    {{ other.title }}
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+
+          <div class="service-detail__panel service-detail__panel--cta">
+            <h3 i18n="@@serviceDetail.needQuote">Need a quote?</h3>
+            <p i18n="@@serviceDetail.quoteLead">
+              Tell us about the property and we will come back with a fixed price.
+            </p>
+            <a class="default-btn" routerLink="/contact" i18n="@@cta.quote">Get A Quote</a>
+            <a class="service-detail__phone" [href]="'tel:' + company.phone">
+              {{ company.phone }}
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+} @else {
+  <app-page-banner title="Service not found" [trail]="trail" />
+
+  <section class="service-detail service-detail--empty">
+    <div class="container text-center">
+      <p i18n="@@serviceDetail.missing">That service does not exist.</p>
+      <a class="default-btn" routerLink="/services" i18n="@@cta.seeAllServices">See all services</a>
+    </div>
+  </section>
+}
