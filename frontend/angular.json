@@ -71,7 +71,11 @@
             "polyfills": [
               "@angular/localize/init"
             ],
-            "localize": true
+            "localize": true,
+            "define": {
+              "NG_SITE_ORIGIN": "\"https://www.glanzwerk.de\"",
+              "NG_DEPLOY_BASE": "\"/\""
+            }
           },
           "configurations": {
             "production": {
@@ -138,12 +142,12 @@
       "i18n": {
         "sourceLocale": {
           "code": "en",
-          "baseHref": "/en/"
+          "subPath": "en"
         },
         "locales": {
           "de": {
             "translation": "src/locale/messages.de.xlf",
-            "baseHref": "/de/"
+            "subPath": "de"
           }
         }
       }

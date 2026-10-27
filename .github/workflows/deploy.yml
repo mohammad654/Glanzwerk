@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  # Pages serves the repository from a sub-path, not the domain root. Both values
+  # feed the build: the base href and language switcher use the path, while
+  # canonical URLs, hreflang and sitemap.xml use the origin. Point these at the
+  # real domain once it exists, and the whole site follows.
+  DEPLOY_BASE: /Glanzwerk/
+  SITE_ORIGIN: https://mohammad654.github.io/Glanzwerk
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci
+
+      - run: npm test -- --watch=false
+
+      # `npm run build`, not `npx ng build`: the prebuild hook regenerates
+      # sitemap.xml and the postbuild hook writes the dist root files. Calling the
+      # CLI directly silently skips both.
+      - name: Build
+        run: |
+          npm run build -- \
+            --base-href "$DEPLOY_BASE" \
+            --define NG_DEPLOY_BASE="\"$DEPLOY_BASE\"" \
+            --define NG_SITE_ORIGIN="\"$SITE_ORIGIN\""
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist/glanzwerk/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

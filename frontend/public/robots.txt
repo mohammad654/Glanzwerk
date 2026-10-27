@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Not public pages, and nothing to index behind them.
-Disallow: /de/login
-Disallow: /en/login
-
-Sitemap: https://www.glanzwerk.de/sitemap.xml

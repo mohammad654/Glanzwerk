@@ -3,7 +3,9 @@
 // purpose: the catalogues are TypeScript, and this must run without a compile step.
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const ORIGIN = 'https://www.glanzwerk.de';
+// Overridden by the deploy workflow; a sitemap full of the wrong origin is worse
+// than no sitemap, because every URL in it is a claim about where the page lives.
+const ORIGIN = process.env.SITE_ORIGIN ?? 'https://www.glanzwerk.de';
 // Mirrors src/app/core/i18n/locales.ts. The default one is also the x-default.
 const LOCALES = ['de', 'en'];
 const DEFAULT_LOCALE = 'de';

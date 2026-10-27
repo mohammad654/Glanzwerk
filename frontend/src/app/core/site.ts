@@ -1,10 +1,11 @@
+import { SITE_ORIGIN } from './build-env';
 import { DEFAULT_LOCALE } from './i18n/locales';
 
 // Swap `origin` for the live domain before launch: canonical URLs, Open Graph tags,
 // structured data and sitemap.xml all resolve against it, and search engines reject
 // relative URLs in those places.
 export const SITE = {
-  origin: 'https://www.glanzwerk.de',
+  origin: SITE_ORIGIN,
   name: 'Glanzwerk',
   title: $localize`:@@site.title:Glanzwerk | Cleaning, Moving & Property Services`,
   description: $localize`:@@site.description:More than cleaning. Glanzwerk handles home and commercial cleaning, moving, clearance, snow removal and property maintenance, including same-day and 24/7 call-outs.`,
