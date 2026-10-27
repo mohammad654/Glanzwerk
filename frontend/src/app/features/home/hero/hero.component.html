@@ -1,0 +1,56 @@
+<section class="hero">
+  <swiper-container
+    class="hero__slider"
+    loop="true"
+    effect="fade"
+    autoplay-delay="6000"
+    pagination="true"
+    pagination-clickable="true"
+  >
+    @for (slide of slides; track slide.title; let first = $first) {
+      <swiper-slide>
+        <div class="hero__slide" [style.background-image]="'url(' + slide.image + ')'">
+          <div class="container hero__inner">
+            <div class="row align-items-center">
+              <div class="col-lg-9">
+                <div class="hero__text">
+                  <span class="hero__eyebrow">{{ slide.eyebrow }}</span>
+                  <!-- Every slide is in the DOM at once, so only the first carries the h1. -->
+                  @if (first) {
+                    <h1>{{ slide.title }}</h1>
+                  } @else {
+                    <h2>{{ slide.title }}</h2>
+                  }
+                  <p>{{ slide.text }}</p>
+
+                  <div class="hero__actions">
+                    <a class="default-btn" routerLink="/contact" i18n="@@cta.requestQuote"
+                      >Request A Quote</a
+                    >
+                    <a
+                      class="default-btn default-btn--light"
+                      routerLink="/services"
+                      i18n="@@cta.ourServices"
+                      >Our Services</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <button
+                  class="hero__video"
+                  type="button"
+                  i18n-aria-label="@@hero.play"
+                  aria-label="Play intro video"
+                >
+                  <i class="bi bi-play-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    }
+  </swiper-container>
+</section>

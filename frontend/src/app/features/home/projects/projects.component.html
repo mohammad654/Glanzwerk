@@ -1,0 +1,51 @@
+<section class="projects">
+  <div class="container">
+    <div class="section-title">
+      <span i18n="@@projects.eyebrow">Projects</span>
+      <h2 i18n="@@projects.heading">Recent Work</h2>
+      <p i18n="@@projects.lead">
+        A selection of current contracts and completed projects across commercial, hospitality and
+        managed residential property.
+      </p>
+    </div>
+
+    <swiper-container
+      class="projects__slider"
+      loop="true"
+      space-between="30"
+      slides-per-view="1"
+      autoplay-delay="5000"
+      breakpoints='{"576": {"slidesPerView": 2}, "992": {"slidesPerView": 3}}'
+    >
+      @for (project of projects; track project.slug) {
+        <swiper-slide>
+          <article class="project">
+            <a
+              class="project__media"
+              [routerLink]="path(project.slug)"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <img [src]="project.image" [alt]="project.title" loading="lazy" />
+            </a>
+
+            <div class="project__content">
+              <h3>
+                <a [routerLink]="path(project.slug)">{{ project.title }}</a>
+              </h3>
+              <span>{{ project.category }}</span>
+
+              <a
+                class="project__link"
+                [routerLink]="path(project.slug)"
+                [attr.aria-label]="'View ' + project.title"
+              >
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

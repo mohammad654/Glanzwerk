@@ -1,0 +1,71 @@
+@use 'abstracts/variables' as v;
+
+.services {
+  padding-bottom: 4.375rem; // 70px
+}
+
+:host(.services--spaced) .services {
+  padding-top: v.$section-padding-y;
+}
+
+.service {
+  height: calc(100% - 1.875rem);
+  margin-bottom: 1.875rem; // 30px
+  padding: 0.9375rem; // 15px
+  border-radius: 0.25rem;
+  background: #fff;
+  box-shadow: 0 0 1.25rem 0.1875rem rgba(#000, 0.05);
+}
+
+.service__media {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.25rem;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 386 / 271;
+    object-fit: cover;
+    transition: scale 0.6s ease-in-out;
+  }
+
+  &:hover img {
+    scale: 1.05;
+  }
+}
+
+.service__content {
+  position: relative;
+  padding: 1.875rem 0.9375rem 0.9375rem;
+
+  h3 {
+    margin: 0 0 0.625rem;
+    color: v.$brand-headings;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 0.9375rem;
+    color: v.$brand-body;
+    font-size: v.$font-size-sm;
+    line-height: 1.8;
+  }
+}
+
+// Sits astride the edge between the image and the card body.
+.service__badge {
+  position: absolute;
+  right: 1.875rem;
+  top: -1.09375rem; // half its own height, per the template
+  display: grid;
+  place-items: center;
+  width: 2.1875rem; // 35px
+  height: 2.1875rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0.75rem rgba(#000, 0.12);
+  color: v.$brand-headings;
+  font-size: 1.125rem;
+}

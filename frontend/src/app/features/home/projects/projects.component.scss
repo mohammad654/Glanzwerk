@@ -1,0 +1,12 @@
+@use 'abstracts/variables' as v;
+
+// The cards themselves live in styles/components/_project-card.scss, shared
+// with the projects grid page.
+.projects {
+  padding: v.$section-padding-y 0 4.375rem;
+}
+
+.projects__slider {
+  display: block;
+  padding-bottom: 1rem;
+}

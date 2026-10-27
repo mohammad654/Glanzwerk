@@ -1,0 +1,63 @@
+@use 'abstracts/variables' as v;
+
+.appointment {
+  padding: v.$section-padding-y 0;
+  background: v.$brand-headings;
+}
+
+.appointment__note {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  padding: 0.9375rem 1.25rem;
+  border-radius: v.$radius-pill;
+  background: rgba(#fff, 0.12);
+  color: #fff;
+  font-size: v.$font-size-sm;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.875rem; // 30px
+
+  input,
+  select {
+    width: 100%;
+    height: 3.125rem; // 50px
+    padding: 0.625rem 1.25rem;
+    border: 1px dashed #fff;
+    border-radius: v.$radius-pill;
+    background: rgba(#fff, 0.2);
+    color: #fff;
+    font-size: v.$topbar-font-size;
+
+    &::placeholder {
+      color: rgba(#fff, 0.75);
+    }
+
+    &:focus {
+      outline: 2px solid v.$primary;
+      outline-offset: 2px;
+    }
+  }
+
+  // The native pickers render their own text, so they need a readable ground.
+  select option {
+    color: v.$brand-headings;
+  }
+
+  i {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.0625rem;
+    color: v.$primary;
+    font-size: 1.125rem;
+    pointer-events: none;
+  }
+
+  &.is-invalid input,
+  &.is-invalid select {
+    border-color: #ff8a8a;
+    border-style: solid;
+  }
+}

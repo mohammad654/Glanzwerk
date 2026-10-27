@@ -1,0 +1,51 @@
+@use 'abstracts/variables' as v;
+
+.process {
+  padding: v.$section-padding-y 0 4.375rem;
+  background: v.$bg-tint;
+}
+
+.process__card {
+  position: relative;
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  box-shadow: 0 0 1.25rem 0.1875rem rgba(#000, 0.05);
+  text-align: center;
+
+  > i {
+    display: block;
+    margin-bottom: 1rem;
+    color: v.$primary;
+    font-size: 2.75rem; // stands in for the template's 70px step illustration
+  }
+
+  h3 {
+    margin: 0 0 0.9375rem;
+    color: v.$brand-headings;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: v.$brand-body;
+    font-size: v.$font-size-sm;
+    line-height: 1.8;
+  }
+}
+
+.process__number {
+  position: absolute;
+  right: 1.875rem;
+  top: 1.875rem;
+  display: grid;
+  place-items: center;
+  width: 2.1875rem; // 35px
+  height: 2.1875rem;
+  border-radius: 50%;
+  background: v.$primary;
+  color: #fff;
+  font-size: v.$topbar-font-size;
+  font-weight: 600;
+}

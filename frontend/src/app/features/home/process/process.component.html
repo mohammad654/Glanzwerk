@@ -1,0 +1,31 @@
+<section class="process">
+  <div class="container">
+    <div class="section-title">
+      <span i18n="@@process.eyebrow">How We Work</span>
+      <h2 i18n="@@process.heading">From First Call To Ongoing Contract</h2>
+      <p i18n="@@process.lead">
+        Three steps, and no obligation at any of them. Most clients have a written specification
+        within a week of the first conversation.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      @for (step of steps; track step.title; let i = $index) {
+        <div class="col-lg-4 col-sm-6">
+          <div class="process__card">
+            <i [class]="'bi ' + step.icon" aria-hidden="true"></i>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.text }}</p>
+
+            <a class="read-more" routerLink="/contact">
+              <ng-container i18n="@@cta.getInTouch">Get In Touch</ng-container>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </a>
+
+            <span class="process__number">{{ i + 1 | number: '2.0' }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

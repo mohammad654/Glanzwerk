@@ -1,0 +1,72 @@
+<section class="appointment">
+  <div class="container">
+    <div class="section-title section-title--light">
+      <span i18n="@@appointment.eyebrow">Request A Survey</span>
+      <h2 i18n="@@appointment.heading">Book A Free Site Visit</h2>
+    </div>
+
+    @if (submitted()) {
+      <p class="appointment__note" role="status">
+        Thank you. Your details are complete. Online booking is not yet connected, so please call or
+        email us and we will arrange the survey directly.
+      </p>
+    }
+
+    <form class="appointment__form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('name')">
+            <input type="text" formControlName="name" placeholder="Enter Your Name" />
+            <i class="bi bi-person" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('email')">
+            <input type="email" formControlName="email" placeholder="Enter Your Email" />
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('phone')">
+            <input type="tel" formControlName="phone" placeholder="Enter Your Phone" />
+            <i class="bi bi-phone" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('service')">
+            <select formControlName="service" aria-label="Select service">
+              <option value="">Select Service</option>
+              @for (service of services; track service) {
+                <option [value]="service">{{ service }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('date')">
+            <input type="date" formControlName="date" aria-label="Preferred date" />
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="form-group" [class.is-invalid]="isInvalid('time')">
+            <select formControlName="time" aria-label="Select time">
+              <option value="">Select Time</option>
+              @for (slot of timeSlots; track slot) {
+                <option [value]="slot">{{ slot }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button class="default-btn" type="submit">Confirm Appointment</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

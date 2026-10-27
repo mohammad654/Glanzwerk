@@ -1,0 +1,11 @@
+@use 'abstracts/variables' as v;
+
+// The cards themselves live in styles/components/_post-card.scss, shared with
+// the blog grid page.
+.blog {
+  padding: v.$section-padding-y 0 4.375rem;
+}
+
+:host(.blog--headless) .blog {
+  padding-top: v.$section-padding-y;
+}

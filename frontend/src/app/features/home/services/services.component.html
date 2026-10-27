@@ -1,0 +1,44 @@
+<section class="services">
+  <div class="container">
+    <div class="section-title">
+      <span i18n="@@services.eyebrow">Services</span>
+      <h2 i18n="@@services.heading">We Do More Than Clean. We Get Things Done.</h2>
+      <p i18n="@@services.lead">
+        Seven services, one team. Book them as a standing contract or as a single last-minute job.
+      </p>
+    </div>
+
+    <div class="row">
+      @for (service of services; track service.slug) {
+        <div class="col-lg-4 col-sm-6">
+          <div class="service">
+            <a
+              class="service__media"
+              [routerLink]="path(service.slug)"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <img [src]="service.image" [alt]="service.title" loading="lazy" />
+            </a>
+
+            <div class="service__content">
+              <h3>
+                <a [routerLink]="path(service.slug)">{{ service.title }}</a>
+              </h3>
+              <p>{{ service.summary }}</p>
+
+              <a class="read-more" [routerLink]="path(service.slug)">
+                <ng-container i18n="@@cta.readMore">Read More</ng-container>
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+              </a>
+
+              <span class="service__badge" aria-hidden="true">
+                <i [class]="'bi ' + service.icon"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

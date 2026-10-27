@@ -1,0 +1,46 @@
+<section class="why-us">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="why-us__content">
+          <span i18n="@@whyUs.eyebrow">Why Glanzwerk</span>
+          <h2 i18n="@@whyUs.heading">What You Can Expect</h2>
+          <p i18n="@@whyUs.lead">
+            Most problems with a cleaning contract come down to the same three things: a scope
+            nobody wrote down, staff who change every week, and a standard nobody checks. These are
+            the commitments we make instead.
+          </p>
+
+          <ul>
+            @for (commitment of commitments; track commitment.title) {
+              <li>
+                <span class="why-us__marker" aria-hidden="true">
+                  <i class="bi bi-check-lg"></i>
+                </span>
+                <h3>{{ commitment.title }}</h3>
+                <p>{{ commitment.text }}</p>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="why-us__media">
+          <img
+            class="why-us__photo"
+            src="assets/images/about/bathroom-detail.jpg"
+            alt="Detail cleaning of a washroom surface"
+            loading="lazy"
+          />
+          <img
+            class="why-us__photo why-us__photo--inset"
+            src="assets/images/about/supplies.jpg"
+            alt="Colour-coded cleaning cloths"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

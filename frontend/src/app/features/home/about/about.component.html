@@ -1,0 +1,50 @@
+<section class="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="about__content">
+          <span i18n="@@about.eyebrow">About Glanzwerk</span>
+          <h2 i18n="@@about.heading">Your Problem Is Our Starting Point</h2>
+          <p i18n="@@about.lead">
+            Most property problems do not need five different companies. Glanzwerk covers cleaning,
+            moving, clearance and property support for homes and businesses, from a standing
+            appointment to the thing that went wrong this morning.
+          </p>
+
+          <ul>
+            @for (point of points; track point) {
+              <li>
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                {{ point }}
+              </li>
+            }
+          </ul>
+
+          <p class="about__highlight" i18n="@@about.highlight">
+            Tell us what you need and we will bring the people and the equipment for it. We leave
+            every space better than we found it.
+          </p>
+
+          <a class="default-btn" routerLink="/about" i18n="@@cta.moreAbout">More About Us</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about__media">
+          <img
+            class="about__photo"
+            src="assets/images/about/team-office.jpg"
+            alt="A Glanzwerk cleaner working in an office"
+            loading="lazy"
+          />
+          <img
+            class="about__photo about__photo--inset"
+            src="assets/images/about/reception.jpg"
+            alt="Reception of a commercial building under contract"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

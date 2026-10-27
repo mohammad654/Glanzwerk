@@ -1,0 +1,121 @@
+@use 'abstracts/variables' as v;
+
+.hero__slider {
+  display: block;
+  --swiper-pagination-color: #{v.$primary};
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+.hero__slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: v.$hero-height;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+  // The template tints every slide so white text stays readable on any photo.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(#003782, 0.5);
+  }
+
+  // The header is transparent and sits on whatever the photo happens to be, so
+  // this scrim keeps the logo and nav legible over a bright image.
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 13rem;
+    background: linear-gradient(to bottom, rgba(#000, 0.55), transparent);
+  }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  // The eyebrow is small and lands wherever the photo happens to be busiest.
+  text-shadow: 0 0.0625rem 0.375rem rgba(#000, 0.7);
+  color: #fff;
+  font-size: v.$font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  max-width: 43.125rem; // 690px
+
+  h1,
+  h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 3.75rem; // 60px
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 0.125rem 1rem rgba(#000, 0.4);
+  }
+
+  p {
+    margin-bottom: 1.875rem;
+    font-size: v.$font-size-base;
+    line-height: 1.8;
+    text-shadow: 0 0.0625rem 0.5rem rgba(#000, 0.5);
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__video {
+  display: grid;
+  place-items: center;
+  width: 3.75rem; // 60px
+  height: 3.75rem;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 50%;
+  background: v.$primary;
+  color: v.$brand-indigo;
+  font-size: 1.5rem;
+  transition: v.$btn-transition;
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero__slide {
+    min-height: 37.5rem; // 600px
+  }
+
+  .hero__text h1,
+  .hero__text h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero__video {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__text h1,
+  .hero__text h2 {
+    font-size: 2rem;
+  }
+}
