@@ -1,4 +1,6 @@
-import { DEFAULT_LOCALE, LOCALES, localizedPath, toLocaleCode } from './locales';
+import { STATIC_ROUTES, localizedPathsFor } from '../routes';
+import { SERVICES } from '../service-catalog';
+import { DEFAULT_LOCALE, LOCALES, localeHref, toLocaleCode, unprefixed } from './locales';
 
 describe('locales', () => {
   it('redirects to a locale that exists', () => {
@@ -10,18 +12,45 @@ describe('locales', () => {
     expect(toLocaleCode('de')).toBe('de');
   });
 
-  it('swaps the locale prefix instead of stacking prefixes', () => {
-    expect(localizedPath('/de/kontakt', 'en')).toBe('/en/kontakt');
-    expect(localizedPath('/en/contact', 'de')).toBe('/de/contact');
+  it('strips a locale prefix without stripping a real first segment', () => {
+    expect(unprefixed('/de/kontakt')).toBe('kontakt');
+    expect(unprefixed('/en/contact')).toBe('contact');
+    expect(unprefixed('/contact')).toBe('contact');
+    expect(unprefixed('/')).toBe('');
   });
 
-  it('adds a prefix to a path that has none', () => {
-    expect(localizedPath('/contact', 'de')).toBe('/de/contact');
-    expect(localizedPath('/services/home-cleaning', 'en')).toBe('/en/services/home-cleaning');
+  it('builds a locale URL without stacking or dropping prefixes', () => {
+    expect(localeHref('kontakt', 'de')).toBe('/de/kontakt');
+    expect(localeHref('', 'de')).toBe('/de');
+  });
+});
+
+describe('cross-locale paths', () => {
+  it('pairs a page with its translated counterpart, not its own path re-prefixed', () => {
+    const paths = localizedPathsFor(STATIC_ROUTES.contact.en);
+
+    expect(paths?.de).toBe('kontakt');
+    expect(paths?.en).toBe('contact');
   });
 
-  it('keeps the home page from becoming a bare slash', () => {
-    expect(localizedPath('/', 'de')).toBe('/de');
-    expect(localizedPath('/en', 'de')).toBe('/de');
+  it('knows every service page in both locales', () => {
+    for (const service of SERVICES) {
+      expect(localizedPathsFor(service.path.en)).toEqual(service.path);
+    }
+  });
+
+  it('gives each locale a distinct slug, so hreflang pairs cannot collapse', () => {
+    for (const service of SERVICES) {
+      expect(service.path.de).not.toBe(service.path.en);
+    }
+  });
+
+  it('never issues the same URL to two pages', () => {
+    const all = [
+      ...Object.values(STATIC_ROUTES),
+      ...SERVICES.map((service) => service.path),
+    ].flatMap((path) => [`de/${path.de}`, `en/${path.en}`]);
+
+    expect(new Set(all).size).toBe(all.length);
   });
 });

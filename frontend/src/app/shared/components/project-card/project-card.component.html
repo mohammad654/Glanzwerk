@@ -1,6 +1,6 @@
 <article class="project">
   <a class="project__media" [routerLink]="link()" tabindex="-1" aria-hidden="true">
-    <img [src]="project().image" [alt]="project().title" loading="lazy" />
+    <img [src]="project().image" [alt]="project().title" loading="lazy" [width]="imageSize.width" [height]="imageSize.height" />
   </a>
 
   <div class="project__content">

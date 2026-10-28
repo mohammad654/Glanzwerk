@@ -3,7 +3,7 @@
 .footer__top {
   padding: v.$section-padding-y 0 4.375rem;
   background: v.$brand-indigo;
-  color: #fff;
+  color: v.$white;
 }
 
 .widget {
@@ -11,13 +11,13 @@
 
   h3 {
     margin-bottom: 1.25rem;
-    color: #fff;
+    color: v.$white;
     font-size: 1.375rem; // 22px
     font-weight: 700;
   }
 
   p {
-    color: #fff;
+    color: v.$white;
     font-size: v.$font-size-sm;
     line-height: 1.8;
   }
@@ -47,7 +47,7 @@
     height: 1.875rem;
     border-radius: 50%;
     background: v.$primary;
-    color: #fff;
+    color: v.$white;
     font-size: v.$font-size-sm;
     transition:
       background v.$btn-transition,
@@ -56,7 +56,7 @@
 
     &:hover {
       scale: 1.2;
-      background: #fff;
+      background: v.$white;
       color: v.$brand-indigo;
     }
   }
@@ -66,7 +66,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  color: #fff;
+  color: v.$white;
   font-size: v.$font-size-sm;
   line-height: 2.125rem;
   // Grows rightwards so the column edge stays put.
@@ -85,7 +85,7 @@
   position: relative;
   margin-bottom: 0.5rem;
   padding-left: 1.875rem;
-  color: #fff;
+  color: v.$white;
   font-size: v.$font-size-sm;
 
   i {
@@ -104,7 +104,7 @@
 
   a {
     display: inline-block;
-    color: #fff;
+    color: v.$white;
     transform-origin: left center;
     transition:
       color 0.25s ease-in-out,
@@ -119,12 +119,51 @@
 
 .footer__bottom {
   padding: 1.25rem 0;
-  background: #05224c;
+  background: v.$brand-navy;
+  color: v.$white;
 
   p {
     margin: 0;
-    color: #fff;
     font-size: v.$font-size-sm;
+  }
+}
+
+.footer__bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+// Impressum and Datenschutzerklärung are legally required and conventionally live here.
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: v.$font-size-sm;
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus-visible {
+      color: v.$primary;
+    }
+  }
+}
+
+// Stacked and centred once the two blocks no longer fit on one line.
+@media (max-width: 575.98px) {
+  .footer__bottom-inner {
+    justify-content: center;
     text-align: center;
+  }
+
+  .footer__legal {
+    justify-content: center;
   }
 }

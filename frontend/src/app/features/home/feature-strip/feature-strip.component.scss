@@ -12,7 +12,7 @@
   height: 100%;
   border-radius: v.$radius-lg;
   background: v.$primary;
-  color: #fff;
+  color: v.$white;
 }
 
 .feature {
@@ -24,7 +24,7 @@
 
   h3 {
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: v.$white;
     font-size: 1.25rem;
     font-weight: 700;
   }
@@ -41,7 +41,7 @@
   padding: 1.25rem;
   border-radius: v.$radius-lg;
   background: v.$brand-indigo;
-  color: #fff;
+  color: v.$white;
 
   span {
     display: block;
@@ -55,13 +55,13 @@
     gap: 0.5rem;
     align-items: baseline;
     margin: 0 0 0.5rem;
-    color: #fff;
+    color: v.$white;
     font-size: 1.125rem;
     font-weight: 700;
   }
 
   a {
-    color: #fff;
+    color: v.$white;
     font-size: 1.5625rem; // 25px
     font-weight: 700;
 
@@ -72,6 +72,12 @@
 }
 
 @media (max-width: 991.98px) {
+  // The strip overlaps the hero by design, but on a short mobile hero that overlap
+  // lands on top of the call-to-action buttons. Below this width it sits underneath.
+  .feature-strip {
+    margin-top: 0;
+  }
+
   .hot-line {
     margin-top: 1.5rem;
   }

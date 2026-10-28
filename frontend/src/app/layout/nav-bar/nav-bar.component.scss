@@ -19,7 +19,7 @@
   height: v.$logo-height;
   width: auto;
   // The mark is mid-tone, and the header sits on whatever the hero photo is.
-  filter: drop-shadow(0 0.0625rem 0.1875rem rgba(#000, 0.55));
+  filter: drop-shadow(0 0.0625rem 0.1875rem rgba(v.$black, 0.55));
 }
 
 .site-nav__menu {
@@ -66,8 +66,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background: #fff;
-  box-shadow: 0 0 1.875rem rgba(#000, 0.08);
+  background: v.$white;
+  box-shadow: v.$shadow-bar;
 
   // Hidden rather than removed, so it can fade in.
   opacity: 0;
@@ -81,7 +81,7 @@
   a {
     display: block;
     padding: 0.625rem 0.9375rem;
-    border-bottom: 1px dashed #eee;
+    border-bottom: 1px dashed v.$border-subtle;
     color: v.$brand-headings;
     font-size: 0.8125rem; // 13px
     font-weight: 600;
@@ -128,7 +128,7 @@
   display: none;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: v.$white;
   font-size: 1.5rem;
   line-height: 1;
   padding: 0.25rem 0.5rem;
@@ -138,7 +138,7 @@
 .site-nav__burger {
   border: 0;
   background: transparent;
-  color: #fff;
+  color: v.$white;
   font-size: 1.75rem;
   line-height: 1;
   padding: 0 0.25rem;
@@ -189,7 +189,7 @@
 
     a {
       border-bottom: 0;
-      color: rgba(#fff, 0.75);
+      color: rgba(v.$white, 0.75);
       font-size: 0.875rem;
     }
   }

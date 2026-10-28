@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { preloadImage } from '../../../core/preload-image';
 import { registerSwiperElements } from '../../../core/swiper-elements';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
+import { LINKS } from '../../../core/routes';
 
 interface HeroSlide {
   eyebrow: string;
@@ -24,24 +25,27 @@ interface HeroSlide {
   host: { ngSkipHydration: '' },
 })
 export class HeroComponent {
+  /** Static-page links, so no template spells a URL out. */
+  readonly links = LINKS;
+
   readonly slides: HeroSlide[] = [
     {
       eyebrow: $localize`:@@hero.1.eyebrow:Cleaning · Moving · Everything Between`,
       title: $localize`:@@hero.1.title:More Than Cleaning. More Than Expected.`,
       text: $localize`:@@hero.1.text:One team for cleaning, moving, clearance and the jobs that come up in between. You call, we turn up when we said we would.`,
-      image: 'assets/images/hero/hero-team.jpg',
+      image: 'assets/images/hero/glanzwork-team-dresden.webp',
     },
     {
       eyebrow: $localize`:@@hero.2.eyebrow:Emergency & 24/7`,
       title: $localize`:@@hero.2.title:When It Cannot Wait Until Monday`,
       text: $localize`:@@hero.2.text:Same-day appointments, overnight shifts, weekends and holidays. Running out of time or facing a job too big to handle alone? Call us.`,
-      image: 'assets/images/hero/hero-night-shift.jpg',
+      image: 'assets/images/hero/bueroreinigung-nach-feierabend-dresden.webp',
     },
     {
       eyebrow: $localize`:@@hero.3.eyebrow:Snow & Outdoor Services`,
       title: $localize`:@@hero.3.title:Cleared Before The Day Begins`,
       text: $localize`:@@hero.3.text:Snow clearing, gritting and outdoor care, with every deployment logged. That record is your evidence that the duty of care was met.`,
-      image: 'assets/images/hero/hero-winter.jpg',
+      image: 'assets/images/hero/winterdienst-schneeraeumung-dresden.webp',
     },
   ];
 

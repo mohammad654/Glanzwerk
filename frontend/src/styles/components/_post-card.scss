@@ -33,7 +33,7 @@
 
   li {
     display: inline-block;
-    color: #78a9e3;
+    color: v.$text-meta;
     font-size: v.$topbar-font-size;
 
     + li::before {

@@ -14,7 +14,7 @@ interface Stat {
   styleUrl: './stats.component.scss',
 })
 export class StatsComponent {
-  // Placeholder figures — replace with Glanzwerk's real numbers before launch.
+  // Placeholder figures — replace with Glanzwork's real numbers before launch.
   readonly stats: Stat[] = [
     { value: '12', label: $localize`:@@stats.1:Years in building services` },
     { value: '140+', label: $localize`:@@stats.2:Sites under contract` },

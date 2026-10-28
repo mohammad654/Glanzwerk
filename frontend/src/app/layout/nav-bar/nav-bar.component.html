@@ -1,16 +1,16 @@
 <nav class="site-nav" [class.site-nav--open]="menuOpen()">
   <div class="container site-nav__inner">
     <a class="site-nav__brand" routerLink="/" (click)="closeMenu()">
-      <img src="assets/images/generated_logo..png" alt="Glanzwerk" />
+      <img src="assets/images/glanzwork-logo.png" alt="Glanzwork Gebäudereinigung Dresden" width="404" height="224" />
     </a>
 
     <ul id="primary-menu" class="site-nav__menu">
-      @for (item of items; track item.path) {
+      @for (item of items; track item.link) {
         <li class="site-nav__item">
           <a
-            [routerLink]="'/' + item.path"
+            [routerLink]="item.link"
             routerLinkActive="is-active"
-            [routerLinkActiveOptions]="{ exact: item.path === '' }"
+            [routerLinkActiveOptions]="{ exact: item.isHome }"
             (click)="closeMenu()"
           >
             {{ item.label }}
@@ -21,10 +21,10 @@
 
           @if (item.children) {
             <ul class="site-nav__dropdown">
-              @for (child of item.children; track child.path) {
+              @for (child of item.children; track child.link) {
                 <li>
                   <a
-                    [routerLink]="'/' + child.path"
+                    [routerLink]="child.link"
                     routerLinkActive="is-active"
                     (click)="closeMenu()"
                     >{{ child.label }}</a
@@ -48,7 +48,7 @@
         <i appIcon="bi-list" aria-hidden="true"></i>
       </button>
 
-      <a class="default-btn site-nav__cta" routerLink="/contact" i18n="@@cta.quote">Get A Quote</a>
+      <a class="default-btn site-nav__cta" [routerLink]="links.contact" i18n="@@cta.quote">Get A Quote</a>
 
       <button
         class="site-nav__toggle"

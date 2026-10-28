@@ -3,7 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 
-import { findAncestors } from '../../../core/navigation';
+import { trailFor } from '../../../core/navigation';
 import { PageBannerComponent } from '../page-banner/page-banner.component';
 
 @Component({
@@ -37,5 +37,5 @@ export class PagePlaceholderComponent {
     { initialValue: '' },
   );
 
-  readonly trail = computed(() => findAncestors(this.path()) ?? []);
+  readonly trail = computed(() => trailFor(this.path()));
 }

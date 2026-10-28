@@ -63,7 +63,7 @@
   width: 1.875rem; // 30px
   height: 1.875rem;
   background: v.$primary;
-  color: #fff;
+  color: v.$white;
   font-size: v.$font-size-base;
 }
 
@@ -88,8 +88,8 @@
     bottom: 0;
     width: 15.5rem;
     height: 15.5rem;
-    border: 0.625rem solid #fff;
-    box-shadow: 0 0 1.5rem rgba(#000, 0.12);
+    border: 0.625rem solid v.$white;
+    box-shadow: v.$shadow-photo;
   }
 }
 

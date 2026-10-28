@@ -2,8 +2,12 @@
 
 // $wipe-duration is paired with WIPE_MS in route-loading.service.ts: the service
 // holds the overlay in place for exactly as long as the exit animation runs.
-$boot-hold: 0.25s;
-$boot-duration: 0.9s;
+// The boot splash sits over the hero, so every millisecond here is time the visitor
+// spends looking at an overlay instead of the page. Halved from 0.25s + 0.9s: the
+// squeegee still reads, and the hero is clear in about half the time. Raise both if
+// the effect matters more than the first impression of speed.
+$boot-hold: 0s;
+$boot-duration: 0.55s;
 $wipe-duration: 0.62s;
 $squeegee-height: 1.25rem;
 $wipe-easing: cubic-bezier(0.76, 0, 0.24, 1);
@@ -24,9 +28,9 @@ $wipe-easing: cubic-bezier(0.76, 0, 0.24, 1);
   display: grid;
   place-items: center;
   background:
-    radial-gradient(28rem 18rem at 18% 24%, rgba(#fff, 0.1), transparent 70%),
+    radial-gradient(28rem 18rem at 18% 24%, rgba(v.$white, 0.1), transparent 70%),
     radial-gradient(24rem 16rem at 82% 72%, rgba(v.$brand-cyan, 0.22), transparent 70%),
-    linear-gradient(180deg, rgba(#000, 0.25), rgba(#000, 0)), v.$brand-indigo;
+    linear-gradient(180deg, rgba(v.$black, 0.25), rgba(v.$black, 0)), v.$brand-indigo;
   // Runs from CSS alone, so the splash clears itself without JavaScript.
   animation: wipe-down $boot-duration $wipe-easing $boot-hold forwards;
 }
@@ -42,7 +46,7 @@ $wipe-easing: cubic-bezier(0.76, 0, 0.24, 1);
 
 .wipe__message {
   margin: v.$spacer 0 0;
-  color: #fff;
+  color: v.$white;
   font-size: v.$font-size-sm;
 }
 
@@ -55,7 +59,7 @@ $wipe-easing: cubic-bezier(0.76, 0, 0.24, 1);
   border-radius: v.$radius-pill;
   background: linear-gradient(
     180deg,
-    rgba(#fff, 0.95),
+    rgba(v.$white, 0.95),
     rgba(v.$brand-cyan, 0.9) 45%,
     rgba(v.$brand-indigo, 0.95)
   );
@@ -72,8 +76,8 @@ $wipe-easing: cubic-bezier(0.76, 0, 0.24, 1);
     border-radius: 50%;
     background: radial-gradient(
       circle at 32% 30%,
-      rgba(#fff, 0.85),
-      rgba(#fff, 0.1) 62%,
+      rgba(v.$white, 0.85),
+      rgba(v.$white, 0.1) 62%,
       transparent 72%
     );
     animation: bubble-rise 4.5s linear infinite;

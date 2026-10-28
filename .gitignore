@@ -15,6 +15,8 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Company background document. Kept local: this repository is public and the
-# file is business material, not code.
+# Business documents. Kept local: this repository is public and these are
+# business material, not code. The SEO guide also carries the owner's personal
+# contact details and the competitive strategy.
 Lebenslauf Firma Glanzwerk .pdf
+Glanzwerk-Growth-and-SEO-Guide.pdf

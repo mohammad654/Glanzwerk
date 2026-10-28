@@ -36,11 +36,11 @@
 // On a dark band the heading and lead have to invert.
 .section-title--light {
   h2 {
-    color: #fff;
+    color: v.$white;
   }
 
   p {
-    color: rgba(#fff, 0.8);
+    color: rgba(v.$white, 0.8);
   }
 }
 

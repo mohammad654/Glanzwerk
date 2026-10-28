@@ -8,12 +8,12 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
   selector: 'app-projects-page',
   imports: [PageBannerComponent, ProjectCardComponent],
   template: `
-    <app-page-banner title="Projects" />
+    <app-page-banner [title]="pageTitle" />
 
     <section class="projects-grid">
       <div class="container">
         <div class="row g-4">
-          @for (project of projects; track project.slug) {
+          @for (project of projects; track project.key) {
             <div class="col-lg-4 col-md-6">
               <app-project-card [project]="project" />
             </div>
@@ -31,5 +31,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
   `,
 })
 export class ProjectsPageComponent {
+  readonly pageTitle = $localize`:@@page.references.h1:References`;
+
   readonly projects = PROJECTS;
 }

@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { COMPANY } from '../../core/company';
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
+import { LINKS } from '../../core/routes';
 
 @Component({
   selector: 'app-top-bar',
@@ -12,5 +13,8 @@ import { IconComponent } from '../../shared/components/icon/icon.component';
   styleUrl: './top-bar.component.scss',
 })
 export class TopBarComponent {
+  /** Static-page links, so no template spells a URL out. */
+  readonly links = LINKS;
+
   readonly company = COMPANY;
 }

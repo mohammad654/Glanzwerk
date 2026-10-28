@@ -1,5 +1,10 @@
+import { LocalizedPath, pathIn } from './i18n/localized-path';
+
 export interface BlogPost {
-  slug: string;
+  /** Locale-independent identity; never shown and never routed. */
+  key: string;
+  /** The URL segment per locale. Keep each on one line: the sitemap script reads them. */
+  path: LocalizedPath;
   title: string;
   author: string;
   date: string;
@@ -11,12 +16,13 @@ export interface BlogPost {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
-    slug: 'how-often-should-an-office-be-deep-cleaned',
+    key: 'how-often-should-an-office-be-deep-cleaned',
+    path: { de: 'ratgeber/wie-oft-grundreinigung-buero', en: 'blog/how-often-should-an-office-be-deep-cleaned' },
     title: 'How Often Should An Office Be Deep Cleaned?',
-    author: 'Glanzwerk Team',
+    author: 'Glanzwork Team',
     date: 'Jan 12, 2026',
     icon: 'bi-droplet-half',
-    image: 'assets/images/blog/clean-office.jpg',
+    image: 'assets/images/blog/ratgeber-bueroreinigung-intervalle.webp',
     excerpt:
       'Daily cleaning keeps an office usable. It is the periodic deep clean that protects the fit-out you paid for.',
     body: [
@@ -27,12 +33,13 @@ export const BLOG_POSTS: readonly BlogPost[] = [
     ],
   },
   {
-    slug: 'what-a-cleaning-specification-should-contain',
+    key: 'what-a-cleaning-specification-should-contain',
+    path: { de: 'ratgeber/leistungsverzeichnis-reinigung', en: 'blog/what-a-cleaning-specification-should-contain' },
     title: 'What A Cleaning Specification Should Contain',
-    author: 'Glanzwerk Team',
+    author: 'Glanzwork Team',
     date: 'Jan 08, 2026',
     icon: 'bi-clipboard-check',
-    image: 'assets/images/blog/cleaning-supplies.jpg',
+    image: 'assets/images/blog/ratgeber-leistungsverzeichnis-reinigung.webp',
     excerpt:
       'Most disputes with a cleaning contractor are not about effort. They are about a scope nobody wrote down.',
     body: [
@@ -43,12 +50,13 @@ export const BLOG_POSTS: readonly BlogPost[] = [
     ],
   },
   {
-    slug: 'planning-the-clean-after-building-work',
+    key: 'planning-the-clean-after-building-work',
+    path: { de: 'ratgeber/bauendreinigung-planen', en: 'blog/planning-the-clean-after-building-work' },
     title: 'Planning The Clean After Building Work',
-    author: 'Glanzwerk Team',
+    author: 'Glanzwork Team',
     date: 'Jan 03, 2026',
     icon: 'bi-tools',
-    image: 'assets/images/blog/hand-hygiene.jpg',
+    image: 'assets/images/blog/ratgeber-hygienekonzept-reinigung.webp',
     excerpt:
       'Construction dust keeps settling for weeks. A handover clean is a different job from a weekly one.',
     body: [
@@ -60,10 +68,12 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   },
 ];
 
-export const blogPath = (slug: string): string => `blog/${slug}`;
+/** This build's URL segment for a post. */
+export const blogPath = (post: BlogPost): string => pathIn(post.path);
 
 /** The same route as a router link. */
-export const blogLink = (slug: string): string => `/${blogPath(slug)}`;
+export const blogLink = (post: BlogPost): string => `/${blogPath(post)}`;
 
-export const findPost = (slug: string): BlogPost | undefined =>
-  BLOG_POSTS.find((post) => post.slug === slug);
+/** Lookup by the URL this build serves the page at. */
+export const findPostByPath = (path: string): BlogPost | undefined =>
+  BLOG_POSTS.find((post) => blogPath(post) === path);

@@ -2,8 +2,17 @@
 
 .hero__slider {
   display: block;
+
+  // Every slide is in the prerendered HTML so crawlers see all three, and the fade
+  // effect stacks them. Until Swiper boots and takes over, that means slide two and
+  // three print straight through slide one. Swiper adds `swiper-initialized` when it
+  // is ready, so until then only the first slide is shown.
+  &:not(.swiper-initialized) swiper-slide:not(:first-child) {
+    display: none;
+  }
+
   --swiper-pagination-color: #{v.$primary};
-  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-color: v.$white;
   --swiper-pagination-bullet-inactive-opacity: 0.5;
 }
 
@@ -14,14 +23,14 @@
   min-height: v.$hero-height;
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: v.$white;
 
   // The template tints every slide so white text stays readable on any photo.
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(#003782, 0.5);
+    background: rgba(v.$brand-overlay, 0.5);
   }
 
   // The header is transparent and sits on whatever the photo happens to be, so
@@ -32,7 +41,7 @@
     inset-inline: 0;
     top: 0;
     height: 13rem;
-    background: linear-gradient(to bottom, rgba(#000, 0.55), transparent);
+    background: linear-gradient(to bottom, rgba(v.$black, 0.55), transparent);
   }
 }
 
@@ -45,8 +54,8 @@
   display: block;
   margin-bottom: 0.75rem;
   // The eyebrow is small and lands wherever the photo happens to be busiest.
-  text-shadow: 0 0.0625rem 0.375rem rgba(#000, 0.7);
-  color: #fff;
+  text-shadow: 0 0.0625rem 0.375rem rgba(v.$black, 0.7);
+  color: v.$white;
   font-size: v.$font-size-sm;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -59,18 +68,18 @@
   h1,
   h2 {
     margin-bottom: 1rem;
-    color: #fff;
+    color: v.$white;
     font-size: 3.75rem; // 60px
     font-weight: 700;
     line-height: 1.2;
-    text-shadow: 0 0.125rem 1rem rgba(#000, 0.4);
+    text-shadow: 0 0.125rem 1rem rgba(v.$black, 0.4);
   }
 
   p {
     margin-bottom: 1.875rem;
     font-size: v.$font-size-base;
     line-height: 1.8;
-    text-shadow: 0 0.0625rem 0.5rem rgba(#000, 0.5);
+    text-shadow: 0 0.0625rem 0.5rem rgba(v.$black, 0.5);
   }
 }
 
@@ -94,13 +103,16 @@
   transition: v.$btn-transition;
 
   &:hover {
-    background: #fff;
+    background: v.$white;
   }
 }
 
 @media (max-width: 991.98px) {
   .hero__slide {
     min-height: 37.5rem; // 600px
+    // The navbar is transparent and sits over the photo. Once the slide is this
+    // short, centred text rides up underneath it, so reserve the header's height.
+    padding-top: v.$navbar-height;
   }
 
   .hero__text h1,

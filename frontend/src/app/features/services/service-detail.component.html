@@ -1,12 +1,12 @@
 @if (service(); as item) {
-  <app-page-banner [title]="item.title" [trail]="trail" />
+  <app-page-banner [title]="item.title" [trail]="trail()" />
 
   <section class="detail">
     <div class="container">
       <div class="row gy-5 g-lg-5">
         <div class="col-lg-8">
           <div class="detail__media">
-            <img [src]="item.image" [alt]="item.title" />
+            <img [src]="item.image" [alt]="item.title" [width]="imageSize.width" [height]="imageSize.height" />
           </div>
 
           <h2>{{ item.title }}</h2>
@@ -34,15 +34,27 @@
               </li>
             }
           </ul>
+
+          @if (faqs().length) {
+            <h3 class="detail__faq-heading" i18n="@@serviceDetail.faq">Frequently asked questions</h3>
+            <dl class="detail__faq">
+              @for (faq of faqs(); track faq.question) {
+                <div class="detail__faq-item">
+                  <dt>{{ faq.question }}</dt>
+                  <dd>{{ faq.answer }}</dd>
+                </div>
+              }
+            </dl>
+          }
         </div>
 
         <aside class="col-lg-4">
           <div class="detail__panel">
             <h3 i18n="@@serviceDetail.allServices">All Services</h3>
             <ul class="detail__list">
-              @for (other of allServices; track other.slug) {
+              @for (other of allServices; track other.key) {
                 <li>
-                  <a [routerLink]="path(other.slug)" [class.is-current]="other.slug === item.slug">
+                  <a [routerLink]="path(other)" [class.is-current]="other.key === item.key">
                     <i [appIcon]="other.icon" aria-hidden="true"></i>
                     {{ other.title }}
                   </a>
@@ -56,8 +68,8 @@
             <p i18n="@@serviceDetail.quoteLead">
               Tell us about the property and we will come back with a fixed price.
             </p>
-            <a class="default-btn" routerLink="/contact" i18n="@@cta.quote">Get A Quote</a>
-            <a class="detail__phone" [href]="'tel:' + company.phone">
+            <a class="default-btn" [routerLink]="links.contact" i18n="@@cta.quote">Get A Quote</a>
+            <a class="detail__phone" [href]="'tel:' + company.phoneHref">
               {{ company.phone }}
             </a>
           </div>
@@ -66,12 +78,12 @@
     </div>
   </section>
 } @else {
-  <app-page-banner title="Service not found" [trail]="trail" />
+  <app-page-banner [title]="notFoundTitle" [trail]="trail()" />
 
   <section class="detail">
     <div class="container text-center">
       <p i18n="@@serviceDetail.missing">That service does not exist.</p>
-      <a class="default-btn" routerLink="/services" i18n="@@cta.seeAllServices">See all services</a>
+      <a class="default-btn" [routerLink]="links.services" i18n="@@cta.seeAllServices">See all services</a>
     </div>
   </section>
 }

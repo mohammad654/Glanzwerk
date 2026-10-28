@@ -1,6 +1,10 @@
 // Design tokens — the single source of truth for the whole UI.
 // Values measured off the Trice reference template.
 
+// Neutrals — literals belong here and nowhere else
+$white: #fff;
+$black: #000;
+
 // Palette
 $brand-cyan: #04b8e5; // buttons, active links, eyebrow text
 $brand-indigo: #190f3c; // top bar
@@ -8,11 +12,15 @@ $brand-headings: #232350; // headings
 $brand-body: #5d5d5d; // body copy
 $brand-sky: #78a9e3; // bylines, dates and other secondary meta
 
+// Deep blues taken from the footer and hero overlay, which had them inline
+$brand-navy: #05224c; // footer base bar
+$brand-overlay: #003782; // the wash over hero photography
+
 // Tinted backgrounds that separate alternating sections
 $bg-tint: #f4fbfe;
 $bg-tint-soft: #f6fcfe;
 
-// From logo.png — kept for accents that should feel like the mark itself
+// Sampled from the Glanzwork mark — accents that should feel like the logo itself
 $brand-blue: #2e6f9e;
 $brand-green: #7fbf5a;
 
@@ -56,6 +64,15 @@ $btn-transition: 0.5s;
 // Home
 $hero-height: 50rem; // 800px
 $feature-overlap: 6.25rem; // 100px — the feature strip rides up over the hero
+
+// Borders
+$border-subtle: #eee;
+
+// Elevation — one scale, so cards in different sections cannot drift apart
+$shadow-card: 0 0 1.25rem 0.1875rem rgba($black, 0.05);
+$shadow-card-hover: 0 1.25rem 2.5rem rgba($black, 0.18);
+$shadow-photo: 0 0 1.5rem rgba($black, 0.12);
+$shadow-bar: 0 0 1.875rem rgba($black, 0.08);
 
 // Shape and rhythm
 $radius-sm: 0.375rem;

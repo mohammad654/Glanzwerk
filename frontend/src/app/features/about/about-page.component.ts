@@ -10,11 +10,13 @@ import { StatsComponent } from './stats/stats.component';
   selector: 'app-about-page',
   imports: [PageBannerComponent, AboutComponent, StatsComponent, WhyUsComponent, ProcessComponent],
   template: `
-    <app-page-banner title="About" />
+    <app-page-banner [title]="pageTitle" />
     <app-about [spacedTop]="true" />
     <app-stats />
     <app-why-us />
     <app-process />
   `,
 })
-export class AboutPageComponent {}
+export class AboutPageComponent {
+  readonly pageTitle = $localize`:@@page.about.h1:About Glanzwork`;
+}

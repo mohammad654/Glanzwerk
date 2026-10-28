@@ -1,4 +1,4 @@
-<app-page-banner title="Contact" />
+<app-page-banner [title]="pageTitle" />
 
 <section class="contact">
   <div class="container">
@@ -14,6 +14,7 @@
     <ul class="channels">
       @for (channel of channels; track channel.label) {
         <li class="channel">
+          <i class="channel__watermark" [appIcon]="channel.icon" aria-hidden="true"></i>
           <span class="channel__icon" aria-hidden="true">
             <i [appIcon]="channel.icon"></i>
           </span>
@@ -163,7 +164,7 @@
                     [attr.aria-invalid]="isInvalid('consent') || null"
                     [attr.aria-describedby]="isInvalid('consent') ? 'contact-consent-error' : null"
                   />
-                  I agree that Glanzwerk may store these details in order to answer my enquiry.
+                  I agree that Glanzwork may store these details in order to answer my enquiry.
                 </label>
                 @if (isInvalid('consent')) {
                   <span class="form-field__error" id="contact-consent-error">
@@ -197,7 +198,7 @@
               Burst pipe, flooded basement, a handover tomorrow morning: do not use the form. Call
               us and we will tell you straight away whether we can make it.
             </p>
-            <a class="contact__phone" [href]="'tel:' + company.phone">
+            <a class="contact__phone" [href]="'tel:' + company.phoneHref">
               <i appIcon="bi-telephone-fill" aria-hidden="true"></i>
               {{ company.phone }}
             </a>

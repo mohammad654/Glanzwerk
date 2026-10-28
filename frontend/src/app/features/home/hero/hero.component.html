@@ -24,12 +24,12 @@
                   <p>{{ slide.text }}</p>
 
                   <div class="hero__actions">
-                    <a class="default-btn" routerLink="/contact" i18n="@@cta.requestQuote"
+                    <a class="default-btn" [routerLink]="links.contact" i18n="@@cta.requestQuote"
                       >Request A Quote</a
                     >
                     <a
                       class="default-btn default-btn--light"
-                      routerLink="/services"
+                      [routerLink]="links.services"
                       i18n="@@cta.ourServices"
                       >Our Services</a
                     >

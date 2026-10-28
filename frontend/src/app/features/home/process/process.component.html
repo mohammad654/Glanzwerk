@@ -17,7 +17,7 @@
             <h3>{{ step.title }}</h3>
             <p>{{ step.text }}</p>
 
-            <a class="read-more" routerLink="/contact">
+            <a class="read-more" [routerLink]="links.contact">
               <ng-container i18n="@@cta.getInTouch">Get In Touch</ng-container>
               <i appIcon="bi-plus-lg" aria-hidden="true"></i>
             </a>

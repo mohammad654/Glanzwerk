@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
+import { LINKS } from '../../../core/routes';
 
 @Component({
   selector: 'app-about',
@@ -12,6 +13,9 @@ import { IconComponent } from '../../../shared/components/icon/icon.component';
   },
 })
 export class AboutComponent {
+  /** Static-page links, so no template spells a URL out. */
+  readonly links = LINKS;
+
   /** On the home page the feature strip supplies the gap above; elsewhere this does. */
   readonly spacedTop = input(false);
 

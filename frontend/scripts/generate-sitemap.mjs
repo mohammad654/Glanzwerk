@@ -1,73 +1,84 @@
-// Regenerates public/sitemap.xml from the content catalogues. Wired to `prebuild`, so
-// adding a service, project or post can never leave the sitemap behind. Plain Node on
-// purpose: the catalogues are TypeScript, and this must run without a compile step.
-import { readFileSync, writeFileSync } from 'node:fs';
+// Builds sitemap.xml from the prerendered output rather than from the source.
+//
+// The catalogues are TypeScript with translated slugs, so no regex over the source
+// can know which German page pairs with which English one. The built pages already
+// know: SeoService writes a canonical URL and a full set of hreflang alternates into
+// every indexable page, and writes none into the pages that must stay out of the
+// index. Reading those back means the sitemap cannot disagree with the site.
+//
+// Runs as part of `postbuild`, after finalize-dist.mjs has prepared the root.
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { join, relative, sep } from 'node:path';
 
-// Overridden by the deploy workflow; a sitemap full of the wrong origin is worse
-// than no sitemap, because every URL in it is a claim about where the page lives.
-const ORIGIN = process.env.SITE_ORIGIN ?? 'https://www.glanzwerk.de';
-// Mirrors src/app/core/i18n/locales.ts. The default one is also the x-default.
+const OUT = 'dist/glanzwerk/browser';
 const LOCALES = ['de', 'en'];
-const DEFAULT_LOCALE = 'de';
-const CATALOGUES = [
-  { file: 'src/app/core/service-catalog.ts', prefix: 'services', priority: '0.9' },
-  { file: 'src/app/core/project-catalog.ts', prefix: 'projects', priority: '0.6' },
-  { file: 'src/app/core/blog-catalog.ts', prefix: 'blog', priority: '0.6' },
-];
+const ORIGIN = process.env.SITE_ORIGIN ?? 'https://www.glanzwerk.de';
 
-// Mirrors the indexable static pages in src/app/core/seo/page-meta.ts.
-const STATIC_PAGES = [
-  { path: '', priority: '1.0' },
-  { path: 'services', priority: '0.9' },
-  { path: 'contact', priority: '0.8' },
-  { path: 'about', priority: '0.8' },
-  { path: 'projects', priority: '0.7' },
-  { path: 'blog', priority: '0.7' },
-];
+/** Pages nearer the front of the site matter more; depth is a fair proxy. */
+const priorityFor = (path) => (path === '' ? '1.0' : path.includes('/') ? '0.6' : '0.8');
 
-const slugsIn = (file) =>
-  [...readFileSync(file, 'utf8').matchAll(/^ {4}slug: '([^']+)'/gm)].map((match) => match[1]);
+const htmlFilesIn = (dir) => {
+  const entries = readdirSync(dir, { withFileTypes: true });
+  return entries.flatMap((entry) => {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) return htmlFilesIn(full);
+    return entry.name === 'index.html' ? [full] : [];
+  });
+};
 
-const entries = [
-  ...STATIC_PAGES,
-  ...CATALOGUES.flatMap(({ file, prefix, priority }) =>
-    slugsIn(file).map((slug) => ({ path: `${prefix}/${slug}`, priority })),
-  ),
-];
+const canonicalIn = (html) =>
+  html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/)?.[1] ?? null;
+
+const alternatesIn = (html) =>
+  [...html.matchAll(/<link[^>]+rel="alternate"[^>]+hreflang="([^"]+)"[^>]+href="([^"]+)"/g)].map(
+    ([, hreflang, href]) => ({ hreflang, href }),
+  );
+
+const pages = [];
+
+for (const locale of LOCALES) {
+  for (const file of htmlFilesIn(join(OUT, locale))) {
+    const html = readFileSync(file, 'utf8');
+    const canonical = canonicalIn(html);
+
+    // No canonical means the page declared itself noindex. Honour that.
+    if (!canonical) continue;
+
+    const path = relative(join(OUT, locale), file).split(sep).slice(0, -1).join('/');
+    pages.push({ canonical, alternates: alternatesIn(html), priority: priorityFor(path) });
+  }
+}
+
+if (pages.length === 0) {
+  throw new Error(`No indexable pages found under ${OUT}. Did the build run?`);
+}
 
 const lastmod = new Date().toISOString().slice(0, 10);
-const href = (locale, path) => [ORIGIN, locale, path].filter(Boolean).join('/');
+const escape = (url) => url.replace(/&/g, '&amp;');
 
-// Every URL carries the full set of alternates, including itself: Google treats a
-// page that omits its own hreflang as having declared nothing.
-const alternates = (path) =>
-  [...LOCALES.map((locale) => [locale, locale]), ['x-default', DEFAULT_LOCALE]]
-    .map(
-      ([hreflang, locale]) =>
-        `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${href(locale, path)}"/>`,
-    )
-    .join('\n');
-
-const url = (locale, { path, priority }) => `  <url>
-    <loc>${href(locale, path)}</loc>
-${alternates(path)}
+const url = ({ canonical, alternates, priority }) => `  <url>
+    <loc>${escape(canonical)}</loc>
+${alternates
+  .map(
+    ({ hreflang, href }) =>
+      `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escape(href)}"/>`,
+  )
+  .join('\n')}
     <lastmod>${lastmod}</lastmod>
     <priority>${priority}</priority>
   </url>`;
 
-const urls = LOCALES.flatMap((locale) => entries.map((entry) => url(locale, entry)));
-
 writeFileSync(
-  'public/sitemap.xml',
+  `${OUT}/sitemap.xml`,
   `<?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated by scripts/generate-sitemap.mjs. Do not edit by hand. -->
+<!-- Generated by scripts/generate-sitemap.mjs from the prerendered output. -->
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-${urls.join('\n')}
+${pages.map(url).join('\n')}
 </urlset>
 `,
 );
 
-console.log(`sitemap.xml: ${urls.length} urls across ${LOCALES.length} locales`);
+console.log(`sitemap.xml: ${pages.length} indexable urls across ${LOCALES.length} locales`);

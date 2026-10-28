@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 
 import { BLOG_POSTS, blogLink } from '../../../core/blog-catalog';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
+import { CATALOGUE_IMAGE } from '../../../core/media';
 
 @Component({
   selector: 'app-blog',
@@ -14,6 +15,9 @@ import { IconComponent } from '../../../shared/components/icon/icon.component';
   },
 })
 export class BlogComponent {
+  /** Reserves the photo\'s space before it loads. */
+  readonly imageSize = CATALOGUE_IMAGE;
+
   /** The blog page has its own banner, so it does not need the section title. */
   readonly hideTitle = input(false);
 

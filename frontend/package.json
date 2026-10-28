@@ -8,12 +8,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "sitemap": "node scripts/generate-sitemap.mjs",
-    "prebuild": "npm run sitemap && npm run icons",
-    "serve:ssr:glanzwerk": "node dist/glanzwerk/server/server.mjs",
-    "postbuild": "node scripts/finalize-dist.mjs",
+    "prebuild": "npm run icons",
+    "postbuild": "node scripts/finalize-dist.mjs && npm run sitemap",
     "start:en": "ng serve --configuration en",
     "preview": "npm run build && node scripts/preview.mjs",
-    "icons": "node scripts/generate-icon-sprite.mjs"
+    "icons": "node scripts/generate-icon-sprite.mjs",
+    "i18n:extract": "ng extract-i18n --output-path src/locale --out-file messages.xlf",
+    "i18n:check": "npm run i18n:extract && node scripts/check-translations.mjs"
   },
   "private": true,
   "packageManager": "npm@11.17.0",
@@ -27,7 +28,6 @@
     "@angular/router": "^22.0.0",
     "@angular/ssr": "^22.2.4",
     "bootstrap": "^5.3.8",
-    "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "swiper": "^14.3.0",
     "tslib": "^2.3.0"
@@ -37,7 +37,6 @@
     "@angular/cli": "^22.0.5",
     "@angular/compiler-cli": "^22.0.0",
     "@angular/localize": "^22.2.3",
-    "@types/express": "^5.0.1",
     "@types/node": "^22.12.0",
     "bootstrap-icons": "^1.13.2",
     "jsdom": "^28.0.0",

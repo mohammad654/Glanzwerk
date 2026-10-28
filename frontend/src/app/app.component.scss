@@ -14,5 +14,5 @@
 // links, so the header brings its own background.
 .site-header.is-scrolled {
   background: v.$brand-indigo;
-  box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.15);
+  box-shadow: 0 0.125rem 0.75rem rgba(v.$black, 0.15);
 }

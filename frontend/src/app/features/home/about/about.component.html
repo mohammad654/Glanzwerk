@@ -3,10 +3,10 @@
     <div class="row align-items-center gy-5 g-lg-5">
       <div class="col-lg-6">
         <div class="about__content">
-          <span i18n="@@about.eyebrow">About Glanzwerk</span>
+          <span i18n="@@about.eyebrow">About Glanzwork</span>
           <h2 i18n="@@about.heading">Your Problem Is Our Starting Point</h2>
           <p i18n="@@about.lead">
-            Most property problems do not need five different companies. Glanzwerk covers cleaning,
+            Most property problems do not need five different companies. Glanzwork covers cleaning,
             moving, clearance and property support for homes and businesses, from a standing
             appointment to the thing that went wrong this morning.
           </p>
@@ -25,7 +25,7 @@
             every space better than we found it.
           </p>
 
-          <a class="default-btn" routerLink="/about" i18n="@@cta.moreAbout">More About Us</a>
+          <a class="default-btn" [routerLink]="links.about" i18n="@@cta.moreAbout">More About Us</a>
         </div>
       </div>
 
@@ -33,14 +33,20 @@
         <div class="about__media">
           <img
             class="about__photo"
-            src="assets/images/about/team-office.jpg"
-            alt="A Glanzwerk cleaner working in an office"
+            src="assets/images/about/glanzwork-bueroteam.webp"
+            alt="The Glanzwork team cleaning an office building in Dresden"
+            i18n-alt="@@alt.about.team"
+            width="900"
+            height="844"
             loading="lazy"
           />
           <img
             class="about__photo about__photo--inset"
-            src="assets/images/about/reception.jpg"
-            alt="Reception of a commercial building under contract"
+            src="assets/images/about/empfangsbereich-reinigung-dresden.webp"
+            alt="Cleaned reception area of a Dresden office building"
+            i18n-alt="@@alt.about.reception"
+            width="900"
+            height="600"
             loading="lazy"
           />
         </div>

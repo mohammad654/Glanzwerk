@@ -55,11 +55,45 @@
 .detail__phone {
   display: block;
   margin-top: 1rem;
-  color: #fff;
+  color: v.$white;
   font-size: 1.25rem;
   font-weight: 700;
 
   &:hover {
     color: v.$primary;
+  }
+}
+
+// Questions sit in the main column under the job list. A plain <dl> rather than an
+// accordion: the answers are the reason the page can win a rich result, so they stay
+// in the markup and readable with no JavaScript.
+.detail__faq-heading {
+  margin-top: 2.5rem;
+}
+
+.detail__faq {
+  margin: 0;
+}
+
+.detail__faq-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid v.$border-subtle;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  dt {
+    margin-bottom: 0.5rem;
+    color: v.$brand-headings;
+    font-family: v.$font-heading;
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0;
+    color: v.$brand-body;
+    font-size: v.$font-size-sm;
+    line-height: v.$line-height-base;
   }
 }

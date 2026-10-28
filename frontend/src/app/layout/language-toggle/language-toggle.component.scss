@@ -10,13 +10,13 @@
   align-items: center;
   gap: 0.375rem;
   padding: 0 0.5rem;
-  color: rgba(#fff, 0.6);
+  color: rgba(v.$white, 0.6);
   font-weight: 600;
   letter-spacing: 0.03em;
 
   // A hairline between the two codes instead of a separator character.
   & + & {
-    border-left: 1px solid rgba(#fff, 0.25);
+    border-left: 1px solid rgba(v.$white, 0.25);
   }
 
   &:hover,
@@ -26,13 +26,13 @@
 }
 
 .lang__item.is-current {
-  color: #fff;
+  color: v.$white;
 }
 
 .lang__flag {
   display: block;
   // A pale flag on a pale background loses its edge without this.
-  box-shadow: 0 0 0 1px rgba(#fff, 0.3);
+  box-shadow: 0 0 0 1px rgba(v.$white, 0.3);
   border-radius: 2px;
   overflow: hidden;
 }

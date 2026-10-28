@@ -1,36 +1,50 @@
-import { BLOG_POSTS, blogPath } from '../blog-catalog';
-import { PROJECTS, projectPath } from '../project-catalog';
-import { ADDRESS_LINE, COMPANY, SOCIAL_LINKS } from '../company';
-import { SERVICES, servicePath } from '../service-catalog';
+import { findPostByPath } from '../blog-catalog';
+import { COMPANY, SOCIAL_LINKS } from '../company';
+import { LocaleCode } from '../i18n/locales';
+import { pathIn } from '../i18n/localized-path';
+import { flattenNavItems, trailFor } from '../navigation';
+import { findProjectByPath } from '../project-catalog';
+import { SERVICES, findServiceByPath } from '../service-catalog';
+import { faqsFor } from '../service-faqs';
 import { SITE, absoluteUrl } from '../site';
 
 /** A JSON-LD node. Shapes vary by @type, so this stays deliberately loose. */
 type Schema = Record<string, unknown>;
 
-const businessId = (locale: string) => `${absoluteUrl('', locale)}#business`;
+const businessId = (locale: LocaleCode) => `${absoluteUrl('', locale)}#business`;
+
+/** Every town in the Einsatzgebiet, as the Place nodes schema.org expects. */
+const areaServed = COMPANY.areaServed.map((name) => ({ '@type': 'Place', name }));
 
 /**
  * The LocalBusiness node every page carries. Local search results — the map pack in
  * particular — are built from name, address, phone and opening hours, so this is the
  * one piece of markup that directly affects whether a nearby customer finds us.
+ *
+ * The type stays `LocalBusiness`: schema.org has no `CleaningService` type, and an
+ * invented @type makes the whole node invalid rather than more specific.
  */
-const localBusiness = (locale: string): Schema => ({
+const localBusiness = (locale: LocaleCode): Schema => ({
   '@type': 'LocalBusiness',
   '@id': businessId(locale),
   name: COMPANY.name,
   url: absoluteUrl('', locale),
   image: absoluteUrl(SITE.shareImage, locale),
   description: SITE.description,
-  telephone: COMPANY.phone,
+  // Dialable form: schema.org wants the number reachable from abroad, not the local one.
+  telephone: COMPANY.phoneHref,
   email: COMPANY.email,
+  founder: { '@type': 'Person', name: COMPANY.founder },
+  knowsLanguage: COMPANY.languages,
   address: {
     '@type': 'PostalAddress',
     streetAddress: COMPANY.address.street,
     postalCode: COMPANY.address.postalCode,
     addressLocality: COMPANY.address.city,
+    addressRegion: COMPANY.address.region,
     addressCountry: COMPANY.address.country,
   },
-  areaServed: { '@type': 'Place', name: COMPANY.areaServed },
+  areaServed,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: COMPANY.openingHoursSpec.days,
@@ -43,46 +57,62 @@ const localBusiness = (locale: string): Schema => ({
     name: `${COMPANY.name} Services`,
     itemListElement: SERVICES.map((service) => ({
       '@type': 'Offer',
-      url: absoluteUrl(servicePath(service.slug), locale),
+      url: absoluteUrl(service.path[locale], locale),
       itemOffered: { '@type': 'Service', name: service.title },
     })),
   },
 });
 
-const titleCase = (segment: string): string =>
-  segment
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+/** What a page calls itself in a breadcrumb — its own title, not its slug. */
+const pageName = (path: string): string => {
+  const service = findServiceByPath(path);
+  if (service) {
+    return service.title;
+  }
 
-/** Breadcrumb labels read better from the catalogs than from the slug. */
-const crumbLabel = (path: string): string => {
-  const service = SERVICES.find((item) => servicePath(item.slug) === path);
-  const project = PROJECTS.find((item) => projectPath(item.slug) === path);
-  const post = BLOG_POSTS.find((item) => blogPath(item.slug) === path);
-  return service?.title ?? project?.title ?? post?.title ?? titleCase(path.split('/').pop() ?? '');
+  const project = findProjectByPath(path);
+  if (project) {
+    return project.title;
+  }
+
+  const post = findPostByPath(path);
+  if (post) {
+    return post.title;
+  }
+
+  return flattenNavItems().find((item) => pathIn(item.path) === path)?.label ?? path;
 };
 
-const breadcrumbs = (path: string, locale: string): Schema | undefined => {
-  const segments = path.split('/').filter(Boolean);
-  if (segments.length === 0) {
+/**
+ * The trail comes from the menu tree, not from the URL's segments: service pages sit
+ * at the site root for SEO but still belong under Services for a reader.
+ */
+const breadcrumbs = (path: string, locale: LocaleCode): Schema | undefined => {
+  if (!path) {
     return undefined;
   }
 
-  const trail = segments.map((_, index) => segments.slice(0, index + 1).join('/'));
+  const crumbs = [
+    { name: SITE.name, item: absoluteUrl('', locale) },
+    ...trailFor(path).map((crumb) => ({
+      name: crumb.label,
+      item: absoluteUrl(crumb.path, locale),
+    })),
+    { name: pageName(path), item: absoluteUrl(path, locale) },
+  ];
+
   return {
     '@type': 'BreadcrumbList',
-    itemListElement: ['', ...trail].map((crumb, index) => ({
+    itemListElement: crumbs.map((crumb, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: crumb === '' ? SITE.name : crumbLabel(crumb),
-      item: absoluteUrl(crumb, locale),
+      ...crumb,
     })),
   };
 };
 
-const pageSchema = (path: string, locale: string): Schema | undefined => {
-  const service = SERVICES.find((item) => servicePath(item.slug) === path);
+const pageSchema = (path: string, locale: LocaleCode): Schema | undefined => {
+  const service = findServiceByPath(path);
   if (service) {
     return {
       '@type': 'Service',
@@ -92,11 +122,11 @@ const pageSchema = (path: string, locale: string): Schema | undefined => {
       url: absoluteUrl(path, locale),
       image: absoluteUrl(service.image, locale),
       provider: { '@id': businessId(locale) },
-      areaServed: { '@type': 'Place', name: COMPANY.areaServed },
+      areaServed,
     };
   }
 
-  const post = BLOG_POSTS.find((item) => blogPath(item.slug) === path);
+  const post = findPostByPath(path);
   if (post) {
     return {
       '@type': 'BlogPosting',
@@ -113,10 +143,35 @@ const pageSchema = (path: string, locale: string): Schema | undefined => {
   return undefined;
 };
 
-/** One @graph per page: the business, the breadcrumb trail, and the page's own node. */
-export const structuredDataFor = (path: string, locale: string): Schema => ({
+/**
+ * The page's questions and answers, where it has any. This is the node that can turn
+ * a result into an expandable one, so it carries the answers verbatim: markup that
+ * does not match what the visitor reads is a manual-action risk, not a clever trick.
+ */
+const faqPage = (path: string): Schema | undefined => {
+  const service = findServiceByPath(path);
+  const faqs = service ? faqsFor(service.key) : [];
+  if (faqs.length === 0) {
+    return undefined;
+  }
+
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+};
+
+/** One @graph per page: the business, the breadcrumb trail, and the page's own nodes. */
+export const structuredDataFor = (path: string, locale: LocaleCode): Schema => ({
   '@context': 'https://schema.org',
-  '@graph': [localBusiness(locale), breadcrumbs(path, locale), pageSchema(path, locale)].filter(
-    (node): node is Schema => node !== undefined,
-  ),
+  '@graph': [
+    localBusiness(locale),
+    breadcrumbs(path, locale),
+    pageSchema(path, locale),
+    faqPage(path),
+  ].filter((node): node is Schema => node !== undefined),
 });

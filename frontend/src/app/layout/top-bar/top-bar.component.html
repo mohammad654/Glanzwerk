@@ -9,7 +9,7 @@
       <li>
         <i appIcon="bi-telephone" aria-hidden="true"></i>
         <span i18n="@@topbar.phone">Call Us:</span>
-        <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+        <a [href]="'tel:' + company.phoneHref">{{ company.phone }}</a>
       </li>
     </ul>
 
@@ -17,7 +17,7 @@
       <li class="top-bar__secondary" i18n="@@topbar.hours">
         Opening Hour: {{ company.openingHours }}
       </li>
-      <li class="top-bar__secondary"><a routerLink="/login" i18n="@@topbar.signin">Sign In</a></li>
+      <li class="top-bar__secondary"><a [routerLink]="links.login" i18n="@@topbar.signin">Sign In</a></li>
       <li><app-language-toggle /></li>
     </ul>
   </div>

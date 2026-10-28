@@ -2,15 +2,16 @@ import { DOCUMENT, Injectable, LOCALE_ID, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { DEFAULT_LOCALE, LOCALES, toLocaleCode } from '../i18n/locales';
+import { localizedPathsFor } from '../routes';
 import { SITE, absoluteUrl } from '../site';
 import { resolvePageMeta } from './page-meta';
 import { structuredDataFor } from './structured-data';
 
 /** Only one JSON-LD block per page, so it is replaced rather than appended. */
-const JSON_LD_ID = 'glanzwerk-structured-data';
+const JSON_LD_ID = 'glanzwork-structured-data';
 
 /** Marks the alternate-language links so they can be replaced wholesale. */
-const ALTERNATE_ATTR = 'data-glanzwerk-alternate';
+const ALTERNATE_ATTR = 'data-glanzwork-alternate';
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -96,11 +97,20 @@ export class SeoService {
       return;
     }
 
-    const alternates = LOCALES.map((locale) => ({
+    // Slugs are translated, so each locale needs its own path, not this one re-prefixed.
+    const paths = localizedPathsFor(path);
+    if (!paths) {
+      return;
+    }
+
+    const alternates: { hreflang: string; href: string }[] = LOCALES.map((locale) => ({
       hreflang: locale.code,
-      href: absoluteUrl(path, locale.code),
+      href: absoluteUrl(paths[locale.code], locale.code),
     }));
-    alternates.push({ hreflang: 'x-default', href: absoluteUrl(path, DEFAULT_LOCALE) });
+    alternates.push({
+      hreflang: 'x-default',
+      href: absoluteUrl(paths[DEFAULT_LOCALE], DEFAULT_LOCALE),
+    });
 
     for (const { hreflang, href } of alternates) {
       const link = this.document.createElement('link');

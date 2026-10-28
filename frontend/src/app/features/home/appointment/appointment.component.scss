@@ -16,7 +16,7 @@
   border: 1px solid rgba(v.$form-success, 0.6);
   border-radius: v.$radius-lg;
   background: rgba(v.$form-success, 0.18);
-  color: #fff;
+  color: v.$white;
   font-size: v.$font-size-sm;
   text-align: center;
 
@@ -46,7 +46,7 @@
     padding: 0.625rem 0.75rem;
     border: 1px solid v.$input-border;
     border-radius: v.$radius-sm;
-    background: #fff;
+    background: v.$white;
     color: v.$brand-headings;
     font-size: v.$topbar-font-size;
 

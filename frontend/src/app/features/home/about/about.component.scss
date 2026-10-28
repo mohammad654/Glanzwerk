@@ -80,8 +80,8 @@
     bottom: 0;
     width: 14.375rem; // 230px
     height: 14.375rem;
-    border: 0.625rem solid #fff;
-    box-shadow: 0 0 1.5rem rgba(#000, 0.12);
+    border: 0.625rem solid v.$white;
+    box-shadow: v.$shadow-photo;
   }
 }
 

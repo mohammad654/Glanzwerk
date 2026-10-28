@@ -1,9 +1,12 @@
 import { DEPLOY_BASE } from '../build-env';
 
+/** The locales the site is built for. Adding one means adding a build configuration. */
+export type LocaleCode = 'de' | 'en';
+
 /** German is first because it is the default the site redirects to. */
 export interface Locale {
   /** BCP 47 code. Used for the URL prefix, the lang attribute and hreflang. */
-  code: string;
+  code: LocaleCode;
   /** What the switcher shows. */
   label: string;
   /** The language's own name, for people who cannot read the current one. */
@@ -15,15 +18,23 @@ export const LOCALES: readonly Locale[] = [
   { code: 'en', label: 'EN', name: 'English' },
 ];
 
-export const DEFAULT_LOCALE = 'de';
+export const DEFAULT_LOCALE: LocaleCode = 'de';
 
-const CODES = LOCALES.map((locale) => locale.code);
+const CODES: readonly string[] = LOCALES.map((locale) => locale.code);
+
+/**
+ * Which build this is, resolved at compile time by the translation of this one id.
+ * `LOCALE_ID` would need injection, and the route table is built at module scope
+ * before any injector exists.
+ */
+export const CURRENT_LOCALE = $localize`:@@locale.code:en` as LocaleCode;
 
 /** `en-US` and `en` both mean the English build. */
-export const toLocaleCode = (localeId: string): string => localeId.split('-')[0];
+export const toLocaleCode = (localeId: string): LocaleCode =>
+  localeId.split('-')[0] as LocaleCode;
 
 /** The path with the deploy base and any locale prefix stripped off. */
-const unprefixed = (pathname: string): string => {
+export const unprefixed = (pathname: string): string => {
   const withoutBase = pathname.startsWith(DEPLOY_BASE)
     ? pathname.slice(DEPLOY_BASE.length)
     : pathname;
@@ -35,9 +46,12 @@ const unprefixed = (pathname: string): string => {
 };
 
 /**
- * The same page in another language. Each locale is a separate build, so this is a
- * real URL rather than a route, and it has to carry the deploy base: on GitHub Pages
- * the site lives under a repository sub-path, not at the domain root.
+ * The same page in another language, as a real URL: each locale is a separate build.
+ * It carries the deploy base because on GitHub Pages the site lives under a
+ * repository sub-path, not at the domain root.
+ *
+ * `path` is already the counterpart locale's own path — slugs are translated, so the
+ * caller resolves it from the route table rather than reusing the current one.
  */
-export const localizedPath = (pathname: string, code: string): string =>
-  DEPLOY_BASE + [code, unprefixed(pathname)].filter(Boolean).join('/');
+export const localeHref = (path: string, code: LocaleCode): string =>
+  DEPLOY_BASE + [code, path].filter(Boolean).join('/');

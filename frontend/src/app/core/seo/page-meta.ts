@@ -1,6 +1,8 @@
-import { BLOG_POSTS } from '../blog-catalog';
-import { PROJECTS } from '../project-catalog';
-import { SERVICES } from '../service-catalog';
+import { BLOG_POSTS, findPostByPath } from '../blog-catalog';
+import { pathIn } from '../i18n/localized-path';
+import { PROJECTS, findProjectByPath } from '../project-catalog';
+import { STATIC_ROUTES, StaticRouteKey, UNLISTED_ROUTES } from '../routes';
+import { SERVICES, findServiceByPath } from '../service-catalog';
 import { SITE } from '../site';
 
 export interface PageMeta {
@@ -22,52 +24,83 @@ const page = (title: string, description: string, overrides: Partial<PageMeta> =
   ...overrides,
 });
 
-const STATIC_PAGES: Readonly<Record<string, PageMeta>> = {
-  '': page(SITE.title, SITE.description),
+/** Keyed by route key so the German and English URLs share one definition. */
+const STATIC_META: Readonly<Record<StaticRouteKey, PageMeta>> = {
+  home: page(SITE.title, SITE.description),
   about: page(
-    $localize`:@@meta.about.title:About Glanzwerk | One Team For Cleaning, Moving & More`,
-    $localize`:@@meta.about.description:Directly employed, insured and vetted staff covering cleaning, moving, clearance and property support, with fixed pricing agreed before any work begins.`,
+    $localize`:@@meta.about.title:About Glanzwork | Your Cleaning Company in Dresden`,
+    $localize`:@@meta.about.description:A Dresden family business for cleaning, winter service and grounds care. Directly employed staff, a named contact person and prices agreed in writing.`,
   ),
   services: page(
-    $localize`:@@meta.services.title:Cleaning, Moving & Property Services | Glanzwerk`,
-    $localize`:@@meta.services.description:Seven services from one team: home and commercial cleaning, moving, snow and outdoor work, 24/7 emergencies, property maintenance and waste removal.`,
+    $localize`:@@meta.services.title:Our Services | Building Cleaning Dresden | Glanzwork`,
+    $localize`:@@meta.services.description:Maintenance, office, school, medical, public sector and industrial cleaning, glass, winter service, grounds care and caretaking — all from one provider in Dresden.`,
   ),
-  projects: page(
-    $localize`:@@meta.projects.title:Our Work | Cleaning & Property Project Examples | Glanzwerk`,
-    $localize`:@@meta.projects.description:Real jobs we have delivered: office contracts, facade and kitchen cleaning, pressure washing and winter service, with the scope and schedule behind each one.`,
+  references: page(
+    $localize`:@@meta.references.title:References | Cleaning Projects in Dresden | Glanzwork`,
+    $localize`:@@meta.references.description:Real contracts we run in and around Dresden: offices, schools, clinics, facades and winter service, with the scope and schedule behind each one.`,
   ),
   blog: page(
-    $localize`:@@meta.blog.title:Cleaning & Property Advice | Glanzwerk Blog`,
-    $localize`:@@meta.blog.description:Practical guidance on cleaning frequencies, written specifications and post-construction handover, from the team that does the work.`,
+    $localize`:@@meta.blog.title:Advice on Cleaning & Property Care | Glanzwork`,
+    $localize`:@@meta.blog.description:Practical guidance on cleaning intervals, written specifications and post-construction handover, from the team in Dresden that does the work.`,
   ),
   contact: page(
-    $localize`:@@meta.contact.title:Contact Glanzwerk | Request A Free Quote`,
-    $localize`:@@meta.contact.description:Tell us what you need and we will come back with a fixed written price. Same-day and out-of-hours work included. Call, email or send an enquiry.`,
+    $localize`:@@meta.contact.title:Contact Glanzwork Dresden | Request A Free Quote`,
+    $localize`:@@meta.contact.description:Tell us what you need and we come back with a fixed written price. Free site visit in Dresden and the surrounding area. Call, email or send an enquiry.`,
   ),
-  // A placeholder until the page is built; indexing an empty page costs rankings.
+  // Written and indexable once they hold real content — see UNLISTED_ROUTES below.
+  serviceArea: page(
+    $localize`:@@meta.serviceArea.title:Service Area | Cleaning in Dresden & Around | Glanzwork`,
+    $localize`:@@meta.serviceArea.description:Where we work: every district of Dresden plus Radebeul, Freital, Pirna, Heidenau, Coswig and Meißen. Short travel times and fast call-outs.`,
+  ),
+  jobs: page(
+    $localize`:@@meta.jobs.title:Jobs at Glanzwork Dresden | Cleaning Staff Wanted`,
+    $localize`:@@meta.jobs.description:We are looking for cleaners, site supervisors and winter service helpers in Dresden. Fair pay, fixed teams and a family working atmosphere.`,
+  ),
+  imprint: page(
+    $localize`:@@meta.imprint.title:Imprint | Glanzwork`,
+    $localize`:@@meta.imprint.description:Legal information about Glanzwork, Dresden.`,
+  ),
+  privacy: page(
+    $localize`:@@meta.privacy.title:Privacy Policy | Glanzwork`,
+    $localize`:@@meta.privacy.description:How Glanzwork handles personal data.`,
+  ),
   login: page(
-    $localize`:@@meta.login.title:Sign In | Glanzwerk`,
-    $localize`:@@meta.login.description:Sign in to the Glanzwerk portal.`,
-    { indexable: false },
+    $localize`:@@meta.login.title:Sign In | Glanzwork`,
+    $localize`:@@meta.login.description:Sign in to the Glanzwork portal.`,
   ),
 };
 
+/** Route keys whose pages are not yet written, so must not enter the index. */
+const PLACEHOLDER_ROUTES: readonly StaticRouteKey[] = ['serviceArea', 'jobs'];
+
+const NOINDEX_ROUTES = new Set<StaticRouteKey>([...UNLISTED_ROUTES, ...PLACEHOLDER_ROUTES]);
+
+/** This build's URL for each static page, resolved once. */
+const STATIC_PAGES: ReadonlyMap<string, PageMeta> = new Map(
+  (Object.keys(STATIC_META) as StaticRouteKey[]).map((key) => [
+    pathIn(STATIC_ROUTES[key]),
+    NOINDEX_ROUTES.has(key) ? { ...STATIC_META[key], indexable: false } : STATIC_META[key],
+  ]),
+);
+
 const detailMeta = (path: string): PageMeta | undefined => {
-  const service = SERVICES.find((item) => `services/${item.slug}` === path);
+  const service = findServiceByPath(path);
   if (service) {
     return page(service.metaTitle, service.metaDescription, { image: service.image });
   }
 
-  const project = PROJECTS.find((item) => `projects/${item.slug}` === path);
+  const project = findProjectByPath(path);
   if (project) {
-    return page(`${project.title} | ${project.category} Case Study | Glanzwerk`, project.summary, {
-      image: project.image,
-    });
+    return page(
+      $localize`:@@meta.project.title:${project.title}:title: | ${project.category}:category: Reference | Glanzwork`,
+      project.summary,
+      { image: project.image },
+    );
   }
 
-  const post = BLOG_POSTS.find((item) => `blog/${item.slug}` === path);
+  const post = findPostByPath(path);
   if (post) {
-    return page(`${post.title} | Glanzwerk`, post.excerpt, {
+    return page($localize`:@@meta.post.title:${post.title}:title: | Glanzwork`, post.excerpt, {
       image: post.image,
       type: 'article',
     });
@@ -78,8 +111,16 @@ const detailMeta = (path: string): PageMeta | undefined => {
 
 /** `path` is a route URL without the leading slash, query string or fragment. */
 export const resolvePageMeta = (path: string): PageMeta =>
-  STATIC_PAGES[path] ??
+  STATIC_PAGES.get(path) ??
   detailMeta(path) ??
   // Unknown URLs are served the home page by the router's wildcard, so they must not
   // compete with it in the index.
   page(SITE.title, SITE.description, { indexable: false });
+
+/** Every indexable URL this build serves, for the sitemap and for tests. */
+export const indexablePaths = (): string[] => [
+  ...[...STATIC_PAGES.entries()].filter(([, meta]) => meta.indexable).map(([path]) => path),
+  ...SERVICES.map((service) => pathIn(service.path)),
+  ...PROJECTS.map((project) => pathIn(project.path)),
+  ...BLOG_POSTS.map((post) => pathIn(post.path)),
+];

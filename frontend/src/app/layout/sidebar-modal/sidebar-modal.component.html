@@ -6,7 +6,7 @@
     role="dialog"
     aria-modal="true"
     i18n-aria-label="@@sidebar.label"
-    aria-label="About Glanzwerk"
+    aria-label="About Glanzwork"
   >
     <button
       class="sidebar__close"
@@ -21,7 +21,7 @@
     <section class="sidebar__block">
       <h2 i18n="@@sidebar.about">About Us</h2>
       <p i18n="@@sidebar.aboutBody">
-        Glanzwerk covers cleaning, moving, clearance and property support for commercial and private
+        Glanzwork covers cleaning, moving, clearance and property support for commercial and private
         property. We work to a written specification, with directly employed staff and a named
         supervisor on every site, so responsibility for the standard always sits in one place.
       </p>
@@ -42,7 +42,7 @@
     <section class="sidebar__block">
       <h2 i18n="@@sidebar.getInTouch">Get In Touch</h2>
       <p class="sidebar__contact">
-        <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+        <a [href]="'tel:' + company.phoneHref">{{ company.phone }}</a>
         <span i18n="@@sidebar.or">OR</span>
         <a [href]="'mailto:' + company.email">{{ company.email }}</a>
       </p>

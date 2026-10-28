@@ -7,8 +7,10 @@ import { PageBannerComponent } from '../../shared/components/page-banner/page-ba
   selector: 'app-blog-page',
   imports: [PageBannerComponent, BlogComponent],
   template: `
-    <app-page-banner title="Blog" />
+    <app-page-banner [title]="pageTitle" />
     <app-blog [hideTitle]="true" />
   `,
 })
-export class BlogPageComponent {}
+export class BlogPageComponent {
+  readonly pageTitle = $localize`:@@page.blog.h1:Advice & Guides`;
+}

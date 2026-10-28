@@ -6,10 +6,10 @@ import { DEFAULT_LOCALE } from './i18n/locales';
 // relative URLs in those places.
 export const SITE = {
   origin: SITE_ORIGIN,
-  name: 'Glanzwerk',
-  title: $localize`:@@site.title:Glanzwerk | Cleaning, Moving & Property Services`,
-  description: $localize`:@@site.description:More than cleaning. Glanzwerk handles home and commercial cleaning, moving, clearance, snow removal and property maintenance, including same-day and 24/7 call-outs.`,
-  shareImage: 'assets/images/hero/hero-team.jpg',
+  name: 'Glanzwork',
+  title: $localize`:@@site.title:Cleaning Company in Dresden | Glanzwork Facility Services`,
+  description: $localize`:@@site.description:Commercial and office cleaning, winter service and gardening in Dresden. English-speaking contact, fixed teams, documented quality. Request a free quote.`,
+  shareImage: 'assets/images/hero/glanzwork-team-dresden.webp',
 } as const;
 
 /**

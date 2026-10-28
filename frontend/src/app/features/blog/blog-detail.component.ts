@@ -1,8 +1,11 @@
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { BLOG_POSTS, blogLink, findPost } from '../../core/blog-catalog';
+import { BLOG_POSTS, blogLink } from '../../core/blog-catalog';
+import { pathIn } from '../../core/i18n/localized-path';
+import { LINKS, STATIC_ROUTES } from '../../core/routes';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
+import { CATALOGUE_IMAGE } from '../../core/media';
 
 @Component({
   selector: 'app-blog-detail',
@@ -11,15 +14,23 @@ import { PageBannerComponent } from '../../shared/components/page-banner/page-ba
   styleUrl: './blog-detail.component.scss',
 })
 export class BlogDetailComponent {
-  /** Bound from the :slug route parameter. */
-  readonly slug = input.required<string>();
+  readonly notFoundTitle = $localize`:@@notFound.post:Article not found`;
 
-  readonly post = computed(() => findPost(this.slug()));
+  /** Reserves the photo\'s space before it loads. */
+  readonly imageSize = CATALOGUE_IMAGE;
 
-  readonly others = computed(() => BLOG_POSTS.filter((post) => post.slug !== this.slug()));
+  /** Static-page links, so no template spells a URL out. */
+  readonly links = LINKS;
 
-  readonly trail = [{ label: 'Blog', path: 'blog' }];
+  /** Bound from the route's `data.key`. Keys are locale-independent; URLs are not. */
+  readonly key = input.required<string>();
 
-  /** Catalog routes come from the catalog, so no page spells one out. */
+  readonly post = computed(() => BLOG_POSTS.find((post) => post.key === this.key()));
+
+  readonly others = computed(() => BLOG_POSTS.filter((post) => post.key !== this.key()));
+
+  readonly trail = [{ label: $localize`:@@nav.blog:Advice`, path: pathIn(STATIC_ROUTES.blog) }];
+
+  /** Catalogue routes come from the catalogue, so no page spells one out. */
   readonly path = blogLink;
 }

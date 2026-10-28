@@ -16,26 +16,96 @@
 }
 
 .channel {
-  padding: 2.1875rem 1.5625rem;
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 1.5625rem 2.1875rem;
+  border: 1px solid rgba(v.$primary, 0.12);
   border-radius: v.$radius-lg;
-  background: v.$bg-tint;
+  background: linear-gradient(180deg, v.$white 0%, v.$bg-tint 100%);
   text-align: center;
+  transition:
+    translate 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 
-  h3 {
-    margin-bottom: 0.5rem;
-    color: v.$brand-headings;
-    font-family: v.$font-heading;
-    font-size: 1.125rem;
-    font-weight: 700;
+  // A brand bar that wipes across the top edge, the squeegee gesture of the
+  // loading overlay scaled down to a card.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 0.1875rem;
+    background: linear-gradient(90deg, v.$primary, v.$secondary);
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 0.4s ease-in-out;
   }
 
+  // An oversized tint blob, cropped by the card's own overflow.
+  &::after {
+    content: '';
+    position: absolute;
+    right: -3.125rem;
+    top: -3.125rem;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 50%;
+    background: rgba(v.$primary, 0.07);
+  }
+
+  // Every decoration is painted behind the content.
+  > *:not(.channel__watermark) {
+    position: relative;
+    z-index: 1;
+  }
+
+  // focus-within so reaching the link by keyboard shows the same state.
+  &:hover,
+  &:focus-within {
+    translate: 0 -0.5rem;
+    border-color: rgba(v.$primary, 0.3);
+    box-shadow: 0 1.125rem 2.1875rem rgba(v.$brand-headings, 0.14);
+
+    &::before {
+      scale: 1 1;
+    }
+
+    .channel__icon {
+      rotate: 0deg;
+      scale: 1.06;
+      box-shadow: 0 0.875rem 1.5rem rgba(v.$primary, 0.45);
+
+      i {
+        rotate: 0deg;
+      }
+    }
+
+    .channel__watermark {
+      rotate: -8deg;
+      scale: 1.1;
+      opacity: 0.12;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.625rem;
+    color: v.$primary;
+    font-family: v.$font-heading;
+    font-size: v.$topbar-font-size;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  // The channel itself is what the card is for, so it carries the most weight.
   a,
   .channel__value {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: v.$brand-headings;
-    font-size: v.$font-size-sm;
-    font-weight: 600;
+    font-family: v.$font-heading;
+    font-size: 1.0625rem;
+    font-weight: 700;
     word-break: break-word;
   }
 
@@ -45,23 +115,68 @@
   }
 
   .channel__note {
+    position: relative;
     margin-bottom: 0;
+    padding-top: 1rem;
     color: v.$brand-body;
     font-size: v.$topbar-font-size;
     line-height: 1.6;
+
+    // A short rule instead of a full divider, so the note reads as a footnote.
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1.75rem;
+      height: 2px;
+      border-radius: v.$radius-pill;
+      background: v.$primary;
+      translate: -50% 0;
+    }
   }
 }
 
+// A ghost of the same glyph, bled off the bottom-right corner.
+.channel__watermark {
+  position: absolute;
+  right: -1.25rem;
+  bottom: -1.5rem;
+  z-index: 0;
+  color: v.$primary;
+  font-size: 7.5rem;
+  opacity: 0.07;
+  rotate: -12deg;
+  transition:
+    rotate 0.4s ease-in-out,
+    scale 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
+}
+
+// A tilted squircle rather than a circle, so the row of four has some motion
+// standing still. The glyph is counter-rotated to stay upright.
 .channel__icon {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 3.75rem;
-  height: 3.75rem;
-  margin: 0 auto 1.25rem;
-  border-radius: 50%;
-  background: v.$primary;
-  color: #fff;
-  font-size: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.375rem;
+  border-radius: 1.375rem;
+  background: linear-gradient(135deg, v.$primary 0%, v.$brand-blue 100%);
+  box-shadow: 0 0.5rem 1.125rem rgba(v.$primary, 0.35);
+  color: v.$white;
+  font-size: 1.625rem;
+  rotate: -8deg;
+  transition:
+    rotate 0.3s ease-in-out,
+    scale 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+
+  i {
+    rotate: 8deg;
+    transition: rotate 0.3s ease-in-out;
+  }
 }
 
 .contact__note {
@@ -104,7 +219,7 @@
     padding: 0.625rem 0.75rem;
     border: 1px solid v.$input-border;
     border-radius: v.$radius-sm;
-    background: #fff;
+    background: v.$white;
     color: v.$brand-headings;
     font-family: v.$font-body;
     font-size: v.$font-size-base;
@@ -203,11 +318,11 @@
   padding: 1.875rem;
   border-radius: v.$radius-lg;
   background: v.$brand-headings;
-  color: rgba(#fff, 0.85);
+  color: rgba(v.$white, 0.85);
 
   h4 {
     margin-bottom: 0.75rem;
-    color: #fff;
+    color: v.$white;
     font-family: v.$font-heading;
     font-size: 1.125rem;
     font-weight: 700;
@@ -224,7 +339,7 @@
   display: inline-flex;
   gap: 0.625rem;
   align-items: center;
-  color: #fff;
+  color: v.$white;
   font-size: 1.125rem;
   font-weight: 700;
 

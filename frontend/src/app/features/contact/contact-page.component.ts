@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { ADDRESS_LINE, COMPANY } from '../../core/company';
+import { ADDRESS_LINE, COMPANY, PRIMARY_CITY } from '../../core/company';
 import { SERVICES } from '../../core/service-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
@@ -16,6 +16,8 @@ const MESSAGE_LIMITS = { min: 10, max: 2000 } as const;
   styleUrl: './contact-page.component.scss',
 })
 export class ContactPageComponent {
+  readonly pageTitle = $localize`:@@page.contact.h1:Contact`;
+
   private readonly formBuilder = inject(FormBuilder);
 
   readonly company = COMPANY;
@@ -28,7 +30,7 @@ export class ContactPageComponent {
       icon: 'bi-telephone',
       label: 'Call us',
       value: COMPANY.phone,
-      href: `tel:${COMPANY.phone}`,
+      href: `tel:${COMPANY.phoneHref}`,
       note: 'Fastest route for urgent and same-day work',
     },
     {
@@ -43,7 +45,7 @@ export class ContactPageComponent {
       label: 'Our office',
       value: ADDRESS_LINE,
       href: null,
-      note: `Serving ${COMPANY.areaServed} and the surrounding area`,
+      note: `Serving ${PRIMARY_CITY} and the surrounding area`,
     },
     {
       icon: 'bi-clock',

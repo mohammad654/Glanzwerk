@@ -6,7 +6,7 @@
       <div class="row gy-5 g-lg-5">
         <div class="col-lg-8">
           <div class="detail__media">
-            <img [src]="item.image" [alt]="item.title" />
+            <img [src]="item.image" [alt]="item.title" [width]="imageSize.width" [height]="imageSize.height" />
           </div>
 
           <span class="detail__category">{{ item.category }}</span>
@@ -33,9 +33,9 @@
           <div class="detail__panel">
             <h3>More Projects</h3>
             <ul class="detail__list">
-              @for (other of others(); track other.slug) {
+              @for (other of others(); track other.key) {
                 <li>
-                  <a [routerLink]="path(other.slug)">
+                  <a [routerLink]="path(other)">
                     <i [appIcon]="other.icon" aria-hidden="true"></i>
                     {{ other.title }}
                   </a>
@@ -44,18 +44,18 @@
             </ul>
           </div>
 
-          <a class="default-btn" routerLink="/contact">Start A Project</a>
+          <a class="default-btn" [routerLink]="links.contact">Start A Project</a>
         </aside>
       </div>
     </div>
   </section>
 } @else {
-  <app-page-banner title="Project not found" [trail]="trail" />
+  <app-page-banner [title]="notFoundTitle" [trail]="trail" />
 
   <section class="detail text-center">
     <div class="container">
       <p>That project does not exist.</p>
-      <a class="default-btn" routerLink="/projects">See all projects</a>
+      <a class="default-btn" [routerLink]="links.references">See all projects</a>
     </div>
   </section>
 }

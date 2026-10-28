@@ -11,5 +11,5 @@ declare const NG_DEPLOY_BASE: string | undefined;
 export const SITE_ORIGIN =
   typeof NG_SITE_ORIGIN === 'string' ? NG_SITE_ORIGIN : 'https://www.glanzwerk.de';
 
-/** Path the app is served under, with both slashes: '/' or '/Glanzwerk/'. */
+/** Path the app is served under, with both slashes: '/' or '/Glanzwork/'. */
 export const DEPLOY_BASE = typeof NG_DEPLOY_BASE === 'string' ? NG_DEPLOY_BASE : '/';

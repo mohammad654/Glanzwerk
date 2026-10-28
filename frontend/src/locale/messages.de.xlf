@@ -2,6 +2,14 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" target-language="de" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="locale.code" datatype="html">
+        <source>en</source>
+        <target state="translated">de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/i18n/locales.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="company.openingHours" datatype="html">
         <source>9:00 am - 6:00 pm</source>
         <target state="translated">9:00 - 18:00 Uhr</target>
@@ -34,17 +42,9 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="nav.projects" datatype="html">
-        <source>Projects</source>
-        <target state="translated">Projekte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core/navigation.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="nav.blog" datatype="html">
-        <source>Blog</source>
-        <target state="translated">Blog</target>
+        <source>Advice</source>
+        <target state="translated">Ratgeber</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/navigation.ts</context>
           <context context-type="linenumber">24</context>
@@ -59,112 +59,96 @@
         </context-group>
       </trans-unit>
       <trans-unit id="meta.about.title" datatype="html">
-        <source>About Glanzwerk | One Team For Cleaning, Moving &amp; More</source>
-        <target state="translated">Über Glanzwerk | Ein Team für Reinigung, Umzug &amp; mehr</target>
+        <source>About Glanzwork | Your Cleaning Company in Dresden</source>
+        <target state="translated">Über Glanzwork | Ihre Gebäudereinigung in Dresden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.about.description" datatype="html">
-        <source>Directly employed, insured and vetted staff covering cleaning, moving, clearance and property support, with fixed pricing agreed before any work begins.</source>
-        <target state="translated">Festangestellte, versicherte und geprüfte Mitarbeitende für Reinigung, Umzug, Entrümpelung und Objektbetreuung. Festpreis, vereinbart vor Arbeitsbeginn.</target>
+        <source>A Dresden family business for cleaning, winter service and grounds care. Directly employed staff, a named contact person and prices agreed in writing.</source>
+        <target state="translated">Familienbetrieb aus Dresden für Reinigung, Winterdienst und Grünpflege. Festangestelltes Personal, feste Ansprechpartnerin und schriftlich vereinbarte Preise.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.services.title" datatype="html">
-        <source>Cleaning, Moving &amp; Property Services | Glanzwerk</source>
-        <target state="translated">Reinigung, Umzug &amp; Hausservice in Berlin | Glanzwerk</target>
+        <source>Our Services | Building Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Leistungen | Gebäudereinigung Dresden | Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.services.description" datatype="html">
-        <source>Seven services from one team: home and commercial cleaning, moving, snow and outdoor work, 24/7 emergencies, property maintenance and waste removal.</source>
-        <target state="translated">Sieben Leistungen aus einer Hand: Haus- und Gebäudereinigung, Umzüge, Winterdienst, 24/7-Notdienst, Hausmeisterservice und Entrümpelung in Berlin.</target>
+        <source>Maintenance, office, school, medical, public sector and industrial cleaning, glass, winter service, grounds care and caretaking — all from one provider in Dresden.</source>
+        <target state="translated">Unterhalts-, Büro-, Schul-, Praxis-, Industrie- und Glasreinigung, Winterdienst, Grünpflege und Hausmeisterservice in Dresden – alles aus einer Hand.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="meta.projects.title" datatype="html">
-        <source>Our Work | Cleaning &amp; Property Project Examples | Glanzwerk</source>
-        <target state="translated">Referenzen | Reinigung &amp; Objektbetreuung | Glanzwerk</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="meta.projects.description" datatype="html">
-        <source>Real jobs we have delivered: office contracts, facade and kitchen cleaning, pressure washing and winter service, with the scope and schedule behind each one.</source>
-        <target state="translated">Ausgeführte Aufträge: Büroreinigung im Vertrag, Fassaden- und Küchenreinigung, Hochdruckreinigung und Winterdienst, jeweils mit Umfang und Ablauf.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="meta.blog.title" datatype="html">
-        <source>Cleaning &amp; Property Advice | Glanzwerk Blog</source>
-        <target state="translated">Ratgeber Reinigung &amp; Objektbetreuung | Glanzwerk</target>
+        <source>Advice on Cleaning &amp; Property Care | Glanzwork</source>
+        <target state="translated">Ratgeber Reinigung &amp; Objektbetreuung | Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.blog.description" datatype="html">
-        <source>Practical guidance on cleaning frequencies, written specifications and post-construction handover, from the team that does the work.</source>
-        <target state="translated">Praktische Hinweise zu Reinigungsintervallen, Leistungsverzeichnissen und der Bauendreinigung, von dem Team, das die Arbeit ausführt.</target>
+        <source>Practical guidance on cleaning intervals, written specifications and post-construction handover, from the team in Dresden that does the work.</source>
+        <target state="translated">Praktische Hinweise zu Reinigungsintervallen, Leistungsverzeichnissen und Bauendreinigung – vom Team aus Dresden, das die Arbeit selbst macht.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.contact.title" datatype="html">
-        <source>Contact Glanzwerk | Request A Free Quote</source>
-        <target state="translated">Kontakt Glanzwerk | Kostenloses Angebot anfordern</target>
+        <source>Contact Glanzwork Dresden | Request A Free Quote</source>
+        <target state="translated">Kontakt Glanzwork Dresden | Kostenloses Angebot</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.contact.description" datatype="html">
-        <source>Tell us what you need and we will come back with a fixed written price. Same-day and out-of-hours work included. Call, email or send an enquiry.</source>
-        <target state="translated">Sagen Sie uns, was Sie brauchen, und Sie erhalten einen schriftlichen Festpreis. Auch kurzfristig und außerhalb der Geschäftszeiten. Anrufen oder anfragen.</target>
+        <source>Tell us what you need and we come back with a fixed written price. Free site visit in Dresden and the surrounding area. Call, email or send an enquiry.</source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen – Sie erhalten einen schriftlichen Festpreis. Kostenlose Besichtigung in Dresden und Umgebung. Anrufen, mailen oder anfragen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.login.title" datatype="html">
-        <source>Sign In | Glanzwerk</source>
-        <target state="translated">Anmelden | Glanzwerk</target>
+        <source>Sign In | Glanzwork</source>
+        <target state="translated">Anmelden | Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.login.description" datatype="html">
-        <source>Sign in to the Glanzwerk portal.</source>
-        <target state="translated">Melden Sie sich im Glanzwerk-Portal an.</target>
+        <source>Sign in to the Glanzwork portal.</source>
+        <target state="translated">Melden Sie sich im Glanzwork-Portal an.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
           <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="site.title" datatype="html">
-        <source>Glanzwerk | Cleaning, Moving &amp; Property Services</source>
-        <target state="translated">Glanzwerk | Reinigung, Umzug &amp; Hausservice in Berlin</target>
+        <source>Cleaning Company in Dresden | Glanzwork Facility Services</source>
+        <target state="translated">Gebäudereinigung Dresden | Glanzwork Reinigung &amp; Service</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/site.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="site.description" datatype="html">
-        <source>More than cleaning. Glanzwerk handles home and commercial cleaning, moving, clearance, snow removal and property maintenance, including same-day and 24/7 call-outs.</source>
-        <target state="translated">Mehr als Reinigung. Glanzwerk übernimmt Haus- und Gebäudereinigung, Umzüge, Entrümpelung, Winterdienst und Hausmeisterservice, auch kurzfristig und rund um die Uhr.</target>
+        <source>Commercial and office cleaning, winter service and gardening in Dresden. English-speaking contact, fixed teams, documented quality. Request a free quote.</source>
+        <target state="translated">Reinigung, Winterdienst und Gartenpflege aus einer Hand: für Schulen, Behörden, Industrie und Privat in Dresden. Fester Ansprechpartner. Jetzt Angebot anfordern.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/site.ts</context>
           <context context-type="linenumber">10</context>
@@ -339,8 +323,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about.eyebrow" datatype="html">
-        <source>About Glanzwerk</source>
-        <target state="translated">Über Glanzwerk</target>
+        <source>About Glanzwork</source>
+        <target state="translated">Über Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -355,8 +339,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about.lead" datatype="html">
-        <source> Most property problems do not need five different companies. Glanzwerk covers cleaning, moving, clearance and property support for homes and businesses, from a standing appointment to the thing that went wrong this morning. </source>
-        <target state="translated">Die meisten Probleme rund um eine Immobilie brauchen keine fünf verschiedenen Firmen. Glanzwerk übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Privat- und Geschäftskunden, vom festen Termin bis zu dem, was heute Morgen schiefgegangen ist.</target>
+        <source> Most property problems do not need five different companies. Glanzwork covers cleaning, moving, clearance and property support for homes and businesses, from a standing appointment to the thing that went wrong this morning. </source>
+        <target state="translated">Die meisten Probleme rund um eine Immobilie brauchen keine fünf verschiedenen Firmen. Glanzwork übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Privat- und Geschäftskunden, vom festen Termin bis zu dem, was heute Morgen schiefgegangen ist.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
           <context context-type="linenumber">9,11</context>
@@ -702,30 +686,6 @@
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="projects.eyebrow" datatype="html">
-        <source>Projects</source>
-        <target state="translated">Projekte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
-          <context context-type="linenumber">4,5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.heading" datatype="html">
-        <source>Recent Work</source>
-        <target state="translated">Aktuelle Arbeiten</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
-          <context context-type="linenumber">5,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="projects.lead" datatype="html">
-        <source> A selection of current contracts and completed projects across commercial, hospitality and managed residential property. </source>
-        <target state="translated">Eine Auswahl laufender Verträge und abgeschlossener Projekte aus Gewerbe, Gastronomie und verwalteten Wohnimmobilien.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/home/projects/projects.component.html</context>
-          <context context-type="linenumber">7,10</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="services.eyebrow" datatype="html">
         <source>Services</source>
         <target state="translated">Leistungen</target>
@@ -743,16 +703,16 @@
         </context-group>
       </trans-unit>
       <trans-unit id="services.lead" datatype="html">
-        <source> Seven services, one team. Book them as a standing contract or as a single last-minute job. </source>
-        <target state="translated">Sieben Leistungen, ein Team. Buchbar als laufender Vertrag oder als einzelner kurzfristiger Auftrag.</target>
+        <source> Every service from one team. Book a standing contract or a single last-minute job. </source>
+        <target state="translated">Alle Leistungen aus einer Hand. Buchbar als laufender Vertrag oder als einzelner kurzfristiger Auftrag.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/services/services.component.html</context>
           <context context-type="linenumber">7,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.eyebrow" datatype="html">
-        <source>Why Glanzwerk</source>
-        <target state="translated">Warum Glanzwerk</target>
+        <source>Why Glanzwork</source>
+        <target state="translated">Warum Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -923,8 +883,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.label" datatype="html">
-        <source>About Glanzwerk</source>
-        <target state="translated">Über Glanzwerk</target>
+        <source>About Glanzwork</source>
+        <target state="translated">Über Glanzwork</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
           <context context-type="linenumber">9,12</context>
@@ -947,8 +907,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.aboutBody" datatype="html">
-        <source> Glanzwerk covers cleaning, moving, clearance and property support for commercial and private property. We work to a written specification, with directly employed staff and a named supervisor on every site, so responsibility for the standard always sits in one place. </source>
-        <target state="translated">Glanzwerk übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Gewerbe- und Privatimmobilien. Wir arbeiten nach einem schriftlichen Leistungsverzeichnis, mit festangestellten Mitarbeitenden und einer benannten Objektleitung in jedem Objekt, damit die Verantwortung für den Standard immer an einer Stelle liegt.</target>
+        <source> Glanzwork covers cleaning, moving, clearance and property support for commercial and private property. We work to a written specification, with directly employed staff and a named supervisor on every site, so responsibility for the standard always sits in one place. </source>
+        <target state="translated">Glanzwork übernimmt Reinigung, Umzug, Entrümpelung und Objektbetreuung für Gewerbe- und Privatimmobilien. Wir arbeiten nach einem schriftlichen Leistungsverzeichnis, mit festangestellten Mitarbeitenden und einer benannten Objektleitung in jedem Objekt, damit die Verantwortung für den Standard immer an einer Stelle liegt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
           <context context-type="linenumber">24,27</context>
@@ -1144,6 +1104,2562 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
           <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.references" datatype="html">
+        <source>References</source>
+        <target state="translated">Referenzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/navigation.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.serviceArea.title" datatype="html">
+        <source>Service Area</source>
+        <target state="translated">Einsatzgebiet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.jobs.title" datatype="html">
+        <source>Jobs</source>
+        <target state="translated">Jobs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.imprint.title" datatype="html">
+        <source>Imprint</source>
+        <target state="translated">Impressum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.privacy.title" datatype="html">
+        <source>Privacy Policy</source>
+        <target state="translated">Datenschutzerklärung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.login.title" datatype="html">
+        <source>Sign In</source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.references.title" datatype="html">
+        <source>References | Cleaning Projects in Dresden | Glanzwork</source>
+        <target state="translated">Referenzen | Reinigungsprojekte in Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.references.description" datatype="html">
+        <source>Real contracts we run in and around Dresden: offices, schools, clinics, facades and winter service, with the scope and schedule behind each one.</source>
+        <target state="translated">Objekte, die wir in und um Dresden betreuen: Büros, Schulen, Kliniken, Fassaden und Winterdienst – mit Leistungsumfang und Reinigungsrhythmus.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.serviceArea.title" datatype="html">
+        <source>Service Area | Cleaning in Dresden &amp; Around | Glanzwork</source>
+        <target state="translated">Einsatzgebiet | Reinigung in Dresden und Umgebung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.serviceArea.description" datatype="html">
+        <source>Where we work: every district of Dresden plus Radebeul, Freital, Pirna, Heidenau, Coswig and Meißen. Short travel times and fast call-outs.</source>
+        <target state="translated">Wo wir arbeiten: alle Dresdner Stadtteile sowie Radebeul, Freital, Pirna, Heidenau, Coswig und Meißen. Kurze Wege und schnelle Einsätze.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.jobs.title" datatype="html">
+        <source>Jobs at Glanzwork Dresden | Cleaning Staff Wanted</source>
+        <target state="translated">Jobs Reinigungskraft Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.jobs.description" datatype="html">
+        <source>We are looking for cleaners, site supervisors and winter service helpers in Dresden. Fair pay, fixed teams and a family working atmosphere.</source>
+        <target state="translated">Wir suchen Reinigungskräfte, Objektleiter und Winterdienst-Helfer in Dresden. Faire Bezahlung, feste Teams, familiäres Arbeitsklima.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.imprint.title" datatype="html">
+        <source>Imprint | Glanzwork</source>
+        <target state="translated">Impressum | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.imprint.description" datatype="html">
+        <source>Legal information about Glanzwork, Dresden.</source>
+        <target state="translated">Rechtliche Angaben zu Glanzwork, Dresden.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.privacy.title" datatype="html">
+        <source>Privacy Policy | Glanzwork</source>
+        <target state="translated">Datenschutzerklärung | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.privacy.description" datatype="html">
+        <source>How Glanzwork handles personal data.</source>
+        <target state="translated">Wie Glanzwork mit personenbezogenen Daten umgeht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.project.title" datatype="html">
+        <source><x id="title" equiv-text="project.title"/> | <x id="category" equiv-text="project.category"/> Reference | Glanzwork</source>
+        <target state="translated"><x id="title" equiv-text="project.title"/> | Referenz <x id="category" equiv-text="project.category"/> | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.post.title" datatype="html">
+        <source><x id="title" equiv-text="post.title"/> | Glanzwork</source>
+        <target state="translated"><x id="title" equiv-text="post.title"/> | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.title" datatype="html">
+        <source>Maintenance Cleaning Dresden</source>
+        <target state="translated">Unterhaltsreinigung Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.shortTitle" datatype="html">
+        <source>Maintenance Cleaning</source>
+        <target state="translated">Unterhaltsreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.summary" datatype="html">
+        <source>Daily or weekly contract cleaning for offices, schools and commercial buildings, run by the same fixed team.</source>
+        <target state="translated">Tägliche oder wöchentliche Reinigung für Büros, Schulen und Gewerbeobjekte – immer vom selben festen Team.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.metaTitle" datatype="html">
+        <source>Maintenance Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Unterhaltsreinigung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.metaDescription" datatype="html">
+        <source>Daily or weekly maintenance cleaning for offices, schools and commercial sites in Dresden. Fixed teams, documented quality. Free site visit.</source>
+        <target state="translated">Tägliche oder wöchentliche Unterhaltsreinigung für Büros, Schulen und Gewerbe in Dresden. Feste Teams, dokumentierte Qualität. Kostenlose Besichtigung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.p1" datatype="html">
+        <source>Maintenance cleaning is the work that nobody notices until it stops. It is also the contract that decides whether a building feels looked after, so we treat it as the core of what we do rather than as filler between bigger jobs.</source>
+        <target state="translated">Unterhaltsreinigung ist die Arbeit, die niemandem auffällt – bis sie ausbleibt. Sie entscheidet darüber, ob ein Gebäude gepflegt wirkt, und deshalb ist sie bei uns das Kerngeschäft und nicht der Lückenfüller zwischen größeren Aufträgen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.p2" datatype="html">
+        <source>You get a written cleaning schedule that says what is done daily, weekly and monthly, and the same team doing it. People who come back to the same building learn where the problems are, which door sticks, which floor marks, and which room needs attention before a visit.</source>
+        <target state="translated">Sie erhalten einen schriftlichen Reinigungsplan, der festhält, was täglich, wöchentlich und monatlich erledigt wird – und ein festes Team, das ihn umsetzt. Wer immer dasselbe Objekt betreut, kennt die Problemstellen: welcher Boden schnell streift, welcher Raum vor Besuch Aufmerksamkeit braucht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.p3" datatype="html">
+        <source>Every visit is logged, so when your facility manager or auditor asks what was cleaned and when, the answer is on paper. We agree the scope once, in plain language, and you have one contact person for any change to it.</source>
+        <target state="translated">Jeder Einsatz wird dokumentiert. Wenn Ihre Objektleitung oder ein Prüfer wissen will, was wann gereinigt wurde, steht die Antwort auf dem Papier. Den Leistungsumfang vereinbaren wir einmal in klarer Sprache, und für jede Änderung daran haben Sie eine feste Ansprechpartnerin.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.h1" datatype="html">
+        <source>The same fixed team in your building</source>
+        <target state="translated">Immer dasselbe feste Team im Objekt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.h2" datatype="html">
+        <source>Written schedule: daily, weekly, monthly</source>
+        <target state="translated">Schriftlicher Plan: täglich, wöchentlich, monatlich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.h3" datatype="html">
+        <source>Every visit documented for your records</source>
+        <target state="translated">Jeder Einsatz für Ihre Unterlagen dokumentiert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.h4" datatype="html">
+        <source>One named contact for the whole contract</source>
+        <target state="translated">Eine feste Ansprechpartnerin für den ganzen Vertrag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i1" datatype="html">
+        <source>Daily and weekly office cleaning</source>
+        <target state="translated">Tägliche und wöchentliche Büroreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i2" datatype="html">
+        <source>Large-area and zone cleaning</source>
+        <target state="translated">Großflächenreinigung und Revierreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i3" datatype="html">
+        <source>Sanitary facilities and consumables</source>
+        <target state="translated">Sanitärreinigung inklusive Verbrauchsmaterial</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i4" datatype="html">
+        <source>Kitchens, break rooms and tea points</source>
+        <target state="translated">Küchen, Pausenräume und Teeküchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i5" datatype="html">
+        <source>Cleaning after closing time</source>
+        <target state="translated">Reinigung nach Feierabend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.maintenance.i6" datatype="html">
+        <source>Written cleaning specification on request</source>
+        <target state="translated">Leistungsverzeichnis auf Wunsch</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.title" datatype="html">
+        <source>Office Cleaning Dresden</source>
+        <target state="translated">Büroreinigung Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.shortTitle" datatype="html">
+        <source>Office Cleaning</source>
+        <target state="translated">Büroreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.summary" datatype="html">
+        <source>Discreet cleaning for offices, law firms and practices, scheduled before opening or after closing.</source>
+        <target state="translated">Diskrete Reinigung für Büros, Kanzleien und Praxen – vor Arbeitsbeginn oder nach Geschäftsschluss.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.metaTitle" datatype="html">
+        <source>Office Cleaning Dresden: Reliable &amp; Discreet | Glanzwork</source>
+        <target state="translated">Büroreinigung Dresden: zuverlässig &amp; diskret | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.metaDescription" datatype="html">
+        <source>Professional office cleaning in Dresden before or after business hours. Transparent prices, a named contact. Request your free quote today.</source>
+        <target state="translated">Professionelle Büroreinigung in Dresden vor oder nach Geschäftsschluss. Transparente Preise, feste Ansprechpartnerin. Jetzt kostenloses Angebot sichern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.p1" datatype="html">
+        <source>An office says what a company is like before anyone speaks. We clean yours around your working day, so your staff arrive to a desk that is ready and your visitors never see the work being done.</source>
+        <target state="translated">Ein Büro sagt etwas über ein Unternehmen, bevor das erste Wort fällt. Wir reinigen Ihres rund um Ihren Arbeitstag: Ihre Mitarbeitenden kommen an einen fertigen Arbeitsplatz, und Ihre Besucher bekommen die Arbeit nie zu sehen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.p2" datatype="html">
+        <source>Law firms, practices and agencies handle confidential paperwork. Our teams are briefed on what not to touch, work to a fixed route, and are the same people each week, so you are not introducing strangers to your files every month.</source>
+        <target state="translated">Kanzleien, Praxen und Agenturen arbeiten mit vertraulichen Unterlagen. Unsere Teams werden eingewiesen, was nicht angefasst wird, arbeiten nach festem Revier und sind jede Woche dieselben Personen – Sie stellen also nicht jeden Monat Fremde an Ihre Akten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.p3" datatype="html">
+        <source>Pricing is per square metre and per visit, agreed in writing before we start. If your floor space or your schedule changes, the price changes with it and you see why.</source>
+        <target state="translated">Abgerechnet wird nach Quadratmeter und Einsatz, schriftlich vereinbart, bevor wir anfangen. Ändert sich Ihre Fläche oder Ihr Rhythmus, ändert sich der Preis mit – und Sie sehen, warum.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.h1" datatype="html">
+        <source>Before opening or after closing</source>
+        <target state="translated">Vor Arbeitsbeginn oder nach Feierabend</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.h2" datatype="html">
+        <source>Briefed on confidential areas</source>
+        <target state="translated">Eingewiesen auf vertrauliche Bereiche</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.h3" datatype="html">
+        <source>Transparent price per square metre</source>
+        <target state="translated">Transparenter Preis pro Quadratmeter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.h4" datatype="html">
+        <source>Vetted, directly employed staff</source>
+        <target state="translated">Fest angestelltes, geprüftes Personal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i1" datatype="html">
+        <source>Desks, surfaces and office furniture</source>
+        <target state="translated">Schreibtische, Oberflächen und Büromöbel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i2" datatype="html">
+        <source>Meeting and conference rooms</source>
+        <target state="translated">Besprechungs- und Konferenzräume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i3" datatype="html">
+        <source>Kitchens and tea points</source>
+        <target state="translated">Küchen und Teeküchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i4" datatype="html">
+        <source>Sanitary facilities and restocking</source>
+        <target state="translated">Sanitärbereiche inklusive Auffüllen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i5" datatype="html">
+        <source>Floors, carpets and entrance areas</source>
+        <target state="translated">Böden, Teppiche und Eingangsbereiche</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.office.i6" datatype="html">
+        <source>Interior glass and partition walls</source>
+        <target state="translated">Innenliegende Glasflächen und Trennwände</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.title" datatype="html">
+        <source>School &amp; Daycare Cleaning</source>
+        <target state="translated">Schul- und Kita-Reinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.shortTitle" datatype="html">
+        <source>School Cleaning</source>
+        <target state="translated">Schulreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.summary" datatype="html">
+        <source>Classrooms, daycare rooms and sports halls cleaned to a hygiene plan, scheduled around lessons and holidays.</source>
+        <target state="translated">Klassenzimmer, Kita-Räume und Turnhallen nach Hygieneplan – geplant um Unterricht und Ferien herum.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.metaTitle" datatype="html">
+        <source>School &amp; Daycare Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Schulreinigung &amp; Kita-Reinigung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.metaDescription" datatype="html">
+        <source>Cleaning for schools, daycare centres and sports halls in Dresden to a hygiene plan. Scheduled around lessons and holidays, deep cleaning included.</source>
+        <target state="translated">Reinigung von Schulen, Kitas und Sporthallen in Dresden nach Hygieneplan. Planung um Schulzeiten und Ferien, inklusive Grundreinigung. Angebot anfordern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.p1" datatype="html">
+        <source>Schools and daycare centres are the hardest buildings to clean well: heavy use, short windows, and a duty of care towards children. The work has to fit the timetable, not the other way round.</source>
+        <target state="translated">Schulen und Kitas sind die anspruchsvollsten Objekte überhaupt: starke Nutzung, kurze Zeitfenster und eine Verantwortung gegenüber Kindern. Die Reinigung muss sich nach dem Stundenplan richten, nicht umgekehrt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.p2" datatype="html">
+        <source>We clean to a written hygiene plan, with the surfaces children actually touch treated as the priority: door handles, tables, taps and sanitary areas. Our staff are briefed on which products may be used in rooms with children and which may not.</source>
+        <target state="translated">Wir arbeiten nach schriftlichem Hygieneplan, und die Flächen, die Kinder tatsächlich anfassen, haben Vorrang: Türklinken, Tische, Armaturen und Sanitärbereiche. Unser Personal weiß, welche Mittel in Räumen mit Kindern eingesetzt werden dürfen und welche nicht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.p3" datatype="html">
+        <source>The school holidays are when deep cleaning happens: floors stripped and resealed, furniture moved, sports halls brought back to standard before the new term. We plan that calendar with you a term ahead so nothing is rushed in the last week.</source>
+        <target state="translated">In den Ferien findet die Grundreinigung statt: Böden werden grundgereinigt und neu eingepflegt, Mobiliar gerückt, Turnhallen vor dem neuen Schuljahr wieder in Stand gebracht. Diesen Kalender planen wir ein Halbjahr im Voraus mit Ihnen, damit in der letzten Ferienwoche nichts gehetzt wird.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.h1" datatype="html">
+        <source>Cleaned to a written hygiene plan</source>
+        <target state="translated">Reinigung nach schriftlichem Hygieneplan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.h2" datatype="html">
+        <source>Scheduled around lessons and care hours</source>
+        <target state="translated">Geplant um Unterrichts- und Betreuungszeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.h3" datatype="html">
+        <source>Deep cleaning during the holidays</source>
+        <target state="translated">Grundreinigung in den Schulferien</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.h4" datatype="html">
+        <source>Staff trained for rooms used by children</source>
+        <target state="translated">Personal geschult für Räume mit Kindern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i1" datatype="html">
+        <source>Classrooms and group rooms</source>
+        <target state="translated">Klassenzimmer und Gruppenräume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i2" datatype="html">
+        <source>Daycare and after-school rooms</source>
+        <target state="translated">Kita-, Hort- und Betreuungsräume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i3" datatype="html">
+        <source>Sports halls and changing rooms</source>
+        <target state="translated">Turnhallen und Umkleiden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i4" datatype="html">
+        <source>Sanitary facilities to a hygiene plan</source>
+        <target state="translated">Sanitärreinigung nach Hygieneplan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i5" datatype="html">
+        <source>Corridors, stairwells and entrances</source>
+        <target state="translated">Flure, Treppenhäuser und Eingänge</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.school.i6" datatype="html">
+        <source>Holiday deep cleaning and floor care</source>
+        <target state="translated">Ferien-Grundreinigung und Bodenpflege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.title" datatype="html">
+        <source>Medical Practice &amp; Care Home Cleaning</source>
+        <target state="translated">Praxis- und Pflegeheimreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.shortTitle" datatype="html">
+        <source>Medical Cleaning</source>
+        <target state="translated">Praxisreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.summary" datatype="html">
+        <source>Hygienic cleaning and disinfection for practices, medical centres and care homes, with documented procedures.</source>
+        <target state="translated">Hygienische Reinigung und Desinfektion für Praxen, MVZ und Pflegeeinrichtungen – mit dokumentierten Abläufen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.metaTitle" datatype="html">
+        <source>Medical &amp; Care Home Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Praxisreinigung &amp; Pflegeheim-Reinigung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.metaDescription" datatype="html">
+        <source>Hygienic cleaning and disinfection for medical practices, health centres and care homes in Dresden. Trained staff, documented procedures.</source>
+        <target state="translated">Hygienische Reinigung und Desinfektion für Arztpraxen, MVZ und Pflegeeinrichtungen in Dresden. Geschultes Personal, dokumentierte Abläufe.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.p1" datatype="html">
+        <source>In a practice or a care home, cleaning is part of the hygiene concept, not a service around it. The sequence matters, the products matter, and so does being able to show what was done.</source>
+        <target state="translated">In einer Praxis oder einem Pflegeheim ist Reinigung Teil des Hygienekonzepts und nicht eine Dienstleistung daneben. Die Reihenfolge zählt, die Mittel zählen – und die Fähigkeit, nachzuweisen, was getan wurde.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.p2" datatype="html">
+        <source>We work to your hygiene plan: treatment rooms, waiting areas and sanitary facilities in the right order, with separate equipment per zone so nothing is carried from one room into another. Staff are trained for medical settings and know what a contact surface is.</source>
+        <target state="translated">Wir arbeiten nach Ihrem Hygieneplan: Behandlungsräume, Wartebereiche und Sanitärräume in der richtigen Reihenfolge, mit getrenntem Material je Zone, damit nichts aus einem Raum in den nächsten getragen wird. Unser Personal ist für medizinische Bereiche geschult und weiß, was eine Kontaktfläche ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.p3" datatype="html">
+        <source>Every visit is documented in a form your practice manager can hand to an inspector. Where you need disinfection to a specific standard, we agree it in writing and use products that match it.</source>
+        <target state="translated">Jeder Einsatz wird so dokumentiert, dass Ihre Praxisleitung den Nachweis bei einer Begehung vorlegen kann. Wo Sie eine Desinfektion nach bestimmtem Standard brauchen, halten wir das schriftlich fest und setzen passende Mittel ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.h1" datatype="html">
+        <source>Works to your existing hygiene plan</source>
+        <target state="translated">Arbeitet nach Ihrem bestehenden Hygieneplan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.h2" datatype="html">
+        <source>Separate equipment per hygiene zone</source>
+        <target state="translated">Getrenntes Material je Hygienezone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.h3" datatype="html">
+        <source>Documented for inspections</source>
+        <target state="translated">Dokumentiert für Begehungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.h4" datatype="html">
+        <source>Staff trained for medical settings</source>
+        <target state="translated">Personal für medizinische Bereiche geschult</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i1" datatype="html">
+        <source>Treatment and examination rooms</source>
+        <target state="translated">Behandlungs- und Untersuchungsräume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i2" datatype="html">
+        <source>Waiting areas and reception</source>
+        <target state="translated">Wartebereiche und Empfang</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i3" datatype="html">
+        <source>Surface disinfection to plan</source>
+        <target state="translated">Flächendesinfektion nach Plan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i4" datatype="html">
+        <source>Care homes and senior residences</source>
+        <target state="translated">Pflegeheime und Seniorenresidenzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i5" datatype="html">
+        <source>Health centres and shared practices</source>
+        <target state="translated">MVZ und Gemeinschaftspraxen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.medical.i6" datatype="html">
+        <source>Physiotherapy and dental practices</source>
+        <target state="translated">Physiotherapie- und Zahnarztpraxen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.title" datatype="html">
+        <source>Cleaning For Public Authorities</source>
+        <target state="translated">Reinigung für öffentliche Auftraggeber</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.shortTitle" datatype="html">
+        <source>Public Sector</source>
+        <target state="translated">Öffentliche Einrichtungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.summary" datatype="html">
+        <source>Building cleaning for authorities, administrations, libraries and municipal properties, tender-ready and documented.</source>
+        <target state="translated">Gebäudereinigung für Behörden, Verwaltungen, Bibliotheken und kommunale Objekte – ausschreibungsfähig und dokumentiert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.metaTitle" datatype="html">
+        <source>Public Building Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Reinigung öffentlicher Einrichtungen Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.metaDescription" datatype="html">
+        <source>Building cleaning for authorities, administrations, libraries and municipal buildings in Dresden and Saxony. Pay-scale compliant, documented, dependable.</source>
+        <target state="translated">Gebäudereinigung für Behörden, Verwaltungen, Bibliotheken und kommunale Gebäude in Dresden und Sachsen. Tariftreu, dokumentiert, zuverlässig.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.p1" datatype="html">
+        <source>Public buildings are bought through tenders, and tenders are won on paperwork as much as on price. We keep the documents a public buyer asks for ready: trade register entry, clearance certificates, liability insurance, references and proof of wage compliance.</source>
+        <target state="translated">Öffentliche Gebäude werden über Ausschreibungen vergeben, und Ausschreibungen entscheiden sich ebenso sehr an den Unterlagen wie am Preis. Wir halten bereit, was ein öffentlicher Auftraggeber verlangt: Handelsregisterauszug, Unbedenklichkeitsbescheinigungen, Haftpflichtversicherung, Referenzliste und den Nachweis der Tariftreue.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.p2" datatype="html">
+        <source>We pay the industry collective wage and can show it. For a public client that is not a detail — it is a condition of award, and the reason a cheap bid often turns out not to be eligible.</source>
+        <target state="translated">Wir zahlen den Tariflohn der Gebäudereinigung und können das belegen. Für einen öffentlichen Auftraggeber ist das keine Nebensache, sondern Vergabevoraussetzung – und der Grund, warum sich ein billiges Angebot oft als nicht wertungsfähig erweist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.p3" datatype="html">
+        <source>We bid for lots that fit us: a single school, an office building, one administrative site. Being the right size for the lot means your building gets attention rather than being the smallest item on a national contract.</source>
+        <target state="translated">Wir bewerben uns auf Lose, die zu uns passen: eine Schule, ein Verwaltungsgebäude, ein Standort. Für das Los die richtige Größe zu haben bedeutet, dass Ihr Gebäude Aufmerksamkeit bekommt, statt der kleinste Posten in einem bundesweiten Rahmenvertrag zu sein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.h1" datatype="html">
+        <source>Tender documents kept ready</source>
+        <target state="translated">Vergabeunterlagen liegen bereit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.h2" datatype="html">
+        <source>Collective wage compliance on paper</source>
+        <target state="translated">Tariftreue schriftlich nachgewiesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.h3" datatype="html">
+        <source>Performance records for every site</source>
+        <target state="translated">Leistungsnachweis für jedes Objekt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">178</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.h4" datatype="html">
+        <source>Sized for single-building lots</source>
+        <target state="translated">Zugeschnitten auf Einzelobjekt-Lose</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i1" datatype="html">
+        <source>Authorities and administrative buildings</source>
+        <target state="translated">Behörden und Verwaltungsgebäude</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i2" datatype="html">
+        <source>Town halls and citizens&apos; offices</source>
+        <target state="translated">Rathäuser und Bürgerämter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i3" datatype="html">
+        <source>Libraries and museums</source>
+        <target state="translated">Bibliotheken und Museen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i4" datatype="html">
+        <source>Municipal and communal buildings</source>
+        <target state="translated">Kommunale Gebäude und Einrichtungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i5" datatype="html">
+        <source>Framework agreements and call-offs</source>
+        <target state="translated">Rahmenverträge und Einzelabrufe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.publicSector.i6" datatype="html">
+        <source>Service specifications on request</source>
+        <target state="translated">Leistungsverzeichnis auf Anfrage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.title" datatype="html">
+        <source>Industrial Cleaning Dresden</source>
+        <target state="translated">Industriereinigung Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.shortTitle" datatype="html">
+        <source>Industrial Cleaning</source>
+        <target state="translated">Industriereinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.summary" datatype="html">
+        <source>Production halls, warehouses and workshops cleaned around shift patterns, to your site safety rules.</source>
+        <target state="translated">Produktionshallen, Lager und Werkstätten – gereinigt im Schichtbetrieb und nach Ihren Sicherheitsregeln.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.metaTitle" datatype="html">
+        <source>Industrial Cleaning Dresden &amp; Saxony | Glanzwork</source>
+        <target state="translated">Industriereinigung Dresden &amp; Sachsen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">198</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.metaDescription" datatype="html">
+        <source>Cleaning of production halls, warehouses and workshops on shift schedules. Safety-compliant procedures and fixed teams. Arrange a site visit now.</source>
+        <target state="translated">Reinigung von Produktionshallen, Lagern und Werkstätten im Schichtbetrieb. Sicherheitskonforme Abläufe und feste Teams. Jetzt Besichtigung vereinbaren.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.p1" datatype="html">
+        <source>A production site cannot stop for cleaning. We work to your shift pattern, including nights and weekends, and plan around the lines that keep running.</source>
+        <target state="translated">Ein Produktionsstandort kann für die Reinigung nicht stillstehen. Wir arbeiten nach Ihrem Schichtmodell, auch nachts und am Wochenende, und planen um die Linien herum, die weiterlaufen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.p2" datatype="html">
+        <source>Before the first visit we walk the site with your safety officer: access rules, protective equipment, lockout procedures, which areas need a permit and which chemicals are banned. Our teams are briefed on that before they arrive, not on the day.</source>
+        <target state="translated">Vor dem ersten Einsatz gehen wir das Objekt mit Ihrer Fachkraft für Arbeitssicherheit ab: Zutrittsregeln, Schutzausrüstung, Freischaltungen, welche Bereiche eine Erlaubnis brauchen und welche Chemikalien ausgeschlossen sind. Unsere Teams werden vorher eingewiesen, nicht erst am Einsatztag.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.p3" datatype="html">
+        <source>Industrial floors, machine surroundings, social rooms and changing areas each need different equipment and different intervals. We price them separately so you can see what drives the cost and adjust the intervals where it makes sense.</source>
+        <target state="translated">Industrieböden, Maschinenumfeld, Sozialräume und Umkleiden brauchen unterschiedliches Gerät und unterschiedliche Intervalle. Wir kalkulieren sie getrennt, damit Sie sehen, was die Kosten treibt, und Intervalle dort anpassen können, wo es sinnvoll ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.h1" datatype="html">
+        <source>Works to your shift pattern</source>
+        <target state="translated">Arbeitet nach Ihrem Schichtmodell</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.h2" datatype="html">
+        <source>Briefed on site safety rules first</source>
+        <target state="translated">Vorab eingewiesen auf Ihre Sicherheitsregeln</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.h3" datatype="html">
+        <source>Separate pricing per area type</source>
+        <target state="translated">Getrennte Kalkulation je Flächenart</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">208</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.h4" datatype="html">
+        <source>Night and weekend work available</source>
+        <target state="translated">Nacht- und Wochenendeinsätze möglich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i1" datatype="html">
+        <source>Production halls and assembly areas</source>
+        <target state="translated">Produktionshallen und Montagebereiche</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i2" datatype="html">
+        <source>Warehouses and logistics centres</source>
+        <target state="translated">Lagerhallen und Logistikzentren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">213</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i3" datatype="html">
+        <source>Workshops and vehicle bays</source>
+        <target state="translated">Werkstätten und Fahrzeughallen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i4" datatype="html">
+        <source>Industrial floors and machine surroundings</source>
+        <target state="translated">Industrieböden und Maschinenumfeld</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i5" datatype="html">
+        <source>Social rooms and changing facilities</source>
+        <target state="translated">Sozialräume und Umkleiden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">216</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.industrial.i6" datatype="html">
+        <source>Laboratories and server rooms</source>
+        <target state="translated">Laborreinigung und Serverräume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.title" datatype="html">
+        <source>Stairwell Cleaning Dresden</source>
+        <target state="translated">Treppenhausreinigung Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">225</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.shortTitle" datatype="html">
+        <source>Housing Cleaning</source>
+        <target state="translated">Treppenhausreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.summary" datatype="html">
+        <source>Stairwells, shared areas, winter service and grounds care for property managers and housing cooperatives.</source>
+        <target state="translated">Treppenhäuser, Gemeinschaftsflächen, Winterdienst und Grünpflege für Hausverwaltungen und Genossenschaften.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.metaTitle" datatype="html">
+        <source>Stairwell Cleaning Dresden For Property Managers | Glanzwork</source>
+        <target state="translated">Treppenhausreinigung Dresden für Hausverwaltungen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">228</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.metaDescription" datatype="html">
+        <source>Stairwell and shared-area cleaning, winter service and grounds care for property managers and housing cooperatives in Dresden. One contract, one invoice.</source>
+        <target state="translated">Treppenhaus- und Wohnanlagenreinigung, Winterdienst und Grünpflege für Hausverwaltungen und Genossenschaften in Dresden. Ein Vertrag, eine Rechnung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">229</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.p1" datatype="html">
+        <source>A property manager does not want three contractors for one building. We take the stairwell, the grounds and the winter service together, on one contract with one invoice and one person to call.</source>
+        <target state="translated">Eine Hausverwaltung will nicht drei Dienstleister für ein Objekt. Wir übernehmen Treppenhaus, Außenanlagen und Winterdienst zusammen – in einem Vertrag, mit einer Rechnung und einer Person, die Sie anrufen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">231</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.p2" datatype="html">
+        <source>Stairwell cleaning runs to a fixed weekday so residents know when it happens and complaints drop. Where a building has a cleaning rota on the wall, we take it over and keep it visible.</source>
+        <target state="translated">Die Treppenhausreinigung läuft an einem festen Wochentag, damit die Bewohner wissen, wann gereinigt wird – das allein senkt die Zahl der Beschwerden spürbar. Wo ein Reinigungsplan im Hausflur hängt, übernehmen wir ihn und halten ihn sichtbar aktuell.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">232</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.p3" datatype="html">
+        <source>For cooperatives and owners&apos; associations we can report per property, which makes the annual statement easier and shows owners exactly what their service charge paid for.</source>
+        <target state="translated">Für Genossenschaften und Eigentümergemeinschaften berichten wir auf Wunsch je Objekt. Das erleichtert die Jahresabrechnung und zeigt den Eigentümern genau, wofür ihr Hausgeld verwendet wurde.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.h1" datatype="html">
+        <source>Cleaning, grounds and winter in one contract</source>
+        <target state="translated">Reinigung, Grünpflege und Winterdienst in einem Vertrag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.h2" datatype="html">
+        <source>Fixed weekday, visible to residents</source>
+        <target state="translated">Fester Wochentag, sichtbar für die Bewohner</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">237</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.h3" datatype="html">
+        <source>Per-property reporting for statements</source>
+        <target state="translated">Objektbezogene Nachweise für die Abrechnung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.h4" datatype="html">
+        <source>One invoice, one contact person</source>
+        <target state="translated">Eine Rechnung, eine Ansprechpartnerin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i1" datatype="html">
+        <source>Stairwells and access ways</source>
+        <target state="translated">Treppenhäuser und Zugangswege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i2" datatype="html">
+        <source>Shared rooms, cellars and bin stores</source>
+        <target state="translated">Gemeinschaftsräume, Keller und Müllplätze</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">243</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i3" datatype="html">
+        <source>Windows in shared areas</source>
+        <target state="translated">Fenster in Gemeinschaftsbereichen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">244</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i4" datatype="html">
+        <source>Outdoor areas and bin management</source>
+        <target state="translated">Außenanlagen und Mülltonnenservice</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i5" datatype="html">
+        <source>Winter service for the property</source>
+        <target state="translated">Winterdienst für die Wohnanlage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.housing.i6" datatype="html">
+        <source>Cleaning after tenant changes</source>
+        <target state="translated">Reinigung bei Mieterwechsel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.title" datatype="html">
+        <source>Glass &amp; Window Cleaning</source>
+        <target state="translated">Glas- und Fensterreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.shortTitle" datatype="html">
+        <source>Glass Cleaning</source>
+        <target state="translated">Glasreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.summary" datatype="html">
+        <source>Streak-free windows, frames and glass facades for commercial and private properties, at height where needed.</source>
+        <target state="translated">Streifenfreie Fenster, Rahmen und Glasfassaden für Gewerbe und Privat – auf Wunsch auch in der Höhe.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.metaTitle" datatype="html">
+        <source>Glass &amp; Window Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Glas- &amp; Fensterreinigung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.metaDescription" datatype="html">
+        <source>Streak-free window, frame and glass facade cleaning for businesses and private clients in Dresden. Short-notice appointments, fair prices.</source>
+        <target state="translated">Streifenfreie Fenster-, Rahmen- und Glasfassadenreinigung für Gewerbe und Privat in Dresden. Kurzfristige Termine, faire Preise.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.p1" datatype="html">
+        <source>Glass is the first thing a visitor looks through and the easiest thing to get visibly wrong. We clean the frames and the rebates as well as the pane, because a clean pane in a dirty frame still looks dirty.</source>
+        <target state="translated">Glas ist das Erste, wodurch ein Besucher schaut, und das Einfachste, was sichtbar schlecht gemacht werden kann. Wir reinigen Rahmen und Falz mit, denn eine saubere Scheibe in einem schmutzigen Rahmen wirkt trotzdem schmutzig.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.p2" datatype="html">
+        <source>For upper floors and glass facades we work with telescopic poles and purified water, and with rope access where a facade cannot be reached any other way. Both are planned and insured before anyone goes up.</source>
+        <target state="translated">Für obere Etagen und Glasfassaden arbeiten wir mit Teleskopstange und reinem Wasser, bei unzugänglichen Fassaden auch seilunterstützt. Beides wird vorher geplant und ist versichert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.p3" datatype="html">
+        <source>Solar panels and conservatories are their own job: the wrong brush scratches a panel, and a scratched panel loses yield for the rest of its life. We clean them with equipment made for the surface.</source>
+        <target state="translated">Solaranlagen und Wintergärten sind eine eigene Aufgabe: Die falsche Bürste zerkratzt ein Modul, und ein zerkratztes Modul verliert für den Rest seiner Laufzeit Ertrag. Wir reinigen sie mit Gerät, das zur Oberfläche passt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.h1" datatype="html">
+        <source>Frames and rebates, not just the glass</source>
+        <target state="translated">Rahmen und Falz, nicht nur die Scheibe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.h2" datatype="html">
+        <source>Purified water for a streak-free finish</source>
+        <target state="translated">Reines Wasser für ein streifenfreies Ergebnis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">267</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.h3" datatype="html">
+        <source>Rope access for high facades</source>
+        <target state="translated">Seilzugang für hohe Fassaden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.h4" datatype="html">
+        <source>Short-notice appointments</source>
+        <target state="translated">Kurzfristige Termine möglich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i1" datatype="html">
+        <source>Windows, frames and rebates</source>
+        <target state="translated">Fenster, Rahmen und Falze</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">272</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i2" datatype="html">
+        <source>Glass facades and entrance glazing</source>
+        <target state="translated">Glasfassaden und Eingangsverglasung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">273</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i3" datatype="html">
+        <source>Shop windows and display cases</source>
+        <target state="translated">Schaufenster und Vitrinen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i4" datatype="html">
+        <source>Conservatories and roof glazing</source>
+        <target state="translated">Wintergärten und Dachverglasung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i5" datatype="html">
+        <source>Solar and photovoltaic panels</source>
+        <target state="translated">Solar- und PV-Anlagen reinigen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">276</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.glass.i6" datatype="html">
+        <source>Facade cleaning and maintenance</source>
+        <target state="translated">Fassadenreinigung und Fassadenpflege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">277</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.title" datatype="html">
+        <source>Deep &amp; Post-Construction Cleaning</source>
+        <target state="translated">Grundreinigung und Bauendreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.shortTitle" datatype="html">
+        <source>Deep Cleaning</source>
+        <target state="translated">Grundreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.summary" datatype="html">
+        <source>Deep cleans, builders&apos; cleans and special jobs: after renovation, a move, an event or water damage.</source>
+        <target state="translated">Grund-, Bauend- und Sonderreinigung: nach Renovierung, Umzug, Veranstaltung oder Wasserschaden.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.metaTitle" datatype="html">
+        <source>Deep &amp; Post-Construction Cleaning Dresden | Glanzwork</source>
+        <target state="translated">Grundreinigung &amp; Bauendreinigung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.metaDescription" datatype="html">
+        <source>Deep cleaning, post-construction and special cleaning in Dresden: after renovation, moving, events or water damage. Fast and thorough.</source>
+        <target state="translated">Grundreinigung, Bauend- und Sonderreinigung in Dresden: nach Renovierung, Umzug, Veranstaltung oder Wasserschaden. Schnell und gründlich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.p1" datatype="html">
+        <source>A deep clean resets a building to the state a maintenance contract can hold. It is the job to book before a new tenant moves in, after building work, or when regular cleaning has fallen behind.</source>
+        <target state="translated">Eine Grundreinigung versetzt ein Gebäude in den Zustand zurück, den eine Unterhaltsreinigung halten kann. Sie ist der Auftrag vor dem Einzug eines neuen Mieters, nach Bauarbeiten oder dann, wenn die laufende Reinigung zu lange im Rückstand war.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.p2" datatype="html">
+        <source>Builders&apos; cleans are a different trade from ordinary cleaning: fine dust settles for days, adhesive residue and paint spots need solvents, and protective film has to come off every surface. We plan a rough clean and a fine clean, not one pass.</source>
+        <target state="translated">Bauendreinigung ist ein anderes Handwerk als normale Reinigung: Feinstaub setzt sich über Tage, Kleberreste und Farbspritzer brauchen Lösemittel, und Schutzfolie muss von jeder Oberfläche herunter. Wir planen Grob- und Feinreinigung getrennt, nicht als einen Durchgang.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">292</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.p3" datatype="html">
+        <source>After water damage speed decides how much is saved. We can usually be on site the same day to remove standing water and start drying, and we work alongside your insurer&apos;s assessor rather than ahead of them.</source>
+        <target state="translated">Nach einem Wasserschaden entscheidet die Geschwindigkeit, wie viel zu retten ist. Wir sind in der Regel noch am selben Tag vor Ort, um stehendes Wasser zu entfernen und die Trocknung zu starten – abgestimmt mit dem Gutachter Ihrer Versicherung, nicht an ihm vorbei.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">293</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.h1" datatype="html">
+        <source>Rough clean and fine clean, planned apart</source>
+        <target state="translated">Grob- und Feinreinigung getrennt geplant</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.h2" datatype="html">
+        <source>Same-day response for water damage</source>
+        <target state="translated">Einsatz am selben Tag bei Wasserschaden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">297</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.h3" datatype="html">
+        <source>Handover-ready for landlords and agents</source>
+        <target state="translated">Übergabefertig für Vermieter und Makler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">298</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.h4" datatype="html">
+        <source>Fixed price agreed before starting</source>
+        <target state="translated">Festpreis vor Arbeitsbeginn vereinbart</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i1" datatype="html">
+        <source>Deep cleaning and spring cleaning</source>
+        <target state="translated">Grundreinigung und Frühjahrsputz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">302</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i2" datatype="html">
+        <source>Post-construction and fine cleaning</source>
+        <target state="translated">Bauendreinigung und Baufeinreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i3" datatype="html">
+        <source>Cleaning after renovation</source>
+        <target state="translated">Reinigung nach Renovierung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i4" datatype="html">
+        <source>Cleaning after water damage</source>
+        <target state="translated">Reinigung nach Wasserschaden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">305</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i5" datatype="html">
+        <source>Event and venue cleaning</source>
+        <target state="translated">Veranstaltungsreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.deepClean.i6" datatype="html">
+        <source>Disinfection and hygiene cleaning</source>
+        <target state="translated">Desinfektions- und Hygienereinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.title" datatype="html">
+        <source>Winter Service Dresden</source>
+        <target state="translated">Winterdienst Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.shortTitle" datatype="html">
+        <source>Winter Service</source>
+        <target state="translated">Winterdienst</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.summary" datatype="html">
+        <source>Snow clearing and gritting for businesses, schools, property managers and private clients, early and documented.</source>
+        <target state="translated">Schneeräumung und Streudienst für Firmen, Schulen, Hausverwaltungen und Privat – früh und dokumentiert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">317</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.metaTitle" datatype="html">
+        <source>Winter Service Dresden: Snow &amp; Grit | Glanzwork</source>
+        <target state="translated">Winterdienst Dresden: Räum- &amp; Streudienst | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">318</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.metaDescription" datatype="html">
+        <source>Snow clearing and gritting for companies, schools, property managers and private clients in Dresden. Early morning, documented for your liability.</source>
+        <target state="translated">Schneeräumung und Streudienst für Firmen, Schulen, Hausverwaltungen und Privat in Dresden. Früh am Morgen, dokumentiert für Ihre Haftung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">319</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.p1" datatype="html">
+        <source>In Germany the property owner carries the clearing duty, and if someone falls it is the owner who has to prove the path was cleared. A winter service contract moves that work to us — and, just as importantly, creates the record.</source>
+        <target state="translated">In Deutschland trägt der Eigentümer die Räumpflicht, und wenn jemand stürzt, muss der Eigentümer nachweisen, dass geräumt war. Ein Winterdienstvertrag verlagert diese Arbeit zu uns – und erzeugt, mindestens ebenso wichtig, den Nachweis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">321</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.p2" datatype="html">
+        <source>We clear before the statutory times, starting early enough that your staff and visitors arrive on a safe surface rather than watching us work. Routes are fixed in advance and driven in a set order.</source>
+        <target state="translated">Wir räumen vor den gesetzlichen Zeiten und beginnen früh genug, dass Ihre Mitarbeitenden und Besucher auf sicheren Flächen ankommen, statt uns bei der Arbeit zuzusehen. Die Routen stehen vorher fest und werden in gleicher Reihenfolge abgefahren.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">322</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.p3" datatype="html">
+        <source>Every call-out is logged with the time, the route and what was spread. That log is what your insurer asks for after an accident. For sensitive grounds and planting we use grit rather than salt.</source>
+        <target state="translated">Jeder Einsatz wird mit Uhrzeit, Route und Streumittel protokolliert. Genau dieses Protokoll verlangt Ihre Versicherung nach einem Unfall. Bei empfindlichen Grünflächen und Pflanzungen streuen wir Splitt statt Salz.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">323</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.h1" datatype="html">
+        <source>Cleared before the statutory times</source>
+        <target state="translated">Geräumt vor den gesetzlichen Zeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">326</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.h2" datatype="html">
+        <source>Every call-out logged for liability</source>
+        <target state="translated">Jeder Einsatz haftungssicher protokolliert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">327</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.h3" datatype="html">
+        <source>Takes over the owner&apos;s clearing duty</source>
+        <target state="translated">Übernimmt die Räum- und Streupflicht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">328</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.h4" datatype="html">
+        <source>Grit instead of salt where needed</source>
+        <target state="translated">Splitt statt Salz, wo es nötig ist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">329</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i1" datatype="html">
+        <source>Snow clearing for paths and car parks</source>
+        <target state="translated">Schneeräumung für Wege und Parkplätze</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i2" datatype="html">
+        <source>Gritting and ice prevention</source>
+        <target state="translated">Streudienst und Glättebekämpfung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">333</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i3" datatype="html">
+        <source>Seasonal contracts for businesses</source>
+        <target state="translated">Saisonverträge für Gewerbe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">334</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i4" datatype="html">
+        <source>Winter service for property managers</source>
+        <target state="translated">Winterdienst für Hausverwaltungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">335</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i5" datatype="html">
+        <source>Entrances, steps and fire routes</source>
+        <target state="translated">Eingänge, Treppen und Rettungswege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">336</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.winter.i6" datatype="html">
+        <source>Documented call-out records</source>
+        <target state="translated">Dokumentierte Einsatzprotokolle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">337</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.title" datatype="html">
+        <source>Gardening &amp; Grounds Care</source>
+        <target state="translated">Garten- und Grünpflege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">345</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.shortTitle" datatype="html">
+        <source>Grounds Care</source>
+        <target state="translated">Grünpflege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">346</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.summary" datatype="html">
+        <source>Lawns, hedges, leaves and green spaces for businesses, housing estates and private gardens.</source>
+        <target state="translated">Rasen, Hecken, Laub und Grünanlagen für Gewerbe, Wohnanlagen und private Gärten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">347</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.metaTitle" datatype="html">
+        <source>Gardening &amp; Grounds Care Dresden | Glanzwork</source>
+        <target state="translated">Gartenpflege &amp; Grünpflege Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">348</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.metaDescription" datatype="html">
+        <source>Lawns, hedges, leaves and green spaces: gardening and outdoor cleaning for businesses, housing estates and private clients in Dresden. One-off or yearly.</source>
+        <target state="translated">Rasen, Hecken, Laub und Grünanlagen: Gartenpflege und Außenreinigung für Gewerbe, Wohnanlagen und Privat in Dresden. Einmalig oder im Jahresvertrag.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">349</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.p1" datatype="html">
+        <source>Grounds care is the other half of looking after a property. A clean building with an overgrown entrance still reads as neglected, which is why we sell it with the cleaning rather than apart from it.</source>
+        <target state="translated">Grünpflege ist die andere Hälfte der Objektbetreuung. Ein sauberes Gebäude mit einem zugewachsenen Eingang wirkt trotzdem vernachlässigt – deshalb verkaufen wir sie zusammen mit der Reinigung und nicht getrennt davon.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">351</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.p2" datatype="html">
+        <source>A yearly contract spreads the work across the seasons: cutting and hedge trimming through the summer, leaves and gutters in autumn, winter service when it turns, and a tidy-up before spring. You pay a level monthly amount instead of unpredictable invoices.</source>
+        <target state="translated">Ein Jahresvertrag verteilt die Arbeit über die Saison: Mähen und Heckenschnitt im Sommer, Laub und Dachrinnen im Herbst, Winterdienst bei Wetterumschwung und ein Frühjahrsputz vor der neuen Saison. Sie zahlen einen gleichbleibenden Monatsbetrag statt unvorhersehbarer Rechnungen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">352</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.p3" datatype="html">
+        <source>Hard surfaces need cleaning too. Pressure washing lifts moss and algae off paths, terraces and car parks, which is as much a safety job as a cosmetic one once a surface turns green.</source>
+        <target state="translated">Auch befestigte Flächen brauchen Pflege. Hochdruckreinigung löst Moos und Algen von Wegen, Terrassen und Parkplätzen – was spätestens dann eine Sicherheitsfrage und nicht nur eine optische ist, wenn eine Fläche grün wird.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">353</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.h1" datatype="html">
+        <source>Yearly contract, level monthly price</source>
+        <target state="translated">Jahresvertrag mit gleichbleibendem Monatspreis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">356</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.h2" datatype="html">
+        <source>Sold together with your cleaning</source>
+        <target state="translated">Gemeinsam mit Ihrer Reinigung aus einer Hand</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">357</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.h3" datatype="html">
+        <source>Seasonal plan agreed in advance</source>
+        <target state="translated">Saisonplan im Voraus abgestimmt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">358</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.h4" datatype="html">
+        <source>Green waste removed and disposed of</source>
+        <target state="translated">Grünschnitt wird abgefahren und entsorgt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">359</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i1" datatype="html">
+        <source>Lawn mowing and lawn care</source>
+        <target state="translated">Rasen mähen und Rasenpflege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">362</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i2" datatype="html">
+        <source>Hedge and shrub trimming</source>
+        <target state="translated">Hecken- und Gehölzschnitt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">363</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i3" datatype="html">
+        <source>Leaf clearing and gutter cleaning</source>
+        <target state="translated">Laubentfernung und Dachrinnenreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">364</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i4" datatype="html">
+        <source>Green space care for housing estates</source>
+        <target state="translated">Grünanlagenpflege für Wohnanlagen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">365</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i5" datatype="html">
+        <source>Pressure washing of paths and terraces</source>
+        <target state="translated">Hochdruckreinigung von Wegen und Terrassen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">366</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.gardening.i6" datatype="html">
+        <source>Car park and outdoor area cleaning</source>
+        <target state="translated">Parkplatz- und Außenreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">367</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.title" datatype="html">
+        <source>Caretaker &amp; Facility Services</source>
+        <target state="translated">Hausmeisterservice und Objektbetreuung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">375</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.shortTitle" datatype="html">
+        <source>Caretaker Service</source>
+        <target state="translated">Hausmeisterservice</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">376</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.summary" datatype="html">
+        <source>Caretaking, bin management, clearances and property supervision — everything from one contractor.</source>
+        <target state="translated">Hausmeisterdienst, Mülltonnenservice, Entrümpelung und Objektbetreuung – alles von einem Dienstleister.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">377</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.metaTitle" datatype="html">
+        <source>Caretaker &amp; Property Services Dresden | Glanzwork</source>
+        <target state="translated">Hausmeisterservice &amp; Objektbetreuung Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">378</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.metaDescription" datatype="html">
+        <source>Caretaker service, bin management, clearances and property supervision in Dresden. Everything from one provider with a named contact person.</source>
+        <target state="translated">Hausmeisterservice, Mülltonnenservice, Entrümpelung und Objektbetreuung in Dresden. Alles aus einer Hand mit festem Ansprechpartner.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">379</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.p1" datatype="html">
+        <source>A caretaker service is the small jobs that otherwise land on whoever is nearest: bins out and back, a light replaced, a blocked gully, a contractor let in and checked on.</source>
+        <target state="translated">Ein Hausmeisterservice sind die kleinen Aufgaben, die sonst bei dem landen, der gerade am nächsten ist: Tonnen raus und zurück, eine Leuchte gewechselt, ein verstopfter Ablauf, ein Handwerker eingelassen und kontrolliert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">381</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.p2" datatype="html">
+        <source>We visit on an agreed rhythm and report what we found, so a property manager with buildings across the city knows the state of each one without driving to it.</source>
+        <target state="translated">Wir kommen in einem vereinbarten Rhythmus und melden zurück, was wir vorgefunden haben. So kennt eine Hausverwaltung mit Objekten über die ganze Stadt den Zustand jedes einzelnen, ohne selbst hinzufahren.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">382</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.p3" datatype="html">
+        <source>Clearances are the other half: a flat after a tenancy, a cellar, an estate. We sort what can be recycled from what cannot, dispose of it properly and give you the disposal receipts.</source>
+        <target state="translated">Die andere Hälfte sind Entrümpelungen: eine Wohnung nach dem Auszug, ein Keller, ein kompletter Haushalt. Wir trennen Verwertbares von Restmüll, entsorgen ordnungsgemäß und übergeben Ihnen die Entsorgungsnachweise.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">383</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.h1" datatype="html">
+        <source>Agreed visit rhythm with a written report</source>
+        <target state="translated">Fester Besuchsrhythmus mit schriftlicher Rückmeldung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">386</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.h2" datatype="html">
+        <source>Bins managed to the collection calendar</source>
+        <target state="translated">Tonnen nach Abfuhrkalender gestellt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">387</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.h3" datatype="html">
+        <source>Disposal receipts for every clearance</source>
+        <target state="translated">Entsorgungsnachweis für jede Entrümpelung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.h4" datatype="html">
+        <source>One contractor for the whole property</source>
+        <target state="translated">Ein Dienstleister für das ganze Objekt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">389</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i1" datatype="html">
+        <source>Caretaker rounds and small repairs</source>
+        <target state="translated">Hausmeisterrundgänge und Kleinreparaturen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">392</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i2" datatype="html">
+        <source>Bin management and collection calendar</source>
+        <target state="translated">Mülltonnenservice nach Abfuhrkalender</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">393</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i3" datatype="html">
+        <source>Property supervision and reporting</source>
+        <target state="translated">Objektbetreuung mit Zustandsbericht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">394</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i4" datatype="html">
+        <source>Flat and cellar clearances</source>
+        <target state="translated">Wohnungs- und Kellerentrümpelung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">395</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i5" datatype="html">
+        <source>Estate and household clearances</source>
+        <target state="translated">Haushaltsauflösung und Nachlassräumung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">396</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.facility.i6" datatype="html">
+        <source>Waste removal and proper disposal</source>
+        <target state="translated">Abfallentsorgung mit Nachweis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">397</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.title" datatype="html">
+        <source>Home Cleaning Dresden</source>
+        <target state="translated">Haushaltsreinigung Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">405</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.shortTitle" datatype="html">
+        <source>Home Cleaning</source>
+        <target state="translated">Haushaltsreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">406</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.summary" datatype="html">
+        <source>Regular home cleaning, move-out cleaning and window cleaning for private households, insured and invoiced.</source>
+        <target state="translated">Regelmäßige Wohnungsreinigung, Endreinigung beim Auszug und Fensterputzen – versichert und auf Rechnung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">407</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.metaTitle" datatype="html">
+        <source>Home Cleaning &amp; Domestic Help Dresden | Glanzwork</source>
+        <target state="translated">Haushaltsreinigung &amp; Putzhilfe Dresden | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">408</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.metaDescription" datatype="html">
+        <source>Regular home cleaning, move-out cleaning and window cleaning in Dresden. Reliable, insured, and invoiced properly.</source>
+        <target state="translated">Regelmäßige Wohnungsreinigung, Endreinigung beim Auszug und Fensterputzen in Dresden. Zuverlässig, versichert, auf Rechnung. Jetzt Angebot anfordern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">409</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.p1" datatype="html">
+        <source>Domestic cleaning works when it is the same person every time. You explain your home once, and after that it simply happens on the agreed day.</source>
+        <target state="translated">Haushaltsreinigung funktioniert dann, wenn es jedes Mal dieselbe Person ist. Sie erklären Ihr Zuhause einmal, und danach passiert es einfach am vereinbarten Tag.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">411</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.p2" datatype="html">
+        <source>We are a registered company, not an informal arrangement: our cleaners are employed, insured and declared, and you get a proper invoice. That matters if something is damaged, and it matters for the tax relief on household services.</source>
+        <target state="translated">Wir sind ein angemeldetes Unternehmen und keine Absprache unter der Hand: Unsere Reinigungskräfte sind angestellt, versichert und gemeldet, und Sie bekommen eine ordentliche Rechnung. Das zählt, wenn einmal etwas beschädigt wird – und es zählt für die Steuerermäßigung auf haushaltsnahe Dienstleistungen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">412</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.p3" datatype="html">
+        <source>Move-out cleaning is its own job, done to the standard a landlord or agent inspects against, so the deposit comes back and the handover happens on the day it was booked.</source>
+        <target state="translated">Die Endreinigung beim Auszug ist eine eigene Aufgabe. Wir reinigen in dem Standard, nach dem Vermieter und Hausverwaltungen abnehmen, damit die Kaution zurückkommt und die Übergabe am geplanten Tag stattfindet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">413</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.h1" datatype="html">
+        <source>The same cleaner every visit</source>
+        <target state="translated">Immer dieselbe Reinigungskraft</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">416</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.h2" datatype="html">
+        <source>Employed, insured and declared staff</source>
+        <target state="translated">Angestellt, versichert und angemeldet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">417</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.h3" datatype="html">
+        <source>Proper invoice for tax relief</source>
+        <target state="translated">Ordentliche Rechnung für die Steuerermäßigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">418</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.h4" datatype="html">
+        <source>Deposit-standard move-out cleaning</source>
+        <target state="translated">Endreinigung im Standard der Wohnungsübergabe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">419</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i1" datatype="html">
+        <source>Regular home and apartment cleaning</source>
+        <target state="translated">Regelmäßige Wohnungs- und Hausreinigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">422</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i2" datatype="html">
+        <source>Kitchens, ovens and appliances</source>
+        <target state="translated">Küche, Backofen und Haushaltsgeräte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">423</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i3" datatype="html">
+        <source>Bathroom descaling and limescale removal</source>
+        <target state="translated">Badreinigung und Kalkentfernung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">424</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i4" datatype="html">
+        <source>Window cleaning for private homes</source>
+        <target state="translated">Fenster putzen für Privathaushalte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">425</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i5" datatype="html">
+        <source>Move-out and end-of-tenancy cleaning</source>
+        <target state="translated">Endreinigung bei Auszug und Wohnungsübergabe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">426</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="service.home.i6" datatype="html">
+        <source>Holiday lets and guest changeovers</source>
+        <target state="translated">Ferienwohnungen und Gästewechsel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-catalog.ts</context>
+          <context context-type="linenumber">427</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alt.whyUs.washroom" datatype="html">
+        <source>Washroom fittings being detail-cleaned by Glanzwork in Dresden</source>
+        <target state="translated">Sanitärreinigung: Detailarbeit an Waschtisch und Armatur durch Glanzwork in Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alt.whyUs.supplies" datatype="html">
+        <source>Colour-coded cloths and eco-certified cleaning products</source>
+        <target state="translated">Farbcodierte Reinigungstücher und umweltfreundliche Reinigungsmittel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alt.about.team" datatype="html">
+        <source>The Glanzwork team cleaning an office building in Dresden</source>
+        <target state="translated">Glanzwork Team bei der Unterhaltsreinigung eines Bürogebäudes in Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alt.about.reception" datatype="html">
+        <source>Cleaned reception area of a Dresden office building</source>
+        <target state="translated">Gereinigter Empfangsbereich eines Bürogebäudes in Dresden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/about/about.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.about.h1" datatype="html">
+        <source>About Glanzwork</source>
+        <target state="translated">Über Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about/about-page.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.services.h1" datatype="html">
+        <source>Our Services</source>
+        <target state="translated">Unsere Leistungen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/services-page.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.references.h1" datatype="html">
+        <source>References</source>
+        <target state="translated">Referenzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/projects-page.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.blog.h1" datatype="html">
+        <source>Advice &amp; Guides</source>
+        <target state="translated">Ratgeber</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-page.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.contact.h1" datatype="html">
+        <source>Contact</source>
+        <target state="translated">Kontakt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.service" datatype="html">
+        <source>Service not found</source>
+        <target state="translated">Leistung nicht gefunden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.project" datatype="html">
+        <source>Reference not found</source>
+        <target state="translated">Referenz nicht gefunden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.post" datatype="html">
+        <source>Article not found</source>
+        <target state="translated">Beitrag nicht gefunden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceDetail.faq" datatype="html">
+        <source>Frequently asked questions</source>
+        <target state="translated">Häufige Fragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/services/service-detail.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.maintenance.q1" datatype="html">
+        <source>What belongs in a cleaning specification?</source>
+        <target state="translated">Was gehört in ein Leistungsverzeichnis für die Reinigung?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.maintenance.a1" datatype="html">
+        <source>A usable specification lists every room or zone, what happens in it at which interval, and who supplies the consumables. Ours separates daily, weekly and monthly work so you can see what you are paying for and change an interval without renegotiating the contract.</source>
+        <target state="translated">Ein brauchbares Leistungsverzeichnis listet jeden Raum oder jedes Revier, was dort in welchem Intervall passiert und wer das Verbrauchsmaterial stellt. Unseres trennt tägliche, wöchentliche und monatliche Arbeiten, damit Sie sehen, wofür Sie zahlen, und ein Intervall ändern können, ohne den Vertrag neu zu verhandeln.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.maintenance.q2" datatype="html">
+        <source>How often should an office be cleaned?</source>
+        <target state="translated">Wie oft sollte ein Büro gereinigt werden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.maintenance.a2" datatype="html">
+        <source>Sanitary facilities and kitchens need daily attention in any office that is occupied every day. Desks and floors usually work on two or three visits a week, with a deep clean once or twice a year. Reception and meeting rooms are the exception: they are what visitors see, so they are worth a daily pass.</source>
+        <target state="translated">Sanitärbereiche und Küchen brauchen in einem täglich genutzten Büro tägliche Aufmerksamkeit. Schreibtische und Böden funktionieren meist mit zwei bis drei Einsätzen pro Woche, dazu ein- bis zweimal im Jahr eine Grundreinigung. Empfang und Besprechungsräume sind die Ausnahme: Sie sind das, was Besucher sehen, und lohnen einen täglichen Durchgang.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.office.q1" datatype="html">
+        <source>What does office cleaning cost per square metre in Dresden?</source>
+        <target state="translated">Was kostet Büroreinigung pro m² in Dresden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.office.a1" datatype="html">
+        <source>Most offices in Dresden land somewhere around one to two euros per square metre per month at two or three visits a week, but the honest answer is that floor type, sanitary facilities and how much furniture has to be worked around move that figure more than the floor area does. We quote a fixed price after a free site visit.</source>
+        <target state="translated">Die meisten Büros in Dresden liegen bei zwei bis drei Einsätzen pro Woche etwa zwischen einem und zwei Euro pro Quadratmeter und Monat. Ehrlicherweise verschieben Bodenbelag, Sanitärbereiche und die Menge an Mobiliar, um die herum gearbeitet werden muss, diesen Wert stärker als die reine Fläche. Wir nennen einen Festpreis nach kostenloser Besichtigung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.office.q2" datatype="html">
+        <source>Do you clean outside business hours?</source>
+        <target state="translated">Reinigen Sie auch außerhalb der Geschäftszeiten?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.office.a2" datatype="html">
+        <source>Yes, and for most offices we recommend it. We work before opening or after closing so nobody is cleaning around occupied desks. Key handover, alarm codes and access rules are agreed in writing before the first visit.</source>
+        <target state="translated">Ja, und für die meisten Büros empfehlen wir das. Wir arbeiten vor Arbeitsbeginn oder nach Geschäftsschluss, damit niemand um besetzte Schreibtische herum putzt. Schlüsselübergabe, Alarmcodes und Zutrittsregeln werden vor dem ersten Einsatz schriftlich festgehalten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.school.q1" datatype="html">
+        <source>How often does a classroom have to be cleaned?</source>
+        <target state="translated">Wie oft muss ein Klassenzimmer gereinigt werden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.school.a1" datatype="html">
+        <source>Floors, waste bins and contact surfaces such as door handles and taps are a daily job in an occupied classroom, and sanitary facilities usually need more than one pass a day. The exact rhythm is set by the school&apos;s hygiene plan, which we work to rather than replace.</source>
+        <target state="translated">Böden, Abfallbehälter und Kontaktflächen wie Türklinken und Armaturen sind in einem genutzten Klassenzimmer eine tägliche Aufgabe, Sanitärbereiche brauchen meist mehr als einen Durchgang pro Tag. Den genauen Rhythmus gibt der Hygieneplan der Schule vor, nach dem wir arbeiten – wir ersetzen ihn nicht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.school.q2" datatype="html">
+        <source>Can the deep clean happen during the summer holidays?</source>
+        <target state="translated">Kann die Grundreinigung in den Sommerferien stattfinden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.school.a2" datatype="html">
+        <source>That is when it should happen. The holidays are the only window long enough to strip and reseal floors, move furniture and bring sports halls back to standard. We plan that calendar with you a term ahead so the work is finished before the first day of term, not during it.</source>
+        <target state="translated">Dann sollte sie stattfinden. Die Ferien sind das einzige Zeitfenster, das lang genug ist, um Böden grundzureinigen und neu einzupflegen, Mobiliar zu rücken und Turnhallen wieder in Stand zu bringen. Diesen Kalender planen wir ein Halbjahr im Voraus mit Ihnen, damit die Arbeit vor dem ersten Schultag fertig ist und nicht währenddessen läuft.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.medical.q1" datatype="html">
+        <source>What does a hygiene plan require of a cleaning company?</source>
+        <target state="translated">Was verlangt ein Hygieneplan von einer Reinigungsfirma?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.medical.a1" datatype="html">
+        <source>It sets which surfaces are disinfected rather than cleaned, with what, in which order, and how often. In practice it also means separate equipment per zone so nothing travels from a treatment room to a waiting area, staff trained for the setting, and a record of each visit that survives an inspection.</source>
+        <target state="translated">Er legt fest, welche Flächen desinfiziert statt nur gereinigt werden, womit, in welcher Reihenfolge und wie oft. Praktisch bedeutet das außerdem getrenntes Material je Zone, damit nichts aus einem Behandlungsraum in den Wartebereich wandert, geschultes Personal und einen Nachweis je Einsatz, der einer Begehung standhält.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.medical.q2" datatype="html">
+        <source>Do you clean care homes as well as practices?</source>
+        <target state="translated">Reinigen Sie auch Pflegeheime und nicht nur Praxen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.medical.a2" datatype="html">
+        <source>Yes — care homes, senior residences, health centres, physiotherapy and dental practices. Full hospital cleaning of operating theatres and intensive care needs validated procedures we do not yet offer, and we would rather say so than take the contract.</source>
+        <target state="translated">Ja – Pflegeheime, Seniorenresidenzen, MVZ sowie Physiotherapie- und Zahnarztpraxen. Die vollständige Klinikreinigung von OP-Bereichen und Intensivstationen erfordert validierte Verfahren, die wir derzeit nicht anbieten. Das sagen wir lieber, als den Auftrag anzunehmen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.publicSector.q1" datatype="html">
+        <source>Which documents does a cleaning tender ask for?</source>
+        <target state="translated">Welche Unterlagen verlangt eine Ausschreibung für Gebäudereinigung?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.publicSector.a1" datatype="html">
+        <source>Typically a trade register entry, clearance certificates from the tax office, health insurers and the trade association, proof of liability insurance, a reference list, and a declaration of collective wage compliance. We keep that folder current, which is why a short deadline is not a reason for us to skip a tender.</source>
+        <target state="translated">In der Regel Handelsregisterauszug, Unbedenklichkeitsbescheinigungen von Finanzamt, Krankenkassen und BG BAU, Nachweis der Haftpflichtversicherung, eine Referenzliste und die Erklärung zur Tariftreue. Wir halten diesen Ordner aktuell – deshalb ist eine kurze Frist für uns kein Grund, eine Ausschreibung auszulassen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.publicSector.q2" datatype="html">
+        <source>Are you too small for a public contract?</source>
+        <target state="translated">Sind Sie für einen öffentlichen Auftrag zu klein?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.publicSector.a2" datatype="html">
+        <source>For a region-wide framework, yes. For a single school, office building or administrative site — the size most lots are actually split into — being local is an advantage: short travel times, a named contact and a team that stays the same.</source>
+        <target state="translated">Für einen landesweiten Rahmenvertrag ja. Für eine einzelne Schule, ein Verwaltungsgebäude oder einen Standort – die Größe, in die Lose tatsächlich geteilt werden – ist Regionalität ein Vorteil: kurze Wege, eine feste Ansprechpartnerin und ein Team, das gleich bleibt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.industrial.q1" datatype="html">
+        <source>Can you clean during shift operation?</source>
+        <target state="translated">Können Sie im Schichtbetrieb reinigen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.industrial.a1" datatype="html">
+        <source>Yes. We plan around the lines that keep running and work nights and weekends where that is the only usable window. Before the first visit we walk the site with your safety officer so access rules, protective equipment and permit areas are settled in advance.</source>
+        <target state="translated">Ja. Wir planen um die Linien herum, die weiterlaufen, und arbeiten nachts und am Wochenende, wo das das einzig nutzbare Zeitfenster ist. Vor dem ersten Einsatz gehen wir das Objekt mit Ihrer Fachkraft für Arbeitssicherheit ab, damit Zutrittsregeln, Schutzausrüstung und erlaubnispflichtige Bereiche vorher geklärt sind.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.industrial.q2" datatype="html">
+        <source>What does industrial cleaning actually cover?</source>
+        <target state="translated">Was umfasst Industriereinigung konkret?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.industrial.a2" datatype="html">
+        <source>Production halls, warehouses, workshops, industrial floors and the area around machinery, plus the social rooms and changing facilities that are easy to forget and the first thing staff notice. Each is priced separately because each needs different equipment and intervals.</source>
+        <target state="translated">Produktionshallen, Lager, Werkstätten, Industrieböden und das Maschinenumfeld – dazu die Sozialräume und Umkleiden, die leicht vergessen werden und den Mitarbeitenden zuerst auffallen. Jeder Bereich wird getrennt kalkuliert, weil jeder anderes Gerät und andere Intervalle braucht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.housing.q1" datatype="html">
+        <source>What does stairwell cleaning cost in an apartment building?</source>
+        <target state="translated">Was kostet Treppenhausreinigung im Mehrfamilienhaus?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.housing.a1" datatype="html">
+        <source>It depends on the number of floors, whether there is a lift, and whether windows and bin stores are included. A typical Dresden building on a weekly rhythm is a modest per-unit cost on the service charge — and bundling it with grounds care and winter service on one contract is usually cheaper than three separate ones.</source>
+        <target state="translated">Das hängt von der Zahl der Etagen ab, davon, ob ein Aufzug vorhanden ist, und davon, ob Fenster und Müllplätze eingeschlossen sind. Ein typisches Dresdner Haus mit wöchentlichem Rhythmus schlägt sich in der Hausgeldabrechnung moderat je Einheit nieder – und Reinigung, Grünpflege und Winterdienst in einem Vertrag sind in der Regel günstiger als drei getrennte.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.housing.q2" datatype="html">
+        <source>Can you handle cleaning, grounds and winter service together?</source>
+        <target state="translated">Bekomme ich Reinigung, Grünpflege und Winterdienst zusammen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.housing.a2" datatype="html">
+        <source>That is how we prefer to work with property managers: one contract, one invoice and one person to call. It also means nobody argues about whether leaves on the path are the gardener&apos;s job or the cleaner&apos;s.</source>
+        <target state="translated">Genau so arbeiten wir am liebsten mit Hausverwaltungen: ein Vertrag, eine Rechnung und eine Person, die Sie anrufen. Außerdem diskutiert dann niemand darüber, ob Laub auf dem Weg Sache des Gärtners oder der Reinigung ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.glass.q1" datatype="html">
+        <source>How often should office windows be cleaned?</source>
+        <target state="translated">Wie oft sollten Bürofenster gereinigt werden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.glass.a1" datatype="html">
+        <source>Twice a year is the usual minimum for an office. Ground-floor glass, entrances and anything facing a busy road need four times a year or more. Shop windows are their own case — most of our retail clients book monthly.</source>
+        <target state="translated">Zweimal im Jahr ist für ein Büro das übliche Minimum. Erdgeschossverglasung, Eingänge und alles an einer stark befahrenen Straße brauchen vier Termine im Jahr oder mehr. Schaufenster sind ein eigener Fall – die meisten unserer Einzelhandelskunden buchen monatlich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.glass.q2" datatype="html">
+        <source>Can you clean solar panels without damaging them?</source>
+        <target state="translated">Können Sie Solaranlagen reinigen, ohne sie zu beschädigen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.glass.a2" datatype="html">
+        <source>Yes, with purified water and equipment made for the surface. The risk is real: the wrong brush leaves micro-scratches that cost yield for the rest of the panel&apos;s life, which is why we never use the same kit we use on a facade.</source>
+        <target state="translated">Ja, mit reinem Wasser und Gerät, das zur Oberfläche passt. Das Risiko ist real: Die falsche Bürste hinterlässt Mikrokratzer, die für den Rest der Laufzeit Ertrag kosten. Deshalb setzen wir dafür nie dasselbe Material ein wie an einer Fassade.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deepClean.q1" datatype="html">
+        <source>How quickly can you do a builders&apos; clean?</source>
+        <target state="translated">Wie kurzfristig ist eine Bauendreinigung möglich?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deepClean.a1" datatype="html">
+        <source>For a flat or a small office, usually within a few days of asking, and we can often work weekends to hit a handover date. Tell us the handover date first — it is the only fixed point in the job, and we plan the rough clean and the fine clean backwards from it.</source>
+        <target state="translated">Für eine Wohnung oder ein kleines Büro meist innerhalb weniger Tage, und für einen Übergabetermin arbeiten wir auch am Wochenende. Nennen Sie uns zuerst den Übergabetermin – er ist der einzige feste Punkt im Auftrag, und wir planen Grob- und Feinreinigung von dort aus rückwärts.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deepClean.q2" datatype="html">
+        <source>What happens after water damage?</source>
+        <target state="translated">Was ist nach einem Wasserschaden zu tun?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deepClean.a2" datatype="html">
+        <source>Call us and your insurer on the same day. We can usually be on site within hours to remove standing water and start drying, but we document the state before we touch anything and work alongside the assessor, because cleaning up ahead of them can cost you the claim.</source>
+        <target state="translated">Rufen Sie uns und Ihre Versicherung noch am selben Tag an. Wir sind in der Regel innerhalb weniger Stunden vor Ort, um stehendes Wasser zu entfernen und die Trocknung zu starten. Wir dokumentieren den Zustand aber, bevor wir etwas anfassen, und arbeiten mit dem Gutachter zusammen – vorschnelles Aufräumen kann den Anspruch kosten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.winter.q1" datatype="html">
+        <source>Who is liable for ice on the pavement outside a building?</source>
+        <target state="translated">Wer haftet bei Glatteis vor dem Haus?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.winter.a1" datatype="html">
+        <source>The property owner, and the duty can be passed to a tenant or a contractor by agreement. What does not pass is the obligation to prove it was met: after an accident it is the owner who has to show the path was cleared and gritted. A winter service contract with a written log is that proof.</source>
+        <target state="translated">Der Eigentümer. Die Pflicht kann vertraglich an Mieter oder einen Dienstleister übertragen werden. Was nicht übergeht, ist der Nachweis: Nach einem Unfall muss der Eigentümer belegen, dass geräumt und gestreut war. Ein Winterdienstvertrag mit schriftlichem Protokoll ist genau dieser Beleg.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.winter.q2" datatype="html">
+        <source>When does snow have to be cleared in Dresden?</source>
+        <target state="translated">Wann muss in Dresden Schnee geräumt werden?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.winter.a2" datatype="html">
+        <source>On working days from 07:00 to 20:00, and from 08:00 on Sundays and public holidays, with clearing repeated if it keeps snowing. We start before those times so your entrance is safe when the first person arrives rather than while they are waiting.</source>
+        <target state="translated">An Werktagen von 7:00 bis 20:00 Uhr, an Sonn- und Feiertagen ab 8:00 Uhr, bei anhaltendem Schneefall wiederholt. Wir beginnen vor diesen Zeiten, damit Ihr Eingang sicher ist, wenn die ersten Menschen ankommen – und nicht erst, während sie warten.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.gardening.q1" datatype="html">
+        <source>What does leaf clearing cost?</source>
+        <target state="translated">Was kostet es, Laub entfernen zu lassen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.gardening.a1" datatype="html">
+        <source>As a one-off it is priced by area and how much there is to take away. On a yearly contract it is already covered, which is why most clients with trees on the property choose the contract — autumn is exactly when a one-off is hardest to book at short notice.</source>
+        <target state="translated">Einmalig richtet sich der Preis nach Fläche und Menge, die abgefahren werden muss. Im Jahresvertrag ist die Leistung bereits enthalten – deshalb entscheiden sich die meisten Kunden mit Bäumen auf dem Grundstück für den Vertrag: Im Herbst ist ein Einzelauftrag am schwersten kurzfristig zu bekommen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.gardening.q2" datatype="html">
+        <source>Do you take the green waste away?</source>
+        <target state="translated">Fahren Sie den Grünschnitt ab?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.gardening.a2" datatype="html">
+        <source>Yes. Cuttings and leaves are removed and disposed of properly, and the disposal is included in the quoted price rather than appearing afterwards as an extra.</source>
+        <target state="translated">Ja. Schnittgut und Laub werden mitgenommen und ordnungsgemäß entsorgt, und die Entsorgung steckt im genannten Preis, statt später als Zusatzposten aufzutauchen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.facility.q1" datatype="html">
+        <source>Can I get caretaking and cleaning from one provider?</source>
+        <target state="translated">Bekomme ich Hausmeisterservice und Reinigung aus einer Hand?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.facility.a1" datatype="html">
+        <source>Yes, and for most properties it is the cheaper arrangement: one contract, one invoice, one contact, and nobody to point at when something falls between two jobs. We can also add winter service and grounds care to the same agreement.</source>
+        <target state="translated">Ja, und für die meisten Objekte ist das die günstigere Lösung: ein Vertrag, eine Rechnung, eine Ansprechpartnerin – und niemand, auf den man zeigen kann, wenn etwas zwischen zwei Gewerken liegen bleibt. Winterdienst und Grünpflege lassen sich in dieselbe Vereinbarung aufnehmen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.facility.q2" datatype="html">
+        <source>What do you do with what you clear out?</source>
+        <target state="translated">Was passiert mit dem Räumgut?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.facility.a2" datatype="html">
+        <source>We separate what can be reused or recycled from what cannot, dispose of the rest through licensed channels, and hand you the disposal receipts. For an estate clearance we agree in advance what is kept, and nothing of value is thrown away without asking.</source>
+        <target state="translated">Wir trennen Verwertbares und Wiederverwendbares vom Rest, entsorgen über zugelassene Wege und übergeben Ihnen die Entsorgungsnachweise. Bei einer Haushaltsauflösung legen wir vorher fest, was aufbewahrt wird – nichts von Wert wird ungefragt weggeworfen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.home.q1" datatype="html">
+        <source>Will the move-out clean get my deposit back?</source>
+        <target state="translated">Bekomme ich mit der Endreinigung meine Kaution zurück?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.home.a1" datatype="html">
+        <source>We clean to the standard landlords and agents actually inspect against: windows, inside cupboards, the oven, limescale, and the marks behind appliances. We cannot promise what a landlord will decide, but we can tell you before we start if something in the flat is damage rather than dirt.</source>
+        <target state="translated">Wir reinigen in dem Standard, nach dem Vermieter und Hausverwaltungen tatsächlich abnehmen: Fenster, Schrankinnenseiten, Backofen, Kalk und die Spuren hinter den Geräten. Was ein Vermieter am Ende entscheidet, können wir nicht versprechen – aber wir sagen Ihnen vor Beginn, wenn etwas in der Wohnung Schaden und nicht Schmutz ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.home.q2" datatype="html">
+        <source>Can I claim home cleaning against tax?</source>
+        <target state="translated">Kann ich Haushaltsreinigung steuerlich absetzen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.home.a2" datatype="html">
+        <source>In Germany a share of household services can be claimed, provided you have a proper invoice and pay by bank transfer rather than cash. We are a registered company with employed, insured staff, so you get an invoice that qualifies. Your tax adviser can tell you the current rate.</source>
+        <target state="translated">In Deutschland lässt sich ein Anteil haushaltsnaher Dienstleistungen absetzen, sofern eine ordentliche Rechnung vorliegt und per Überweisung statt bar gezahlt wird. Wir sind ein angemeldetes Unternehmen mit angestelltem, versichertem Personal – Sie erhalten also eine Rechnung, die das erfüllt. Den aktuellen Satz nennt Ihnen Ihr Steuerberater.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
+          <context context-type="linenumber">144</context>
         </context-group>
       </trans-unit>
     </body>

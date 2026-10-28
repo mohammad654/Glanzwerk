@@ -5,7 +5,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="widget">
             <a routerLink="/" class="widget__brand">
-              <img src="assets/images/generated_logo..png" alt="Glanzwerk" />
+              <img src="assets/images/glanzwork-logo.png" alt="Glanzwork Gebäudereinigung Dresden" width="404" height="224" />
             </a>
 
             <p i18n="@@footer.intro">
@@ -69,7 +69,7 @@
               <li>
                 <i appIcon="bi-telephone-outbound" aria-hidden="true"></i>
                 <span i18n="@@footer.hotline">Hotline:</span>
-                <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+                <a [href]="'tel:' + company.phoneHref">{{ company.phone }}</a>
               </li>
               <li>
                 <i appIcon="bi-envelope" aria-hidden="true"></i>
@@ -89,8 +89,16 @@
   </div>
 
   <div class="footer__bottom">
-    <div class="container">
+    <div class="container footer__bottom-inner">
       <p i18n="@@footer.copyright">© {{ currentYear }} {{ company.name }}. All rights reserved.</p>
+
+      <ul class="footer__legal">
+        @for (link of secondaryLinks; track link.path) {
+          <li>
+            <a [routerLink]="link.path">{{ link.label }}</a>
+          </li>
+        }
+      </ul>
     </div>
   </div>
 </footer>

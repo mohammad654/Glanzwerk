@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 
 import { SERVICES, serviceLink } from '../../../core/service-catalog';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
+import { CATALOGUE_IMAGE } from '../../../core/media';
 
 @Component({
   selector: 'app-services',
@@ -14,6 +15,9 @@ import { IconComponent } from '../../../shared/components/icon/icon.component';
   },
 })
 export class ServicesComponent {
+  /** Reserves the photo\'s space before it loads. */
+  readonly imageSize = CATALOGUE_IMAGE;
+
   /** Pages without a section above this one supply their own top gap. */
   readonly spacedTop = input(false);
 

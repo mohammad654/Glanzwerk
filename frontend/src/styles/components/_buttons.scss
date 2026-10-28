@@ -7,7 +7,7 @@
   border: 0;
   border-radius: v.$radius-pill;
   background: v.$primary;
-  color: #fff;
+  color: v.$white;
   font-family: v.$font-body;
   font-size: v.$btn-font-size;
   font-weight: 400;
@@ -18,18 +18,18 @@
   &:hover,
   &:focus-visible {
     background: v.$brand-indigo;
-    color: #fff;
+    color: v.$white;
   }
 }
 
 // The secondary call to action, paired with the primary one in the hero.
 .default-btn--light {
-  background: #fff;
+  background: v.$white;
   color: v.$brand-headings;
 
   &:hover,
   &:focus-visible {
     background: v.$brand-indigo;
-    color: #fff;
+    color: v.$white;
   }
 }
