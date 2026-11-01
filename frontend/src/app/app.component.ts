@@ -1,6 +1,8 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { isAdminUrl } from './core/admin';
+import { RouterUrlService } from './core/services/router-url.service';
 import { ScrollService } from './core/services/scroll.service';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { SidebarModalComponent } from './layout/sidebar-modal/sidebar-modal.component';
@@ -13,6 +15,7 @@ import { ScreenWipeComponent } from './shared/components/screen-wipe/screen-wipe
 const SCROLL_THRESHOLD = 80;
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   imports: [
     RouterOutlet,
@@ -28,6 +31,14 @@ const SCROLL_THRESHOLD = 80;
 })
 export class App {
   private readonly scroll = inject(ScrollService);
+  private readonly routerUrl = inject(RouterUrlService);
+
+  /**
+   * The admin area is a tool, not a page of the site: it renders its own sidebar
+   * shell, so the marketing header, footer, back-to-top button and boot splash are
+   * left off entirely rather than hidden with CSS.
+   */
+  readonly siteChrome = computed(() => !isAdminUrl(this.routerUrl.url()));
 
   readonly scrolled = computed(() => this.scroll.offset() > SCROLL_THRESHOLD);
 }

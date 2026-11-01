@@ -59,3 +59,21 @@
     display: none;
   }
 }
+
+// A button, not a link: signing out is a state change, not a destination. It has to
+// borrow the bar's own type and colour, which the reset strips from a button.
+.top-bar__signout {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus-visible {
+    color: v.$accent;
+  }
+}

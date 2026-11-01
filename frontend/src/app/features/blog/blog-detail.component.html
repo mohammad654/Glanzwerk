@@ -23,7 +23,7 @@
 
         <aside class="col-lg-4">
           <div class="detail__panel">
-            <h3>More Posts</h3>
+            <h3 i18n="@@blog.moreHeading">More Posts</h3>
             <ul class="detail__list detail__list--stacked">
               @for (other of others(); track other.key) {
                 <li>
@@ -42,8 +42,8 @@
 
   <section class="detail text-center">
     <div class="container">
-      <p>That post does not exist.</p>
-      <a class="default-btn" [routerLink]="links.blog">See all posts</a>
+      <p i18n="@@blog.notFound">That post does not exist.</p>
+      <a class="default-btn" [routerLink]="links.blog" i18n="@@blog.seeAll">See all posts</a>
     </div>
   </section>
 }

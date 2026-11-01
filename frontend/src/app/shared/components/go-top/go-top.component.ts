@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 
 import { ScrollService } from '../../../core/services/scroll.service';
 import { IconComponent } from '../icon/icon.component';
@@ -7,6 +7,7 @@ import { IconComponent } from '../icon/icon.component';
 const REVEAL_AFTER = 400;
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-go-top',
   imports: [IconComponent],
   template: `

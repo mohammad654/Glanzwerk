@@ -34,8 +34,20 @@
         @if (submitted()) {
           <p class="contact__note" role="status">
             <i appIcon="bi-check-circle-fill" aria-hidden="true"></i>
-            Thank you. Your enquiry is complete. Online sending is not connected yet, so please call
-            {{ company.phone }} or email {{ company.email }} and we will pick it up straight away.
+            <span i18n="@@contact.sent">
+              Thank you. Your enquiry is with us and we will come back to you the same working day.
+            </span>
+          </p>
+        }
+
+        @if (errorMessage()) {
+          <p class="contact__note contact__note--error" role="alert">
+            <i appIcon="bi-exclamation-triangle" aria-hidden="true"></i>
+            <!-- The server's own sentence, which says why. If the request never
+                 arrived at all, the phone number is the useful answer. -->
+            {{ errorMessage() }}
+            <span i18n="@@contact.orCall">You can also call us on</span>
+            {{ company.phone }}.
           </p>
         }
 
@@ -56,7 +68,7 @@
                   [attr.aria-describedby]="isInvalid('name') ? 'contact-name-error' : null"
                 />
                 @if (isInvalid('name')) {
-                  <span class="form-field__error" id="contact-name-error"
+                  <span class="form-field__error" id="contact-name-error" i18n="@@contact.error.name"
                     >Please tell us your name.</span
                   >
                 }
@@ -78,7 +90,7 @@
                   [attr.aria-describedby]="isInvalid('email') ? 'contact-email-error' : null"
                 />
                 @if (isInvalid('email')) {
-                  <span class="form-field__error" id="contact-email-error"
+                  <span class="form-field__error" id="contact-email-error" i18n="@@contact.error.email"
                     >Please enter a valid email address.</span
                   >
                 }
@@ -100,7 +112,7 @@
                   [attr.aria-describedby]="isInvalid('phone') ? 'contact-phone-error' : null"
                 />
                 @if (isInvalid('phone')) {
-                  <span class="form-field__error" id="contact-phone-error"
+                  <span class="form-field__error" id="contact-phone-error" i18n="@@contact.error.phone"
                     >Please enter a number we can reach you on.</span
                   >
                 }
@@ -110,26 +122,16 @@
             <div class="col-sm-6">
               <div class="form-field">
                 <label for="contact-service" i18n="@@contact.service">What do you need?</label>
-                <select
-                  id="contact-service"
-                  formControlName="service"
-                  [class.is-invalid]="isInvalid('service')"
-                  [attr.aria-invalid]="isInvalid('service') || null"
-                  [attr.aria-describedby]="isInvalid('service') ? 'contact-service-error' : null"
-                >
-                  <option value="" i18n="@@contact.selectService">Select a service</option>
-                  @for (service of services; track service) {
-                    <option [value]="service">{{ service }}</option>
+                <!-- The options carry the database's service ids, so the enquiry is
+                     stored against a real service rather than a copied-out title.
+                     Leaving it on "something else" is allowed: somebody who cannot
+                     see which box their job fits into should still be able to ask. -->
+                <select id="contact-service" formControlName="serviceId">
+                  <option value="" i18n="@@contact.somethingElse">Something else</option>
+                  @for (service of serviceOptions(); track service.id) {
+                    <option [value]="service.id">{{ service.name }}</option>
                   }
-                  <option value="Something else" i18n="@@contact.somethingElse">
-                    Something else
-                  </option>
                 </select>
-                @if (isInvalid('service')) {
-                  <span class="form-field__error" id="contact-service-error"
-                    >Please choose the closest match.</span
-                  >
-                }
               </div>
             </div>
 
@@ -148,7 +150,7 @@
                   [attr.aria-describedby]="isInvalid('message') ? 'contact-message-error' : null"
                 ></textarea>
                 @if (isInvalid('message')) {
-                  <span class="form-field__error" id="contact-message-error">
+                  <span class="form-field__error" id="contact-message-error" i18n="@@contact.error.message">
                     Please add at least {{ messageLimits.min }} characters so we can price it.
                   </span>
                 }
@@ -164,19 +166,35 @@
                     [attr.aria-invalid]="isInvalid('consent') || null"
                     [attr.aria-describedby]="isInvalid('consent') ? 'contact-consent-error' : null"
                   />
-                  I agree that Glanzwork may store these details in order to answer my enquiry.
+                  <span i18n="@@contact.consent"
+                    >I agree that Glanzwork may store these details in order to answer my
+                    enquiry.</span
+                  >
                 </label>
                 @if (isInvalid('consent')) {
-                  <span class="form-field__error" id="contact-consent-error">
+                  <span class="form-field__error" id="contact-consent-error" i18n="@@contact.error.consent">
                     We need your agreement before we can hold your details.
                   </span>
                 }
               </div>
             </div>
 
+            <!-- Honeypot. Hidden from people and from screen readers, and left empty
+                 by anyone filling the form in by hand; the server quietly drops a
+                 submission that arrives with it set. Cheaper and less intrusive than
+                 a captcha. -->
+            <div class="contact__honeypot" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input id="contact-website" type="text" formControlName="website" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="col-12">
-              <button class="default-btn" type="submit" i18n="@@contact.bookVisit">
-                Book A Free Site Visit
+              <button class="default-btn" type="submit" [disabled]="pending()">
+                @if (pending()) {
+                  <span i18n="@@contact.sending">Sending…</span>
+                } @else {
+                  <span i18n="@@contact.bookVisit">Book A Free Site Visit</span>
+                }
               </button>
             </div>
           </div>
@@ -194,7 +212,7 @@
 
           <div class="contact__urgent">
             <h4 i18n="@@contact.urgentHeading">Need someone today?</h4>
-            <p>
+            <p i18n="@@contact.urgentBody">
               Burst pipe, flooded basement, a handover tomorrow morning: do not use the form. Call
               us and we will tell you straight away whether we can make it.
             </p>

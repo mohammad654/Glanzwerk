@@ -1,9 +1,10 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
 import { LINKS } from '../../../core/routes';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-about',
   imports: [IconComponent, RouterLink],
   templateUrl: './about.component.html',

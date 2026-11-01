@@ -1,0 +1,161 @@
+<app-admin-page-header [page]="page">
+  <button type="button" class="admin-btn admin-btn--primary" (click)="openNew()">
+    <i appIcon="bi-plus-lg"></i>
+    <span i18n="@@admin.services.add">Add service</span>
+  </button>
+</app-admin-page-header>
+
+@if (services.isLoading()) {
+  <div class="admin-loading"></div>
+}
+
+@if (loadError()) {
+  <app-admin-alert [message]="loadError()!" />
+}
+
+@if (toggle.failure()) {
+  <app-admin-alert [message]="toggle.failure()!.message" />
+}
+
+<app-admin-table-panel
+  [title]="labels.panel"
+  [placeholder]="labels.search"
+  [count]="rows().length"
+  [total]="all().length"
+  [(query)]="query"
+>
+  @if (rows().length) {
+    <div class="admin-table-scroll">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th i18n="@@admin.column.service">Service</th>
+            <th i18n="@@admin.column.key">Key</th>
+            <th i18n="@@admin.column.duration">Duration</th>
+            <th i18n="@@admin.column.status">Status</th>
+            <th><span class="admin-sr-only" i18n="@@admin.column.actions">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (service of rows(); track service.id) {
+            <tr>
+              <td>
+                <span class="admin-table__primary">{{ service.nameDe }}</span>
+                <span class="admin-table__secondary">{{ service.nameEn }}</span>
+              </td>
+              <td><span class="admin-chip">{{ service.serviceKey }}</span></td>
+              <td>{{ duration(service.durationMinutes) }}</td>
+              <td>
+                <app-admin-status
+                  [label]="service.active ? labels.active : labels.inactive"
+                  [tone]="service.active ? 'success' : 'neutral'"
+                />
+              </td>
+              <td>
+                <div class="admin-actions">
+                  <button type="button" class="admin-btn admin-btn--quiet" (click)="openEdit(service)">
+                    <i appIcon="bi-pencil"></i>
+                    <span i18n="@@admin.action.edit">Edit</span>
+                  </button>
+
+                  @if (service.active) {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet admin-btn--danger"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(service, false)"
+                      i18n="@@admin.action.deactivate"
+                    >
+                      Withdraw
+                    </button>
+                  } @else {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(service, true)"
+                      i18n="@@admin.action.activate"
+                    >
+                      Reinstate
+                    </button>
+                  }
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else {
+    <app-admin-empty [message]="labels.empty" icon="bi-search" />
+  }
+</app-admin-table-panel>
+
+@if (editing()) {
+  <app-admin-dialog [title]="dialogTitle()" (dismissed)="close()">
+    @if (save.failure()) {
+      <app-admin-alert [message]="save.failure()!.message" />
+    }
+
+    <form class="admin-form" [formGroup]="form" (ngSubmit)="submit()" id="service-form">
+      <label class="admin-field" [class.is-invalid]="invalid('nameDe')">
+        <span i18n="@@admin.field.nameDe">Name (German)</span>
+        <input type="text" formControlName="nameDe" autocomplete="off" />
+        @if (error('nameDe')) {
+          <span class="admin-field__error">{{ error('nameDe') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('nameEn')">
+        <span i18n="@@admin.field.nameEn">Name (English)</span>
+        <input type="text" formControlName="nameEn" autocomplete="off" />
+        @if (error('nameEn')) {
+          <span class="admin-field__error">{{ error('nameEn') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('serviceKey')">
+        <span i18n="@@admin.field.serviceKey">Catalogue key</span>
+        <input type="text" formControlName="serviceKey" autocomplete="off" />
+        @if (error('serviceKey')) {
+          <span class="admin-field__error">{{ error('serviceKey') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('durationMinutes')">
+        <!-- How long the work takes, not the appointment: every appointment is one
+             fixed slot. -->
+        <span i18n="@@admin.field.duration">Work duration (minutes)</span>
+        <input type="number" formControlName="durationMinutes" min="15" max="600" step="15" />
+        @if (error('durationMinutes')) {
+          <span class="admin-field__error">{{ error('durationMinutes') }}</span>
+        }
+      </label>
+
+      <label class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.descriptionDe">Description (German)</span>
+        <textarea formControlName="descriptionDe" rows="3"></textarea>
+      </label>
+
+      <label class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.descriptionEn">Description (English)</span>
+        <textarea formControlName="descriptionEn" rows="3"></textarea>
+      </label>
+    </form>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="close()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="submit"
+        form="service-form"
+        class="admin-btn admin-btn--primary"
+        [disabled]="save.pending()"
+        i18n="@@admin.action.save"
+      >
+        Save
+      </button>
+    </div>
+  </app-admin-dialog>
+}

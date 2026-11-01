@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 
 import { RouteLoadingService } from '../../../core/services/route-loading.service';
 
@@ -24,6 +24,7 @@ const BUBBLES = [1, 2, 3, 4, 5] as const;
  * a navigation takes long enough to be worth admitting to.
  */
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-screen-wipe',
   templateUrl: './screen-wipe.component.html',
   styleUrl: './screen-wipe.component.scss',

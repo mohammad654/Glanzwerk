@@ -1,0 +1,589 @@
+@use 'sass:color';
+@use 'abstracts/variables' as v;
+
+// The shell and the read-only primitives: sidebar, topbar, page heading, panel,
+// table, status badge, filters, chips and empty state.
+//
+// The interactive primitives — buttons, alerts, forms, dialogs, paging — are in
+// `admin-controls.scss`, which the same component loads. One file would be simpler,
+// but the build's per-stylesheet budget (8 kB, see angular.json) exists to stop a
+// component stylesheet quietly becoming a second global sheet, and this area really
+// does need both halves. Splitting keeps the budget meaningful instead of raising it.
+//
+// Both are loaded with the admin chunk and never by the marketing site — see the
+// note on the component.
+
+// The canvas has to reach past the layout box, or an overscroll shows the white
+// body behind a dark app. `color-scheme` makes scrollbars and form controls dark too.
+html:has(.admin) {
+  background: v.$admin-bg;
+  color-scheme: dark;
+}
+
+.admin {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh; // or a phone's toolbar scrolls a page that already fits
+  background: v.$admin-bg;
+  color: v.$admin-text;
+  font-size: v.$font-size-sm;
+}
+
+// Sidebar ---------------------------------------------------------------------
+
+.admin__sidebar {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: 1040;
+  display: flex;
+  flex-direction: column;
+  width: v.$admin-sidebar-width;
+  padding: 0 0.75rem 0.75rem;
+  overflow-y: auto;
+  border-inline-end: 1px solid v.$admin-border;
+  background: v.$admin-surface;
+}
+
+.admin__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: v.$admin-topbar-height;
+  flex: none;
+  margin-bottom: 1rem;
+  padding-inline: 0.25rem;
+  color: v.$admin-text;
+  text-decoration: none;
+}
+
+.admin__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: v.$radius;
+  background: v.$admin-accent;
+  color: v.$white;
+  font-size: 1rem;
+}
+
+.admin__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.admin__brand-name {
+  font-family: v.$font-heading;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.admin__brand-sub {
+  color: v.$admin-text-muted;
+  font-size: 0.6875rem;
+}
+
+.admin__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.admin__nav-caption {
+  margin: 1rem 0 0.375rem;
+  padding-inline: 0.75rem;
+  color: v.$admin-text-muted;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.admin__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: v.$radius;
+  color: v.$admin-text-muted;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  i {
+    font-size: 1.0625rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: v.$admin-surface-raised;
+    color: v.$admin-text;
+  }
+
+  // Mantis marks the open page with a tinted well and a coloured icon rather than a
+  // solid block, which keeps the sidebar quiet when every other item is muted.
+  &.is-active {
+    background: rgba(v.$admin-accent, 0.16);
+    color: v.$admin-accent;
+    font-weight: 700;
+  }
+}
+
+// The way back to the public site is not one of the five pages, so it sits apart at
+// the foot of the sidebar rather than competing with them.
+.admin__link--quiet {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid v.$admin-border;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.admin__scrim {
+  display: none;
+}
+
+// Main column -----------------------------------------------------------------
+
+.admin__main {
+  flex: 1;
+  min-width: 0; // tables are wider than the column; without this they stretch it
+  margin-inline-start: v.$admin-sidebar-width;
+}
+
+.admin__topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: v.$admin-topbar-height;
+  padding-inline: v.$admin-gutter;
+  border-bottom: 1px solid v.$admin-border;
+  background: v.$admin-surface;
+}
+
+.admin__menu-toggle {
+  display: none;
+  padding: 0.375rem 0.5rem;
+  border: 1px solid v.$admin-border-strong;
+  border-radius: v.$radius-sm;
+  background: none;
+  color: v.$admin-text;
+  font-size: 1.125rem;
+}
+
+.admin__crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  color: v.$admin-text-muted;
+  font-size: 0.8125rem;
+
+  i {
+    font-size: 0.625rem;
+  }
+
+  strong {
+    color: v.$admin-text;
+    font-family: v.$font-heading;
+    font-weight: 700;
+  }
+}
+
+.admin__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-inline-start: auto;
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid rgba(v.$admin-accent, 0.35);
+  border-radius: v.$radius-pill;
+  color: v.$admin-accent;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin__content {
+  padding: v.$admin-gutter;
+}
+
+// Page heading ----------------------------------------------------------------
+
+.admin-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: v.$admin-gutter;
+
+  h1 {
+    margin-bottom: 0.25rem;
+    color: v.$admin-text;
+    font-size: 1.375rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: v.$admin-text-muted;
+  }
+}
+
+// Panel ----------------------------------------------------------------------
+
+// Flat, like Mantis: one hairline border does the separating, no shadow at all.
+.admin-panel {
+  border: 1px solid v.$admin-border;
+  border-radius: v.$radius-lg;
+  background: v.$admin-surface;
+  overflow: hidden;
+}
+
+.admin-panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem v.$admin-gutter;
+  border-bottom: 1px solid v.$admin-border;
+
+  h2 {
+    margin-bottom: 0;
+    color: v.$admin-text;
+    font-size: 1rem;
+  }
+}
+
+.admin-panel__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+// "7 / 14" — how much of the collection the filter left standing.
+.admin-panel__count {
+  padding: 0.125rem 0.5rem;
+  border-radius: v.$radius-sm;
+  background: v.$admin-surface-raised;
+  color: v.$admin-text-muted;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+// Grid ------------------------------------------------------------------------
+
+.admin-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: v.$admin-gutter;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+// Table ----------------------------------------------------------------------
+
+// Horizontal scroll rather than a squeezed table: a booking row carries a client, a
+// service, a date and an assignee, and none of them shortens usefully.
+.admin-table-scroll {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+
+  th,
+  td {
+    padding: 0.8125rem v.$admin-gutter;
+    text-align: start;
+  }
+
+  th {
+    border-bottom: 1px solid v.$admin-border;
+    color: v.$admin-text-muted;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid v.$admin-border;
+    transition: background 0.15s ease;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background: v.$admin-surface-raised;
+    }
+  }
+
+  td {
+    color: v.$admin-text-muted;
+    vertical-align: middle;
+  }
+}
+
+.admin-table__primary {
+  display: block;
+  color: v.$admin-text;
+  font-weight: 600;
+}
+
+.admin-table__secondary {
+  display: block;
+  color: v.$admin-text-muted;
+  font-size: 0.75rem;
+}
+
+.admin-table__numeric {
+  color: v.$admin-text;
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+
+// Avatar ---------------------------------------------------------------------
+
+// Initials, not photographs: there are no staff portraits and a broken image in
+// every row of a table is worse than no image at all.
+.admin-avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: v.$radius-pill;
+  background: v.$admin-surface-raised;
+  color: v.$admin-text;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.admin-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+// Filter strip ---------------------------------------------------------------
+
+.admin-panel__filters {
+  padding: 0.75rem v.$admin-gutter;
+  border-bottom: 1px solid v.$admin-border;
+
+  // Pages without filters project nothing, and an empty bordered strip is worse
+  // than no strip.
+  &:empty {
+    display: none;
+  }
+}
+
+// Chips ----------------------------------------------------------------------
+
+.admin-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.admin-chip {
+  padding: 0.125rem 0.5rem;
+  border: 1px solid v.$admin-border-strong;
+  border-radius: v.$radius-sm;
+  color: v.$admin-text-muted;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.admin-chip--more {
+  border-style: dashed;
+}
+
+// Status badge ---------------------------------------------------------------
+
+.admin-status {
+  display: inline-block;
+  padding: 0.1875rem 0.625rem;
+  border-radius: v.$radius-sm;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  // The label is white on every tone, so the colour alone carries the meaning and a
+  // badge never reads as dim text on a dim background. The tint is strong enough to
+  // keep the hue obvious and still dark enough for white to have real contrast.
+  color: v.$white;
+
+  &--neutral {
+    background: rgba(v.$admin-neutral, 0.32);
+  }
+
+  &--info {
+    background: rgba(v.$admin-accent, 0.32);
+  }
+
+  &--success {
+    background: rgba(v.$admin-positive, 0.32);
+  }
+
+  &--danger {
+    background: rgba(v.$admin-negative, 0.32);
+  }
+}
+
+// Controls -------------------------------------------------------------------
+
+.admin-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  // A flex item shrinks below its content by default, which cropped the placeholder
+  // the moment the panel title grew.
+  flex: 0 1 19rem;
+
+  i {
+    position: absolute;
+    inset-inline-start: 0.75rem;
+    color: v.$admin-text-muted;
+    pointer-events: none;
+  }
+
+  input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    border: 1px solid v.$admin-border-strong;
+    border-radius: v.$radius-sm;
+    background: v.$admin-bg;
+    color: v.$admin-text;
+    font-size: 0.8125rem;
+
+    &::placeholder {
+      color: v.$admin-text-muted;
+    }
+
+    &:focus {
+      border-color: v.$admin-accent;
+      outline: none;
+    }
+  }
+}
+
+.admin-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.admin-filter {
+  padding: 0.375rem 0.8125rem;
+  border: 1px solid v.$admin-border-strong;
+  border-radius: v.$radius-pill;
+  background: none;
+  color: v.$admin-text-muted;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    border-color: v.$admin-accent;
+    color: v.$admin-text;
+  }
+
+  &.is-active {
+    border-color: v.$admin-accent;
+    background: rgba(v.$admin-accent, 0.16);
+    color: v.$admin-accent;
+  }
+}
+
+.admin-empty {
+  padding: 3.5rem v.$admin-gutter;
+  color: v.$admin-text-muted;
+  text-align: center;
+
+  // A block box is not centred by text-align, and the icon host is inline-block.
+  i {
+    display: block;
+    margin: 0 auto 0.5rem;
+    color: v.$admin-border-strong;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Mobile ---------------------------------------------------------------------
+
+@media (max-width: 991.98px) {
+  // `visibility`, not `transform` alone: a sidebar pushed off-screen is still in the
+  // tab order, so a keyboard user tabbing off the menu button landed in eight links
+  // they could not see. Hiding it also takes it out of the accessibility tree, which
+  // is why the markup needs no `aria-hidden` of its own. Same idiom as the scrim
+  // below — `visible` applies at once on the way in and waits for the slide out.
+  .admin__sidebar {
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0.25s ease;
+
+    &.is-open {
+      transform: none;
+      visibility: visible;
+    }
+  }
+
+  .admin__main {
+    margin-inline-start: 0;
+  }
+
+  .admin__menu-toggle {
+    display: block;
+  }
+
+  .admin__scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1035;
+    display: block;
+    border: 0;
+    background: rgba(v.$black, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .admin__content {
+    padding: 1rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding-inline: 1rem;
+  }
+
+  .admin-panel__header {
+    padding-inline: 1rem;
+  }
+}

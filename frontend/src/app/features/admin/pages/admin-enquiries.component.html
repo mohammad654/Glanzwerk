@@ -1,0 +1,179 @@
+<app-admin-page-header [page]="page">
+  <button
+    type="button"
+    class="admin-btn"
+    [disabled]="enquiries.isLoading()"
+    (click)="enquiries.reload()"
+  >
+    <i appIcon="bi-arrow-repeat"></i>
+    <span i18n="@@admin.refresh">Refresh</span>
+  </button>
+</app-admin-page-header>
+
+@if (enquiries.isLoading()) {
+  <div class="admin-loading"></div>
+}
+
+@if (loadError()) {
+  <app-admin-alert [message]="loadError()!" />
+}
+
+<app-admin-table-panel
+  [title]="labels.panel"
+  [placeholder]="labels.search"
+  [count]="rows().length"
+  [total]="total()"
+  [query]="query()"
+  (queryChange)="onQuery($event)"
+>
+  <div adminPanelFilters class="admin-filters">
+    @for (filter of filters(); track filter.key) {
+      <button
+        type="button"
+        class="admin-filter"
+        [class.is-active]="status() === filter.key"
+        (click)="setStatus(filter.key)"
+      >
+        {{ filter.label }}
+      </button>
+    }
+  </div>
+
+  @if (rows().length) {
+    <div class="admin-table-scroll">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th i18n="@@admin.column.from">From</th>
+            <th i18n="@@admin.column.service">Service</th>
+            <th i18n="@@admin.column.message">Message</th>
+            <th i18n="@@admin.column.received">Received</th>
+            <th i18n="@@admin.column.status">Status</th>
+            <th><span class="admin-sr-only" i18n="@@admin.column.actions">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (enquiry of rows(); track enquiry.id) {
+            <tr>
+              <td>
+                <span class="admin-table__primary">{{ enquiry.name }}</span>
+                <span class="admin-table__secondary">{{ enquiry.email }}</span>
+              </td>
+              <td>
+                @if (enquiry.serviceName) {
+                  {{ enquiry.serviceName }}
+                } @else {
+                  <span class="admin-table__secondary">{{ labels.general }}</span>
+                }
+              </td>
+              <!-- Truncated with CSS, not sliced in TypeScript: the full text goes to
+                   the browser either way and the dialog needs all of it. -->
+              <td class="admin-table__primary admin-table__truncate">{{ enquiry.message }}</td>
+              <td>
+                <span class="admin-table__primary">
+                  {{ enquiry.createdAt | date: 'mediumDate' }}
+                </span>
+                <span class="admin-table__secondary">
+                  {{ enquiry.createdAt | date: 'shortTime' }}
+                </span>
+              </td>
+              <td>
+                <app-admin-status
+                  [label]="statusLabels[enquiry.status]"
+                  [tone]="statusTones[enquiry.status]"
+                />
+              </td>
+              <td>
+                <div class="admin-actions">
+                  <button
+                    type="button"
+                    class="admin-btn admin-btn--quiet"
+                    (click)="openEnquiry(enquiry)"
+                  >
+                    <i appIcon="bi-envelope-open"></i>
+                    <span i18n="@@admin.action.openEnquiry">Open</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <app-admin-pager [page]="enquiryPage()" (goTo)="goToPage($event)" />
+  } @else {
+    <app-admin-empty [message]="labels.empty" icon="bi-inbox" />
+  }
+</app-admin-table-panel>
+
+@if (open(); as enquiry) {
+  <app-admin-dialog [title]="labels.dialog" (dismissed)="close()">
+    @if (save.failure()) {
+      <app-admin-alert [message]="save.failure()!.message" />
+    }
+
+    <dl class="admin-details">
+      <dt i18n="@@admin.field.name">Name</dt>
+      <dd>{{ enquiry.name }}</dd>
+
+      <dt i18n="@@admin.field.email">Email</dt>
+      <dd><a href="mailto:{{ enquiry.email }}">{{ enquiry.email }}</a></dd>
+
+      <dt i18n="@@admin.field.phone">Phone</dt>
+      <dd>
+        @if (enquiry.phone) {
+          <a href="tel:{{ enquiry.phone }}">{{ enquiry.phone }}</a>
+        } @else {
+          —
+        }
+      </dd>
+
+      <dt i18n="@@admin.column.service">Service</dt>
+      <dd>{{ enquiry.serviceName ?? labels.general }}</dd>
+
+      <dt i18n="@@admin.column.received">Received</dt>
+      <dd>{{ enquiry.createdAt | date: 'medium' }}</dd>
+    </dl>
+
+    <p class="admin-message" style="margin-top: 1rem">{{ enquiry.message }}</p>
+
+    <form class="admin-form" [formGroup]="form" (ngSubmit)="submit()" id="enquiry-form" style="margin-top: 1.25rem">
+      <label class="admin-field">
+        <span i18n="@@admin.column.status">Status</span>
+        <select formControlName="status">
+          @for (option of statuses; track option) {
+            <option [value]="option">{{ statusLabels[option] }}</option>
+          }
+        </select>
+        @if (error('status')) {
+          <span class="admin-field__error">{{ error('status') }}</span>
+        }
+      </label>
+
+      <label class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.adminNotes">Internal note</span>
+        <!-- Never shown to the person who wrote in. -->
+        <textarea formControlName="adminNotes" rows="3"></textarea>
+        @if (error('adminNotes')) {
+          <span class="admin-field__error">{{ error('adminNotes') }}</span>
+        }
+      </label>
+    </form>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="close()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="submit"
+        form="enquiry-form"
+        class="admin-btn admin-btn--primary"
+        [disabled]="save.pending()"
+        i18n="@@admin.action.save"
+      >
+        Save
+      </button>
+    </div>
+  </app-admin-dialog>
+}

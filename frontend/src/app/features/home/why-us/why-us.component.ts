@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
 
 interface Commitment {
@@ -7,6 +7,7 @@ interface Commitment {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-why-us',
   imports: [IconComponent],
   templateUrl: './why-us.component.html',

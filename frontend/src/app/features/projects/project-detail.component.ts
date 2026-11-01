@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { LINKS, STATIC_ROUTES } from '../../core/routes';
@@ -9,6 +9,7 @@ import { IconComponent } from '../../shared/components/icon/icon.component';
 import { CATALOGUE_IMAGE } from '../../core/media';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-project-detail',
   imports: [IconComponent, PageBannerComponent, RouterLink],
   templateUrl: './project-detail.component.html',

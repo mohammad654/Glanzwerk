@@ -266,15 +266,7 @@
           <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contact.selectService" datatype="html">
-        <source>Select a service</source>
-        <target state="translated">Leistung auswählen</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">112,113</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="contact.somethingElse" datatype="html">
+            <trans-unit id="contact.somethingElse" datatype="html">
         <source> Something else </source>
         <target state="translated">Etwas anderes</target>
         <context-group purpose="location">
@@ -407,7 +399,63 @@
         <target state="translated">Kostenlose Besichtigung vereinbaren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
-          <context context-type="linenumber">5,8</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.lead" datatype="html">
+        <source>Tell us what you need and pick a time that suits you. We come out, look at the job and agree the price with you before any work begins.</source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen, und wählen Sie einen Termin, der Ihnen passt. Wir kommen vorbei, sehen uns die Arbeit an und stimmen den Preis mit Ihnen ab, bevor wir anfangen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.cta" datatype="html">
+        <source>Book An Appointment</source>
+        <target state="translated">Termin buchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">23,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.existing" datatype="html">
+        <source>Already a customer?</source>
+        <target state="translated">Schon Kunde?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.existingLink" datatype="html">
+        <source>See your appointments</source>
+        <target state="translated">Ihre Termine ansehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">28,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.free" datatype="html">
+        <source>The visit costs nothing. We look at the job and agree a fixed price before anyone starts work.</source>
+        <target state="translated">Die Besichtigung kostet nichts. Wir sehen uns die Arbeit an und vereinbaren einen Festpreis, bevor jemand anfängt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.slots" datatype="html">
+        <source>You choose from the times we are genuinely free, so nothing has to be rearranged afterwards.</source>
+        <target state="translated">Sie wählen aus den Zeiten, zu denen wir wirklich frei sind – so muss später nichts verschoben werden.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.track" datatype="html">
+        <source>Every appointment sits in your account, where you can follow it or call it off.</source>
+        <target state="translated">Jeder Termin liegt in Ihrem Konto, wo Sie ihn verfolgen oder absagen können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="blog.eyebrow" datatype="html">
@@ -1034,6 +1082,14 @@
           <context context-type="linenumber">20,21</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="topbar.signout" datatype="html">
+        <source>Sign Out</source>
+        <target state="translated">Abmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goTop.label" datatype="html">
         <source>Back to top</source>
         <target state="translated">Nach oben</target>
@@ -1166,15 +1222,7 @@
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="page.login.title" datatype="html">
-        <source>Sign In</source>
-        <target state="translated">Anmelden</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="meta.references.title" datatype="html">
+            <trans-unit id="meta.references.title" datatype="html">
         <source>References | Cleaning Projects in Dresden | Glanzwork</source>
         <target state="translated">Referenzen | Reinigungsprojekte in Dresden | Glanzwork</target>
         <context-group purpose="location">
@@ -3660,6 +3708,2338 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/service-faqs.ts</context>
           <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.overview.label" datatype="html">
+        <source>Overview</source>
+        <target state="translated">Übersicht</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.overview.lead" datatype="html">
+        <source>Today&apos;s jobs and the numbers behind them.</source>
+        <target state="translated">Die heutigen Einsätze und die Zahlen dahinter.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.clients.label" datatype="html">
+        <source>Clients</source>
+        <target state="translated">Kunden</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.lead" datatype="html">
+        <source>The companies and households we clean for.</source>
+        <target state="translated">Die Unternehmen und Haushalte, für die wir reinigen.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.label" datatype="html">
+        <source>Employees</source>
+        <target state="translated">Mitarbeiter</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.lead" datatype="html">
+        <source>The team, what they are qualified for and how booked they are.</source>
+        <target state="translated">Das Team, die Qualifikationen und die Auslastung.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.label" datatype="html">
+        <source>Services</source>
+        <target state="translated">Leistungen</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.lead" datatype="html">
+        <source>The service catalogue the public site and the booking form are built from.</source>
+        <target state="translated">Der Leistungskatalog, aus dem die Website und das Anfrageformular aufgebaut sind.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.title" datatype="html">
+        <source><x id="label" equiv-text="page.label"/> | Glanzwork Admin</source>
+        <target state="translated"><x id="label" equiv-text="page.label"/> | Glanzwork Admin</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.brand.sub" datatype="html">
+        <source>Admin workspace</source>
+        <target state="translated">Administration</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+        <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.backToSite" datatype="html">
+        <source>Back to the website</source>
+        <target state="translated">Zurück zur Website</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+        <context context-type="linenumber">28,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.toggleNav" datatype="html">
+        <source>Toggle navigation</source>
+        <target state="translated">Navigation ein-/ausblenden</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+        <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.group.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target state="translated">Dashboard</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.group.management" datatype="html">
+        <source>Management</source>
+        <target state="translated">Verwaltung</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/core/admin.ts</context>
+        <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.requested" datatype="html">
+        <source>Requested</source>
+        <target state="translated">Angefragt</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
+        <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.confirmed" datatype="html">
+        <source>Confirmed</source>
+        <target state="translated">Bestätigt</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
+        <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.inProgress" datatype="html">
+        <source>In progress</source>
+        <target state="translated">Läuft</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
+        <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.completed" datatype="html">
+        <source>Completed</source>
+        <target state="translated">Abgeschlossen</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
+        <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.cancelled" datatype="html">
+        <source>Cancelled</source>
+        <target state="translated">Storniert</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
+        <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.role.cleaner" datatype="html">
+        <source>Cleaner</source>
+        <target state="translated">Reinigungskraft</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.supervisor" datatype="html">
+        <source>Site supervisor</source>
+        <target state="translated">Objektleitung</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.driver" datatype="html">
+        <source>Driver</source>
+        <target state="translated">Fahrer</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.office" datatype="html">
+        <source>Office</source>
+        <target state="translated">Büro</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.active" datatype="html">
+        <source>Active</source>
+        <target state="translated">Aktiv</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.leave" datatype="html">
+        <source>On leave</source>
+        <target state="translated">Abwesend</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.inactive" datatype="html">
+        <source>Inactive</source>
+        <target state="translated">Inaktiv</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+        <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.panelTitle" datatype="html">
+        <source>All clients</source>
+        <target state="translated">Alle Kunden</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+        <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.empty" datatype="html">
+        <source>No client matches that search.</source>
+        <target state="translated">Kein Kunde passt zu dieser Suche.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+        <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clientStatus.active" datatype="html">
+        <source>Active</source>
+        <target state="translated">Aktiv</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+        <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clientStatus.former" datatype="html">
+        <source>Blocked</source>
+        <target state="translated">Gesperrt</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+        <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.panelTitle" datatype="html">
+        <source>The team</source>
+        <target state="translated">Das Team</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+        <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.empty" datatype="html">
+        <source>Nobody matches that search.</source>
+        <target state="translated">Niemand passt zu dieser Suche.</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+        <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.client" datatype="html">
+        <source>Client</source>
+        <target state="translated">Kunde</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+        <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.column.since" datatype="html">
+        <source>Since</source>
+        <target state="translated">Seit</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+        <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.status" datatype="html">
+        <source>Status</source>
+        <target state="translated">Status</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+        <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.column.skills" datatype="html">
+        <source>Qualified for</source>
+        <target state="translated">Qualifiziert für</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+        <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.hours" datatype="html">
+        <source>Hours</source>
+        <target state="translated">Stunden</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+        <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.search2" datatype="html">
+        <source>Name or email</source>
+        <target state="translated">Name oder E-Mail</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+        <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.search2" datatype="html">
+        <source>Name or role</source>
+        <target state="translated">Name oder Funktion</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+        <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+                                          <trans-unit id="admin.filter.all" datatype="html">
+        <source>All</source>
+        <target state="translated">Alle</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.ts</context>
+        <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.reference" datatype="html">
+        <source>Appointment</source>
+        <target state="translated">Termin</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+        <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.service" datatype="html">
+        <source>Service</source>
+        <target state="translated">Leistung</target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+        <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.enquiries.label" datatype="html">
+        <source>Enquiries</source>
+        <target state="translated">Anfragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.lead" datatype="html">
+        <source>Messages from the website&apos;s contact form, and where each one stands.</source>
+        <target state="translated">Nachrichten aus dem Kontaktformular der Website und wie weit jede davon ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.offline" datatype="html">
+        <source>Could not reach the server. Check your connection and try again.</source>
+        <target state="translated">Der Server ist nicht erreichbar. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.unexpected" datatype="html">
+        <source>Something went wrong. Please try again.</source>
+        <target state="translated">Da ist etwas schiefgelaufen. Bitte versuchen Sie es erneut.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.forbidden" datatype="html">
+        <source>You do not have permission to do that.</source>
+        <target state="translated">Dazu haben Sie keine Berechtigung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.unauthorized" datatype="html">
+        <source>Your session has expired. Please sign in again.</source>
+        <target state="translated">Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.register.title" datatype="html">
+        <source>Create An Account | Glanzwork</source>
+        <target state="translated">Konto erstellen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.register.description" datatype="html">
+        <source>Create a Glanzwork account to book appointments and follow your jobs.</source>
+        <target state="translated">Erstellen Sie ein Glanzwork-Konto, um Termine zu buchen und Ihre Aufträge zu verfolgen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.account.title" datatype="html">
+        <source>My Appointments | Glanzwork</source>
+        <target state="translated">Meine Termine | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.account.description" datatype="html">
+        <source>Your Glanzwork appointments and their status.</source>
+        <target state="translated">Ihre Glanzwork-Termine und deren Status.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.booking.title" datatype="html">
+        <source>Book An Appointment | Glanzwork</source>
+        <target state="translated">Termin buchen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.booking.description" datatype="html">
+        <source>Pick a service, a date and a time, and we confirm your appointment.</source>
+        <target state="translated">Leistung, Datum und Uhrzeit wählen – wir bestätigen Ihren Termin.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.signInHeading" datatype="html">
+        <source>Sign in to see your jobs</source>
+        <target state="translated">Melden Sie sich an, um Ihre Aufträge zu sehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.signInLead" datatype="html">
+        <source> Your appointments, their status and what each one costs are tied to your account. </source>
+        <target state="translated">Ihre Termine, deren Status und die jeweiligen Kosten sind mit Ihrem Konto verknüpft.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signIn" datatype="html">
+        <source> Sign in </source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.noAccount" datatype="html">
+        <source>No account yet?</source>
+        <target state="translated">Noch kein Konto?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.registerLink" datatype="html">
+        <source>Create one</source>
+        <target state="translated">Jetzt erstellen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">21,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.eyebrow" datatype="html">
+        <source>Your account</source>
+        <target state="translated">Ihr Konto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.lead" datatype="html">
+        <source> Everything we have booked in for you, and everything we have finished. </source>
+        <target state="translated">Alles, was für Sie eingeplant ist, und alles, was wir erledigt haben.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.bookAnother" datatype="html">
+        <source> Book an appointment </source>
+        <target state="translated">Termin buchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">41,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.upcoming" datatype="html">
+        <source> Coming up </source>
+        <target state="translated">Demnächst</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">46,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.assignedTo" datatype="html">
+        <source>Your colleague:</source>
+        <target state="translated">Ihre Ansprechperson:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.notYetAssigned" datatype="html">
+        <source> We are still assigning someone to this job. </source>
+        <target state="translated">Wir ordnen diesem Auftrag noch jemanden zu.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.cancel" datatype="html">
+        <source> Cancel this appointment </source>
+        <target state="translated">Diesen Termin absagen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.loading" datatype="html">
+        <source>Loading your appointments…</source>
+        <target state="translated">Ihre Termine werden geladen …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">100,102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.noUpcoming" datatype="html">
+        <source> Nothing booked in at the moment. </source>
+        <target state="translated">Derzeit ist nichts eingeplant.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">103,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.history" datatype="html">
+        <source> Earlier </source>
+        <target state="translated">Früher</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">109,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.account.h1" datatype="html">
+        <source>My Appointments</source>
+        <target state="translated">Meine Termine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signInHeading" datatype="html">
+        <source>Sign in to book</source>
+        <target state="translated">Zum Buchen anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signInLead" datatype="html">
+        <source> Appointments are tied to your account, so you can see where each job stands and call one off if plans change. Signing in takes a moment. </source>
+        <target state="translated">Termine sind mit Ihrem Konto verknüpft, damit Sie sehen, wie weit jeder Auftrag ist, und einen Termin absagen können, wenn sich Ihre Pläne ändern. Die Anmeldung dauert nur einen Moment.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.heading" datatype="html">
+        <source>Request an appointment</source>
+        <target state="translated">Termin anfragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="booking.success" datatype="html">
+        <source> Thank you. Your request is in and we will confirm it shortly. Your reference is </source>
+        <target state="translated">Vielen Dank. Ihre Anfrage liegt uns vor und wir bestätigen sie in Kürze. Ihre Referenz ist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.service" datatype="html">
+        <source>Service</source>
+        <target state="translated">Leistung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.servicePlaceholder" datatype="html">
+        <source>Choose a service</source>
+        <target state="translated">Leistung wählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.serviceError" datatype="html">
+        <source> Please choose a service. </source>
+        <target state="translated">Bitte wählen Sie eine Leistung.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.employee" datatype="html">
+        <source> Preferred colleague (optional) </source>
+        <target state="translated">Gewünschte Ansprechperson (optional)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.anyEmployee" datatype="html">
+        <source>Whoever is available</source>
+        <target state="translated">Wer verfügbar ist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+                                                <trans-unit id="booking.street" datatype="html">
+        <source>Street and number</source>
+        <target state="translated">Straße und Hausnummer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.streetError" datatype="html">
+        <source> Please tell us where the work is. </source>
+        <target state="translated">Bitte nennen Sie uns den Einsatzort.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">154,155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.postalCode" datatype="html">
+        <source>Postal code</source>
+        <target state="translated">Postleitzahl</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">162,164</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.postalCodeError" datatype="html">
+        <source> Five digits, please. </source>
+        <target state="translated">Bitte fünf Ziffern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">174,175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.city" datatype="html">
+        <source>Town</source>
+        <target state="translated">Ort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">182,183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.cityError" datatype="html">
+        <source> Please tell us the town. </source>
+        <target state="translated">Bitte nennen Sie uns den Ort.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">192,193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.notes" datatype="html">
+        <source> Anything we should know (optional) </source>
+        <target state="translated">Was wir noch wissen sollten (optional)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">201,202</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.submitting" datatype="html">
+        <source>Sending your request…</source>
+        <target state="translated">Anfrage wird gesendet …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">210,212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.submit" datatype="html">
+        <source>Request appointment</source>
+        <target state="translated">Termin anfragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">212,214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.booking.h1" datatype="html">
+        <source>Book An Appointment</source>
+        <target state="translated">Termin buchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.heading" datatype="html">
+        <source>Welcome back</source>
+        <target state="translated">Willkommen zurück</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.lead" datatype="html">
+        <source> Sign in to book an appointment and follow the jobs we are doing for you. </source>
+        <target state="translated">Melden Sie sich an, um einen Termin zu buchen und Ihre Aufträge zu verfolgen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.emailError" datatype="html">
+        <source> Please enter a valid email address. </source>
+        <target state="translated">Bitte geben Sie eine gültige E-Mail-Adresse ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.password" datatype="html">
+        <source>Password</source>
+        <target state="translated">Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.passwordError" datatype="html">
+        <source> Please enter your password. </source>
+        <target state="translated">Bitte geben Sie Ihr Passwort ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.submitting" datatype="html">
+        <source>Signing in…</source>
+        <target state="translated">Anmeldung läuft …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.submit" datatype="html">
+        <source>Sign in</source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">59,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.login.h1" datatype="html">
+        <source>Sign In</source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.heading" datatype="html">
+        <source>Create your account</source>
+        <target state="translated">Konto erstellen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.lead" datatype="html">
+        <source> An account lets you book an appointment online and see where each job stands. It takes a minute. </source>
+        <target state="translated">Mit einem Konto buchen Sie Termine online und sehen jederzeit, wie weit jeder Auftrag ist. Das dauert eine Minute.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">8,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.nameError" datatype="html">
+        <source>Please tell us your name.</source>
+        <target state="translated">Bitte nennen Sie uns Ihren Namen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailError" datatype="html">
+        <source>Please enter a valid email address.</source>
+        <target state="translated">Bitte geben Sie eine gültige E-Mail-Adresse ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.phoneOptional" datatype="html">
+        <source> Phone number (optional) </source>
+        <target state="translated">Telefonnummer (optional)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">64,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.phoneError" datatype="html">
+        <source> That does not look like a phone number. </source>
+        <target state="translated">Das sieht nicht wie eine Telefonnummer aus.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.consent" datatype="html">
+        <source>I have read and accept the</source>
+        <target state="translated">Ich habe die</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.privacyLink" datatype="html">
+        <source>privacy policy</source>
+        <target state="translated">Datenschutzerklärung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">110,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.consentError" datatype="html">
+        <source> Please accept the privacy policy. </source>
+        <target state="translated">Bitte stimmen Sie der Datenschutzerklärung zu.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">115,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.submitting" datatype="html">
+        <source>Creating your account…</source>
+        <target state="translated">Konto wird erstellt …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">122,124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.submit" datatype="html">
+        <source>Create account</source>
+        <target state="translated">Konto erstellen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">124,126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.haveAccount" datatype="html">
+        <source>Already registered?</source>
+        <target state="translated">Schon registriert?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.loginLink" datatype="html">
+        <source>Sign in</source>
+        <target state="translated">Anmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">131,134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.register.h1" datatype="html">
+        <source>Create An Account</source>
+        <target state="translated">Konto erstellen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.signOut" datatype="html">
+        <source>Sign out</source>
+        <target state="translated">Abmelden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.new" datatype="html">
+        <source>New</source>
+        <target state="translated">Neu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.read" datatype="html">
+        <source>Read</source>
+        <target state="translated">Gelesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.responded" datatype="html">
+        <source>Answered</source>
+        <target state="translated">Beantwortet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.closed" datatype="html">
+        <source>Closed</source>
+        <target state="translated">Abgeschlossen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.refresh" datatype="html">
+        <source>Refresh</source>
+        <target state="translated">Aktualisieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.assignee" datatype="html">
+        <source>Assigned to</source>
+        <target state="translated">Zugewiesen an</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.actions" datatype="html">
+        <source>Actions</source>
+        <target state="translated">Aktionen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.edit" datatype="html">
+        <source>Edit</source>
+        <target state="translated">Bearbeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.field.assignee" datatype="html">
+        <source>Assigned to</source>
+        <target state="translated">Zugewiesen an</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">161,162</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.field.street" datatype="html">
+        <source>Street</source>
+        <target state="translated">Straße</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">194,195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.postalCode" datatype="html">
+        <source>Postal code</source>
+        <target state="translated">Postleitzahl</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">202,203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.city" datatype="html">
+        <source>Town</source>
+        <target state="translated">Ort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">210,211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.notes" datatype="html">
+        <source>Notes</source>
+        <target state="translated">Notizen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">218,219</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.cancel" datatype="html">
+        <source> Cancel </source>
+        <target state="translated">Abbrechen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">225,227</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">220,222</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">166,168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">158,160</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.save" datatype="html">
+        <source> Save </source>
+        <target state="translated">Speichern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-bookings.component.html</context>
+          <context context-type="linenumber">234,236</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">229,231</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">175,177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">167,169</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.column.phone" datatype="html">
+        <source>Phone</source>
+        <target state="translated">Telefon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+                        <trans-unit id="admin.action.viewHistory" datatype="html">
+        <source>History</source>
+        <target state="translated">Verlauf</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">75,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.block" datatype="html">
+        <source> Block </source>
+        <target state="translated">Sperren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.unblock" datatype="html">
+        <source> Unblock </source>
+        <target state="translated">Entsperren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.name" datatype="html">
+        <source>Name</source>
+        <target state="translated">Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">119,120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.email" datatype="html">
+        <source>Email</source>
+        <target state="translated">E-Mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">126,127</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.phone" datatype="html">
+        <source>Phone</source>
+        <target state="translated">Telefon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">129,130</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">154,155</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">123,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.registered" datatype="html">
+        <source>Registered</source>
+        <target state="translated">Registriert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.close" datatype="html">
+        <source> Close </source>
+        <target state="translated">Schließen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">178,180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.neverBooked" datatype="html">
+        <source>Never booked</source>
+        <target state="translated">Noch nie gebucht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.history" datatype="html">
+        <source>Appointment history</source>
+        <target state="translated">Terminverlauf</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.employees.add" datatype="html">
+        <source>Add employee</source>
+        <target state="translated">Mitarbeiter hinzufügen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.name" datatype="html">
+        <source>Name</source>
+        <target state="translated">Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.role" datatype="html">
+        <source>Role</source>
+        <target state="translated">Funktion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.deactivateStaff" datatype="html">
+        <source> Deactivate </source>
+        <target state="translated">Deaktivieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.activateStaff" datatype="html">
+        <source> Reactivate </source>
+        <target state="translated">Reaktivieren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+                  <trans-unit id="admin.field.jobRole" datatype="html">
+        <source>Role</source>
+        <target state="translated">Funktion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.availability" datatype="html">
+        <source>Availability</source>
+        <target state="translated">Verfügbarkeit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">172,173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.weeklyHours" datatype="html">
+        <source>Contracted hours per week</source>
+        <target state="translated">Vertragsstunden pro Woche</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">181,182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.hiredOn" datatype="html">
+        <source>Start date</source>
+        <target state="translated">Eintrittsdatum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">189,190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.skills" datatype="html">
+        <source>Qualified for</source>
+        <target state="translated">Qualifiziert für</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">197,198</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.new" datatype="html">
+        <source>New employee</source>
+        <target state="translated">Neuer Mitarbeiter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.edit" datatype="html">
+        <source>Edit employee</source>
+        <target state="translated">Mitarbeiter bearbeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.from" datatype="html">
+        <source>From</source>
+        <target state="translated">Von</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.message" datatype="html">
+        <source>Message</source>
+        <target state="translated">Nachricht</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.received" datatype="html">
+        <source>Received</source>
+        <target state="translated">Eingegangen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.openEnquiry" datatype="html">
+        <source>Open</source>
+        <target state="translated">Öffnen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.adminNotes" datatype="html">
+        <source>Internal note</source>
+        <target state="translated">Interne Notiz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">155,156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.panelTitle" datatype="html">
+        <source>Messages</source>
+        <target state="translated">Nachrichten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.search" datatype="html">
+        <source>Name, email or text</source>
+        <target state="translated">Name, E-Mail oder Text</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.empty" datatype="html">
+        <source>No message matches that filter.</source>
+        <target state="translated">Keine Nachricht passt zu diesem Filter.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.dialog" datatype="html">
+        <source>Enquiry</source>
+        <target state="translated">Anfrage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.general" datatype="html">
+        <source>General enquiry</source>
+        <target state="translated">Allgemeine Anfrage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.today" datatype="html">
+        <source>Appointments today</source>
+        <target state="translated">Termine heute</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.week" datatype="html">
+        <source>Next seven days</source>
+        <target state="translated">Nächste sieben Tage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.requested" datatype="html">
+        <source>Awaiting confirmation</source>
+        <target state="translated">Wartet auf Bestätigung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.enquiries" datatype="html">
+        <source>Unanswered enquiries</source>
+        <target state="translated">Unbeantwortete Anfragen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.clients" datatype="html">
+        <source>Active clients</source>
+        <target state="translated">Aktive Kunden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.employees" datatype="html">
+        <source>Staff on the books</source>
+        <target state="translated">Mitarbeiter im Bestand</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.services.add" datatype="html">
+        <source>Add service</source>
+        <target state="translated">Leistung hinzufügen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.key" datatype="html">
+        <source>Key</source>
+        <target state="translated">Schlüssel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.duration" datatype="html">
+        <source>Duration</source>
+        <target state="translated">Dauer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.deactivate" datatype="html">
+        <source> Withdraw </source>
+        <target state="translated">Zurückziehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.activate" datatype="html">
+        <source> Reinstate </source>
+        <target state="translated">Wieder anbieten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.nameDe" datatype="html">
+        <source>Name (German)</source>
+        <target state="translated">Name (deutsch)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.nameEn" datatype="html">
+        <source>Name (English)</source>
+        <target state="translated">Name (englisch)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.serviceKey" datatype="html">
+        <source>Catalogue key</source>
+        <target state="translated">Katalogschlüssel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="admin.field.duration" datatype="html">
+        <source>Work duration (minutes)</source>
+        <target state="translated">Dauer der Arbeit (Minuten)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">138,139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.descriptionDe" datatype="html">
+        <source>Description (German)</source>
+        <target state="translated">Beschreibung (deutsch)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.descriptionEn" datatype="html">
+        <source>Description (English)</source>
+        <target state="translated">Beschreibung (englisch)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.new" datatype="html">
+        <source>New service</source>
+        <target state="translated">Neue Leistung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.edit" datatype="html">
+        <source>Edit service</source>
+        <target state="translated">Leistung bearbeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.panelTitle" datatype="html">
+        <source>The offering</source>
+        <target state="translated">Das Angebot</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.search" datatype="html">
+        <source>Name or key</source>
+        <target state="translated">Name oder Schlüssel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.empty" datatype="html">
+        <source>No service matches that search.</source>
+        <target state="translated">Keine Leistung passt zu dieser Suche.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.serviceStatus.active" datatype="html">
+        <source>On offer</source>
+        <target state="translated">Im Angebot</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.serviceStatus.inactive" datatype="html">
+        <source>Withdrawn</source>
+        <target state="translated">Zurückgezogen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.dialog.close" datatype="html">
+        <source>Close</source>
+        <target state="translated">Schließen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-dialog.component.ts</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.pager.previous" datatype="html">
+        <source>Previous page</source>
+        <target state="translated">Vorherige Seite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-pager.component.ts</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.pager.next" datatype="html">
+        <source>Next page</source>
+        <target state="translated">Nächste Seite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-pager.component.ts</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.sent" datatype="html">
+        <source> Thank you. Your enquiry is with us and we will come back to you the same working day. </source>
+        <target state="translated">Vielen Dank. Ihre Anfrage liegt uns vor und wir melden uns am selben Werktag bei Ihnen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.orCall" datatype="html">
+        <source>You can also call us on</source>
+        <target state="translated">Sie erreichen uns auch telefonisch unter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.sending" datatype="html">
+        <source>Sending…</source>
+        <target state="translated">Wird gesendet …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">191,192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.label" datatype="html">
+        <source>Appointments</source>
+        <target state="translated">Termine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.lead" datatype="html">
+        <source>Every appointment, with the client, the service and who is going.</source>
+        <target state="translated">Alle Termine, mit Kunde, Leistung und wer hinfährt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.lead2" datatype="html">
+        <source> Tell us what you need and pick a time that suits you. The appointment is free — we come out, look at the job and give you a fixed price before anyone starts work. </source>
+        <target state="translated">Sagen Sie uns, was Sie brauchen, und wählen Sie eine passende Zeit. Der Termin ist kostenlos – wir kommen vorbei, sehen uns die Arbeit an und nennen Ihnen einen Festpreis, bevor jemand anfängt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.unassigned" datatype="html">
+        <source>Unassigned</source>
+        <target state="translated">Nicht zugewiesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.slot" datatype="html">
+        <source>Day and time</source>
+        <target state="translated">Tag und Uhrzeit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.panelTitle" datatype="html">
+        <source>Schedule</source>
+        <target state="translated">Terminplan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.search" datatype="html">
+        <source>Reference, client or service</source>
+        <target state="translated">Referenz, Kunde oder Leistung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.empty" datatype="html">
+        <source>No appointment matches that filter.</source>
+        <target state="translated">Kein Termin passt zu diesem Filter.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.edit" datatype="html">
+        <source>Edit appointment</source>
+        <target state="translated">Termin bearbeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.appointments" datatype="html">
+        <source>Appointments</source>
+        <target state="translated">Termine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.lastAppointment" datatype="html">
+        <source>Last appointment</source>
+        <target state="translated">Letzter Termin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.completed" datatype="html">
+        <source>Completed</source>
+        <target state="translated">Abgeschlossen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.noAppointments" datatype="html">
+        <source>This client has no appointments yet.</source>
+        <target state="translated">Dieser Kunde hat noch keine Termine.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.emailOptional" datatype="html">
+        <source>Email (optional)</source>
+        <target state="translated">E-Mail (optional)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">129,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.completed" datatype="html">
+        <source>Appointments completed</source>
+        <target state="translated">Abgeschlossene Termine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.pickServiceFirst" datatype="html">
+        <source> Choose a service first and we will show you when we can come. </source>
+        <target state="translated">Wählen Sie zuerst eine Leistung – dann zeigen wir Ihnen, wann wir kommen können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.loading" datatype="html">
+        <source>Looking for free times…</source>
+        <target state="translated">Freie Zeiten werden gesucht …</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.none" datatype="html">
+        <source> No free times in the next few weeks. Please call us and we will find one. </source>
+        <target state="translated">In den nächsten Wochen ist nichts frei. Rufen Sie uns an, wir finden einen Termin.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.date" datatype="html">
+        <source>Day</source>
+        <target state="translated">Tag</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.datePlaceholder" datatype="html">
+        <source>Choose a day</source>
+        <target state="translated">Tag wählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.time" datatype="html">
+        <source>Time</source>
+        <target state="translated">Uhrzeit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.forgotPassword.title" datatype="html">
+        <source>Forgotten Password | Glanzwork</source>
+        <target state="translated">Passwort vergessen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.forgotPassword.description" datatype="html">
+        <source>Ask for a link to choose a new password for your Glanzwork account.</source>
+        <target state="translated">Fordern Sie einen Link an, um ein neues Passwort für Ihr Glanzwork-Konto zu wählen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.resetPassword.title" datatype="html">
+        <source>Choose A New Password | Glanzwork</source>
+        <target state="translated">Neues Passwort wählen | Glanzwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.resetPassword.description" datatype="html">
+        <source>Choose a new password for your Glanzwork account.</source>
+        <target state="translated">Wählen Sie ein neues Passwort für Ihr Glanzwork-Konto.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.slotError" datatype="html">
+        <source> Please pick a day and a time. </source>
+        <target state="translated">Bitte wählen Sie einen Tag und eine Uhrzeit.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.incomplete" datatype="html">
+        <source> Something is still missing above — the fields to fill in are marked in red. </source>
+        <target state="translated">Oben fehlt noch etwas — die auszufüllenden Felder sind rot markiert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">190,192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.heading" datatype="html">
+        <source>Forgotten your password?</source>
+        <target state="translated">Passwort vergessen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.lead" datatype="html">
+        <source> Tell us the address you registered with and we will send you a link to choose a new password. The link is good for one hour and can be used once. </source>
+        <target state="translated">Nennen Sie uns die E-Mail-Adresse, mit der Sie sich registriert haben, und wir senden Ihnen einen Link, um ein neues Passwort zu wählen. Der Link gilt eine Stunde und kann einmal verwendet werden.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">8,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.sent" datatype="html">
+        <source>We have sent a link to</source>
+        <target state="translated">Ein Link ist unterwegs an</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.sentHint" datatype="html">
+        <source> Have a look in your spam folder if it is not there in a few minutes. </source>
+        <target state="translated">Schauen Sie bitte auch in den Spam-Ordner, wenn er nicht in wenigen Minuten da ist.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.submitting" datatype="html">
+        <source>Sending the link…</source>
+        <target state="translated">Link wird gesendet…</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.submit" datatype="html">
+        <source>Send me a link</source>
+        <target state="translated">Link anfordern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.remembered" datatype="html">
+        <source>Remembered it after all?</source>
+        <target state="translated">Doch wieder eingefallen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.forgotPassword.h1" datatype="html">
+        <source>Forgotten Password</source>
+        <target state="translated">Passwort vergessen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.forgotPassword" datatype="html">
+        <source> Forgotten your password? </source>
+        <target state="translated">Passwort vergessen?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.noAccountForEmail" datatype="html">
+        <source>No account for that address yet?</source>
+        <target state="translated">Noch kein Konto für diese Adresse?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.unknownEmail" datatype="html">
+        <source> No account is registered with that email address. </source>
+        <target state="translated">Mit dieser E-Mail-Adresse ist kein Konto registriert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.wrongPassword" datatype="html">
+        <source>The password is incorrect.</source>
+        <target state="translated">Das Passwort ist falsch.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailTaken" datatype="html">
+        <source> That email address is already registered. </source>
+        <target state="translated">Diese E-Mail-Adresse ist bereits registriert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailTakenHint" datatype="html">
+        <source>That is your address?</source>
+        <target state="translated">Das ist Ihre Adresse?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.noTokenHeading" datatype="html">
+        <source> This link is incomplete </source>
+        <target state="translated">Dieser Link ist unvollständig</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.noTokenLead" datatype="html">
+        <source> Open the link from the email exactly as it was sent, or ask for a new one. </source>
+        <target state="translated">Öffnen Sie den Link aus der E-Mail genau so, wie er gesendet wurde, oder fordern Sie einen neuen an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.askAgain" datatype="html">
+        <source> Ask for a new link </source>
+        <target state="translated">Neuen Link anfordern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.doneHeading" datatype="html">
+        <source> Your new password is saved </source>
+        <target state="translated">Ihr neues Passwort ist gespeichert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.doneLead" datatype="html">
+        <source> You can sign in with it now. The link you used will not work again. </source>
+        <target state="translated">Sie können sich jetzt damit anmelden. Der verwendete Link funktioniert nicht noch einmal.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.heading" datatype="html">
+        <source>Choose a new password</source>
+        <target state="translated">Neues Passwort wählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.lead" datatype="html">
+        <source> Pick something you have not used here before. You will sign in with it on the next page. </source>
+        <target state="translated">Wählen Sie etwas, das Sie hier noch nicht verwendet haben. Auf der nächsten Seite melden Sie sich damit an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.newPassword" datatype="html">
+        <source>New password</source>
+        <target state="translated">Neues Passwort</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.confirm" datatype="html">
+        <source> The same password again </source>
+        <target state="translated">Dasselbe Passwort noch einmal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.mismatch" datatype="html">
+        <source> The two passwords are not the same. </source>
+        <target state="translated">Die beiden Passwörter sind nicht gleich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.submitting" datatype="html">
+        <source>Saving your password…</source>
+        <target state="translated">Passwort wird gespeichert…</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.submit" datatype="html">
+        <source>Save my new password</source>
+        <target state="translated">Neues Passwort speichern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">93,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.linkInvalid" datatype="html">
+        <source>This reset link is no longer valid. Please ask for a new one.</source>
+        <target state="translated">Dieser Link ist nicht mehr gültig. Bitte fordern Sie einen neuen an.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.resetPassword.h1" datatype="html">
+        <source>Choose A New Password</source>
+        <target state="translated">Neues Passwort wählen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.met" datatype="html">
+        <source>— met</source>
+        <target state="translated">— erfüllt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/password-rules/password-rules.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.unmet" datatype="html">
+        <source>— still needed</source>
+        <target state="translated">— fehlt noch</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/password-rules/password-rules.component.html</context>
+          <context context-type="linenumber">12,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.length" datatype="html">
+        <source>At least 8 characters</source>
+        <target state="translated">Mindestens 8 Zeichen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.upper" datatype="html">
+        <source>One upper-case letter</source>
+        <target state="translated">Ein Großbuchstabe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.lower" datatype="html">
+        <source>One lower-case letter</source>
+        <target state="translated">Ein Kleinbuchstabe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.digit" datatype="html">
+        <source>One digit</source>
+        <target state="translated">Eine Ziffer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.delete" datatype="html">
+        <source>Delete</source>
+        <target state="translated">Löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.deleteTitle" datatype="html">
+        <source>Delete employee</source>
+        <target state="translated">Mitarbeiter löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.deleteWarning" datatype="html">
+        <source><x id="name" equiv-text="employee.name"/> will be removed for good. Anyone with appointments on record cannot be deleted — deactivate them instead.</source>
+        <target state="translated"><x id="name" equiv-text="employee.name"/> wird endgültig entfernt. Wer Termine im System hat, kann nicht gelöscht werden — deaktivieren Sie die Person stattdessen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">278</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.deleteTitle" datatype="html">
+        <source>Delete appointment</source>
+        <target state="translated">Termin löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.deleteWarning" datatype="html">
+        <source><x id="reference" equiv-text="appointment.reference"/> for <x id="client" equiv-text="appointment.client.name"/> will be removed for good. To call off a visit that was really arranged, cancel it instead.</source>
+        <target state="translated"><x id="reference" equiv-text="appointment.reference"/> für <x id="client" equiv-text="appointment.client.name"/> wird endgültig entfernt. Um einen tatsächlich vereinbarten Termin abzusagen, stornieren Sie ihn stattdessen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.moreHeading" datatype="html">
+        <source>More Posts</source>
+        <target state="translated">Weitere Beiträge</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.notFound" datatype="html">
+        <source>That post does not exist.</source>
+        <target state="translated">Diesen Beitrag gibt es nicht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.seeAll" datatype="html">
+        <source>See all posts</source>
+        <target state="translated">Alle Beiträge ansehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.name" datatype="html">
+        <source>Please tell us your name.</source>
+        <target state="translated">Bitte nennen Sie uns Ihren Namen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.email" datatype="html">
+        <source>Please enter a valid email address.</source>
+        <target state="translated">Bitte geben Sie eine gültige E-Mail-Adresse ein.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.phone" datatype="html">
+        <source>Please enter a number we can reach you on.</source>
+        <target state="translated">Bitte geben Sie eine Nummer an, unter der wir Sie erreichen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.message" datatype="html">
+        <source> Please add at least <x id="INTERPOLATION" equiv-text="{{ messageLimits.min }}"/> characters so we can price it. </source>
+        <target state="translated">Bitte schreiben Sie mindestens <x id="INTERPOLATION" equiv-text="{{ messageLimits.min }}"/> Zeichen, damit wir ein Angebot machen können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">154,155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.consent" datatype="html">
+        <source>I agree that Glanzwork may store these details in order to answer my enquiry.</source>
+        <target state="translated">Ich bin damit einverstanden, dass Glanzwork diese Angaben zur Beantwortung meiner Anfrage speichert.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">170,172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.consent" datatype="html">
+        <source> We need your agreement before we can hold your details. </source>
+        <target state="translated">Ohne Ihr Einverständnis dürfen wir Ihre Daten nicht speichern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.urgentBody" datatype="html">
+        <source> Burst pipe, flooded basement, a handover tomorrow morning: do not use the form. Call us and we will tell you straight away whether we can make it. </source>
+        <target state="translated">Rohrbruch, überflutetes Kellergeschoss, morgen früh eine Übergabe: nutzen Sie dann nicht das Formular. Rufen Sie uns an, und wir sagen Ihnen sofort, ob wir es schaffen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">216,218</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.detailsHeading" datatype="html">
+        <source>Project Details</source>
+        <target state="translated">Projektdaten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.moreHeading" datatype="html">
+        <source>More Projects</source>
+        <target state="translated">Weitere Projekte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.startCta" datatype="html">
+        <source>Start A Project</source>
+        <target state="translated">Projekt starten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.notFound" datatype="html">
+        <source>That project does not exist.</source>
+        <target state="translated">Dieses Projekt gibt es nicht.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.seeAll" datatype="html">
+        <source>See all projects</source>
+        <target state="translated">Alle Projekte ansehen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11y.language" datatype="html">
+        <source>Language</source>
+        <target state="translated">Sprache</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/language-toggle/language-toggle.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11y.breadcrumb" datatype="html">
+        <source>Breadcrumb</source>
+        <target state="translated">Brotkrümelnavigation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/page-banner/page-banner.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11y.skipToContent" datatype="html">
+        <source>Skip to content</source>
+        <target state="translated">Zum Inhalt springen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5,7</context>
         </context-group>
       </trans-unit>
     </body>

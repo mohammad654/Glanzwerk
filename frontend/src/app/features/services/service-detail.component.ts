@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { COMPANY } from '../../core/company';
@@ -11,6 +11,7 @@ import { LINKS } from '../../core/routes';
 import { CATALOGUE_IMAGE } from '../../core/media';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-service-detail',
   imports: [IconComponent, PageBannerComponent, RouterLink],
   templateUrl: './service-detail.component.html',

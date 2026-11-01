@@ -74,7 +74,8 @@
             "localize": true,
             "define": {
               "NG_SITE_ORIGIN": "\"https://www.glanzwerk.de\"",
-              "NG_DEPLOY_BASE": "\"/\""
+              "NG_DEPLOY_BASE": "\"/\"",
+              "NG_API_BASE_URL": "\"/api/v1\""
             }
           },
           "configurations": {
@@ -82,13 +83,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "560kB",
                   "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "7kB",
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
@@ -133,7 +134,10 @@
               "buildTarget": "glanzwerk:build:en"
             }
           },
-          "defaultConfiguration": "de"
+          "defaultConfiguration": "de",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          }
         },
         "test": {
           "builder": "@angular/build:unit-test"

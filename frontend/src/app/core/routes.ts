@@ -23,6 +23,12 @@ export const STATIC_ROUTES = {
   imprint: { de: 'impressum', en: 'imprint' },
   privacy: { de: 'datenschutz', en: 'privacy' },
   login: { de: 'login', en: 'login' },
+  register: { de: 'registrieren', en: 'register' },
+  forgotPassword: { de: 'passwort-vergessen', en: 'forgot-password' },
+  resetPassword: { de: 'passwort-neu-setzen', en: 'reset-password' },
+  account: { de: 'konto', en: 'account' },
+  booking: { de: 'termin-buchen', en: 'book-appointment' },
+  admin: { de: 'admin', en: 'admin' },
 } as const satisfies Record<string, LocalizedPath>;
 
 export type StaticRouteKey = keyof typeof STATIC_ROUTES;
@@ -31,8 +37,28 @@ export type StaticRouteKey = keyof typeof STATIC_ROUTES;
  * Pages that exist for the law and for signed-in users, not for search. Germany
  * requires an Impressum and a Datenschutzerklärung, but neither should compete with
  * the service pages for attention in the index.
+ *
+ * `admin` covers the whole internal dashboard: its child paths are not listed in
+ * `STATIC_ROUTES`, so they resolve to the unknown-path meta, which is noindex too.
+ *
+ * `login`, `register`, the two password-reset steps, `account` and `booking` are
+ * behind, or lead into, a sign-in. A crawler that indexed them would be offering
+ * searchers a form they cannot use and would be competing with the service pages
+ * that are meant to win the click. The
+ * booking page in particular is a conversion step reached from a service page, not a
+ * landing page — if that changes, it is this list the key comes off.
  */
-export const UNLISTED_ROUTES: readonly StaticRouteKey[] = ['imprint', 'privacy', 'login'];
+export const UNLISTED_ROUTES: readonly StaticRouteKey[] = [
+  'imprint',
+  'privacy',
+  'login',
+  'register',
+  'forgotPassword',
+  'resetPassword',
+  'account',
+  'booking',
+  'admin',
+];
 
 /**
  * Every page in the site, as its path in each locale.

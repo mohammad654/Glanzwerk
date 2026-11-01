@@ -1,0 +1,202 @@
+@use "abstracts/variables" as v;
+
+// The sign-in, register, booking and account pages.
+//
+// A page shell, so it lives here rather than in a component file: four components
+// render the same card and view encapsulation would make that four copies of the
+// same CSS. Same reason as `_detail-layout.scss`.
+
+.account {
+  padding: v.$section-padding-y 0;
+  background: v.$bg-tint;
+}
+
+// A single narrow column. A sign-in form two thirds of a desktop wide reads as a
+// page of admin rather than as one question.
+.account__card {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: v.$radius-lg;
+  background: v.$white;
+  box-shadow: 0 0.75rem 2.5rem rgba(v.$brand-headings, 0.08);
+
+  @media (max-width: 575.98px) {
+    padding: 1.5rem;
+  }
+
+  // The booking form needs two columns on a wide screen; the auth forms do not.
+  &--wide {
+    max-width: 52rem;
+  }
+}
+
+.account__heading {
+  margin-bottom: 0.5rem;
+  color: v.$brand-headings;
+  font-family: v.$font-heading;
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+.account__lead {
+  margin-bottom: 1.875rem;
+  color: v.$brand-body;
+  font-size: v.$font-size-sm;
+  line-height: 1.7;
+}
+
+// Server-side messages. Colour is never the only signal — each one carries an icon
+// and its own text, and `role` tells a screen reader which it is.
+.account__alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  margin-bottom: 1.5rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid;
+  border-radius: v.$radius-sm;
+  font-size: v.$font-size-sm;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+  }
+
+  &--error {
+    border-color: rgba(v.$input-error, 0.4);
+    background: rgba(v.$input-error, 0.08);
+    color: v.$input-error;
+  }
+
+  &--success {
+    border-color: rgba(v.$primary, 0.4);
+    background: rgba(v.$primary, 0.08);
+    color: v.$primary;
+  }
+}
+
+.account__footer {
+  margin-top: 1.5rem;
+  color: v.$brand-body;
+  font-size: v.$font-size-sm;
+  text-align: center;
+
+  a {
+    color: v.$primary;
+    font-weight: 700;
+  }
+}
+
+// My appointments ------------------------------------------------------------
+
+.account__bookings {
+  display: grid;
+  gap: 1rem;
+}
+
+.booking-card {
+  display: grid;
+  gap: 0.75rem 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid v.$input-border;
+  border-radius: v.$radius-lg;
+  background: v.$white;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.booking-card__service {
+  margin: 0 0 0.25rem;
+  color: v.$brand-headings;
+  font-family: v.$font-heading;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.booking-card__meta {
+  margin: 0;
+  color: v.$brand-body;
+  font-size: v.$font-size-sm;
+  line-height: 1.7;
+}
+
+.booking-card__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.625rem;
+  text-align: end;
+}
+
+// Status pill. The tones match the five booking statuses.
+.booking-status {
+  display: inline-block;
+  padding: 0.1875rem 0.625rem;
+  border-radius: v.$radius-sm;
+  font-size: v.$topbar-font-size;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &--neutral {
+    background: rgba(v.$brand-body, 0.12);
+    color: v.$brand-body;
+  }
+
+  &--info {
+    background: rgba(v.$primary, 0.12);
+    color: v.$primary;
+  }
+
+  &--success {
+    background: rgba(v.$brand-green, 0.16);
+    color: v.$brand-green;
+  }
+
+  &--danger {
+    background: rgba(v.$input-error, 0.12);
+    color: v.$input-error;
+  }
+}
+
+// A link-shaped button, for "cancel this appointment".
+.account__link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: v.$input-error;
+  font-size: v.$font-size-sm;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .booking-card {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card__aside {
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
+// A line under a field: the link to the reset form, or the nudge to register after
+// the API said no account has that address. Smaller and quieter than an error.
+.account__hint {
+  margin: 0.5rem 0 0;
+  color: v.$brand-body;
+  font-size: v.$topbar-font-size;
+
+  a {
+    color: v.$primary;
+    font-weight: 700;
+  }
+}

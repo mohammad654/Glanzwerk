@@ -19,7 +19,7 @@
 
         <aside class="col-lg-4">
           <div class="detail__panel">
-            <h3>Project Details</h3>
+            <h3 i18n="@@project.detailsHeading">Project Details</h3>
             <ul class="detail__list detail__list--facts">
               @for (fact of item.facts; track fact.label) {
                 <li>
@@ -31,7 +31,7 @@
           </div>
 
           <div class="detail__panel">
-            <h3>More Projects</h3>
+            <h3 i18n="@@project.moreHeading">More Projects</h3>
             <ul class="detail__list">
               @for (other of others(); track other.key) {
                 <li>
@@ -44,7 +44,7 @@
             </ul>
           </div>
 
-          <a class="default-btn" [routerLink]="links.contact">Start A Project</a>
+          <a class="default-btn" [routerLink]="links.contact" i18n="@@project.startCta">Start A Project</a>
         </aside>
       </div>
     </div>
@@ -54,8 +54,8 @@
 
   <section class="detail text-center">
     <div class="container">
-      <p>That project does not exist.</p>
-      <a class="default-btn" [routerLink]="links.references">See all projects</a>
+      <p i18n="@@project.notFound">That project does not exist.</p>
+      <a class="default-btn" [routerLink]="links.references" i18n="@@project.seeAll">See all projects</a>
     </div>
   </section>
 }

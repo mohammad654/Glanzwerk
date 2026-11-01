@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { AboutComponent } from './about/about.component';
 import { AppointmentComponent } from './appointment/appointment.component';
@@ -9,6 +9,7 @@ import { StatsComponent } from '../about/stats/stats.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-home',
   imports: [
     HeroComponent,

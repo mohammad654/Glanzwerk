@@ -4,8 +4,11 @@
 @use "vendors/bootstrap-overrides";
 @use "base/base";
 @use "components/buttons";
+@use "components/forms";
 @use "components/section-title";
 @use "components/read-more";
 @use "components/project-card";
 @use "components/post-card";
 @use "components/detail-layout";
+@use "components/account";
+@use "components/slot-picker";

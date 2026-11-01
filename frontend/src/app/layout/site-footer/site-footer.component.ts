@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { ADDRESS_LINE, COMPANY, SOCIAL_LINKS } from '../../core/company';
@@ -9,6 +9,7 @@ import { SERVICES, serviceLink } from '../../core/service-catalog';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-site-footer',
   imports: [IconComponent, RouterLink],
   templateUrl: './site-footer.component.html',
@@ -36,6 +37,17 @@ export class SiteFooterComponent {
    * required by German law and are conventionally found in the footer.
    */
   readonly secondaryLinks = [
+    // The two account pages. The header has one "Sign In" link and one CTA, and a
+    // third button up there would be noise; the footer is where people look for the
+    // rest of a site.
+    {
+      label: $localize`:@@page.booking.h1:Book An Appointment`,
+      path: linkTo(STATIC_ROUTES.booking),
+    },
+    {
+      label: $localize`:@@page.account.h1:My Appointments`,
+      path: linkTo(STATIC_ROUTES.account),
+    },
     {
       label: $localize`:@@page.serviceArea.title:Service Area`,
       path: linkTo(STATIC_ROUTES.serviceArea),

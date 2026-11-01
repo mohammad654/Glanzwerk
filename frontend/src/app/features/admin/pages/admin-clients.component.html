@@ -1,0 +1,177 @@
+<app-admin-page-header [page]="page">
+  <button type="button" class="admin-btn" [disabled]="clients.isLoading()" (click)="clients.reload()">
+    <i appIcon="bi-arrow-repeat"></i>
+    <span i18n="@@admin.refresh">Refresh</span>
+  </button>
+</app-admin-page-header>
+
+@if (clients.isLoading()) {
+  <div class="admin-loading"></div>
+}
+
+@if (loadError()) {
+  <app-admin-alert [message]="loadError()!" />
+}
+
+@if (toggle.failure()) {
+  <app-admin-alert [message]="toggle.failure()!.message" />
+}
+
+<app-admin-table-panel
+  [title]="labels.panel"
+  [placeholder]="labels.search"
+  [count]="rows().length"
+  [total]="rows().length"
+  [(query)]="query"
+>
+  @if (rows().length) {
+    <div class="admin-table-scroll">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th i18n="@@admin.column.client">Client</th>
+            <th i18n="@@admin.column.phone">Phone</th>
+            <th class="admin-table__numeric" i18n="@@admin.column.appointments">Appointments</th>
+            <th i18n="@@admin.column.lastAppointment">Last appointment</th>
+            <th class="admin-table__numeric" i18n="@@admin.column.completed">Completed</th>
+            <th i18n="@@admin.column.status">Status</th>
+            <th><span class="admin-sr-only" i18n="@@admin.column.actions">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (client of rows(); track client.id) {
+            <tr>
+              <td>
+                <div class="admin-identity">
+                  <app-admin-avatar [name]="client.name" />
+                  <span>
+                    <span class="admin-table__primary">{{ client.name }}</span>
+                    <span class="admin-table__secondary">{{ client.email }}</span>
+                  </span>
+                </div>
+              </td>
+              <td>{{ client.phone ?? '—' }}</td>
+              <td class="admin-table__numeric">{{ client.appointmentCount }}</td>
+              <td>
+                @if (client.lastAppointmentAt) {
+                  {{ client.lastAppointmentAt | date: 'mediumDate' }}
+                } @else {
+                  <span class="admin-table__secondary">{{ labels.never }}</span>
+                }
+              </td>
+              <td class="admin-table__numeric">{{ client.completedAppointments }}</td>
+              <td>
+                <app-admin-status
+                  [label]="client.active ? labels.active : labels.former"
+                  [tone]="client.active ? 'success' : 'danger'"
+                />
+              </td>
+              <td>
+                <div class="admin-actions">
+                  <button type="button" class="admin-btn admin-btn--quiet" (click)="open(client)">
+                    <i appIcon="bi-clock-history"></i>
+                    <span i18n="@@admin.action.viewHistory">History</span>
+                  </button>
+
+                  @if (client.active) {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet admin-btn--danger"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(client, false)"
+                      i18n="@@admin.action.block"
+                    >
+                      Block
+                    </button>
+                  } @else {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(client, true)"
+                      i18n="@@admin.action.unblock"
+                    >
+                      Unblock
+                    </button>
+                  }
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else {
+    <app-admin-empty [message]="labels.empty" icon="bi-search" />
+  }
+</app-admin-table-panel>
+
+@if (openClientId()) {
+  <app-admin-dialog [title]="labels.history" (dismissed)="close()">
+    @if (detailLoading()) {
+      <div class="admin-loading"></div>
+    }
+
+    @if (detailError()) {
+      <app-admin-alert [message]="detailError()!" />
+    }
+
+    @if (detail(); as record) {
+      <dl class="admin-details">
+        <dt i18n="@@admin.field.name">Name</dt>
+        <dd>{{ record.client.name }}</dd>
+
+        <dt i18n="@@admin.field.email">Email</dt>
+        <dd><a href="mailto:{{ record.client.email }}">{{ record.client.email }}</a></dd>
+
+        <dt i18n="@@admin.field.phone">Phone</dt>
+        <dd>{{ record.client.phone ?? '—' }}</dd>
+
+        <dt i18n="@@admin.field.registered">Registered</dt>
+        <dd>{{ record.client.registeredAt | date: 'mediumDate' }}</dd>
+      </dl>
+
+      @if (record.appointments.length) {
+        <div class="admin-table-scroll" style="margin-top: 1.25rem">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th i18n="@@admin.column.reference">Appointment</th>
+                <th i18n="@@admin.column.service">Service</th>
+                <th i18n="@@admin.column.status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (appointment of record.appointments; track appointment.id) {
+                <tr>
+                  <td>
+                    <span class="admin-table__primary">{{ appointment.reference }}</span>
+                    <span class="admin-table__secondary">
+                      {{ appointment.startTime | date: 'mediumDate' }} ·
+                      {{ appointment.startTime | date: 'shortTime' }}
+                    </span>
+                  </td>
+                  <td>{{ serviceLabel(appointment.service) }}</td>
+                  <td>
+                    <app-admin-status
+                      [label]="statusLabels[appointment.status]"
+                      [tone]="statusTones[appointment.status]"
+                    />
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      } @else {
+        <app-admin-empty [message]="labels.noAppointments" icon="bi-calendar-x" />
+      }
+    }
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="close()" i18n="@@admin.action.close">
+        Close
+      </button>
+    </div>
+  </app-admin-dialog>
+}

@@ -1,0 +1,46 @@
+@if (!serviceId()) {
+  <p class="slot-picker__hint" i18n="@@slots.pickServiceFirst">
+    Choose a service first and we will show you when we can come.
+  </p>
+} @else if (loading()) {
+  <p class="slot-picker__hint" i18n="@@slots.loading">Looking for free times…</p>
+} @else if (nothingAvailable()) {
+  <p class="slot-picker__hint" i18n="@@slots.none">
+    No free times in the next few weeks. Please call us and we will find one.
+  </p>
+} @else {
+  <div class="slot-picker" [class.slot-picker--admin]="variant() === 'admin'">
+    <label class="slot-picker__field">
+      <span i18n="@@slots.date">Day</span>
+      <!-- A list of the days we can actually come, not a calendar. A closed or fully
+           booked day is absent rather than greyed out, so nothing here can be picked
+           and then refused. -->
+      <select [value]="chosenDate()" (change)="onDateChange($any($event.target).value)">
+        <option value="" i18n="@@slots.datePlaceholder">Choose a day</option>
+        @for (day of openDays(); track day.date) {
+          <option [value]="day.date">{{ day.date | date: 'fullDate' }}</option>
+        }
+      </select>
+    </label>
+
+    @if (chosenDate()) {
+      <div class="slot-picker__times">
+        <span class="slot-picker__label" i18n="@@slots.time">Time</span>
+        <!-- The whole day, minus what is already taken. -->
+        <div class="slot-picker__grid" role="group" i18n-aria-label="@@slots.time" aria-label="Time">
+          @for (time of timesForChosenDate(); track time) {
+            <button
+              type="button"
+              class="slot-picker__slot"
+              [class.is-chosen]="chosenTime() === time"
+              [attr.aria-pressed]="chosenTime() === time"
+              (click)="chooseTime(time)"
+            >
+              {{ time }}
+            </button>
+          }
+        </div>
+      </div>
+    }
+  </div>
+}

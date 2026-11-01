@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
 /** Written by scripts/generate-icon-sprite.mjs, served from public/. */
 const SPRITE = 'assets/icons/sprite.svg';
@@ -9,6 +9,7 @@ const SPRITE = 'assets/icons/sprite.svg';
  * the glyph is now an `<svg>` of `1em`, inheriting `currentColor`.
  */
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'i[appIcon]',
   template: `
     <svg aria-hidden="true" focusable="false">

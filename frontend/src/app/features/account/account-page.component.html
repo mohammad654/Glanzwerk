@@ -1,0 +1,145 @@
+<app-page-banner [title]="pageTitle" />
+
+<section class="account">
+  <div class="container">
+    @if (!signedIn()) {
+      <div class="account__card">
+        <h2 class="account__heading" i18n="@@account.signInHeading">Sign in to see your jobs</h2>
+        <p class="account__lead" i18n="@@account.signInLead">
+          Your appointments, their status and what each one costs are tied to your account.
+        </p>
+        <button type="button" class="default-btn" (click)="signIn()" i18n="@@booking.signIn">
+          Sign in
+        </button>
+        <p class="account__footer">
+          <span i18n="@@login.noAccount">No account yet?</span>
+          <a [routerLink]="registerLink" i18n="@@login.registerLink">Create one</a>
+        </p>
+      </div>
+    } @else {
+      <div class="section-title">
+        <span i18n="@@account.eyebrow">Your account</span>
+        <h2>
+          @if (user(); as account) {
+            {{ account.name }}
+          }
+        </h2>
+        <p i18n="@@account.lead">
+          Everything we have booked in for you, and everything we have finished.
+        </p>
+      </div>
+
+      @if (showBooked()) {
+        <div class="account__alert account__alert--success" role="status">
+          <i appIcon="bi-check-circle-fill" aria-hidden="true"></i>
+          <p>
+            <span i18n="@@booking.success">
+              Thank you. Your request is in and we will confirm it shortly. Your reference is
+            </span>
+            <strong>{{ booked() }}</strong>.
+          </p>
+        </div>
+      }
+
+      @if (errorMessage()) {
+        <div class="account__alert account__alert--error" role="alert">
+          <i appIcon="bi-exclamation-triangle" aria-hidden="true"></i>
+          <p>{{ errorMessage() }}</p>
+        </div>
+      }
+
+      <p>
+        <a class="default-btn" [routerLink]="appointmentLink" i18n="@@account.bookAnother">
+          Book an appointment
+        </a>
+      </p>
+
+      <h3 class="account__heading" style="margin-top: 2.5rem" i18n="@@account.upcoming">
+        Coming up
+      </h3>
+
+      @if (upcoming().length) {
+        <div class="account__bookings">
+          @for (appointment of upcoming(); track appointment.id) {
+            <article class="booking-card">
+              <div>
+                <h4 class="booking-card__service">{{ serviceLabel(appointment) }}</h4>
+                <p class="booking-card__meta">
+                  <strong>{{ appointment.startTime | date: 'fullDate' }}</strong>
+                  · {{ appointment.startTime | date: 'shortTime' }}–{{
+                    appointment.endTime | date: 'shortTime'
+                  }}<br />
+                  {{ appointment.street }}, {{ appointment.postalCode }} {{ appointment.city }}<br />
+                  @if (appointment.employee) {
+                    <span i18n="@@account.assignedTo">Your colleague:</span>
+                    {{ appointment.employee.name }}
+                  } @else {
+                    <span i18n="@@account.notYetAssigned">
+                      We are still assigning someone to this job.
+                    </span>
+                  }
+                  @if (appointment.notes) {
+                    <br />{{ appointment.notes }}
+                  }
+                </p>
+              </div>
+
+              <div class="booking-card__aside">
+                <span class="booking-status booking-status--{{ statusTones[appointment.status] }}">
+                  {{ statusLabels[appointment.status] }}
+                </span>
+                <!-- No price: appointments are free. -->
+                <span class="booking-card__meta">{{ appointment.reference }}</span>
+
+                @if (canCancel(appointment)) {
+                  <button
+                    type="button"
+                    class="account__link-btn"
+                    [disabled]="cancelling() !== null"
+                    (click)="cancel(appointment)"
+                    i18n="@@account.cancel"
+                  >
+                    Cancel this appointment
+                  </button>
+                }
+              </div>
+            </article>
+          }
+        </div>
+      } @else if (loading()) {
+        <p class="booking-card__meta" i18n="@@account.loading">Loading your appointments…</p>
+      } @else {
+        <p class="booking-card__meta" i18n="@@account.noUpcoming">
+          Nothing booked in at the moment.
+        </p>
+      }
+
+      @if (past().length) {
+        <h3 class="account__heading" style="margin-top: 2.5rem" i18n="@@account.history">
+          Earlier
+        </h3>
+
+        <div class="account__bookings">
+          @for (appointment of past(); track appointment.id) {
+            <article class="booking-card">
+              <div>
+                <h4 class="booking-card__service">{{ serviceLabel(appointment) }}</h4>
+                <p class="booking-card__meta">
+                  {{ appointment.startTime | date: 'mediumDate' }} ·
+                  {{ appointment.street }}, {{ appointment.postalCode }} {{ appointment.city }}
+                </p>
+              </div>
+
+              <div class="booking-card__aside">
+                <span class="booking-status booking-status--{{ statusTones[appointment.status] }}">
+                  {{ statusLabels[appointment.status] }}
+                </span>
+                <span class="booking-card__meta">{{ appointment.reference }}</span>
+              </div>
+            </article>
+          }
+        </div>
+      }
+    }
+  </div>
+</section>

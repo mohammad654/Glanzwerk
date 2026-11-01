@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { COMPANY } from '../../../core/company';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
@@ -10,6 +10,7 @@ interface Feature {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-feature-strip',
   imports: [IconComponent],
   templateUrl: './feature-strip.component.html',

@@ -1,4 +1,6 @@
-<div class="wipe__foam">
+<!-- A status, not content: it sits over the page for about a second while the app
+     boots, and a screen reader should say so rather than read the logo and move on. -->
+<div class="wipe__foam" role="status" aria-live="polite">
   <div class="wipe__bubbles" aria-hidden="true">
     @for (bubble of bubbles; track bubble) {
       <span></span>

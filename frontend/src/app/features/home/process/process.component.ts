@@ -1,5 +1,5 @@
 import { DecimalPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IconComponent } from '../../../shared/components/icon/icon.component';
 import { LINKS } from '../../../core/routes';
@@ -11,6 +11,7 @@ interface ProcessStep {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-process',
   imports: [IconComponent, RouterLink, DecimalPipe],
   templateUrl: './process.component.html',

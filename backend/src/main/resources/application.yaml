@@ -1,0 +1,105 @@
+spring:
+  application:
+    name: glanzwerk-api
+  profiles:
+    active: dev
+
+  jackson:
+    # Leaves absent fields out of the JSON instead of sending nulls. The one place it
+    # matters is ApiError.fieldErrors, which exists only for validation failures.
+    default-property-inclusion: non_null
+
+  web:
+    # The site is German-first, so a request without Accept-Language gets German
+    # content rather than English.
+    locale: de
+    locale-resolver: accept_header
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        # There is deliberately NO `jdbc.time_zone` here.
+        #
+        # Setting it to UTC makes Hibernate convert every timestamp it writes out of
+        # the JVM's zone — including `LocalDateTime`, which has no zone to convert
+        # from. A booking entered as 07:30 was stored as 06:30 and a seed row written
+        # as 09:00 by Flyway was read back as 10:00, so the dashboard and the database
+        # disagreed by an hour and raw SQL disagreed with both. An appointment is a
+        # wall-clock commitment; it must round-trip literally. See `Appointment`.
+        #
+        # The datasource URL completes the fix: `connectionTimeZone=LOCAL` plus
+        # `preserveInstants=false` stops the MySQL driver converting timestamps too.
+        # The consequence is that the `Instant` audit columns are stored as the
+        # server's local wall time rather than UTC. That is a deliberate trade: the
+        # appointment times are what the business runs on and what must be exact,
+        # and created_at/updated_at only ever need to order rows.
+
+        # Fails the build of a query plan rather than silently paginating a fetch
+        # join in memory.
+        query:
+          fail_on_pagination_over_collection_fetch: true
+
+server:
+  # Caps on what one request may be. Every write this API takes is a small JSON body,
+  # so the defaults are far larger than anything legitimate — and an uncapped body or
+  # header is the cheapest denial of service there is.
+  max-http-request-header-size: 16KB
+  tomcat:
+    max-http-form-post-size: 256KB
+    max-swallow-size: 256KB
+    # Stops a slow client holding a request thread open indefinitely.
+    connection-timeout: 20s
+  # Does not echo the exception, the stack trace or the binding errors on the fallback
+  # error page. Everything a client is meant to see comes from GlobalExceptionHandler.
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-binding-errors: never
+    include-exception: false
+
+glanzwerk:
+  jwt:
+    # No default: the app must not start with a secret anybody could guess. The dev
+    # profile supplies an obviously-fake one; see backend/.env.example.
+    secret: ${JWT_SECRET}
+    access-token-expiration: 900      # 15 minutes
+    refresh-token-expiration: 604800  # 7 days
+    cookie-secure: true
+
+  cors:
+    # Empty by default, so a misconfigured deployment refuses browsers instead of
+    # accepting all of them.
+    allowed-origins: []
+
+  password-reset:
+    # A reset link is a credential in a mailbox. An hour is long enough to walk to
+    # the computer and too short to be worth keeping.
+    token-validity: 1h
+    # Where the reset form lives. The API cannot know the site's origin, so it is
+    # configuration; `{token}` is substituted. Nothing sends email yet, so in
+    # development the link is written to the API's log — see
+    # LoggingPasswordResetNotifier.
+    link-template: ${PASSWORD_RESET_LINK:http://localhost:4300/de/passwort-neu-setzen?token={token}}
+
+  appointments:
+    # The zone the wall-clock appointment times belong to. The `Clock` bean reads it,
+    # so the lead-time and opening-hours rules hold wherever the server runs.
+    zone: Europe/Berlin
+    # One appointment, and therefore one step of the slot grid. Every appointment is
+    # the same length whatever service it is about: it is a visit to look at the job,
+    # not the job. 07:00-20:00 in hour slots offers 07:00 through 19:00.
+    slot-minutes: 60
+    opens-at: "07:00"
+    closes-at: "20:00"
+    open-days: MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY
+    min-lead-time-hours: 2
+    max-days-ahead: 365
+    # How many days of availability one request may ask about.
+    max-availability-days: 62
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false

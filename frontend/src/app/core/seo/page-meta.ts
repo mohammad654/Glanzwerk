@@ -1,8 +1,9 @@
-import { BLOG_POSTS, findPostByPath } from '../blog-catalog';
+import { ADMIN_PAGES, adminPageAt, adminTitle } from '../admin';
+import { findPostByPath } from '../blog-catalog';
 import { pathIn } from '../i18n/localized-path';
-import { PROJECTS, findProjectByPath } from '../project-catalog';
+import { findProjectByPath } from '../project-catalog';
 import { STATIC_ROUTES, StaticRouteKey, UNLISTED_ROUTES } from '../routes';
-import { SERVICES, findServiceByPath } from '../service-catalog';
+import { findServiceByPath } from '../service-catalog';
 import { SITE } from '../site';
 
 export interface PageMeta {
@@ -68,6 +69,29 @@ const STATIC_META: Readonly<Record<StaticRouteKey, PageMeta>> = {
     $localize`:@@meta.login.title:Sign In | Glanzwork`,
     $localize`:@@meta.login.description:Sign in to the Glanzwork portal.`,
   ),
+  register: page(
+    $localize`:@@meta.register.title:Create An Account | Glanzwork`,
+    $localize`:@@meta.register.description:Create a Glanzwork account to book appointments and follow your jobs.`,
+  ),
+  forgotPassword: page(
+    $localize`:@@meta.forgotPassword.title:Forgotten Password | Glanzwork`,
+    $localize`:@@meta.forgotPassword.description:Ask for a link to choose a new password for your Glanzwork account.`,
+  ),
+  resetPassword: page(
+    $localize`:@@meta.resetPassword.title:Choose A New Password | Glanzwork`,
+    $localize`:@@meta.resetPassword.description:Choose a new password for your Glanzwork account.`,
+  ),
+  account: page(
+    $localize`:@@meta.account.title:My Appointments | Glanzwork`,
+    $localize`:@@meta.account.description:Your Glanzwork appointments and their status.`,
+  ),
+  booking: page(
+    $localize`:@@meta.booking.title:Book An Appointment | Glanzwork`,
+    $localize`:@@meta.booking.description:Pick a service, a date and a time, and we confirm your appointment.`,
+  ),
+  // The internal dashboard. Its title comes from the page registry so the sidebar,
+  // the heading and the browser tab cannot drift apart.
+  admin: page(adminTitle(ADMIN_PAGES.overview), ADMIN_PAGES.overview.lead),
 };
 
 /** Route keys whose pages are not yet written, so must not enter the index. */
@@ -82,6 +106,18 @@ const STATIC_PAGES: ReadonlyMap<string, PageMeta> = new Map(
     NOINDEX_ROUTES.has(key) ? { ...STATIC_META[key], indexable: false } : STATIC_META[key],
   ]),
 );
+
+/**
+ * The admin area's child pages. They are not in `STATIC_ROUTES`, so without this they
+ * would fall through to the unknown-path meta and every one of them would carry the
+ * home page's title. They stay noindex either way.
+ */
+const adminMeta = (path: string): PageMeta | undefined => {
+  const adminPage = adminPageAt(path);
+  return adminPage
+    ? page(adminTitle(adminPage), adminPage.lead, { indexable: false })
+    : undefined;
+};
 
 const detailMeta = (path: string): PageMeta | undefined => {
   const service = findServiceByPath(path);
@@ -112,15 +148,8 @@ const detailMeta = (path: string): PageMeta | undefined => {
 /** `path` is a route URL without the leading slash, query string or fragment. */
 export const resolvePageMeta = (path: string): PageMeta =>
   STATIC_PAGES.get(path) ??
+  adminMeta(path) ??
   detailMeta(path) ??
   // Unknown URLs are served the home page by the router's wildcard, so they must not
   // compete with it in the index.
   page(SITE.title, SITE.description, { indexable: false });
-
-/** Every indexable URL this build serves, for the sitemap and for tests. */
-export const indexablePaths = (): string[] => [
-  ...[...STATIC_PAGES.entries()].filter(([, meta]) => meta.indexable).map(([path]) => path),
-  ...SERVICES.map((service) => pathIn(service.path)),
-  ...PROJECTS.map((project) => pathIn(project.path)),
-  ...BLOG_POSTS.map((post) => pathIn(post.path)),
-];

@@ -42,6 +42,7 @@
         class="site-nav__burger"
         type="button"
         (click)="openSidebar()"
+        [attr.aria-expanded]="sidebarOpen()"
         i18n-aria-label="@@nav.panel"
         aria-label="Open information panel"
       >

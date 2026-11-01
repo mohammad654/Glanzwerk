@@ -162,6 +162,7 @@
     align-items: stretch;
     gap: 0;
     max-height: 70vh;
+    max-height: 70dvh; // the toolbar's height is not ours to spend
     overflow-y: auto;
     padding: 0.5rem 1.5rem 1rem;
     background: v.$navbar-bg-solid;

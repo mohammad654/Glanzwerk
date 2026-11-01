@@ -2,55 +2,223 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="a11y.skipToContent" datatype="html">
+        <source>Skip to content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="page.serviceArea.title" datatype="html">
         <source>Service Area</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="page.jobs.title" datatype="html">
-        <source>Jobs</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="page.imprint.title" datatype="html">
-        <source>Imprint</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="page.privacy.title" datatype="html">
-        <source>Privacy Policy</source>
+      <trans-unit id="page.jobs.title" datatype="html">
+        <source>Jobs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="page.login.title" datatype="html">
-        <source>Sign In</source>
+      <trans-unit id="page.imprint.title" datatype="html">
+        <source>Imprint</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.privacy.title" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.group.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.group.management" datatype="html">
+        <source>Management</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.overview.label" datatype="html">
+        <source>Overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.overview.lead" datatype="html">
+        <source>Today&apos;s jobs and the numbers behind them.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.label" datatype="html">
+        <source>Appointments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.lead" datatype="html">
+        <source>Every appointment, with the client, the service and who is going.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.label" datatype="html">
+        <source>Clients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.lead" datatype="html">
+        <source>The companies and households we clean for.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.label" datatype="html">
+        <source>Employees</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.lead" datatype="html">
+        <source>The team, what they are qualified for and how booked they are.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.label" datatype="html">
+        <source>Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.lead" datatype="html">
+        <source>The service catalogue the public site and the booking form are built from.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.label" datatype="html">
+        <source>Enquiries</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.lead" datatype="html">
+        <source>Messages from the website&apos;s contact form, and where each one stands.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.title" datatype="html">
+        <source><x id="label" equiv-text="page.label"/> | Glanzwork Admin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/admin.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.offline" datatype="html">
+        <source>Could not reach the server. Check your connection and try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.unexpected" datatype="html">
+        <source>Something went wrong. Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.forbidden" datatype="html">
+        <source>You do not have permission to do that.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api.error.unauthorized" datatype="html">
+        <source>Your session has expired. Please sign in again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.requested" datatype="html">
+        <source>Requested</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/appointment.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.confirmed" datatype="html">
+        <source>Confirmed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/appointment.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.inProgress" datatype="html">
+        <source>In progress</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/appointment.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.completed" datatype="html">
+        <source>Completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/appointment.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.bookingStatus.cancelled" datatype="html">
+        <source>Cancelled</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/appointment.ts</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="company.openingHours" datatype="html">
@@ -96,7 +264,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/projects/project-detail.component.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.blog" datatype="html">
@@ -107,7 +275,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/blog/blog-detail.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.contact" datatype="html">
@@ -121,154 +289,224 @@
         <source>About Glanzwork | Your Cleaning Company in Dresden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.about.description" datatype="html">
         <source>A Dresden family business for cleaning, winter service and grounds care. Directly employed staff, a named contact person and prices agreed in writing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.services.title" datatype="html">
         <source>Our Services | Building Cleaning Dresden | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.services.description" datatype="html">
         <source>Maintenance, office, school, medical, public sector and industrial cleaning, glass, winter service, grounds care and caretaking — all from one provider in Dresden.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.references.title" datatype="html">
         <source>References | Cleaning Projects in Dresden | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.references.description" datatype="html">
         <source>Real contracts we run in and around Dresden: offices, schools, clinics, facades and winter service, with the scope and schedule behind each one.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.blog.title" datatype="html">
         <source>Advice on Cleaning &amp; Property Care | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.blog.description" datatype="html">
         <source>Practical guidance on cleaning intervals, written specifications and post-construction handover, from the team in Dresden that does the work.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.contact.title" datatype="html">
         <source>Contact Glanzwork Dresden | Request A Free Quote</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.contact.description" datatype="html">
         <source>Tell us what you need and we come back with a fixed written price. Free site visit in Dresden and the surrounding area. Call, email or send an enquiry.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.serviceArea.title" datatype="html">
         <source>Service Area | Cleaning in Dresden &amp; Around | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.serviceArea.description" datatype="html">
         <source>Where we work: every district of Dresden plus Radebeul, Freital, Pirna, Heidenau, Coswig and Meißen. Short travel times and fast call-outs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.jobs.title" datatype="html">
         <source>Jobs at Glanzwork Dresden | Cleaning Staff Wanted</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.jobs.description" datatype="html">
         <source>We are looking for cleaners, site supervisors and winter service helpers in Dresden. Fair pay, fixed teams and a family working atmosphere.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.imprint.title" datatype="html">
         <source>Imprint | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.imprint.description" datatype="html">
         <source>Legal information about Glanzwork, Dresden.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.privacy.title" datatype="html">
         <source>Privacy Policy | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.privacy.description" datatype="html">
         <source>How Glanzwork handles personal data.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.login.title" datatype="html">
         <source>Sign In | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.login.description" datatype="html">
         <source>Sign in to the Glanzwork portal.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.register.title" datatype="html">
+        <source>Create An Account | Glanzwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.register.description" datatype="html">
+        <source>Create a Glanzwork account to book appointments and follow your jobs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.forgotPassword.title" datatype="html">
+        <source>Forgotten Password | Glanzwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.forgotPassword.description" datatype="html">
+        <source>Ask for a link to choose a new password for your Glanzwork account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.resetPassword.title" datatype="html">
+        <source>Choose A New Password | Glanzwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.resetPassword.description" datatype="html">
+        <source>Choose a new password for your Glanzwork account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.account.title" datatype="html">
+        <source>My Appointments | Glanzwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.account.description" datatype="html">
+        <source>Your Glanzwork appointments and their status.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.booking.title" datatype="html">
+        <source>Book An Appointment | Glanzwork</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="meta.booking.description" datatype="html">
+        <source>Pick a service, a date and a time, and we confirm your appointment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.project.title" datatype="html">
         <source><x id="title" equiv-text="project.title"/> | <x id="category" equiv-text="project.category"/> Reference | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="meta.post.title" datatype="html">
         <source><x id="title" equiv-text="post.title"/> | Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/seo/page-meta.ts</context>
-          <context context-type="linenumber">103</context>
+          <context context-type="linenumber">139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="service.maintenance.title" datatype="html">
@@ -2291,49 +2529,1797 @@
         <source>About Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/about-page.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.1" datatype="html">
         <source>Years in building services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.2" datatype="html">
         <source>Sites under contract</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.3" datatype="html">
         <source>Directly employed staff</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="stats.4" datatype="html">
         <source>Contract renewal rate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about/stats/stats.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.signInHeading" datatype="html">
+        <source>Sign in to see your jobs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.signInLead" datatype="html">
+        <source> Your appointments, their status and what each one costs are tied to your account. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signIn" datatype="html">
+        <source> Sign in </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.noAccount" datatype="html">
+        <source>No account yet?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.registerLink" datatype="html">
+        <source>Create one</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">21,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">59,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">94,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.eyebrow" datatype="html">
+        <source>Your account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.lead" datatype="html">
+        <source> Everything we have booked in for you, and everything we have finished. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.success" datatype="html">
+        <source> Thank you. Your request is in and we will confirm it shortly. Your reference is </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.bookAnother" datatype="html">
+        <source> Book an appointment </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">53,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.upcoming" datatype="html">
+        <source> Coming up </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.assignedTo" datatype="html">
+        <source>Your colleague:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.notYetAssigned" datatype="html">
+        <source> We are still assigning someone to this job. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.cancel" datatype="html">
+        <source> Cancel this appointment </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.loading" datatype="html">
+        <source>Loading your appointments…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">110,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.noUpcoming" datatype="html">
+        <source> Nothing booked in at the moment. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">113,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.history" datatype="html">
+        <source> Earlier </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.html</context>
+          <context context-type="linenumber">119,122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.account.h1" datatype="html">
+        <source>My Appointments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/account-page.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signInHeading" datatype="html">
+        <source>Sign in to book</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.signInLead" datatype="html">
+        <source> Appointments are tied to your account, so you can see where each job stands and call one off if plans change. Signing in takes a moment. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.heading" datatype="html">
+        <source>Request an appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.lead2" datatype="html">
+        <source> Tell us what you need and pick a time that suits you. The appointment is free — we come out, look at the job and give you a fixed price before anyone starts work. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.service" datatype="html">
+        <source>Service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.servicePlaceholder" datatype="html">
+        <source>Choose a service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.serviceError" datatype="html">
+        <source> Please choose a service. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.employee" datatype="html">
+        <source> Preferred colleague (optional) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.anyEmployee" datatype="html">
+        <source>Whoever is available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.slotError" datatype="html">
+        <source> Please pick a day and a time. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.street" datatype="html">
+        <source>Street and number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.streetError" datatype="html">
+        <source> Please tell us where the work is. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">108,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.postalCode" datatype="html">
+        <source>Postal code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.postalCodeError" datatype="html">
+        <source> Five digits, please. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.city" datatype="html">
+        <source>Town</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">136,137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.cityError" datatype="html">
+        <source> Please tell us the town. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.notes" datatype="html">
+        <source> Anything we should know (optional) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">155,156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.submitting" datatype="html">
+        <source>Sending your request…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">167,169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.submit" datatype="html">
+        <source>Request appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">169,171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booking.incomplete" datatype="html">
+        <source> Something is still missing above — the fields to fill in are marked in red. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.html</context>
+          <context context-type="linenumber">175,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.booking.h1" datatype="html">
+        <source>Book An Appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/booking-page.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/site-footer/site-footer.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.heading" datatype="html">
+        <source>Forgotten your password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.lead" datatype="html">
+        <source> Tell us the address you registered with and we will send you a link to choose a new password. The link is good for one hour and can be used once. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">8,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.sent" datatype="html">
+        <source>We have sent a link to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.sentHint" datatype="html">
+        <source> Have a look in your spam folder if it is not there in a few minutes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.email" datatype="html">
+        <source>Email address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.unknownEmail" datatype="html">
+        <source> No account is registered with that email address. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.emailError" datatype="html">
+        <source>Please enter a valid email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.noAccountForEmail" datatype="html">
+        <source>No account for that address yet?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.submitting" datatype="html">
+        <source>Sending the link…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.submit" datatype="html">
+        <source>Send me a link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword.remembered" datatype="html">
+        <source>Remembered it after all?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.loginLink" datatype="html">
+        <source>Sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.html</context>
+          <context context-type="linenumber">75,78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">144,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.forgotPassword.h1" datatype="html">
+        <source>Forgotten Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/forgot-password-page.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.heading" datatype="html">
+        <source>Welcome back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.lead" datatype="html">
+        <source> Sign in to book an appointment and follow the jobs we are doing for you. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.password" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">95,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.wrongPassword" datatype="html">
+        <source>The password is incorrect.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.passwordError" datatype="html">
+        <source>Please enter your password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.forgotPassword" datatype="html">
+        <source> Forgotten your password? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.submitting" datatype="html">
+        <source>Signing in…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.submit" datatype="html">
+        <source>Sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.html</context>
+          <context context-type="linenumber">87,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.login.h1" datatype="html">
+        <source>Sign In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/login-page.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.heading" datatype="html">
+        <source>Create your account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.lead" datatype="html">
+        <source> An account lets you book an appointment online and see where each job stands. It takes a minute. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">8,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.name" datatype="html">
+        <source>Your name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.nameError" datatype="html">
+        <source>Please tell us your name.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailTaken" datatype="html">
+        <source> That email address is already registered. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailError" datatype="html">
+        <source>Please enter a valid email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.emailTakenHint" datatype="html">
+        <source>That is your address?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.phoneOptional" datatype="html">
+        <source> Phone number (optional) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.phoneError" datatype="html">
+        <source> That does not look like a phone number. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">89,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.consent" datatype="html">
+        <source>I have read and accept the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.privacyLink" datatype="html">
+        <source>privacy policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">123,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.consentError" datatype="html">
+        <source> Please accept the privacy policy. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">128,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.submitting" datatype="html">
+        <source>Creating your account…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">135,137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.submit" datatype="html">
+        <source>Create account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">137,139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="register.haveAccount" datatype="html">
+        <source>Already registered?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.register.h1" datatype="html">
+        <source>Create An Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/register-page.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.noTokenHeading" datatype="html">
+        <source> This link is incomplete </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.noTokenLead" datatype="html">
+        <source> Open the link from the email exactly as it was sent, or ask for a new one. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.askAgain" datatype="html">
+        <source> Ask for a new link </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.doneHeading" datatype="html">
+        <source> Your new password is saved </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.doneLead" datatype="html">
+        <source> You can sign in with it now. The link you used will not work again. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.heading" datatype="html">
+        <source>Choose a new password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.lead" datatype="html">
+        <source> Pick something you have not used here before. You will sign in with it on the next page. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.newPassword" datatype="html">
+        <source>New password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.confirm" datatype="html">
+        <source> The same password again </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.mismatch" datatype="html">
+        <source> The two passwords are not the same. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.submitting" datatype="html">
+        <source>Saving your password…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.submit" datatype="html">
+        <source>Save my new password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.html</context>
+          <context context-type="linenumber">92,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.resetPassword.h1" datatype="html">
+        <source>Choose A New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="resetPassword.linkInvalid" datatype="html">
+        <source>This reset link is no longer valid. Please ask for a new one.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/reset-password-page.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.brand.sub" datatype="html">
+        <source>Admin workspace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.backToSite" datatype="html">
+        <source>Back to the website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">32,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.toggleNav" datatype="html">
+        <source>Toggle navigation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.signOut" datatype="html">
+        <source>Sign out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/admin-layout.component.html</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.cleaner" datatype="html">
+        <source>Cleaner</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.supervisor" datatype="html">
+        <source>Site supervisor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.driver" datatype="html">
+        <source>Driver</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.role.office" datatype="html">
+        <source>Office</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.active" datatype="html">
+        <source>Active</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">190,191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.leave" datatype="html">
+        <source>On leave</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">191,193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employeeStatus.inactive" datatype="html">
+        <source>Inactive</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/employee.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.new" datatype="html">
+        <source>New</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.read" datatype="html">
+        <source>Read</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.responded" datatype="html">
+        <source>Answered</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiryStatus.closed" datatype="html">
+        <source>Closed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/data/enquiry.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.refresh" datatype="html">
+        <source>Refresh</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.reference" datatype="html">
+        <source>Appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.client" datatype="html">
+        <source>Client</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">178,179</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.service" datatype="html">
+        <source>Service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">181,182</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">140,141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.assignee" datatype="html">
+        <source>Assigned to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.status" datatype="html">
+        <source>Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">141,143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.actions" datatype="html">
+        <source>Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.edit" datatype="html">
+        <source>Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.delete" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">131,132</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">165,167</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">138,140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.cancel" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">157,159</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">247,249</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">130,132</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">236,238</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">166,168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">148,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.assignee" datatype="html">
+        <source>Assigned to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">187,188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.unassigned" datatype="html">
+        <source>Unassigned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">195,196</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.slot" datatype="html">
+        <source>Day and time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">203,204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.street" datatype="html">
+        <source>Street</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">216,217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.postalCode" datatype="html">
+        <source>Postal code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">224,225</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.city" datatype="html">
+        <source>Town</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.notes" datatype="html">
+        <source>Notes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">240,241</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.save" datatype="html">
+        <source> Save </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
+          <context context-type="linenumber">256,258</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">245,247</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">175,177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">157,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.panelTitle" datatype="html">
+        <source>Schedule</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.search" datatype="html">
+        <source>Reference, client or service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.empty" datatype="html">
+        <source>No appointment matches that filter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.filter.all" datatype="html">
+        <source>All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.edit" datatype="html">
+        <source>Edit appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.deleteTitle" datatype="html">
+        <source>Delete appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.deleteWarning" datatype="html">
+        <source><x id="reference" equiv-text="appointment.reference"/> for <x id="client" equiv-text="appointment.client.name"/> will be removed for good. To call off a visit that was really arranged, cancel it instead.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.phone" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.appointments" datatype="html">
+        <source>Appointments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.lastAppointment" datatype="html">
+        <source>Last appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.completed" datatype="html">
+        <source>Completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.viewHistory" datatype="html">
+        <source>History</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">73,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.block" datatype="html">
+        <source> Block </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.unblock" datatype="html">
+        <source> Unblock </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">121,122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.phone" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">123,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.registered" datatype="html">
+        <source>Registered</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.close" datatype="html">
+        <source> Close </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
+          <context context-type="linenumber">173,175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.panelTitle" datatype="html">
+        <source>All clients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.search2" datatype="html">
+        <source>Name or email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.empty" datatype="html">
+        <source>No client matches that search.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clientStatus.active" datatype="html">
+        <source>Active</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clientStatus.former" datatype="html">
+        <source>Blocked</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.neverBooked" datatype="html">
+        <source>Never booked</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.history" datatype="html">
+        <source>Appointment history</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.clients.noAppointments" datatype="html">
+        <source>This client has no appointments yet.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.add" datatype="html">
+        <source>Add employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.role" datatype="html">
+        <source>Role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.skills" datatype="html">
+        <source>Qualified for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.since" datatype="html">
+        <source>Since</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.deactivateStaff" datatype="html">
+        <source> Deactivate </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.activateStaff" datatype="html">
+        <source> Reactivate </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.emailOptional" datatype="html">
+        <source>Email (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.jobRole" datatype="html">
+        <source>Role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">178,179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.availability" datatype="html">
+        <source>Availability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">188,189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.weeklyHours" datatype="html">
+        <source>Contracted hours per week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">197,198</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.hiredOn" datatype="html">
+        <source>Start date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">205,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.skills" datatype="html">
+        <source>Qualified for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
+          <context context-type="linenumber">213,214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.new" datatype="html">
+        <source>New employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.edit" datatype="html">
+        <source>Edit employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.panelTitle" datatype="html">
+        <source>The team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.deleteTitle" datatype="html">
+        <source>Delete employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.search2" datatype="html">
+        <source>Name or role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.empty" datatype="html">
+        <source>Nobody matches that search.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.employees.deleteWarning" datatype="html">
+        <source><x id="name" equiv-text="employee.name"/> will be removed for good. Anyone with appointments on record cannot be deleted — deactivate them instead.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.ts</context>
+          <context context-type="linenumber">278</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.from" datatype="html">
+        <source>From</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.message" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.received" datatype="html">
+        <source>Received</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.openEnquiry" datatype="html">
+        <source>Open</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.adminNotes" datatype="html">
+        <source>Internal note</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.html</context>
+          <context context-type="linenumber">155,156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.panelTitle" datatype="html">
+        <source>Messages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.search" datatype="html">
+        <source>Name, email or text</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.empty" datatype="html">
+        <source>No message matches that filter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.dialog" datatype="html">
+        <source>Enquiry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.enquiries.general" datatype="html">
+        <source>General enquiry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.today" datatype="html">
+        <source>Appointments today</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.week" datatype="html">
+        <source>Next seven days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.requested" datatype="html">
+        <source>Awaiting confirmation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.enquiries" datatype="html">
+        <source>Unanswered enquiries</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.clients" datatype="html">
+        <source>Active clients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.employees" datatype="html">
+        <source>Staff on the books</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.metric.completed" datatype="html">
+        <source>Appointments completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.add" datatype="html">
+        <source>Add service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.key" datatype="html">
+        <source>Key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.column.duration" datatype="html">
+        <source>Duration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.deactivate" datatype="html">
+        <source> Withdraw </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.action.activate" datatype="html">
+        <source> Reinstate </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.nameDe" datatype="html">
+        <source>Name (German)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.nameEn" datatype="html">
+        <source>Name (English)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">110,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.serviceKey" datatype="html">
+        <source>Catalogue key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.duration" datatype="html">
+        <source>Work duration (minutes)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.descriptionDe" datatype="html">
+        <source>Description (German)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">136,137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.field.descriptionEn" datatype="html">
+        <source>Description (English)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.html</context>
+          <context context-type="linenumber">141,142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.new" datatype="html">
+        <source>New service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.edit" datatype="html">
+        <source>Edit service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.panelTitle" datatype="html">
+        <source>The offering</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.search" datatype="html">
+        <source>Name or key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.services.empty" datatype="html">
+        <source>No service matches that search.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.serviceStatus.active" datatype="html">
+        <source>On offer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.serviceStatus.inactive" datatype="html">
+        <source>Withdrawn</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-services.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.dialog.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-dialog.component.ts</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.pager.previous" datatype="html">
+        <source>Previous page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-pager.component.ts</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.pager.next" datatype="html">
+        <source>Next page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/shared/admin-pager.component.ts</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.moreHeading" datatype="html">
+        <source>More Posts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.notFound" datatype="html">
+        <source>That post does not exist.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="blog.seeAll" datatype="html">
+        <source>See all posts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/blog/blog-detail.component.html</context>
+          <context context-type="linenumber">46,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="notFound.post" datatype="html">
         <source>Article not found</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/blog/blog-detail.component.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.blog.h1" datatype="html">
         <source>Advice &amp; Guides</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/blog/blog-page.component.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.eyebrow" datatype="html">
@@ -2357,109 +4343,158 @@
           <context context-type="linenumber">9,12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contact.name" datatype="html">
-        <source>Your name</source>
+      <trans-unit id="contact.sent" datatype="html">
+        <source> Thank you. Your enquiry is with us and we will come back to you the same working day. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.orCall" datatype="html">
+        <source>You can also call us on</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.namePlaceholder" datatype="html">
         <source>Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contact.email" datatype="html">
-        <source>Email address</source>
+      <trans-unit id="contact.error.name" datatype="html">
+        <source>Please tell us your name.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">68,69</context>
+          <context context-type="linenumber">72,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.emailPlaceholder" datatype="html">
         <source>Email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.email" datatype="html">
+        <source>Please enter a valid email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">94,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.phone" datatype="html">
         <source>Phone number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">90,91</context>
+          <context context-type="linenumber">102,103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.phonePlaceholder" datatype="html">
         <source>Phone</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.phone" datatype="html">
+        <source>Please enter a number we can reach you on.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">116,118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.service" datatype="html">
         <source>What do you need?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">112,113</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="contact.selectService" datatype="html">
-        <source>Select a service</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">120,121</context>
+          <context context-type="linenumber">124,125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.somethingElse" datatype="html">
-        <source> Something else </source>
+        <source>Something else</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">125,126</context>
+          <context context-type="linenumber">130,131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.message" datatype="html">
         <source>About the job</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">138,139</context>
+          <context context-type="linenumber">140,141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.messageHint" datatype="html">
         <source>Size of the property, how often, and when you need it done.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">144,145</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.message" datatype="html">
+        <source> Please add at least <x id="INTERPOLATION" equiv-text="{{ messageLimits.min }}"/> characters so we can price it. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">154,155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.consent" datatype="html">
+        <source>I agree that Glanzwork may store these details in order to answer my enquiry.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">170,172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.error.consent" datatype="html">
+        <source> We need your agreement before we can hold your details. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.sending" datatype="html">
+        <source>Sending…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">194,195</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.bookVisit" datatype="html">
-        <source> Book A Free Site Visit </source>
+        <source>Book A Free Site Visit</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">179,180</context>
+          <context context-type="linenumber">196,198</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.nextHeading" datatype="html">
         <source>What happens next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">188,189</context>
+          <context context-type="linenumber">206,207</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contact.urgentHeading" datatype="html">
         <source>Need someone today?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
-          <context context-type="linenumber">196,198</context>
+          <context context-type="linenumber">214,215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contact.urgentBody" datatype="html">
+        <source> Burst pipe, flooded basement, a handover tomorrow morning: do not use the form. Call us and we will tell you straight away whether we can make it. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/contact-page.component.html</context>
+          <context context-type="linenumber">216,218</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.contact.h1" datatype="html">
         <source>Contact</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/contact-page.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.eyebrow" datatype="html">
@@ -2515,28 +4550,28 @@
         <source>Big jobs, small jobs and last-minute jobs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.point.2" datatype="html">
         <source>Directly employed, insured and vetted staff</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.point.3" datatype="html">
         <source>One point of contact from quote to completion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="about.point.4" datatype="html">
         <source>Fixed pricing agreed before work begins</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/about/about.component.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appointment.eyebrow" datatype="html">
@@ -2550,7 +4585,56 @@
         <source>Book A Free Site Visit</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
-          <context context-type="linenumber">5,8</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.lead" datatype="html">
+        <source> Tell us what you need and pick a time that suits you. We come out, look at the job and agree the price with you before any work begins. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.cta" datatype="html">
+        <source> Book An Appointment </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">23,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.existing" datatype="html">
+        <source>Already a customer?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.existingLink" datatype="html">
+        <source>See your appointments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.html</context>
+          <context context-type="linenumber">28,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.free" datatype="html">
+        <source>The visit costs nothing. We look at the job and agree a fixed price before anyone starts work.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.slots" datatype="html">
+        <source>You choose from the times we are genuinely free, so nothing has to be rearranged afterwards.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appointment.point.track" datatype="html">
+        <source>Every appointment sits in your account, where you can follow it or call it off.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/appointment/appointment.component.ts</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="blog.eyebrow" datatype="html">
@@ -2603,42 +4687,42 @@
         <source>Last-Minute Ready</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature.1.text" datatype="html">
         <source>Same-day and out-of-hours call-outs, including weekends.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature.2.title" datatype="html">
         <source>One Team, Many Jobs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature.2.text" datatype="html">
         <source>Cleaning, moving and clearance from one contractor.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature.3.title" datatype="html">
         <source>Insured &amp; Vetted</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature.3.text" datatype="html">
         <source>Directly employed staff, fully insured and background-checked.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/feature-strip/feature-strip.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.requestQuote" datatype="html">
@@ -2666,63 +4750,63 @@
         <source>Cleaning · Moving · Everything Between</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.1.title" datatype="html">
         <source>More Than Cleaning. More Than Expected.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.1.text" datatype="html">
         <source>One team for cleaning, moving, clearance and the jobs that come up in between. You call, we turn up when we said we would.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.2.eyebrow" datatype="html">
         <source>Emergency &amp; 24/7</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.2.title" datatype="html">
         <source>When It Cannot Wait Until Monday</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.2.text" datatype="html">
         <source>Same-day appointments, overnight shifts, weekends and holidays. Running out of time or facing a job too big to handle alone? Call us.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.3.eyebrow" datatype="html">
         <source>Snow &amp; Outdoor Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.3.title" datatype="html">
         <source>Cleared Before The Day Begins</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.3.text" datatype="html">
         <source>Snow clearing, gritting and outdoor care, with every deployment logged. That record is your evidence that the duty of care was met.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/hero/hero.component.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.eyebrow" datatype="html">
@@ -2757,42 +4841,42 @@
         <source>Site Survey</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.1.text" datatype="html">
         <source>We visit the property, measure the areas and discuss how the building is actually used before quoting anything.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.2.title" datatype="html">
         <source>Specification &amp; Quote</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.2.text" datatype="html">
         <source>You receive a written schedule of tasks and frequencies alongside a fixed price, so the scope is clear from day one.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.3.title" datatype="html">
         <source>Delivery &amp; Review</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="process.3.text" datatype="html">
         <source>A fixed team starts on the agreed date under a named supervisor, with documented quality checks reported monthly.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/process/process.component.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.eyebrow" datatype="html">
@@ -2855,70 +4939,105 @@
         <source>A specification you can hold us to</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.1.text" datatype="html">
         <source>Every contract starts with a written schedule of tasks and frequencies. The standard is defined in advance, so it can be measured.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.2.title" datatype="html">
         <source>A fixed team on your site</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.2.text" datatype="html">
         <source>The same trained staff attend each visit under a named supervisor. They learn the building, and nobody has to be shown around twice.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.3.title" datatype="html">
         <source>Quality checks you can read</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.3.text" datatype="html">
         <source>Supervisors carry out documented quality walks and report monthly, so problems surface in the review before your tenants raise them.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.4.title" datatype="html">
         <source>Properly employed, properly insured</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whyUs.4.text" datatype="html">
         <source>Our staff are directly employed, trained and fully insured. There is no subcontracting chain, so you always know who is in your building.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.detailsHeading" datatype="html">
+        <source>Project Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.moreHeading" datatype="html">
+        <source>More Projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.startCta" datatype="html">
+        <source>Start A Project</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.notFound" datatype="html">
+        <source>That project does not exist.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project.seeAll" datatype="html">
+        <source>See all projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/projects/project-detail.component.html</context>
+          <context context-type="linenumber">58,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="notFound.project" datatype="html">
         <source>Reference not found</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/projects/project-detail.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.references.h1" datatype="html">
         <source>References</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/projects/projects-page.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="serviceDetail.expect" datatype="html">
@@ -2971,7 +5090,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
-          <context context-type="linenumber">51,54</context>
+          <context context-type="linenumber">52,55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="serviceDetail.missing" datatype="html">
@@ -2992,77 +5111,84 @@
         <source>Service not found</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/services/service-detail.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.services.h1" datatype="html">
         <source>Our Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/services/services-page.component.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11y.language" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/language-toggle/language-toggle.component.html</context>
+          <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.panel" datatype="html">
         <source>Open information panel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
-          <context context-type="linenumber">46,48</context>
+          <context context-type="linenumber">47,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.toggle" datatype="html">
         <source>Toggle navigation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/nav-bar/nav-bar.component.html</context>
-          <context context-type="linenumber">60,62</context>
+          <context context-type="linenumber">61,63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.label" datatype="html">
         <source>About Glanzwork</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">9,12</context>
+          <context context-type="linenumber">18,21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.close" datatype="html">
         <source>Close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">26,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.about" datatype="html">
         <source>About Us</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.aboutBody" datatype="html">
         <source> Glanzwork covers cleaning, moving, clearance and property support for commercial and private property. We work to a written specification, with directly employed staff and a named supervisor on every site, so responsibility for the standard always sits in one place. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">24,27</context>
+          <context context-type="linenumber">33,36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.whatWeDo" datatype="html">
         <source>What We Do</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.getInTouch" datatype="html">
         <source>Get In Touch</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">52,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sidebar.or" datatype="html">
         <source>OR</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/sidebar-modal/sidebar-modal.component.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.intro" datatype="html">
@@ -3142,18 +5268,32 @@
           <context context-type="linenumber">18,20</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="topbar.signout" datatype="html">
+        <source> Sign Out </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="topbar.signin" datatype="html">
         <source>Sign In</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/top-bar/top-bar.component.html</context>
-          <context context-type="linenumber">20,21</context>
+          <context context-type="linenumber">32,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="goTop.label" datatype="html">
         <source>Back to top</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/go-top/go-top.component.ts</context>
-          <context context-type="linenumber">20,22</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a11y.breadcrumb" datatype="html">
+        <source>Breadcrumb</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/page-banner/page-banner.component.html</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="breadcrumb.home" datatype="html">
@@ -3167,7 +5307,21 @@
         <source>This page has not been built yet.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/page-placeholder/page-placeholder.component.ts</context>
-          <context context-type="linenumber">17,19</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.met" datatype="html">
+        <source>— met</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/password-rules/password-rules.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.unmet" datatype="html">
+        <source>— still needed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/password-rules/password-rules.component.html</context>
+          <context context-type="linenumber">12,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="wipe.message.1" datatype="html">
@@ -3210,6 +5364,80 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/screen-wipe/screen-wipe.component.ts</context>
           <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.pickServiceFirst" datatype="html">
+        <source> Choose a service first and we will show you when we can come. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.loading" datatype="html">
+        <source>Looking for free times…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.none" datatype="html">
+        <source> No free times in the next few weeks. Please call us and we will find one. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.date" datatype="html">
+        <source>Day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.datePlaceholder" datatype="html">
+        <source>Choose a day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="slots.time" datatype="html">
+        <source>Time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/slot-picker/slot-picker.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.length" datatype="html">
+        <source>At least 8 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.upper" datatype="html">
+        <source>One upper-case letter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.lower" datatype="html">
+        <source>One lower-case letter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password.rule.digit" datatype="html">
+        <source>One digit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/password-rules.ts</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
     </body>

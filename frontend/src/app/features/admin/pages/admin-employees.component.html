@@ -1,0 +1,249 @@
+<app-admin-page-header [page]="page">
+  <button type="button" class="admin-btn admin-btn--primary" (click)="openNew()">
+    <i appIcon="bi-person-plus"></i>
+    <span i18n="@@admin.employees.add">Add employee</span>
+  </button>
+</app-admin-page-header>
+
+@if (employees.isLoading()) {
+  <div class="admin-loading"></div>
+}
+
+@if (loadError()) {
+  <app-admin-alert [message]="loadError()!" />
+}
+
+@if (toggle.failure()) {
+  <app-admin-alert [message]="toggle.failure()!.message" />
+}
+
+<app-admin-table-panel
+  [title]="labels.panel"
+  [placeholder]="labels.search"
+  [count]="rows().length"
+  [total]="all().length"
+  [(query)]="query"
+>
+  @if (rows().length) {
+    <div class="admin-table-scroll">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th i18n="@@admin.column.name">Name</th>
+            <th i18n="@@admin.column.role">Role</th>
+            <th i18n="@@admin.column.skills">Qualified for</th>
+            <th i18n="@@admin.column.hours">Hours</th>
+            <th i18n="@@admin.column.since">Since</th>
+            <th i18n="@@admin.column.status">Status</th>
+            <th><span class="admin-sr-only" i18n="@@admin.column.actions">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of rows(); track row.employee.id) {
+            <tr>
+              <td>
+                <div class="admin-identity">
+                  <app-admin-avatar [name]="row.employee.name" />
+                  <span>
+                    <span class="admin-table__primary">{{ row.employee.name }}</span>
+                    <span class="admin-table__secondary">{{ row.employee.email }}</span>
+                  </span>
+                </div>
+              </td>
+              <td>{{ row.jobRole }}</td>
+              <td>
+                <span class="admin-chips">
+                  @for (skill of row.skills; track skill) {
+                    <span class="admin-chip">{{ skill }}</span>
+                  }
+                  @if (row.hiddenSkills) {
+                    <span class="admin-chip admin-chip--more">+{{ row.hiddenSkills }}</span>
+                  }
+                </span>
+              </td>
+              <td>{{ row.employee.weeklyHours }} h</td>
+              <td>{{ row.employee.hiredOn | date: 'mediumDate' }}</td>
+              <td><app-admin-status [label]="row.status" [tone]="row.tone" /></td>
+              <td>
+                <div class="admin-actions">
+                  <button
+                    type="button"
+                    class="admin-btn admin-btn--quiet"
+                    (click)="openEdit(row.employee)"
+                  >
+                    <i appIcon="bi-pencil"></i>
+                    <span i18n="@@admin.action.edit">Edit</span>
+                  </button>
+
+                  @if (row.employee.active) {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet admin-btn--danger"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(row.employee, false)"
+                      i18n="@@admin.action.deactivateStaff"
+                    >
+                      Deactivate
+                    </button>
+                  } @else {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet"
+                      [disabled]="toggle.pending()"
+                      (click)="setActive(row.employee, true)"
+                      i18n="@@admin.action.activateStaff"
+                    >
+                      Reactivate
+                    </button>
+                  }
+
+                  <button
+                    type="button"
+                    class="admin-btn admin-btn--quiet admin-btn--danger"
+                    (click)="askDelete(row.employee)"
+                  >
+                    <i appIcon="bi-trash"></i>
+                    <span i18n="@@admin.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else {
+    <app-admin-empty [message]="labels.empty" icon="bi-search" />
+  }
+</app-admin-table-panel>
+
+@if (deleting(); as target) {
+  <app-admin-dialog [title]="labels.deleteTitle" (dismissed)="cancelDelete()">
+    @if (remove.failure()) {
+      <app-admin-alert [message]="remove.failure()!.message" />
+    }
+
+    <p>{{ deleteWarning(target) }}</p>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="cancelDelete()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="admin-btn admin-btn--danger"
+        [disabled]="remove.pending()"
+        (click)="confirmDelete()"
+      >
+        <span i18n="@@admin.action.delete">Delete</span>
+      </button>
+    </div>
+  </app-admin-dialog>
+}
+
+@if (editing()) {
+  <app-admin-dialog [title]="dialogTitle()" (dismissed)="close()">
+    @if (save.failure()) {
+      <app-admin-alert [message]="save.failure()!.message" />
+    }
+
+    <form class="admin-form" [formGroup]="form" (ngSubmit)="submit()" id="employee-form">
+      <label class="admin-field" [class.is-invalid]="invalid('name')">
+        <span i18n="@@admin.field.name">Name</span>
+        <input type="text" formControlName="name" autocomplete="off" />
+        @if (error('name')) {
+          <span class="admin-field__error">{{ error('name') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('email')">
+        <!-- A contact address, not a login: an employee has no account to sign in to,
+             so this is editable and optional. -->
+        <span i18n="@@admin.field.emailOptional">Email (optional)</span>
+        <input type="email" formControlName="email" autocomplete="off" />
+        @if (error('email')) {
+          <span class="admin-field__error">{{ error('email') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('phone')">
+        <span i18n="@@admin.field.phone">Phone</span>
+        <input type="tel" formControlName="phone" autocomplete="off" />
+        @if (error('phone')) {
+          <span class="admin-field__error">{{ error('phone') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('jobRole')">
+        <span i18n="@@admin.field.jobRole">Role</span>
+        <select formControlName="jobRole">
+          @for (role of jobRoles; track role) {
+            <option [value]="role">{{ jobRoleLabels[role] }}</option>
+          }
+        </select>
+      </label>
+
+      @if (!isNew()) {
+        <label class="admin-field">
+          <span i18n="@@admin.field.availability">Availability</span>
+          <select formControlName="status">
+            <option value="ACTIVE" i18n="@@admin.employeeStatus.active">Active</option>
+            <option value="ON_LEAVE" i18n="@@admin.employeeStatus.leave">On leave</option>
+          </select>
+        </label>
+      }
+
+      <label class="admin-field" [class.is-invalid]="invalid('weeklyHours')">
+        <span i18n="@@admin.field.weeklyHours">Contracted hours per week</span>
+        <input type="number" formControlName="weeklyHours" min="1" max="60" />
+        @if (error('weeklyHours')) {
+          <span class="admin-field__error">{{ error('weeklyHours') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('hiredOn')">
+        <span i18n="@@admin.field.hiredOn">Start date</span>
+        <input type="date" formControlName="hiredOn" />
+        @if (error('hiredOn')) {
+          <span class="admin-field__error">{{ error('hiredOn') }}</span>
+        }
+      </label>
+
+      <div class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.skills">Qualified for</span>
+        <!-- A booking can only be assigned to somebody trained for its service, so an
+             empty list here means this person cannot be put on any job. -->
+        <div class="admin-checks">
+          @for (option of serviceOptions(); track option.id) {
+            <label>
+              <input
+                type="checkbox"
+                [checked]="isSelected(option.id)"
+                (change)="toggleService(option.id, $any($event.target).checked)"
+              />
+              {{ option.label }}
+            </label>
+          }
+        </div>
+        @if (error('serviceIds')) {
+          <span class="admin-field__error">{{ error('serviceIds') }}</span>
+        }
+      </div>
+    </form>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="close()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="submit"
+        form="employee-form"
+        class="admin-btn admin-btn--primary"
+        [disabled]="save.pending()"
+        i18n="@@admin.action.save"
+      >
+        Save
+      </button>
+    </div>
+  </app-admin-dialog>
+}

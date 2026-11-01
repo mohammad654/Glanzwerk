@@ -3,6 +3,13 @@ node_modules/
 dist/
 .angular/
 *.tsbuildinfo
+backend/target/
+scripts
+# Secrets. spring-dotenv reads backend/.env at startup; backend/.env.example is the
+# template and is committed. The real file holds the JWT signing key and the database
+# password, so it must never be.
+.env
+backend/.env
 
 # Logs
 *.log

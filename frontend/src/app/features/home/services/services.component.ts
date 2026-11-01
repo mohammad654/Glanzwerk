@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { SERVICES, serviceLink } from '../../../core/service-catalog';
@@ -6,6 +6,7 @@ import { IconComponent } from '../../../shared/components/icon/icon.component';
 import { CATALOGUE_IMAGE } from '../../../core/media';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-services',
   imports: [IconComponent, RouterLink],
   templateUrl: './services.component.html',

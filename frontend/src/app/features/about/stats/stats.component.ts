@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { CountUpDirective } from '../../../shared/directives/count-up.directive';
 
@@ -8,6 +8,7 @@ interface Stat {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-stats',
   imports: [CountUpDirective],
   templateUrl: './stats.component.html',

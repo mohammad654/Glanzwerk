@@ -1,4 +1,4 @@
-import { CURRENT_LOCALE, LocaleCode, localeHref } from './locales';
+import { CURRENT_LOCALE, LocaleCode } from './locales';
 
 /**
  * A page's URL segment in every locale.
@@ -14,7 +14,3 @@ export const pathIn = (path: LocalizedPath): string => path[CURRENT_LOCALE];
 
 /** This build's router link for a page. */
 export const linkTo = (path: LocalizedPath): string => `/${pathIn(path)}`;
-
-/** The page's absolute-from-root URL in another locale, for hreflang and the switcher. */
-export const hrefIn = (path: LocalizedPath, locale: LocaleCode): string =>
-  localeHref(path[locale], locale);

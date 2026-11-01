@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, LOCALE_ID, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, LOCALE_ID, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map, startWith } from 'rxjs';
@@ -8,6 +8,7 @@ import { LOCALES, localeHref, toLocaleCode, unprefixed } from '../../core/i18n/l
 import { localizedPathsFor } from '../../core/routes';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-language-toggle',
   imports: [NgTemplateOutlet],
   templateUrl: './language-toggle.component.html',

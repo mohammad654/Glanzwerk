@@ -1,13 +1,23 @@
-<header class="site-header" [class.is-scrolled]="scrolled()">
-  <app-top-bar />
-  <app-nav-bar />
-</header>
+@if (siteChrome()) {
+  <!-- Visible only once focused. Without it a keyboard or screen-reader user walks
+       the top bar, the logo and a thirteen-item menu with dropdowns before reaching
+       the page, on every page. WCAG 2.4.1. -->
+  <a class="skip-link" href="#main-content" i18n="@@a11y.skipToContent">Skip to content</a>
 
-<main>
+  <header class="site-header" [class.is-scrolled]="scrolled()">
+    <app-top-bar />
+    <app-nav-bar />
+  </header>
+}
+
+<!-- tabindex="-1" so the skip link can actually move focus here, not just the viewport. -->
+<main id="main-content" tabindex="-1">
   <router-outlet />
 </main>
 
-<app-site-footer />
-<app-sidebar-modal />
-<app-go-top />
-<app-screen-wipe />
+@if (siteChrome()) {
+  <app-site-footer />
+  <app-sidebar-modal />
+  <app-go-top />
+  <app-screen-wipe />
+}

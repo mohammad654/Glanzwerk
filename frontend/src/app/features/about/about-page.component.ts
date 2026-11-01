@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { AboutComponent } from '../home/about/about.component';
 import { ProcessComponent } from '../home/process/process.component';
@@ -7,6 +7,7 @@ import { PageBannerComponent } from '../../shared/components/page-banner/page-ba
 import { StatsComponent } from './stats/stats.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-about-page',
   imports: [PageBannerComponent, AboutComponent, StatsComponent, WhyUsComponent, ProcessComponent],
   template: `

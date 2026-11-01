@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 export interface Crumb {
@@ -7,6 +7,7 @@ export interface Crumb {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-page-banner',
   imports: [RouterLink],
   templateUrl: './page-banner.component.html',

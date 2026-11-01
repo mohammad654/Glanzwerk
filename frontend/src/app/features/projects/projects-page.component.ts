@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PROJECTS } from '../../core/project-catalog';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
 import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-projects-page',
   imports: [PageBannerComponent, ProjectCardComponent],
   template: `

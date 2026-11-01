@@ -1,0 +1,85 @@
+<div class="admin">
+  <aside id="admin-nav" class="admin__sidebar" [class.is-open]="menuOpen()">
+    <a class="admin__brand" [routerLink]="homeLink" (click)="closeMenu()">
+      <span class="admin__brand-mark"><i appIcon="bi-shield-lock"></i></span>
+      <span class="admin__brand-text">
+        <span class="admin__brand-name">{{ company.name }}</span>
+        <span class="admin__brand-sub" i18n="@@admin.brand.sub">Admin workspace</span>
+      </span>
+    </a>
+
+    <nav class="admin__nav" aria-label="Admin">
+      @for (section of nav; track section.key) {
+        <p class="admin__nav-caption">{{ section.title }}</p>
+
+        @for (item of section.items; track item.key) {
+          <a
+            class="admin__link"
+            [routerLink]="item.link"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="item.exact ? exactMatch : prefixMatch"
+            (click)="closeMenu()"
+          >
+            <i [appIcon]="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </a>
+        }
+      }
+    </nav>
+
+    <a class="admin__link admin__link--quiet" [routerLink]="siteLink">
+      <i appIcon="bi-box-arrow-left"></i>
+      <span i18n="@@admin.backToSite">Back to the website</span>
+    </a>
+  </aside>
+
+  <button
+    type="button"
+    class="admin__scrim"
+    [class.is-visible]="menuOpen()"
+    (click)="closeMenu()"
+    tabindex="-1"
+    aria-hidden="true"
+  ></button>
+
+  <div class="admin__main">
+    <header class="admin__topbar">
+      <button
+        type="button"
+        class="admin__menu-toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="admin-nav"
+        i18n-aria-label="@@admin.toggleNav"
+        aria-label="Toggle navigation"
+      >
+        <i appIcon="bi-list"></i>
+      </button>
+
+      <nav class="admin__crumbs" aria-label="Breadcrumb">
+        <span i18n="@@admin.brand.sub">Admin workspace</span>
+        <i appIcon="bi-chevron-right"></i>
+        <strong>{{ current().label }}</strong>
+      </nav>
+
+      <!-- Who is signed in, and the way out. The badge used to read "Demo data",
+           which is no longer true: these pages read the live database. -->
+      <div class="admin__account">
+        @if (user(); as account) {
+          <span class="admin__badge">
+            <i appIcon="bi-shield-lock"></i>
+            <span>{{ account.name }}</span>
+          </span>
+        }
+        <button type="button" class="admin-btn admin-btn--quiet" (click)="signOut()">
+          <i appIcon="bi-box-arrow-right"></i>
+          <span i18n="@@admin.signOut">Sign out</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="admin__content">
+      <router-outlet />
+    </main>
+  </div>
+</div>

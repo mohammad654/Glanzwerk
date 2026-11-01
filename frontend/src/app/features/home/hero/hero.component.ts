@@ -1,5 +1,11 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, Component, PLATFORM_ID, inject } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  ChangeDetectionStrategy,
+  Component,
+  PLATFORM_ID,
+  inject,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { preloadImage } from '../../../core/preload-image';
@@ -15,6 +21,7 @@ interface HeroSlide {
 }
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-hero',
   imports: [IconComponent, RouterLink],
   templateUrl: './hero.component.html',

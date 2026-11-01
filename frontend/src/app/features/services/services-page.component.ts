@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ProcessComponent } from '../home/process/process.component';
 import { ServicesComponent } from '../home/services/services.component';
 import { PageBannerComponent } from '../../shared/components/page-banner/page-banner.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-services-page',
   imports: [PageBannerComponent, ServicesComponent, ProcessComponent],
   template: `

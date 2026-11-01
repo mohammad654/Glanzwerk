@@ -80,4 +80,38 @@ $radius: 0.5rem;
 $radius-lg: 0.625rem; // 10px — the template's cards and panels
 $radius-pill: 50px;
 $spacer: 1rem;
-$section-padding-y: 6.25rem; // 100px — the template's pt-100 / pb-100
+// The template's pt-100 / pb-100, held exactly at the width it was measured at and
+// compressed below it. Fourteen call sites take this one value, and a flat 100px top
+// and bottom on a 375px screen spends a third of the viewport on nothing — but the
+// desktop rhythm is the reference look, so `clamp` keeps the ceiling rather than
+// trading it away. 9vw reaches the ceiling at ~1111px.
+$section-padding-y: clamp(3.25rem, 9vw, 6.25rem); // 52px → 100px
+
+// The photo at the top of a service, reference or post card. One value, because three
+// card stylesheets each carrying their own near-identical ratio is three chances for
+// the grids to stop lining up. `1` is square; `4 / 3` is the nearest landscape.
+$card-media-ratio: 1;
+
+// Admin area — the internal dashboard at /admin.
+//
+// A dark, flat surface in the Mantis idiom: no shadows, one hairline border doing all
+// the separating, and the brand indigo pushed down into a near-black canvas so the
+// tool still reads as Glanzwork rather than a generic template.
+$admin-sidebar-width: 15rem;
+$admin-topbar-height: 4.25rem;
+$admin-gutter: 1.5rem;
+
+$admin-bg: #10162b; // the canvas behind everything
+$admin-surface: #19203a; // sidebar, topbar, panels, cards
+$admin-surface-raised: #222a47; // hover rows, inputs, icon wells
+$admin-border: rgba($white, 0.07);
+$admin-border-strong: rgba($white, 0.12);
+
+$admin-text: #e4e8f2;
+$admin-text-muted: #8b94ad;
+$admin-accent: $brand-cyan;
+
+// Chart and status hues. One list, so a bar, a sparkline and a badge agree.
+$admin-positive: $brand-green;
+$admin-negative: #f2545b;
+$admin-neutral: $brand-sky;

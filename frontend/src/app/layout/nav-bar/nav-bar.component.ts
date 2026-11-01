@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { pathIn } from '../../core/i18n/localized-path';
@@ -8,6 +8,7 @@ import { IconComponent } from '../../shared/components/icon/icon.component';
 import { LINKS } from '../../core/routes';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-nav-bar',
   imports: [IconComponent, RouterLink, RouterLinkActive],
   templateUrl: './nav-bar.component.html',
@@ -31,6 +32,9 @@ export class NavBarComponent {
   }));
 
   readonly menuOpen = signal(false);
+
+  /** So the burger can report whether the panel it controls is showing. */
+  readonly sidebarOpen = this.sidebar.isOpen;
 
   toggleMenu(): void {
     this.menuOpen.update((open) => !open);

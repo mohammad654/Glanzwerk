@@ -1,0 +1,260 @@
+<app-admin-page-header [page]="page">
+  <button
+    type="button"
+    class="admin-btn"
+    [disabled]="appointments.isLoading()"
+    (click)="appointments.reload()"
+  >
+    <i appIcon="bi-arrow-repeat"></i>
+    <span i18n="@@admin.refresh">Refresh</span>
+  </button>
+</app-admin-page-header>
+
+@if (appointments.isLoading()) {
+  <div class="admin-loading"></div>
+}
+
+@if (loadError()) {
+  <app-admin-alert [message]="loadError()!" />
+}
+
+@if (transition.failure()) {
+  <app-admin-alert [message]="transition.failure()!.message" />
+}
+
+<app-admin-table-panel
+  [title]="labels.panel"
+  [placeholder]="labels.search"
+  [count]="rows().length"
+  [total]="total()"
+  [query]="query()"
+  (queryChange)="onQuery($event)"
+>
+  <div adminPanelFilters class="admin-filters">
+    @for (filter of filters(); track filter.key) {
+      <button
+        type="button"
+        class="admin-filter"
+        [class.is-active]="status() === filter.key"
+        (click)="setStatus(filter.key)"
+      >
+        {{ filter.label }}
+      </button>
+    }
+  </div>
+
+  @if (rows().length) {
+    <div class="admin-table-scroll">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th i18n="@@admin.column.reference">Appointment</th>
+            <th i18n="@@admin.column.client">Client</th>
+            <th i18n="@@admin.column.service">Service</th>
+            <th i18n="@@admin.column.assignee">Assigned to</th>
+            <th i18n="@@admin.column.status">Status</th>
+            <th><span class="admin-sr-only" i18n="@@admin.column.actions">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (appointment of rows(); track appointment.id) {
+            <tr>
+              <td>
+                <span class="admin-table__primary">{{ appointment.reference }}</span>
+                <span class="admin-table__secondary">
+                  {{ appointment.startTime | date: 'mediumDate' }} ·
+                  {{ appointment.startTime | date: 'shortTime' }}
+                </span>
+              </td>
+              <td>
+                <div class="admin-identity">
+                  <app-admin-avatar [name]="appointment.client.name" />
+                  <span>
+                    <span class="admin-table__primary">{{ appointment.client.name }}</span>
+                    <span class="admin-table__secondary">
+                      {{ appointment.postalCode }} {{ appointment.city }}
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <span class="admin-table__primary">{{ serviceLabel(appointment) }}</span>
+              </td>
+              <td>
+                @if (appointment.employee) {
+                  <div class="admin-identity">
+                    <app-admin-avatar [name]="appointment.employee.name" />
+                    <span class="admin-table__primary">{{ appointment.employee.name }}</span>
+                  </div>
+                } @else {
+                  <span class="admin-table__secondary">{{ labels.unassigned }}</span>
+                }
+              </td>
+              <td>
+                <app-admin-status
+                  [label]="statusLabels[appointment.status]"
+                  [tone]="statusTones[appointment.status]"
+                />
+              </td>
+              <td>
+                <div class="admin-actions">
+                  <button
+                    type="button"
+                    class="admin-btn admin-btn--quiet"
+                    (click)="openEdit(appointment)"
+                  >
+                    <i appIcon="bi-pencil"></i>
+                    <span i18n="@@admin.action.edit">Edit</span>
+                  </button>
+
+                  <!-- Only the moves the workflow allows. A finished or cancelled
+                       appointment offers none, which is why the buttons disappear
+                       entirely rather than being disabled. -->
+                  @for (next of nextStatuses(appointment); track next) {
+                    <button
+                      type="button"
+                      class="admin-btn admin-btn--quiet"
+                      [class.admin-btn--danger]="next === 'CANCELLED'"
+                      [disabled]="transition.pending()"
+                      (click)="changeStatus(appointment, next)"
+                    >
+                      {{ statusLabels[next] }}
+                    </button>
+                  }
+
+                  <button
+                    type="button"
+                    class="admin-btn admin-btn--quiet admin-btn--danger"
+                    (click)="askDelete(appointment)"
+                  >
+                    <i appIcon="bi-trash"></i>
+                    <span i18n="@@admin.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <app-admin-pager [page]="appointmentPage()" (goTo)="goToPage($event)" />
+  } @else {
+    <app-admin-empty [message]="labels.empty" icon="bi-calendar-x" />
+  }
+</app-admin-table-panel>
+
+@if (deleting(); as target) {
+  <app-admin-dialog [title]="labels.deleteTitle" (dismissed)="cancelDelete()">
+    @if (remove.failure()) {
+      <app-admin-alert [message]="remove.failure()!.message" />
+    }
+
+    <p>{{ deleteWarning(target) }}</p>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="cancelDelete()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="admin-btn admin-btn--danger"
+        [disabled]="remove.pending()"
+        (click)="confirmDelete()"
+      >
+        <span i18n="@@admin.action.delete">Delete</span>
+      </button>
+    </div>
+  </app-admin-dialog>
+}
+
+@if (editing(); as appointment) {
+  <app-admin-dialog [title]="labels.edit + ' · ' + appointment.reference" (dismissed)="close()">
+    @if (save.failure()) {
+      <app-admin-alert [message]="save.failure()!.message" />
+    }
+
+    <dl class="admin-details">
+      <dt i18n="@@admin.column.client">Client</dt>
+      <dd>{{ appointment.client.name }} · {{ appointment.client.email }}</dd>
+
+      <dt i18n="@@admin.column.service">Service</dt>
+      <dd>{{ serviceLabel(appointment) }}</dd>
+    </dl>
+
+    <div class="admin-form" style="margin-top: 1.25rem">
+      <label class="admin-field">
+        <span i18n="@@admin.field.assignee">Assigned to</span>
+        <!-- Narrowed to people trained for this service: the server rejects anyone
+             else, so offering them would be offering a choice that fails. Changing
+             this also re-asks for free slots, because the calendar is theirs. -->
+        <select
+          [value]="chosenEmployeeId() ?? ''"
+          (change)="onEmployeeChange($any($event.target).value)"
+        >
+          <option value="" i18n="@@admin.appointments.unassigned">Unassigned</option>
+          @for (employee of assignable(); track employee.id) {
+            <option [value]="employee.id">{{ employee.name }}</option>
+          }
+        </select>
+      </label>
+
+      <div class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.slot">Day and time</span>
+        <!-- Only free slots, from the same endpoint the server validates against. -->
+        <app-slot-picker
+          variant="admin"
+          [serviceId]="appointment.service.id"
+          [employeeId]="chosenEmployeeId()"
+          (selected)="chosenSlot.set($event)"
+        />
+      </div>
+    </div>
+
+    <form class="admin-form" [formGroup]="form" (ngSubmit)="submit()" id="appointment-form">
+      <label class="admin-field" [class.is-invalid]="invalid('street')">
+        <span i18n="@@admin.field.street">Street</span>
+        <input type="text" formControlName="street" autocomplete="off" />
+        @if (error('street')) {
+          <span class="admin-field__error">{{ error('street') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('postalCode')">
+        <span i18n="@@admin.field.postalCode">Postal code</span>
+        <input type="text" formControlName="postalCode" inputmode="numeric" maxlength="5" />
+        @if (error('postalCode')) {
+          <span class="admin-field__error">{{ error('postalCode') }}</span>
+        }
+      </label>
+
+      <label class="admin-field" [class.is-invalid]="invalid('city')">
+        <span i18n="@@admin.field.city">Town</span>
+        <input type="text" formControlName="city" autocomplete="off" />
+        @if (error('city')) {
+          <span class="admin-field__error">{{ error('city') }}</span>
+        }
+      </label>
+
+      <label class="admin-field admin-field--wide">
+        <span i18n="@@admin.field.notes">Notes</span>
+        <textarea formControlName="notes" rows="3"></textarea>
+      </label>
+    </form>
+
+    <div adminDialogFooter>
+      <button type="button" class="admin-btn" (click)="close()" i18n="@@admin.action.cancel">
+        Cancel
+      </button>
+      <button
+        type="submit"
+        form="appointment-form"
+        class="admin-btn admin-btn--primary"
+        [disabled]="save.pending() || !chosenSlot()"
+        i18n="@@admin.action.save"
+      >
+        Save
+      </button>
+    </div>
+  </app-admin-dialog>
+}

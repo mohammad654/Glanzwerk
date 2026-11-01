@@ -1,0 +1,64 @@
+# Local development. Nothing in here is suitable for a deployed environment.
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
+  datasource:
+    # `connectionTimeZone=LOCAL` with `preserveInstants=false` is Connector/J's
+    # no-conversion mode, and it is what makes a DATETIME round-trip literally.
+    # With the previous `serverTimezone=UTC`, the driver converted every timestamp
+    # between UTC and the JVM's zone: an appointment stored as 07:30 came back as 08:30,
+    # and one stored in October came back two hours out because the offset differs
+    # across the DST boundary. Appointments are wall-clock times (see `Booking`), so
+    # the driver must leave them alone.
+    url: jdbc:mysql://localhost:3306/glanzwerk?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&connectionTimeZone=LOCAL&preserveInstants=false&socketTimeout=30000
+    username: ${DB_USERNAME:root}
+    # Set DB_PASSWORD in backend/.env rather than here.
+    password: ${DB_PASSWORD:}
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    validate-on-migrate: true
+
+  jpa:
+    hibernate:
+      # Never `update`: the schema belongs to the migrations. `validate` makes a
+      # mismatch between an entity and a migration fail at startup instead of at
+      # the first query.
+      ddl-auto: validate
+    show-sql: true
+
+server:
+  port: 8081
+
+glanzwerk:
+  jwt:
+    # Development only, and long enough to satisfy the HS256 length check. Tokens
+    # signed with this are worthless, which is the point.
+    secret: ${JWT_SECRET:dev-only-insecure-secret-change-me-before-any-deployment}
+    # The Angular dev server and the preview server are plain HTTP, and a Secure
+    # cookie is never sent back over http://localhost, which would break refresh.
+    cookie-secure: false
+  cors:
+    # ng serve, the production-build preview, and the localhost form of each.
+    allowed-origins:
+      - http://localhost:4200
+      - http://127.0.0.1:4200
+      - http://localhost:4300
+      - http://127.0.0.1:4300
+
+# The API explorer, at http://localhost:8081/swagger-ui.html
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+logging:
+  level:
+    com.glanzwerk.api: DEBUG

@@ -198,91 +198,6 @@
   }
 }
 
-.form-field {
-  margin-bottom: 1.5625rem;
-
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: v.$primary;
-    font-size: v.$topbar-font-size;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  // The checkbox in the consent row is excluded: it keeps its native box.
-  input:not([type='checkbox']),
-  select,
-  textarea {
-    width: 100%;
-    padding: 0.625rem 0.75rem;
-    border: 1px solid v.$input-border;
-    border-radius: v.$radius-sm;
-    background: v.$white;
-    color: v.$brand-headings;
-    font-family: v.$font-body;
-    font-size: v.$font-size-base;
-    transition: border-color 0.2s ease-in-out;
-
-    &::placeholder {
-      color: rgba(v.$brand-body, 0.6);
-    }
-
-    &:focus {
-      border-color: v.$primary;
-      outline: 2px solid rgba(v.$primary, 0.35);
-      outline-offset: 0.25rem;
-    }
-  }
-
-  input:not([type='checkbox']),
-  select {
-    height: 3.125rem; // 50px
-  }
-
-  // Until a service is picked the select should read as a prompt, like the
-  // placeholder in every other field, rather than as an answer already given.
-  select:has(option[value='']:checked) {
-    color: rgba(v.$brand-body, 0.6);
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  // Colour alone cannot carry the error, so each field also renders a message.
-  .is-invalid {
-    border-color: v.$input-error;
-  }
-}
-
-.form-field__error {
-  display: block;
-  margin-top: 0.375rem;
-  color: v.$input-error;
-  font-size: v.$topbar-font-size;
-}
-
-.form-field--consent label {
-  display: flex;
-  gap: 0.625rem;
-  align-items: flex-start;
-  color: v.$brand-body;
-  font-size: v.$font-size-sm;
-  font-weight: 400;
-  letter-spacing: normal;
-  line-height: 1.6;
-  text-transform: none;
-
-  input {
-    width: auto;
-    height: auto;
-    margin-top: 0.3125rem;
-    accent-color: v.$primary;
-  }
-}
-
 .contact__aside {
   padding: 2.5rem;
   border-radius: v.$radius-lg;
@@ -367,4 +282,21 @@
   .contact__aside {
     padding: 1.875rem;
   }
+}
+
+// The honeypot field. Taken out of the layout entirely rather than `display: none`:
+// some bots skip hidden inputs, and this one is meant to be found and filled in.
+.contact__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// The error twin of `.contact__note`.
+.contact__note--error {
+  border-color: rgba(v.$input-error, 0.4);
+  background: rgba(v.$input-error, 0.08);
+  color: v.$input-error;
 }

@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { Project, projectLink } from '../../../core/project-catalog';
@@ -11,6 +11,7 @@ import { CATALOGUE_IMAGE } from '../../../core/media';
  * contexts get it without duplicating the rules.
  */
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-project-card',
   imports: [IconComponent, RouterLink],
   templateUrl: './project-card.component.html',

@@ -1,0 +1,182 @@
+<app-page-banner [title]="pageTitle" />
+
+<section class="account">
+  <div class="container">
+    @if (!signedIn()) {
+      <!-- An invitation rather than a redirect: arriving at "book an appointment" and
+           landing on a bare login form with no explanation reads as an error. -->
+      <div class="account__card">
+        <h2 class="account__heading" i18n="@@booking.signInHeading">Sign in to book</h2>
+        <p class="account__lead" i18n="@@booking.signInLead">
+          Appointments are tied to your account, so you can see where each job stands and call one
+          off if plans change. Signing in takes a moment.
+        </p>
+
+        <button type="button" class="default-btn" (click)="signIn()" i18n="@@booking.signIn">
+          Sign in
+        </button>
+
+        <p class="account__footer">
+          <span i18n="@@login.noAccount">No account yet?</span>
+          <a [routerLink]="registerLink" i18n="@@login.registerLink">Create one</a>
+        </p>
+      </div>
+    } @else {
+      <div class="account__card account__card--wide">
+        <h2 class="account__heading" i18n="@@booking.heading">Request an appointment</h2>
+        <p class="account__lead" i18n="@@booking.lead2">
+          Tell us what you need and pick a time that suits you. The appointment is free — we come
+          out, look at the job and give you a fixed price before anyone starts work.
+        </p>
+
+        @if (errorMessage()) {
+          <div class="account__alert account__alert--error" role="alert">
+            <i appIcon="bi-exclamation-triangle" aria-hidden="true"></i>
+            <p>{{ errorMessage() }}</p>
+          </div>
+        }
+
+        <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-field">
+                <label for="booking-service" i18n="@@booking.service">Service</label>
+                <select
+                  id="booking-service"
+                  formControlName="serviceId"
+                  [class.is-invalid]="isInvalid('serviceId')"
+                >
+                  <option value="" i18n="@@booking.servicePlaceholder">Choose a service</option>
+                  @for (service of services(); track service.id) {
+                    <option [value]="service.id">{{ service.name }}</option>
+                  }
+                </select>
+                @if (isInvalid('serviceId')) {
+                  <span class="form-field__error" i18n="@@booking.serviceError">
+                    Please choose a service.
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-field">
+                <label for="booking-employee" i18n="@@booking.employee">
+                  Preferred colleague (optional)
+                </label>
+                <!-- Only people trained for the chosen service: the server rejects
+                     anyone else. Choosing one narrows the free times below to their
+                     calendar; leaving it on "whoever is available" is the usual case. -->
+                <select id="booking-employee" formControlName="employeeId">
+                  <option value="" i18n="@@booking.anyEmployee">Whoever is available</option>
+                  @for (employee of employees(); track employee.id) {
+                    <option [value]="employee.id">{{ employee.name }}</option>
+                  }
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-field">
+                <!-- The picker shows only days we can actually come, and on a chosen
+                     day only the times still free. -->
+                <app-slot-picker
+                  [serviceId]="selectedServiceId()"
+                  [employeeId]="selectedEmployeeId()"
+                  (selected)="chosenSlot.set($event)"
+                />
+                @if (slotMissing()) {
+                  <span class="form-field__error" role="alert" i18n="@@booking.slotError">
+                    Please pick a day and a time.
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="form-field">
+                <label for="booking-street" i18n="@@booking.street">Street and number</label>
+                <input
+                  id="booking-street"
+                  type="text"
+                  formControlName="street"
+                  autocomplete="street-address"
+                  [class.is-invalid]="isInvalid('street')"
+                />
+                @if (isInvalid('street')) {
+                  <span class="form-field__error" i18n="@@booking.streetError">
+                    Please tell us where the work is.
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-field">
+                <label for="booking-postal" i18n="@@booking.postalCode">Postal code</label>
+                <input
+                  id="booking-postal"
+                  type="text"
+                  formControlName="postalCode"
+                  inputmode="numeric"
+                  maxlength="5"
+                  autocomplete="postal-code"
+                  [class.is-invalid]="isInvalid('postalCode')"
+                />
+                @if (isInvalid('postalCode')) {
+                  <span class="form-field__error" i18n="@@booking.postalCodeError">
+                    Five digits, please.
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-field">
+                <label for="booking-city" i18n="@@booking.city">Town</label>
+                <input
+                  id="booking-city"
+                  type="text"
+                  formControlName="city"
+                  autocomplete="address-level2"
+                  [class.is-invalid]="isInvalid('city')"
+                />
+                @if (isInvalid('city')) {
+                  <span class="form-field__error" i18n="@@booking.cityError">
+                    Please tell us the town.
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-field">
+                <label for="booking-notes" i18n="@@booking.notes">
+                  Anything we should know (optional)
+                </label>
+                <textarea id="booking-notes" rows="4" formControlName="notes"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enabled whether or not the form is complete. A disabled button answers
+               a click with silence, which reads as a broken page; pressing this one
+               marks what is missing and says so below. -->
+          <button type="submit" class="default-btn" [disabled]="pending()">
+            @if (pending()) {
+              <span i18n="@@booking.submitting">Sending your request…</span>
+            } @else {
+              <span i18n="@@booking.submit">Request appointment</span>
+            }
+          </button>
+
+          @if (incomplete()) {
+            <p class="account__hint" role="alert" i18n="@@booking.incomplete">
+              Something is still missing above — the fields to fill in are marked in red.
+            </p>
+          }
+        </form>
+      </div>
+    }
+  </div>
+</section>

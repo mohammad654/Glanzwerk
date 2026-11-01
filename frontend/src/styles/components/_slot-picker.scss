@@ -1,0 +1,100 @@
+@use "abstracts/variables" as v;
+
+// The day-and-time picker (`shared/components/slot-picker`).
+//
+// Global rather than scoped to the component because the dashboard renders the same
+// markup on a dark surface and overrides only the colours (`.slot-picker--admin`, in
+// the admin stylesheet). One set of layout rules, two palettes.
+
+.slot-picker {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.slot-picker__hint {
+  margin: 0;
+  color: v.$brand-body;
+  font-size: v.$font-size-sm;
+  line-height: 1.6;
+}
+
+.slot-picker__field {
+  display: block;
+
+  > span,
+  + .slot-picker__times .slot-picker__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: v.$primary;
+    font-size: v.$topbar-font-size;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  select {
+    width: 100%;
+    height: 3.125rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid v.$input-border;
+    border-radius: v.$radius-sm;
+    background: v.$white;
+    color: v.$brand-headings;
+    font-family: v.$font-body;
+    font-size: v.$font-size-base;
+
+    &:focus-visible {
+      border-color: v.$primary;
+      outline: 2px solid rgba(v.$primary, 0.35);
+      outline-offset: 0.25rem;
+    }
+  }
+}
+
+.slot-picker__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: v.$primary;
+  font-size: v.$topbar-font-size;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+// Times as a wrapping grid of buttons rather than a second dropdown: the free times
+// are the thing being chosen, and showing them all at once is what makes "the whole
+// day minus what is taken" legible at a glance.
+.slot-picker__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.slot-picker__slot {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid v.$input-border;
+  border-radius: v.$radius-sm;
+  background: v.$white;
+  color: v.$brand-headings;
+  font-size: v.$font-size-sm;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    border-color: v.$primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$primary;
+    outline-offset: 2px;
+  }
+
+  // Not colour alone: the chosen slot also carries aria-pressed.
+  &.is-chosen {
+    border-color: v.$primary;
+    background: v.$primary;
+    color: v.$white;
+  }
+}

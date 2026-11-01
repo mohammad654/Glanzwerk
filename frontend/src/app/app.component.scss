@@ -16,3 +16,33 @@
   background: v.$brand-indigo;
   box-shadow: 0 0.125rem 0.75rem rgba(v.$black, 0.15);
 }
+
+// Off screen until it is focused, which is the whole trick: it costs a sighted
+// visitor nothing and saves a keyboard user the header on every page.
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1040;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0 0 v.$radius v.$radius;
+  background: v.$brand-cyan;
+  color: v.$white;
+  font-family: v.$font-heading;
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+
+  &:focus-visible {
+    top: 0;
+    // The app sets its own focus ring here, because this element is invisible
+    // until the ring is the only thing announcing it.
+    outline: 0.1875rem solid v.$white;
+    outline-offset: -0.1875rem;
+  }
+}
+
+// The skip link's target. It must be focusable to be a target at all, and a
+// focusable region that paints a ring on every click reads as a bug.
+main:focus {
+  outline: none;
+}

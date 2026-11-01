@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { BLOG_POSTS, blogLink } from '../../core/blog-catalog';
@@ -8,6 +8,7 @@ import { PageBannerComponent } from '../../shared/components/page-banner/page-ba
 import { CATALOGUE_IMAGE } from '../../core/media';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-blog-detail',
   imports: [PageBannerComponent, RouterLink],
   templateUrl: './blog-detail.component.html',

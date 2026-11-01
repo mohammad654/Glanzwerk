@@ -1,7 +1,16 @@
-<div class="sidebar" [class.is-open]="isOpen()" [attr.aria-hidden]="!isOpen()">
+<!-- `inert` while closed, so neither the keyboard nor a screen reader can reach a
+     panel that is off screen — see the component for why CSS alone is not enough. -->
+<div
+  class="sidebar"
+  [class.is-open]="isOpen()"
+  [attr.aria-hidden]="!isOpen()"
+  [attr.inert]="isOpen() ? null : ''"
+  (keydown)="onKeydown($event)"
+>
   <div class="sidebar__backdrop" (click)="close()"></div>
 
   <div
+    #panel
     class="sidebar__panel"
     role="dialog"
     aria-modal="true"

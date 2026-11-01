@@ -17,7 +17,21 @@
       <li class="top-bar__secondary" i18n="@@topbar.hours">
         Opening Hour: {{ company.openingHours }}
       </li>
-      <li class="top-bar__secondary"><a [routerLink]="links.login" i18n="@@topbar.signin">Sign In</a></li>
+      @if (signedIn()) {
+        <li class="top-bar__secondary">
+          <i appIcon="bi-person-circle" aria-hidden="true"></i>
+          <a [routerLink]="accountLink()">{{ userName() }}</a>
+        </li>
+        <li class="top-bar__secondary">
+          <button class="top-bar__signout" type="button" (click)="signOut()" i18n="@@topbar.signout">
+            Sign Out
+          </button>
+        </li>
+      } @else {
+        <li class="top-bar__secondary">
+          <a [routerLink]="links.login" i18n="@@topbar.signin">Sign In</a>
+        </li>
+      }
       <li><app-language-toggle /></li>
     </ul>
   </div>

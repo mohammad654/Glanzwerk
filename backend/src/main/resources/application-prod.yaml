@@ -1,0 +1,57 @@
+# Every value here comes from the environment. A missing variable stops the
+# application rather than falling back to a development default.
+spring:
+  datasource:
+    # IMPORTANT: this URL must carry `connectionTimeZone=LOCAL&preserveInstants=false`,
+    # and the host must run in the same zone as `glanzwerk.appointments.zone`. Without it
+    # the MySQL driver converts timestamps and every appointment shifts by the zone
+    # offset — an hour in winter, two in summer. See the note in application.yaml.
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      # Stated rather than left to the default ten, because the right number is a
+      # property of the database this is deployed against, not of the application.
+      # A pool larger than the server's max_connections fails at load, not at startup.
+      maximum-pool-size: ${DB_POOL_SIZE:10}
+      minimum-idle: 2
+      # Fail a request that cannot get a connection, instead of piling threads up
+      # behind an exhausted pool until the whole API stops answering.
+      connection-timeout: 10000
+      max-lifetime: 1200000
+      validation-timeout: 3000
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    # Off in production: a clean deployment should run V1 onwards, and baselining
+    # would silently skip migrations against an unexpected database.
+    baseline-on-migrate: false
+    validate-on-migrate: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+server:
+  port: ${PORT:8081}
+  # Behind a reverse proxy, so X-Forwarded-* decides the scheme and the client IP
+  # that rate limiting counts against.
+  forward-headers-strategy: native
+
+glanzwerk:
+  jwt:
+    secret: ${JWT_SECRET}
+    cookie-secure: true
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}
+
+  password-reset:
+    # Must point at the deployed site, or every reset email sends people to localhost.
+    link-template: ${PASSWORD_RESET_LINK}
+
+logging:
+  level:
+    com.glanzwerk.api: INFO
+    org.hibernate.SQL: WARN
