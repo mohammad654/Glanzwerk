@@ -129,7 +129,7 @@ export class AdminOverviewComponent {
         link: adminLink('clients'),
       },
       {
-        label: $localize`:@@admin.metric.employees:Staff on the books`,
+        label: $localize`:@@admin.metric.employees:Employees`,
         value: data?.activeEmployees ?? null,
         icon: 'bi-person-badge',
         link: adminLink('employees'),

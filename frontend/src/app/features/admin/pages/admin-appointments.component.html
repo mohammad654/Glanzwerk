@@ -58,7 +58,9 @@
         </thead>
         <tbody>
           @for (appointment of rows(); track appointment.id) {
-            <tr>
+            <!-- The row carries its status's colour, so a cancelled or finished visit
+                 is recognisable without reading as far as the status column. -->
+            <tr class="admin-row admin-row--{{ statusTones[appointment.status] }}">
               <td>
                 <span class="admin-table__primary">{{ appointment.reference }}</span>
                 <span class="admin-table__secondary">
@@ -91,10 +93,28 @@
                 }
               </td>
               <td>
-                <app-admin-status
-                  [label]="statusLabels[appointment.status]"
-                  [tone]="statusTones[appointment.status]"
-                />
+                <!-- The status is changed here rather than by a row of buttons: the
+                     column that shows it is the obvious place to edit it, and the
+                     list offers only the moves the workflow allows — including the
+                     way back out of a cancelled or completed visit. -->
+                <select
+                  #statusSelect
+                  class="admin-status-select admin-status-select--{{
+                    statusTones[appointment.status]
+                  }}"
+                  [attr.aria-label]="statusAriaLabel(appointment)"
+                  [disabled]="transition.pending()"
+                  (change)="changeStatus(appointment, statusSelect)"
+                >
+                  <!-- Current status first, so it is what the browser shows as
+                       selected without a value binding that races the options. -->
+                  <option [value]="appointment.status">
+                    {{ statusLabels[appointment.status] }}
+                  </option>
+                  @for (next of nextStatuses(appointment); track next) {
+                    <option [value]="next">{{ statusLabels[next] }}</option>
+                  }
+                </select>
               </td>
               <td>
                 <div class="admin-actions">
@@ -106,21 +126,6 @@
                     <i appIcon="bi-pencil"></i>
                     <span i18n="@@admin.action.edit">Edit</span>
                   </button>
-
-                  <!-- Only the moves the workflow allows. A finished or cancelled
-                       appointment offers none, which is why the buttons disappear
-                       entirely rather than being disabled. -->
-                  @for (next of nextStatuses(appointment); track next) {
-                    <button
-                      type="button"
-                      class="admin-btn admin-btn--quiet"
-                      [class.admin-btn--danger]="next === 'CANCELLED'"
-                      [disabled]="transition.pending()"
-                      (click)="changeStatus(appointment, next)"
-                    >
-                      {{ statusLabels[next] }}
-                    </button>
-                  }
 
                   <button
                     type="button"

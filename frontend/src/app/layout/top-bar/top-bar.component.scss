@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'abstracts/variables' as v;
 
 .top-bar {
@@ -60,20 +61,27 @@
   }
 }
 
-// A button, not a link: signing out is a state change, not a destination. It has to
-// borrow the bar's own type and colour, which the reset strips from a button.
+// A button, not a link: signing out is a state change, not a destination. Borderless,
+// at the bar's own type size so it does not grow the bar, and in danger red — lifted
+// towards white because $danger itself falls under 4.5:1 on the indigo bar.
 .top-bar__signout {
-  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
   border: 0;
+  border-radius: v.$radius-sm;
   background: none;
-  color: inherit;
+  color: color.mix(v.$white, v.$danger, 25%);
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
-  text-decoration: underline;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: v.$btn-transition;
 
   &:hover,
   &:focus-visible {
-    color: v.$accent;
+    background: v.$danger;
+    color: v.$white;
   }
 }

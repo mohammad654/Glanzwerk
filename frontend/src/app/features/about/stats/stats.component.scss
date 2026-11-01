@@ -1,13 +1,13 @@
 @use 'abstracts/variables' as v;
 
 .stats {
-  padding: v.$section-padding-y 0;
+  padding: v.$section-padding-y-sm 0;
   background: v.$bg-tint;
 }
 
 .stat {
   height: 100%;
-  padding: 1.875rem; // 30px
+  padding: 1.5rem 1.25rem; // 24px 20px
   border-radius: v.$radius-lg;
   background: v.$white;
   box-shadow: v.$shadow-card;

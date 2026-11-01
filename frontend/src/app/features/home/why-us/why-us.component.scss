@@ -91,6 +91,14 @@
     border: 0.625rem solid v.$white;
     box-shadow: v.$shadow-photo;
   }
+
+  // A cut-out illustration, not a photo: cropping it to fill the circle would
+  // take the head and the feet off, so it is fitted inside a white disc.
+  &--illustration {
+    padding: 0.75rem;
+    background: v.$white;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 991.98px) {

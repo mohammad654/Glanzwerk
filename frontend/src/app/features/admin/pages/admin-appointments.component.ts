@@ -36,7 +36,6 @@ import { loadErrorMessage } from '../shared/admin-load-error';
 import { createMutation } from '../shared/admin-mutation';
 import { AdminPageHeaderComponent } from '../shared/admin-page-header.component';
 import { AdminPagerComponent } from '../shared/admin-pager.component';
-import { AdminStatusComponent } from '../shared/admin-status.component';
 import { AdminTablePanelComponent } from '../shared/admin-table-panel.component';
 
 /** The filter row offers every status plus a way back to everything. */
@@ -54,7 +53,6 @@ const PAGE_SIZE = 25;
     AdminEmptyComponent,
     AdminPageHeaderComponent,
     AdminPagerComponent,
-    AdminStatusComponent,
     AdminTablePanelComponent,
     DatePipe,
     IconComponent,
@@ -280,10 +278,29 @@ export class AdminAppointmentsComponent {
     });
   }
 
-  changeStatus(appointment: Appointment, status: AppointmentStatus): void {
-    this.transition.run(this.api.changeStatus(appointment.id, status), () =>
-      this.appointments.reload(),
+  /**
+   * Moves an appointment to the status just chosen in its row.
+   *
+   * On a refusal the control is put back to the status the appointment still has.
+   * Without that the row would show the status the office asked for while the alert
+   * above the table says it was not accepted — two answers to the same question.
+   */
+  changeStatus(appointment: Appointment, select: HTMLSelectElement): void {
+    const status = select.value as AppointmentStatus;
+    if (status === appointment.status) {
+      return;
+    }
+
+    this.transition.run(
+      this.api.changeStatus(appointment.id, status),
+      () => this.appointments.reload(),
+      () => (select.value = appointment.status),
     );
+  }
+
+  /** Names the appointment, so the control is not thirty identical "Status" pickers. */
+  statusAriaLabel(appointment: Appointment): string {
+    return $localize`:@@admin.appointments.statusFor:Status of ${appointment.reference}:reference:`;
   }
 
   error(field: string): string | undefined {

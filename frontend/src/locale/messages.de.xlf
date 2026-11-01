@@ -3198,9 +3198,9 @@
           <context context-type="linenumber">33,34</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="alt.whyUs.supplies" datatype="html">
-        <source>Colour-coded cloths and eco-certified cleaning products</source>
-        <target state="translated">Farbcodierte Reinigungstücher und umweltfreundliche Reinigungsmittel</target>
+      <trans-unit id="alt.whyUs.illustration" datatype="html">
+        <source>Illustrated Glanzwork cleaner with mop and cleaning trolley</source>
+        <target state="translated">Illustrierte Glanzwork-Reinigungskraft mit Mopp und Reinigungswagen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
           <context context-type="linenumber">42,43</context>
@@ -3852,6 +3852,14 @@
         <context-group purpose="location">
         <context context-type="sourcefile">src/app/features/admin/data/booking.ts</context>
         <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.statusFor" datatype="html">
+        <source>Status of <x id="reference" equiv-text="appointment.reference"/></source>
+        <target state="translated">Status von <x id="reference" equiv-text="appointment.reference"/></target>
+        <context-group purpose="location">
+        <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+        <context context-type="linenumber">303</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.bookingStatus.cancelled" datatype="html">
@@ -5151,8 +5159,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="admin.metric.employees" datatype="html">
-        <source>Staff on the books</source>
-        <target state="translated">Mitarbeiter im Bestand</target>
+        <source>Employees</source>
+        <target state="translated">Mitarbeiter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
           <context context-type="linenumber">131</context>

@@ -239,6 +239,49 @@ class AppointmentServiceTest {
     }
 
     @Test
+    void reopensACancelledVisitWhenItsSlotIsStillFree() {
+        var appointment = existing(AppointmentStatus.CANCELLED, client);
+        appointment.setEmployee(employee);
+        when(appointmentRepository.findDetailed(99L)).thenReturn(Optional.of(appointment));
+        when(appointmentRepository.hasConflict(eq(11L), any(), any(), anyCollection(), eq(99L)))
+                .thenReturn(false);
+
+        var result = appointments.changeStatus(99L, AppointmentStatus.REQUESTED, Locale.GERMAN);
+
+        assertThat(result.status()).isEqualTo(AppointmentStatus.REQUESTED);
+    }
+
+    @Test
+    void willNotReopenAVisitOntoASlotSomebodyElseNowHas() {
+        // Cancelling freed the slot, so the office may well have given it away. Putting
+        // the appointment back would double-book the employee without saying so.
+        var appointment = existing(AppointmentStatus.CANCELLED, client);
+        appointment.setEmployee(employee);
+        when(appointmentRepository.findDetailed(99L)).thenReturn(Optional.of(appointment));
+        when(appointmentRepository.hasConflict(eq(11L), any(), any(), anyCollection(), eq(99L)))
+                .thenReturn(true);
+
+        assertThatThrownBy(() -> appointments.changeStatus(99L, AppointmentStatus.REQUESTED, Locale.GERMAN))
+                .isInstanceOf(ConflictException.class)
+                .hasMessageContaining("already has an appointment");
+
+        verify(appointmentRepository, never()).save(any());
+    }
+
+    @Test
+    void doesNotReCheckTheSlotForAnOrdinaryStepAlongTheWorkflow() {
+        // The appointment already holds this slot, so asking whether it is free would
+        // find the appointment itself.
+        var appointment = existing(AppointmentStatus.CONFIRMED, client);
+        appointment.setEmployee(employee);
+        when(appointmentRepository.findDetailed(99L)).thenReturn(Optional.of(appointment));
+
+        appointments.changeStatus(99L, AppointmentStatus.IN_PROGRESS, Locale.GERMAN);
+
+        verify(appointmentRepository, never()).hasConflict(anyLong(), any(), any(), anyCollection(), any());
+    }
+
+    @Test
     void willNotSkipTheWorkflow() {
         var appointment = existing(AppointmentStatus.REQUESTED, client);
         when(appointmentRepository.findDetailed(99L)).thenReturn(Optional.of(appointment));

@@ -1,3 +1,7 @@
+## Token usage
+- Keep token usage low. Work efficiently and keep answers short.
+- Don't test or check every step. We will test and check everything together at the end of the project.
+
 # Working Agreement
 Act as a senior software engineer and architect with 20+ years of experience in Angular frontend development and Java Spring Boot backend development.
 
@@ -43,8 +47,9 @@ Act as a senior software engineer and architect with 20+ years of experience in 
 - Flag any security risk you notice, even if I didn't ask.
 
 ## Testing
-- Add or update tests for each step when it makes sense.
-- Run the tests and tell me the result in one line.
+- Write or update tests only when it makes sense, but do NOT run them.
+- Don't test or verify each step. I will test everything myself when the whole task is done.
+- Save tokens: don't re-read files you already read, don't explore code you don't need, and keep output short.
 
 ## Safety
 - Never delete files, force-push, or change dependencies without asking first.

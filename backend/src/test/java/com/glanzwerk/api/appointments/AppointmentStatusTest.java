@@ -20,9 +20,21 @@ class AppointmentStatusTest {
     }
 
     @Test
-    void cannotReopenAFinishedOrCancelledAppointment() {
-        assertThat(AppointmentStatus.COMPLETED.allowedNext()).isEmpty();
-        assertThat(AppointmentStatus.CANCELLED.allowedNext()).isEmpty();
+    void reopensAFinishedOrCancelledAppointmentToTheStart() {
+        // Back to REQUESTED rather than to whatever it was before, so the job is
+        // re-confirmed and re-assigned deliberately instead of silently resuming.
+        assertThat(AppointmentStatus.COMPLETED.allowedNext())
+                .containsExactly(AppointmentStatus.REQUESTED);
+        assertThat(AppointmentStatus.CANCELLED.allowedNext())
+                .containsExactly(AppointmentStatus.REQUESTED);
+    }
+
+    @Test
+    void reopeningIsTheOnlyWayOutOfATerminalStatus() {
+        assertThat(AppointmentStatus.COMPLETED.canTransitionTo(AppointmentStatus.IN_PROGRESS)).isFalse();
+        assertThat(AppointmentStatus.COMPLETED.canTransitionTo(AppointmentStatus.CANCELLED)).isFalse();
+        assertThat(AppointmentStatus.CANCELLED.canTransitionTo(AppointmentStatus.CONFIRMED)).isFalse();
+        assertThat(AppointmentStatus.CANCELLED.canTransitionTo(AppointmentStatus.COMPLETED)).isFalse();
     }
 
     @Test

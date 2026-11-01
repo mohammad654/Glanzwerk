@@ -172,6 +172,18 @@ public class AppointmentService {
             throw new BadRequestException("Assign an employee before confirming the appointment.");
         }
 
+        // Reopening a completed or cancelled visit puts it back on its employee's
+        // calendar, and that slot may have been given to somebody else while it was
+        // off there. Only a move INTO a blocking state can collide, so the check is
+        // skipped for every ordinary step along the workflow, where the appointment
+        // already held the slot and would conflict with itself.
+        var reoccupiesSlot = !AppointmentStatus.blocking().contains(appointment.getStatus())
+                && AppointmentStatus.blocking().contains(next);
+        if (reoccupiesSlot && appointment.getEmployee() != null) {
+            requireFree(appointment.getEmployee(), appointment.getStartTime(),
+                    appointment.getEndTime(), appointment.getId());
+        }
+
         appointment.setStatus(next);
         return mapper.toDto(appointmentRepository.save(appointment), locale);
     }

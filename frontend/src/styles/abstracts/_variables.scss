@@ -50,6 +50,9 @@ $navbar-link-active: $brand-cyan;
 $navbar-link-size: 0.9375rem; // 15px
 $logo-height: 3.5rem; // 56px — the mark is stacked, so it needs the height
 
+$danger: #dc3545; // Bootstrap's own $danger and its button hover shade — the
+$danger-hover: #bb2d3b; // parts of Bootstrap imported here do not define either
+
 // Form fields
 $input-border: #ced4da;
 $input-error: #d9534f;
@@ -86,6 +89,8 @@ $spacer: 1rem;
 // desktop rhythm is the reference look, so `clamp` keeps the ceiling rather than
 // trading it away. 9vw reaches the ceiling at ~1111px.
 $section-padding-y: clamp(3.25rem, 9vw, 6.25rem); // 52px → 100px
+$section-padding-y-sm: clamp(2rem, 4.5vw, 3.25rem); // 32px → 52px — bands of cards
+// alone, which carry their own padding and do not need the full rhythm around them
 
 // The photo at the top of a service, reference or post card. One value, because three
 // card stylesheets each carrying their own near-identical ratio is three chances for

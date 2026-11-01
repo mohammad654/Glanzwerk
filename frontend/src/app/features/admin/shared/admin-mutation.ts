@@ -18,7 +18,7 @@ export interface Mutation {
   /** The last failure, or null. Cleared when a new attempt starts. */
   readonly failure: () => ApiFailure | null;
   /** Runs the call, then `onSuccess` only if it succeeded. */
-  run<T>(source: Observable<T>, onSuccess?: (value: T) => void): void;
+  run<T>(source: Observable<T>, onSuccess?: (value: T) => void, onError?: () => void): void;
   reset(): void;
 }
 
@@ -30,7 +30,7 @@ export const createMutation = (): Mutation => {
     pending: pending.asReadonly(),
     failure: failure.asReadonly(),
 
-    run<T>(source: Observable<T>, onSuccess?: (value: T) => void): void {
+    run<T>(source: Observable<T>, onSuccess?: (value: T) => void, onError?: () => void): void {
       if (pending()) {
         // A second click while the first is still going would send the request twice.
         return;
@@ -41,7 +41,13 @@ export const createMutation = (): Mutation => {
 
       source.pipe(finalize(() => pending.set(false))).subscribe({
         next: (value) => onSuccess?.(value),
-        error: (error: unknown) => failure.set(toFailure(error)),
+        error: (error: unknown) => {
+          failure.set(toFailure(error));
+          // For putting a control back the way it was. A refused write leaves the
+          // screen claiming something the server never accepted, and `failure` alone
+          // cannot undo it: the alert says no while the control still shows yes.
+          onError?.();
+        },
       });
     },
 

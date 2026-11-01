@@ -200,6 +200,17 @@ nobody asked. The `query` parameter is also length-capped on each endpoint.
 Appointments and enquiries filter and page **on the server**. Services, employees and
 clients are small enough to filter in the browser, and say so in a comment where they do.
 
+**The status column is the control that changes the status.** It is a `<select>`
+offering only the moves `NEXT_STATUSES` allows from the status the row is in, rather
+than a row of buttons in the actions column — the column that shows a thing is the
+obvious place to edit it, and a finished or cancelled visit now has a way back out.
+The whole row is tinted by that status (`.admin-row--info|success|danger`), so a
+cancelled or completed visit is recognisable without reading as far as the badge;
+`--neutral` is deliberately untinted, because "requested" is the ordinary state and
+tinting every row would leave nothing standing out. `createMutation().run` takes an
+`onError` so a refused change puts the control back — otherwise the row would claim a
+status the server never accepted while the alert above the table says it did not.
+
 Day-and-time pickers go through `shared/components/slot-picker/`, used by both the
 public booking form and the dashboard's reschedule dialog. One implementation, because
 both must offer exactly what the server will accept; `variant` only swaps class names
@@ -288,7 +299,7 @@ Each feature also contributes its own `SecurityRules` bean saying what of itself
 - **An appointment is free, and there is no price anywhere.** Not on the appointment, not on the service, not in the dashboard's figures. An appointment is a visit to come and look at the job; what the work costs is agreed afterwards, outside this system. The overview counts completed visits where it used to total money.
 - **Every appointment is one fixed slot** (`glanzwerk.appointments.slot-minutes`, 60). The service says what is being looked at, not how long looking takes — which is what lets one slot grid serve the whole business. `CreateAppointmentRequest` carries no length and no status.
 - **An appointment's client is the token's subject.** No endpoint takes a client id from the caller, which is what makes "my appointments" impossible to point at someone else's.
-- **`AppointmentStatus` owns the workflow.** The allowed transitions live on the enum; `COMPLETED` and `CANCELLED` are terminal. Confirming requires an assigned employee.
+- **`AppointmentStatus` owns the workflow.** The allowed transitions live on the enum. Confirming requires an assigned employee. `COMPLETED` and `CANCELLED` are no longer dead ends: each reopens to `REQUESTED`, so a mis-click is recoverable without deleting a record of a visit that really happened. Reopening leads to the *start* of the workflow rather than back to the previous state, so the job is re-confirmed and re-assigned deliberately — and because it re-enters `blocking()`, `changeStatus` re-runs the double-booking check first: the slot may have been given away while the visit was off the calendar. That check fires only on a move into a blocking status, never on an ordinary step along the workflow, where the appointment already holds the slot and would collide with itself.
 - **Employees have no accounts.** There is no EMPLOYEE role: staff are rows in `employees` with no password and no way to sign in. Only an administrator creates them, and not even that can mint an ADMIN.
 - **Bare DTOs on success**, `{ timestamp, status, message, path, fieldErrors? }` on error, and nothing else. The catch-all handler logs the cause and returns a fixed sentence, because a JPA message names tables and columns. That shape holds for the requests the *security filters* turn away too, which never reach `GlobalExceptionHandler`: `common/ApiErrorWriter` is what the entry point and the access-denied handler write, so a 401 and a 403 are not bodyless the way they used to be.
 - **Four unauthenticated writes**: `POST /api/v1/contact-requests` (bean validation, a honeypot field and a per-address rate limit), registration, sign-in, and the two halves of a password reset. All of them are rate-limited.
@@ -367,20 +378,16 @@ a guessed token whether they are getting warmer.
 
 Flyway only — `ddl-auto: validate`, never `update`. Add a new `V<n>__*.sql`; do not edit an applied one.
 
-- `V1__initial_schema.sql` — users, service_offerings, employee_profiles, employee_skills, bookings, contact_requests.
-- `V2__seed_admin_and_services.sql` — the admin account and the thirteen services. **The admin password is public, in the repository.** Change it at first sign-in.
-- `V3__seed_demo_operations.sql` — invented staff, clients, bookings and enquiries so the dashboard is not empty. Delete it before production.
-- `V4__align_demo_bookings_with_opening_days.sql` — V3 dates its appointments as `CURRENT_DATE + n days`, so roughly one database in seven got one on a Sunday, which the rules then refused to let anyone edit. This moves it.
-- `V5__appointments_free_and_employees_without_accounts.sql` — renames `bookings` to `appointments`, drops every price column, and turns employees from user accounts into plain records in a new `employees` table (ids carried over, so existing assignments survive).
-- `V6__cover_every_demo_service_with_schedulable_staff.sql` — V3 left three services with nobody schedulable, so availability correctly offered no days at all for them and the demo looked broken.
-- `V7__password_reset_tokens.sql` — one row per outstanding "I forgot my password". It stores the SHA-256 of the token and never the token, for the same reason `users.password` holds a hash.
-- `V8__token_version_for_credential_revocation.sql` — `users.token_version`, the only revocation this system has. Every token carries the value it was minted against as a `tv` claim and `AuthService.refresh` refuses one that no longer matches, so changing or resetting a password ends every *other* session within the access token's fifteen minutes instead of leaving a week-long refresh cookie alive. A counter rather than a `password_changed_at` timestamp on purpose: a JWT's `iat` has one-second precision, so comparing against a time revoked the very session that had just changed the password whenever both landed in the same second.
+- `V1__initial_schema.sql` — the whole schema: users, service_offerings, employees, employee_skills, appointments, contact_requests, password_reset_tokens.
+- `V2__seed_admin_and_demo_data.sql` — the admin account and the thirteen services (reference data the API cannot start usefully without), then invented staff, clients, appointments and enquiries so the dashboard is not empty. **The admin password is public, in the repository.** Change it at first sign-in. Delete everything below its "DEMO OPERATIONS" banner before production.
 
-**The database is MariaDB 10.4** (what XAMPP ships), not MySQL. That rules out
-`RENAME COLUMN` and `RENAME INDEX`, which need 10.5.2+, so columns are renamed with
-`CHANGE` and indexes dropped and re-added; check constraints are dropped with
-`DROP CONSTRAINT`, not MySQL's `DROP CHECK`. V5 says so at the top — do not
-"modernise" that syntax.
+There were eight migrations until the two above replaced them. The six that are gone were the history of getting here — `bookings` renamed to `appointments`, every price column dropped, employee accounts turned into plain records, demo dates moved off Sundays, skills widened so every service had schedulable staff, `password_reset_tokens` added, `users.token_version` added — and that history is now simply how `V1` declares the tables. Nothing in the repository had ever been deployed, so there was no applied checksum to protect. **A database created before the flattening cannot be migrated onto it**: the recorded checksums no longer match. Drop the `glanzwerk` schema and let Flyway build it again.
+
+**The database is MariaDB 10.4** (what XAMPP ships), not MySQL. The two migrations
+here only create tables and insert rows, so none of it bites today — but the next
+`ALTER` will: 10.4 has no `RENAME COLUMN` or `RENAME INDEX` (10.5.2+), so a column is
+renamed with `CHANGE` and an index is dropped and re-added, and a check constraint is
+dropped with `DROP CONSTRAINT`, not MySQL's `DROP CHECK`. `V1` says so at the top.
 
 Three modelling decisions worth not re-litigating:
 
@@ -411,7 +418,7 @@ of their own round, which needs a way to identify staff who have no accounts.
 
 ## Domain
 
-Building cleaning and grounds services in Dresden. The offering is **thirteen services**, ordered by commercial priority (recurring contract work first): maintenance, office, school & daycare, medical & care home, public sector, industrial, stairwell, glass & window, deep & post-construction, winter service, gardening, caretaker, home cleaning. The same thirteen keys are seeded in `V2__seed_admin_and_services.sql`.
+Building cleaning and grounds services in Dresden. The offering is **thirteen services**, ordered by commercial priority (recurring contract work first): maintenance, office, school & daycare, medical & care home, public sector, industrial, stairwell, glass & window, deep & post-construction, winter service, gardening, caretaker, home cleaning. The same thirteen keys are seeded in `V2__seed_admin_and_demo_data.sql`.
 
 The site is built for local search: German-first copy, city in the slug and the page title, and `COMPANY.areaServed` as the ring around Dresden. The source for that plan is a `Glanzwerk-Growth-and-SEO-Guide.pdf` that is **gitignored** (it carries the owner's personal details), so the code's comments are the only record of it in the repository.
 
@@ -435,8 +442,8 @@ These are deliberate placeholders, not bugs — check before treating any as rea
 - **No Impressum or Datenschutzerklärung.** Legally required for a German business site. The contact form's consent checkbox deliberately has no link because the page does not exist.
 - The hero play button has no video behind it.
 - `backend/src/main/resources/db/migration/V2__*.sql` seeds an admin whose **password is in the repository** (`admin@glanzwerk.de` / `Glanzwerk!2026`), and the service durations in it are placeholders in the same spirit as `core/company.ts`. Change both before anyone outside localhost can reach the API.
-- `V3__seed_demo_operations.sql` is invented staff, clients and appointments. Delete it before production.
-- The three appointments V3 seeds keep the lengths they were given before appointments became a fixed slot (150, 240 and 120 minutes), so `durationMinutes` reports those rather than 60. They normalise to one slot the first time anyone edits them. Deliberate: a record of what was actually arranged is better than rewriting history.
+- The second half of `V2__seed_admin_and_demo_data.sql`, below its "DEMO OPERATIONS" banner, is invented staff, clients, appointments and enquiries. Delete it before production.
+- The three appointments the demo half of V2 seeds keep the lengths they were given before appointments became a fixed slot (150, 240 and 120 minutes), so `durationMinutes` reports those rather than 60. They normalise to one slot the first time anyone edits them. Deliberate: a record of what was actually arranged is better than rewriting history.
 - There is **no employee-facing screen**. Staff have no accounts at all now, which is the intended model — but it means there is nowhere for a cleaner to see their own round. A read-only "my week" view would need a new way to identify them.
 - Email notification for contact requests is not wired: `LoggingEnquiryNotifier` writes a log line. The record is always saved first, so nothing is lost — but nobody is told.
 - **No mail sender at all, so a password reset link never leaves the server.** `LoggingPasswordResetNotifier` writes it to the API's log at WARN and the flow is finished by copying it out of the console. Everything else about the reset works; this is the one piece missing, and it must not be deployed as it stands.
@@ -444,4 +451,4 @@ These are deliberate placeholders, not bugs — check before treating any as rea
 - `RateLimiter` is in-memory and per process. Behind more than one replica the effective limit is the limit times the replica count, and the per-account failed-login budget is correspondingly looser. It sweeps expired windows once every 256 writes rather than on every call, so the map is bounded without making each rate-limited request walk every key — which it did, and which cost most exactly when the endpoint was under attack.
 - Spent and expired `password_reset_tokens` rows are swept hourly by `PasswordResetTokenCleanup`. Nothing else in the schema is garbage-collected; the other tables are all business records.
 - The slot capacity check is check-then-write, so two simultaneous requests for the same slot can both pass. The window is milliseconds and the cost is one appointment to move by hand; the fix, if it ever matters, is a lock on the slot rather than a bigger check.
-- The frontend's initial bundle sits just over the old 500 kB warning budget, now 560 kB: `HttpClient` and the auth session are in the baseline because the route guards need them before any lazy chunk loads. The 1 MB error budget is untouched. `anyComponentStyle` is 7 kB warning / 10 kB error rather than Angular's 4 kB: the admin shell loads the whole dashboard's control vocabulary as two component stylesheets (`admin-layout.component.scss` plus `admin-controls.scss`, ~12.7 kB together) so that it lazy-loads with the admin chunk instead of weighing down every marketing page. Moving it to `styles/components/` would satisfy the 4 kB budget and ship it to every visitor, which is the wrong trade.
+- The frontend's initial bundle sits just over the old 500 kB warning budget, now 560 kB: `HttpClient` and the auth session are in the baseline because the route guards need them before any lazy chunk loads. The 1 MB error budget is untouched. `anyComponentStyle` is 8 kB warning / 10 kB error rather than Angular's 4 kB: the admin shell loads the whole dashboard's control vocabulary as two component stylesheets (`admin-layout.component.scss` plus `admin-controls.scss`, ~12.7 kB together) so that it lazy-loads with the admin chunk instead of weighing down every marketing page. Moving it to `styles/components/` would satisfy the 4 kB budget and ship it to every visitor, which is the wrong trade.

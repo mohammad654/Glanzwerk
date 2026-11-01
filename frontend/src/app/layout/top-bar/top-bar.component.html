@@ -23,8 +23,9 @@
           <a [routerLink]="accountLink()">{{ userName() }}</a>
         </li>
         <li class="top-bar__secondary">
-          <button class="top-bar__signout" type="button" (click)="signOut()" i18n="@@topbar.signout">
-            Sign Out
+          <button class="top-bar__signout" type="button" (click)="signOut()">
+            <i appIcon="bi-box-arrow-right" aria-hidden="true"></i>
+            <span i18n="@@topbar.signout">Sign Out</span>
           </button>
         </li>
       } @else {

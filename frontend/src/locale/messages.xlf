@@ -3429,7 +3429,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">178,179</context>
+          <context context-type="linenumber">183,184</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
@@ -3444,7 +3444,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">181,182</context>
+          <context context-type="linenumber">186,187</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-clients.component.html</context>
@@ -3528,7 +3528,7 @@
         <source>Edit</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">107,108</context>
+          <context context-type="linenumber">127,128</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
@@ -3543,11 +3543,11 @@
         <source>Delete</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">131,132</context>
+          <context context-type="linenumber">136,137</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">165,167</context>
+          <context context-type="linenumber">170,172</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
@@ -3562,11 +3562,11 @@
         <source> Cancel </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">157,159</context>
+          <context context-type="linenumber">162,164</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">247,249</context>
+          <context context-type="linenumber">252,254</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
@@ -3589,60 +3589,60 @@
         <source>Assigned to</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">187,188</context>
+          <context context-type="linenumber">192,193</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.appointments.unassigned" datatype="html">
         <source>Unassigned</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">195,196</context>
+          <context context-type="linenumber">200,201</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">156</context>
+          <context context-type="linenumber">154</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.field.slot" datatype="html">
         <source>Day and time</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">203,204</context>
+          <context context-type="linenumber">208,209</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.field.street" datatype="html">
         <source>Street</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">216,217</context>
+          <context context-type="linenumber">221,222</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.field.postalCode" datatype="html">
         <source>Postal code</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">224,225</context>
+          <context context-type="linenumber">229,230</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.field.city" datatype="html">
         <source>Town</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">232,233</context>
+          <context context-type="linenumber">237,238</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.field.notes" datatype="html">
         <source>Notes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">240,241</context>
+          <context context-type="linenumber">245,246</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.action.save" datatype="html">
         <source> Save </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.html</context>
-          <context context-type="linenumber">256,258</context>
+          <context context-type="linenumber">261,263</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-employees.component.html</context>
@@ -3661,28 +3661,28 @@
         <source>Schedule</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">152</context>
+          <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.appointments.search" datatype="html">
         <source>Reference, client or service</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.appointments.empty" datatype="html">
         <source>No appointment matches that filter.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">154</context>
+          <context context-type="linenumber">152</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.filter.all" datatype="html">
         <source>All</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">153</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-enquiries.component.ts</context>
@@ -3693,21 +3693,28 @@
         <source>Edit appointment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.appointments.deleteTitle" datatype="html">
         <source>Delete appointment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.appointments.deleteWarning" datatype="html">
         <source><x id="reference" equiv-text="appointment.reference"/> for <x id="client" equiv-text="appointment.client.name"/> will be removed for good. To call off a visit that was really arranged, cancel it instead.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
-          <context context-type="linenumber">268</context>
+          <context context-type="linenumber">266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="admin.appointments.statusFor" datatype="html">
+        <source>Status of <x id="reference" equiv-text="appointment.reference"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/pages/admin-appointments.component.ts</context>
+          <context context-type="linenumber">303</context>
         </context-group>
       </trans-unit>
       <trans-unit id="admin.column.phone" datatype="html">
@@ -4127,7 +4134,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="admin.metric.employees" datatype="html">
-        <source>Staff on the books</source>
+        <source>Employees</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/admin/pages/admin-overview.component.ts</context>
           <context context-type="linenumber">132</context>
@@ -4928,8 +4935,8 @@
           <context context-type="linenumber">33,34</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="alt.whyUs.supplies" datatype="html">
-        <source>Colour-coded cloths and eco-certified cleaning products</source>
+      <trans-unit id="alt.whyUs.illustration" datatype="html">
+        <source>Illustrated Glanzwork cleaner with mop and cleaning trolley</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/home/why-us/why-us.component.html</context>
           <context context-type="linenumber">42,43</context>

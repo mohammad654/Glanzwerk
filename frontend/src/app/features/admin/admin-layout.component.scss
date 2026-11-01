@@ -414,9 +414,14 @@ html:has(.admin) {
   border-style: dashed;
 }
 
-// Status badge ---------------------------------------------------------------
+// Status badge, and the control that changes it ------------------------------
+//
+// One shape and one set of tones for both: the dashboard's status column is a
+// `<select>` so the office can move an appointment along, and the client's own list
+// is a plain badge. They must read as the same thing, so they are the same styles.
 
-.admin-status {
+.admin-status,
+.admin-status-select {
   display: inline-block;
   padding: 0.1875rem 0.625rem;
   border-radius: v.$radius-sm;
@@ -443,6 +448,64 @@ html:has(.admin) {
 
   &--danger {
     background: rgba(v.$admin-negative, 0.32);
+  }
+}
+
+// It is a real `<select>`: the keyboard, the screen reader and the touch picker all
+// come from the platform rather than from a listbox we would have to build. Only the
+// platform chrome goes, so a table of these is not a wall of arrows.
+.admin-status-select {
+  appearance: none;
+  border: 0;
+  // Not `font: inherit`: the shorthand would reset the size and weight the shared
+  // rule above just set, and they would have to be written again here.
+  font-family: inherit;
+  cursor: pointer;
+
+  // The list is drawn by the platform on the page's background rather than on the
+  // control's, where white text would be invisible.
+  option {
+    background: v.$admin-surface;
+    color: v.$admin-text;
+  }
+
+  // A transition is in flight. Still legible, because the row has not changed yet.
+  &:disabled {
+    cursor: progress;
+    opacity: 0.6;
+  }
+}
+
+// A row tinted by the status it is in -----------------------------------------
+//
+// The whole line takes its status's colour, so a cancelled or finished visit is
+// recognisable from across the table rather than only at the status column. The cells
+// inherit instead of naming the colour again, so each tone is one declaration.
+//
+// `--neutral` is deliberately absent: "requested" is the ordinary state, and tinting
+// every row would leave nothing standing out. The modifier is still emitted for it so
+// the class is always there to read in the DOM.
+.admin-row {
+  &--info,
+  &--success,
+  &--danger {
+    td,
+    .admin-table__primary,
+    .admin-table__secondary {
+      color: inherit;
+    }
+  }
+
+  &--info {
+    color: v.$admin-accent;
+  }
+
+  &--success {
+    color: v.$admin-positive;
+  }
+
+  &--danger {
+    color: v.$admin-negative;
   }
 }
 

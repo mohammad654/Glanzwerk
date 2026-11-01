@@ -50,16 +50,21 @@ export const APPOINTMENT_STATUSES = Object.keys(APPOINTMENT_STATUS_LABELS) as re
 /**
  * What a status may become next.
  *
- * A copy of the server's workflow, so the action menu offers only the moves that will
- * be accepted. The server checks it again and is the authority — this is to stop the
- * dashboard showing a button that is guaranteed to fail.
+ * A copy of the server's workflow, so the status picker offers only the moves that
+ * will be accepted. The server checks it again and is the authority — this is to stop
+ * the dashboard offering a choice that is guaranteed to fail.
+ *
+ * `COMPLETED` and `CANCELLED` lead back to `REQUESTED` rather than nowhere: a visit
+ * finished or called off by mistake can be reopened, and reopening returns it to the
+ * start of the workflow so it is re-confirmed and re-assigned deliberately. The server
+ * re-checks that the slot is still free before letting it back in.
  */
 export const NEXT_STATUSES: Readonly<Record<AppointmentStatus, readonly AppointmentStatus[]>> = {
   REQUESTED: ['CONFIRMED', 'CANCELLED'],
   CONFIRMED: ['IN_PROGRESS', 'CANCELLED'],
   IN_PROGRESS: ['COMPLETED', 'CANCELLED'],
-  COMPLETED: [],
-  CANCELLED: [],
+  COMPLETED: ['REQUESTED'],
+  CANCELLED: ['REQUESTED'],
 };
 
 /** Statuses a client may still call off themselves. */
