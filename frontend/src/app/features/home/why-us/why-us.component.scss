@@ -1,7 +1,7 @@
 @use 'abstracts/variables' as v;
 
 .why-us {
-  padding-bottom: 4.375rem; // 70px — the template's pb-70
+  padding-bottom: v.$section-padding-y-sm;
 }
 
 .why-us__content {
@@ -37,6 +37,10 @@
     position: relative;
     margin-bottom: 1.875rem; // 30px
     padding-left: 3.75rem; // 60px
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h3 {

@@ -121,7 +121,79 @@
 }
 
 .site-nav__cta {
+  position: relative;
+  // Keeps the rings behind the button without escaping into the header.
+  isolation: isolate;
   white-space: nowrap;
+  // Breathing in step with the rings. `scale` rather than `font-size`, which
+  // would re-measure the button every frame and nudge the burger beside it.
+  animation: site-nav-cta-breathe 2.6s ease-in-out infinite;
+
+  // Two rings leaving the button on a loop. This is the one direct route to
+  // contact on every page, and standing still among the nav links it reads as
+  // chrome rather than as the thing to press.
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 0.125rem solid v.$primary;
+    border-radius: inherit;
+    animation: site-nav-cta-ping 2.6s ease-out infinite;
+  }
+
+  // The second ring trails the first, so the button sends out a pair.
+  &::after {
+    animation-delay: 1.3s;
+  }
+
+  // Once it has been found the rings have done their job and only distract.
+  &:hover,
+  &:focus-visible {
+    animation: none;
+
+    &::before,
+    &::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes site-nav-cta-breathe {
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.07;
+  }
+}
+
+@keyframes site-nav-cta-ping {
+  from {
+    opacity: 0.7;
+    scale: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 1.28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav__cta {
+    animation: none;
+  }
+
+  .site-nav__cta::before,
+  .site-nav__cta::after {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 .site-nav__toggle {

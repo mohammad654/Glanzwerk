@@ -6,6 +6,7 @@ import { FeatureStripComponent } from './feature-strip/feature-strip.component';
 import { HeroComponent } from './hero/hero.component';
 import { ServicesComponent } from './services/services.component';
 import { StatsComponent } from '../about/stats/stats.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
@@ -18,6 +19,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
     StatsComponent,
     ServicesComponent,
     WhyUsComponent,
+    TestimonialsComponent,
     AppointmentComponent,
   ],
   template: `
@@ -27,6 +29,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
     <app-stats />
     <app-services />
     <app-why-us />
+    <app-testimonials />
     <app-appointment />
   `,
 })

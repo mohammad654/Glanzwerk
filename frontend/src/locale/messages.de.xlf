@@ -6050,6 +6050,118 @@
           <context context-type="linenumber">5,7</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="testimonials.eyebrow" datatype="html">
+        <source>Testimonials</source>
+        <target state="translated">Kundenstimmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.heading" datatype="html">
+        <source>What Our Clients Say</source>
+        <target state="translated">Was unsere Kunden sagen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.1.quote" datatype="html">
+        <source>The same two people have cleaned our offices for over a year now. They know which rooms are in use when, and we have not had to explain the building to anybody new since the day they started.</source>
+        <target state="translated">Seit über einem Jahr reinigen dieselben zwei Personen unsere Büros. Sie wissen, welche Räume wann genutzt werden, und wir mussten das Gebäude seit dem ersten Tag niemandem neu erklären.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.1.name" datatype="html">
+        <source>Katrin Hoffmann</source>
+        <target state="translated">Katrin Hoffmann</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.1.role" datatype="html">
+        <source>Office Manager, Dresden-Neustadt</source>
+        <target state="translated">Büroleitung, Dresden-Neustadt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.2.quote" datatype="html">
+        <source>We handed over a building site on the Friday and the client walked through it on the Monday. The written schedule meant nobody had to argue afterwards about what was included.</source>
+        <target state="translated">Wir haben freitags eine Baustelle übergeben, montags ist der Bauherr hindurchgegangen. Dank des schriftlichen Leistungsverzeichnisses musste hinterher niemand darüber streiten, was enthalten war.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.2.name" datatype="html">
+        <source>Mark Richter</source>
+        <target state="translated">Mark Richter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.2.role" datatype="html">
+        <source>Site Manager, Construction Firm</source>
+        <target state="translated">Bauleiter, Bauunternehmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.3.quote" datatype="html">
+        <source>The stairwells and the winter service are both on one contract, and the gritting log has already saved us one argument with an insurer. Calls are answered the same day.</source>
+        <target state="translated">Treppenhausreinigung und Winterdienst laufen über einen Vertrag, und das Streuprotokoll hat uns schon eine Diskussion mit einer Versicherung erspart. Anrufe werden am selben Tag beantwortet.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.3.name" datatype="html">
+        <source>Susanne Baumann</source>
+        <target state="translated">Susanne Baumann</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.3.role" datatype="html">
+        <source>Property Management, Radebeul</source>
+        <target state="translated">Hausverwaltung, Radebeul</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.prev" datatype="html">
+        <source>Previous testimonial</source>
+        <target state="translated">Vorherige Kundenstimme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.next" datatype="html">
+        <source>Next testimonial</source>
+        <target state="translated">Nächste Kundenstimme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="testimonials.rating" datatype="html">
+        <source>Rated five out of five</source>
+        <target state="translated">Mit fünf von fünf Sternen bewertet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/testimonials/testimonials.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
